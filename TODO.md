@@ -1,8 +1,7 @@
 # TODO
 
 - Configure GitHub authentication and add the remote profile repository.
-- Replace `USERNAME` in setup commands once the GitHub username is confirmed.
-- Add verified Git identity for commits.
-- Amend the initial local commit after Git identity is configured.
+- Create the public `Manuel0507/Manuel0507` repository after signing in to GitHub.
+- Add `origin` after the remote repository exists.
 - Push the initial profile repo to GitHub.
 - Review the first 3 automated daily runs for quality before leaving them unattended.

@@ -18,27 +18,28 @@ The scripts should commit only when files changed and should push only when a re
 
 This machine currently needs GitHub authentication before remote publishing can work.
 
-1. Create a public GitHub repository named exactly like your GitHub username. That special repository powers the profile README.
-2. From this folder, add the remote:
+1. Sign in to GitHub in the browser or CLI.
+2. Create a public GitHub repository named exactly like your GitHub username. For this account, the profile repository should be `Manuel0507/Manuel0507`.
+3. From this folder, add the remote:
 
    ```sh
-   git remote add origin git@github.com:USERNAME/USERNAME.git
+   git remote add origin git@github.com:Manuel0507/Manuel0507.git
    ```
 
-3. Configure a Git identity that matches a verified GitHub email:
+4. This repo is already configured with the public GitHub no-reply email for `Manuel0507`:
 
    ```sh
    git config user.name "Manuel Sampedro"
-   git config user.email "YOUR_VERIFIED_GITHUB_EMAIL"
+   git config user.email "281628339+Manuel0507@users.noreply.github.com"
    ```
 
-4. If a local commit was created before the identity was configured, amend it:
+5. If a local commit was created before the identity was configured, amend it:
 
    ```sh
    git commit --amend --reset-author
    ```
 
-5. Push the first version:
+6. Push the first version:
 
    ```sh
    git push -u origin main
