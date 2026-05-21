@@ -9,3 +9,6 @@ Each radar entry should include:
 - One practical takeaway.
 - Sources when the note depends on current external facts.
 
+## Entries
+
+- [2026-05-21 - AI Coding Profile Start](./2026-05-21-ai-coding-profile-start.md)

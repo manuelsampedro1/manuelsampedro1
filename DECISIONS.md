@@ -40,3 +40,13 @@ Rationale:
 - Daily publishing needs a guard against generic filler.
 - The audit checks recent artifacts against the profile's topic and usefulness bar.
 - Corrective actions go into `TODO.md` instead of silently letting automation drift.
+
+## 2026-05-21 - Refresh All Public Indexes During Maintenance
+
+The maintenance commit should refresh the folder indexes for `labs/`, `recipes/`, and `radar/`.
+
+Rationale:
+
+- The profile README should point to current public artifacts, not stale folders.
+- Daily recipe and radar additions need the same discoverability as lab notes.
+- Index refresh belongs in maintenance because it is lightweight and deterministic.

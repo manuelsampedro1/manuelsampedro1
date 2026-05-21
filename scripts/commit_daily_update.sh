@@ -9,6 +9,8 @@ if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
 fi
 
 scripts/update_lab_index.sh
+scripts/update_recipe_index.sh
+scripts/update_radar_index.sh
 
 if [ -z "$(git status --porcelain -- .)" ]; then
   echo "No useful changes to commit."

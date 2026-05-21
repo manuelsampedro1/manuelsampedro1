@@ -33,3 +33,10 @@ This profile is meant to be a public workbench, not a vanity page. The useful pa
 
 The daily index lives in [labs/README.md](./labs/README.md). The automation keeps it current when new notes are added.
 
+## Latest Recipe
+
+- [Coding Agent Repo Loop](./recipes/coding-agent-repo-loop.md)
+
+## Latest Radar Note
+
+- [2026-05-21 - AI Coding Profile Start](./radar/2026-05-21-ai-coding-profile-start.md)

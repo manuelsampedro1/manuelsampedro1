@@ -10,3 +10,6 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - Automation runbook.
 - Small implementation pattern.
 
+## Entries
+
+- [Coding Agent Repo Loop](./coding-agent-repo-loop.md)
