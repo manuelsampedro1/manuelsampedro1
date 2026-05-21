@@ -21,3 +21,12 @@ Rationale:
 - Useful artifacts compound into a credible public body of work.
 - This keeps the account aligned with platform trust and professional reputation.
 
+## 2026-05-21 - Live GitHub Account
+
+Use `manuelsampedro1/manuelsampedro1` as the live GitHub profile repository.
+
+Rationale:
+
+- The browser-authenticated GitHub account is `manuelsampedro1`.
+- GitHub publicly recognizes `manuelsampedro1/manuelsampedro1` as the special profile README repository.
+- Commits are authored with the account's no-reply address: `202281585+manuelsampedro1@users.noreply.github.com`.
