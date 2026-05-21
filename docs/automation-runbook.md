@@ -8,6 +8,10 @@ This repo is designed for daily useful GitHub contributions around AI tooling an
 - 14:10 Madrid, `GitHub AI Recipe`: add one reusable workflow, prompt, checklist, or implementation pattern under `recipes/`.
 - 20:20 Madrid, `GitHub Profile Maintenance`: update indexes, README links, and commit/push any useful changes.
 
+## Quality Guard
+
+- Monday 10:15 Madrid, `GitHub Profile Quality Audit`: review recent automated contributions and flag or fix drift toward generic filler.
+
 ## Commit Rule
 
 No empty commits. No timestamp-only changes. No filler.

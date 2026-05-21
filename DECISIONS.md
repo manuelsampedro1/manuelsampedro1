@@ -30,3 +30,13 @@ Rationale:
 - The browser-authenticated GitHub account is `manuelsampedro1`.
 - GitHub publicly recognizes `manuelsampedro1/manuelsampedro1` as the special profile README repository.
 - Commits are authored with the account's no-reply address: `202281585+manuelsampedro1@users.noreply.github.com`.
+
+## 2026-05-21 - Weekly Quality Guard
+
+Add a weekly quality audit automation in addition to the daily contribution automations.
+
+Rationale:
+
+- Daily publishing needs a guard against generic filler.
+- The audit checks recent artifacts against the profile's topic and usefulness bar.
+- Corrective actions go into `TODO.md` instead of silently letting automation drift.
