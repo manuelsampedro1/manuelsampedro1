@@ -31,7 +31,8 @@ This profile is meant to be a public workbench, not a vanity page. The useful pa
 
 ## Latest Lab Work
 
-The daily index lives in [labs/README.md](./labs/README.md). The automation keeps it current when new notes are added.
+- [2026-05-22 - Agent Artifact Gate for Daily Repo Automation](./labs/2026/2026-05-22-agent-artifact-gate.md)
+- Full archive: [labs/README.md](./labs/README.md)
 
 ## Latest Recipe
 
