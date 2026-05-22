@@ -13,3 +13,4 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 ## Entries
 
 - [Coding Agent Repo Loop](./coding-agent-repo-loop.md)
+- [Agent Artifact Gate](./agent-artifact-gate.md)

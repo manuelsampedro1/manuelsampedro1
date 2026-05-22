@@ -35,7 +35,7 @@ The daily index lives in [labs/README.md](./labs/README.md). The automation keep
 
 ## Latest Recipe
 
-- [Coding Agent Repo Loop](./recipes/coding-agent-repo-loop.md)
+- [Agent Artifact Gate](./recipes/agent-artifact-gate.md)
 
 ## Latest Radar Note
 
