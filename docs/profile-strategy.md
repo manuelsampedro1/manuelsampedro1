@@ -13,10 +13,10 @@ Public identity: AI product builder focused on coding agents, Codex, Claude Code
 
 ## Contribution Mix
 
-- 40% lab notes from actual builds.
-- 30% reusable recipes and workflows.
-- 20% tool radar and source-backed research.
-- 10% README/index maintenance.
+- 45% lab notes from actual Codex-assisted builds, reviews, and debugging.
+- 35% reusable recipes and workflows that can be copied into Codex sessions.
+- 15% tool radar and source-backed research when it changes decisions.
+- 5% README/index maintenance.
 
 ## Quality Bar
 
@@ -28,3 +28,12 @@ A daily artifact is worth publishing when it has at least one of these:
 - source-backed research,
 - a clear failure mode and fix.
 
+## Current Bias
+
+When in doubt, prefer content that helps future Codex sessions move faster:
+
+- sharper prompts,
+- better review output,
+- less repeated debugging,
+- clearer repo instructions,
+- stronger verification discipline.

@@ -8,6 +8,29 @@ This repo is designed for daily useful GitHub contributions around AI tooling an
 - 14:10 Madrid, `GitHub AI Recipe`: add one reusable workflow, prompt, checklist, or implementation pattern under `recipes/`.
 - 20:20 Madrid, `GitHub Profile Maintenance`: refresh public indexes, update README links or TODO status when they materially change, and commit/push any useful changes.
 
+## Intensity Target
+
+Default target: produce two substantive public artifacts per day across the lab and recipe streams, then use maintenance to tighten discoverability or backlog only when something genuinely improved.
+
+Prefer:
+
+- one artifact from a real Codex workflow, bug, review, or repo automation run,
+- one supporting artifact that turns that work into a reusable prompt, checklist, or pattern,
+- small follow-up maintenance only after the artifact work is done.
+
+Do not chase volume with generic notes. More intense means more concrete, more reusable, and closer to actual Codex work.
+
+## Codex Focus
+
+Bias daily output toward artifacts that help with work done inside Codex:
+
+- repo review workflows and findings patterns,
+- debugging loops and failure-mode notes,
+- prompt patterns for scoped edits, planning, and verification,
+- agent memory, automation, and runbook patterns,
+- AGENTS.md structures, guardrails, and repo setup decisions,
+- small scripts or templates that reduce friction in repeat tasks.
+
 ## Quality Guard
 
 - Monday 10:15 Madrid, `GitHub Profile Quality Audit`: review recent automated contributions and flag or fix drift toward generic filler.
