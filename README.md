@@ -36,7 +36,7 @@ This profile is meant to be a public workbench, not a vanity page. The useful pa
 
 ## Latest Recipe
 
-- [Agent Artifact Gate](./recipes/agent-artifact-gate.md)
+- [AI Repo Review Findings](./recipes/ai-repo-review-findings.md)
 
 ## Latest Radar Note
 
