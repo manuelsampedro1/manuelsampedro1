@@ -4,6 +4,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 
 ## Entries
 
+- [2026-05-24 - Flagship Repos for AI Client Credibility](./2026/2026-05-24-flagship-repos-for-ai-clients.md)
 - [2026-05-22 - Agent Artifact Gate for Daily Repo Automation](./2026/2026-05-22-agent-artifact-gate.md)
 - [2026-05-21 - Profile and Contribution System Kickoff](./2026/2026-05-21-profile-contribution-system.md)
 - [2026-05-21 - Live GitHub Profile](./2026/2026-05-21-live-github-profile.md)

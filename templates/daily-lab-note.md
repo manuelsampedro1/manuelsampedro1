@@ -8,6 +8,11 @@ What was being explored or built?
 
 What can another builder reuse?
 
+## Source Linkage
+
+- Repo / tool / workflow:
+- Supporting prompt, script, or file:
+
 ## Notes
 
 - Observation:
@@ -21,4 +26,3 @@ What was tested or checked?
 ## Next Step
 
 One concrete follow-up.
-

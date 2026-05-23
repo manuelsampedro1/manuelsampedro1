@@ -31,9 +31,39 @@ Bias daily output toward artifacts that help with work done inside Codex:
 - AGENTS.md structures, guardrails, and repo setup decisions,
 - small scripts or templates that reduce friction in repeat tasks.
 
+## Artifact Linkage
+
+Every new public note or recipe should declare what real work it came from.
+
+Accepted anchors:
+
+- a public repo URL,
+- a concrete local script or tool path,
+- a specific lab note or decision file,
+- a real workflow prompt or verification command,
+- a shipped case or working demo.
+
+If a draft cannot point to one of those anchors, do not publish it yet.
+
+## Promotion Eligibility
+
+An artifact can be promoted to the root `README.md` or the `Selected Work` surface only if all of these are true:
+
+- it links to owned proof such as a public repo, working tool, or verified case,
+- it includes a real verification section,
+- it would still be useful if separated from the profile repo,
+- it supports the client-facing story more than a more concrete repo would.
+
 ## Quality Guard
 
 - Monday 10:15 Madrid, `GitHub Profile Quality Audit`: review recent automated contributions and flag or fix drift toward generic filler.
+
+The audit should also check:
+
+- too much meta-content versus repo-backed proof,
+- artifacts that do not link back to real work,
+- weak README promotions,
+- drift away from the client-facing narrative.
 
 ## Commit Rule
 
@@ -48,6 +78,8 @@ Current maintenance refreshes:
 - `radar/README.md`
 - root `README.md` latest links when a newer public artifact exists
 - `TODO.md` when a review checkpoint or next step genuinely changes
+
+The maintenance script should skip a run when the diff only touches those surface files.
 
 ## GitHub Setup
 

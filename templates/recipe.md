@@ -4,6 +4,11 @@
 
 Describe the situation.
 
+## Source Linkage
+
+- Repo / tool / workflow:
+- Supporting prompt, script, or note:
+
 ## Steps
 
 1. Step one.
@@ -18,4 +23,3 @@ Describe the situation.
 ## Example
 
 Add a small concrete example.
-

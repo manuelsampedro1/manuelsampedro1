@@ -50,3 +50,43 @@ Rationale:
 - The profile README should point to current public artifacts, not stale folders.
 - Daily recipe and radar additions need the same discoverability as lab notes.
 - Index refresh belongs in maintenance because it is lightweight and deterministic.
+
+## 2026-05-24 - Optimize the Profile for AI Client Credibility
+
+The profile should act first as proof of execution for AI clients, and second as an internal workbench archive.
+
+Rationale:
+
+- Clients need to understand the offer and see proof quickly.
+- The README should sell clarity, taste, and execution, not only activity.
+- Meta-workflows are useful only when they support visible shipped work.
+
+## 2026-05-24 - Flagship Repos Are the Primary Proof Layer
+
+Public proof should be anchored in 2-3 owned repos before secondary notes, recipes, or radar updates.
+
+Rationale:
+
+- Owned repos are stronger than forks or commentary for first impressions.
+- They give pinned repositories a clear job.
+- Labs and recipes become more credible when they point back to working repos.
+
+## 2026-05-24 - Use X as the Public CTA
+
+Use `@manuelsampedrop` as the primary public CTA from the profile surface.
+
+Rationale:
+
+- The profile needs a direct next step.
+- X is the lowest-friction place to continue a conversation publicly.
+- It keeps the CTA aligned with builder-facing distribution.
+
+## 2026-05-24 - Maintenance Automation Must Reject Surface-Only Diffs
+
+The maintenance commit flow should not publish changes when the diff only touches profile surface files or indexes.
+
+Rationale:
+
+- README churn alone is not strong public proof.
+- The maintenance job should follow substantive work, not simulate it.
+- This forces the public surface to be tightened only after something real improved.

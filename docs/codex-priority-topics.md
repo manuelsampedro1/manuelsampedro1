@@ -4,6 +4,7 @@ Use this list when choosing what to publish next. Pick topics that directly impr
 
 ## Highest Leverage
 
+- Follow-up notes that deepen `codex-review-packet`, `verify-by-change`, or `briefboard-local`.
 - Repo review prompts that produce sharp findings instead of summaries.
 - Debugging checklists for repeated failure patterns in local repos.
 - Verification patterns: what to run after docs-only, script, frontend, or backend changes.
@@ -24,3 +25,4 @@ Use this list when choosing what to publish next. Pick topics that directly impr
 - Generic productivity advice.
 - Radar notes without a clear takeaway for Codex users.
 - Maintenance-only diffs unless they unlock discoverability of better content.
+- New profile artifacts that cannot link back to owned repos or real work.

@@ -2,7 +2,7 @@
 
 ## Positioning
 
-Public identity: AI product builder focused on coding agents, Codex, Claude Code, local-first prototypes, and practical automation.
+Public identity: AI builder for clients who need Codex workflows, small tools, automation systems, and local-first product prototypes that can actually ship.
 
 ## Visual Direction
 
@@ -13,10 +13,10 @@ Public identity: AI product builder focused on coding agents, Codex, Claude Code
 
 ## Contribution Mix
 
-- 45% lab notes from actual Codex-assisted builds, reviews, and debugging.
-- 35% reusable recipes and workflows that can be copied into Codex sessions.
-- 15% tool radar and source-backed research when it changes decisions.
-- 5% README/index maintenance.
+- 40% flagship repos and owned product/tool proof.
+- 30% lab notes from actual Codex-assisted builds, reviews, and debugging.
+- 20% reusable recipes and workflows that can be copied into Codex sessions.
+- 10% tool radar and maintenance combined, only when they sharpen the client-facing story.
 
 ## Quality Bar
 
@@ -37,3 +37,18 @@ When in doubt, prefer content that helps future Codex sessions move faster:
 - less repeated debugging,
 - clearer repo instructions,
 - stronger verification discipline.
+
+## Proof Hierarchy
+
+Rank public proof in this order:
+
+1. Owned repos with working code.
+2. Labs and recipes linked to those repos.
+3. README framing and selected-work curation.
+4. Radar or ecosystem notes.
+
+If a lower layer starts overshadowing a higher one, rebalance the profile.
+
+## CTA
+
+Primary public CTA: `@manuelsampedrop`.

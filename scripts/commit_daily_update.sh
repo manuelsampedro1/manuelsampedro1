@@ -17,6 +17,25 @@ if [ -z "$(git status --porcelain -- .)" ]; then
   exit 0
 fi
 
+surface_only=true
+while IFS= read -r line; do
+  [ -z "$line" ] && continue
+  path="${line#?? }"
+  case "$path" in
+    README.md|TODO.md|DECISIONS.md|docs/*|labs/README.md|recipes/README.md|radar/README.md)
+      ;;
+    *)
+      surface_only=false
+      break
+      ;;
+  esac
+done < <(git status --porcelain -- .)
+
+if [ "$surface_only" = true ]; then
+  echo "Maintenance-only surface diff detected. Skipping commit until a substantive artifact changes."
+  exit 0
+fi
+
 git_name="$(git config --get user.name || true)"
 git_email="$(git config --get user.email || true)"
 

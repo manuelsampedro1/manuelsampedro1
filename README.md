@@ -1,43 +1,52 @@
 # Manuel Sampedro
 
-I build AI-native workflows: small tools, agent systems, automation loops, and product experiments around Codex, Claude Code, OpenAI, local-first apps, and evaluation.
+I build AI systems, small internal tools, and local-first product prototypes with Codex.
 
-This profile is meant to be a public workbench, not a vanity page. The useful parts are the notes, recipes, and small repeatable patterns that come from daily building.
+I help teams turn a rough automation or product idea into something scoped, inspectable, and shippable without hiding behind buzzwords or framework weight.
 
-## Current Focus
+If you want to talk through a workflow, tool, or prototype, find me on [X @manuelsampedrop](https://x.com/manuelsampedrop).
 
-- Coding agents: Codex, Claude Code, agentic development loops, review workflows, and repo automation.
-- AI product systems: local-first prototypes, practical evaluation, prompt/version discipline, and low-friction shipping.
-- iOS and web products: native SwiftUI where possible, pragmatic web stacks when they are the right tool.
-- Growth systems for builders: reusable research, content, and distribution workflows with human review where public actions matter.
+## What I Build
+
+- AI workflow systems: review loops, agent handoffs, automation runbooks, and quality gates.
+- Small useful tools: repo helpers, verification layers, brief builders, and local-first utilities.
+- Product prototypes: pragmatic web and iOS experiments that can be tested before anyone commits to a bigger build.
+
+## Selected Work
+
+| Repo | Type | Why it matters |
+| --- | --- | --- |
+| [codex-review-packet](https://github.com/manuelsampedro1/codex-review-packet) | Agent workflow | Packages diffs, repo rules, and context into a sharper review handoff for Codex or Claude Code. |
+| [verify-by-change](https://github.com/manuelsampedro1/verify-by-change) | Verification tool | Suggests honest checks from changed files so AI-generated work closes with evidence instead of boilerplate. |
+| [briefboard-local](https://github.com/manuelsampedro1/briefboard-local) | Local-first product | Turns messy kickoff notes into a structured build brief and a Codex-ready prompt with no backend. |
+
+These are small on purpose. I prefer inspectable tools that solve real workflow friction over bigger demos with less signal.
+
+## How I Work With Codex
+
+- Start from a real brief and explicit acceptance criteria, not vague prompts. See [briefboard-local](https://github.com/manuelsampedro1/briefboard-local).
+- Feed repo-aware context into review workflows so the output can be stricter and more useful. See [codex-review-packet](https://github.com/manuelsampedro1/codex-review-packet) and [AI Repo Review Findings](./recipes/ai-repo-review-findings.md).
+- Match verification to the actual change type instead of pasting the same test advice everywhere. See [verify-by-change](https://github.com/manuelsampedro1/verify-by-change) and [Verification by Change Type](./recipes/verification-by-change-type.md).
 
 ## Public Workbench
 
-- [AI lab notes](./labs/README.md): daily technical notes, experiments, and decisions.
-- [Recipes](./recipes/README.md): reusable prompts, workflows, checklists, and small implementation patterns.
-- [Tooling radar](./radar/README.md): compact research notes on AI coding tools and agent infrastructure.
-- [Automation runbook](./docs/automation-runbook.md): how the daily contribution system works.
+- [AI lab notes](./labs/README.md): build notes, decisions, and launch logs tied to real repos or workflows.
+- [Recipes](./recipes/README.md): reusable prompts, checklists, and implementation patterns that came from actual work.
+- [Tooling radar](./radar/README.md): short research only when it changes a build or tooling decision.
+- [Automation runbook](./docs/automation-runbook.md): how the profile publishing loop works and what it refuses to publish.
+
+## Latest Proof
+
+- Latest lab note: [2026-05-24 - Flagship Repos for AI Client Credibility](./labs/2026/2026-05-24-flagship-repos-for-ai-clients.md)
+- Latest recipes:
+  - [Codex Debugging Checklist](./recipes/codex-debugging-checklist.md)
+  - [AGENTS.md Patterns for Codex Repos](./recipes/agents-md-patterns-for-codex-repos.md)
+  - [Verification by Change Type](./recipes/verification-by-change-type.md)
 
 ## Principles
 
-- Ship useful artifacts, not empty commits.
-- Prefer small, inspectable systems over heavy frameworks.
-- Document the decision when it helps future work.
-- Keep public claims honest: show what exists, what was tested, and what still needs proof.
+- Ship useful proof, not activity theater.
+- Prefer own repos and working artifacts over meta commentary.
+- Keep claims honest: what exists, what was tested, and what is still limited.
+- Use the workbench as supporting evidence, not as a substitute for real projects.
 
-## Stack I Reach For
-
-`SwiftUI` · `iOS 17+` · `Codex` · `Claude Code` · `OpenAI API` · `Agents` · `Python` · `TypeScript` · `Tailwind` · `shadcn/ui` · `Playwright` · `GitHub Actions`
-
-## Latest Lab Work
-
-- [2026-05-22 - Agent Artifact Gate for Daily Repo Automation](./labs/2026/2026-05-22-agent-artifact-gate.md)
-- Full archive: [labs/README.md](./labs/README.md)
-
-## Latest Recipe
-
-- [AI Repo Review Findings](./recipes/ai-repo-review-findings.md)
-
-## Latest Radar Note
-
-- [2026-05-21 - AI Coding Profile Start](./radar/2026-05-21-ai-coding-profile-start.md)
