@@ -6,7 +6,7 @@ This repo is designed for daily useful GitHub contributions around AI tooling an
 
 - 09:05 Madrid, `GitHub AI Lab Note`: create or improve one technical note under `labs/`.
 - 14:10 Madrid, `GitHub AI Recipe`: add one reusable workflow, prompt, checklist, or implementation pattern under `recipes/`.
-- 20:20 Madrid, `GitHub Profile Maintenance`: refresh public indexes, update README links, and commit/push any useful changes.
+- 20:20 Madrid, `GitHub Profile Maintenance`: refresh public indexes, update README links or TODO status when they materially change, and commit/push any useful changes.
 
 ## Quality Guard
 
@@ -23,6 +23,8 @@ Current maintenance refreshes:
 - `labs/README.md`
 - `recipes/README.md`
 - `radar/README.md`
+- root `README.md` latest links when a newer public artifact exists
+- `TODO.md` when a review checkpoint or next step genuinely changes
 
 ## GitHub Setup
 
