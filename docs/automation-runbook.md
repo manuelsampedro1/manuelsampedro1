@@ -81,6 +81,8 @@ Current maintenance refreshes:
 
 The maintenance script should skip a run when the diff only touches those surface files.
 
+Changes under `scripts/` are eligible for a maintenance commit when they improve artifact generation, publishing safety, or verification quality.
+
 ## GitHub Setup
 
 Remote publishing is configured for `manuelsampedro1/manuelsampedro1`.

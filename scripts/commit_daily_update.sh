@@ -48,7 +48,32 @@ if [ -z "$git_name" ] || [ -z "$git_email" ] || [[ "$git_email" == *.local ]]; t
   exit 1
 fi
 
-git add README.md DECISIONS.md TODO.md docs labs recipes radar templates scripts .gitignore
+paths_to_stage=(
+  README.md
+  DECISIONS.md
+  TODO.md
+  docs
+  labs
+  recipes
+  radar
+  templates
+  scripts
+  .gitignore
+)
+
+existing_paths=()
+for path in "${paths_to_stage[@]}"; do
+  if [ -e "$path" ]; then
+    existing_paths+=("$path")
+  fi
+done
+
+if [ "${#existing_paths[@]}" -eq 0 ]; then
+  echo "No known project paths are available to stage."
+  exit 1
+fi
+
+git add "${existing_paths[@]}"
 
 if git diff --cached --quiet -- .; then
   echo "No useful changes to commit."

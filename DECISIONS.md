@@ -90,3 +90,13 @@ Rationale:
 - README churn alone is not strong public proof.
 - The maintenance job should follow substantive work, not simulate it.
 - This forces the public surface to be tightened only after something real improved.
+
+## 2026-05-24 - Repo Automation Script Fixes Count as Substantive Work
+
+Changes under `scripts/` can be published by maintenance when they improve artifact generation, publishing safety, or verification quality.
+
+Rationale:
+
+- The public workbench includes the automation logic that produces and guards its artifacts.
+- Hardening publish scripts is operational proof, not surface churn.
+- This keeps maintenance strict about README-only edits without blocking real tooling improvements.
