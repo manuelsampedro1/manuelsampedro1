@@ -37,7 +37,7 @@ These are small on purpose. I prefer inspectable tools that solve real workflow 
 
 ## Latest Proof
 
-- Latest lab note: [2026-05-24 - Flagship Repos for AI Client Credibility](./labs/2026/2026-05-24-flagship-repos-for-ai-clients.md)
+- Latest lab note: [2026-05-24 - Publish Gate Matrix for AI Repo Automation](./labs/2026/2026-05-24-publish-gate-matrix-for-ai-repo-automation.md)
 - Latest recipes:
   - [Codex Debugging Checklist](./recipes/codex-debugging-checklist.md)
   - [AGENTS.md Patterns for Codex Repos](./recipes/agents-md-patterns-for-codex-repos.md)
@@ -49,4 +49,3 @@ These are small on purpose. I prefer inspectable tools that solve real workflow 
 - Prefer own repos and working artifacts over meta commentary.
 - Keep claims honest: what exists, what was tested, and what is still limited.
 - Use the workbench as supporting evidence, not as a substitute for real projects.
-
