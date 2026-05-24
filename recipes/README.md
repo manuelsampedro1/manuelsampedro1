@@ -13,6 +13,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 ## Entries
 
 - [Verification by Change Type](./verification-by-change-type.md)
+- [Flagship Repo Proof Packet](./flagship-repo-proof-packet.md)
 - [Coding Agent Repo Loop](./coding-agent-repo-loop.md)
 - [Codex Debugging Checklist](./codex-debugging-checklist.md)
 - [AI Repo Review Findings](./ai-repo-review-findings.md)
