@@ -11,6 +11,7 @@ fi
 scripts/update_lab_index.sh
 scripts/update_recipe_index.sh
 scripts/update_radar_index.sh
+scripts/update_root_readme_latest.sh
 
 if [ -z "$(git status --porcelain -- .)" ]; then
   echo "No useful changes to commit."

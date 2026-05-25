@@ -37,10 +37,10 @@ These are small on purpose. I prefer inspectable tools that solve real workflow 
 
 ## Latest Proof
 
-- Latest lab note: [2026-05-24 - Publish Gate Matrix for AI Repo Automation](./labs/2026/2026-05-24-publish-gate-matrix-for-ai-repo-automation.md)
+- Latest lab note: [2026-05-25 - Runbook Drift in Agent Repo Automation](./labs/2026/2026-05-25-runbook-drift-in-agent-repo-automation.md)
 - Latest recipes:
-  - [Codex Debugging Checklist](./recipes/codex-debugging-checklist.md)
-  - [AGENTS.md Patterns for Codex Repos](./recipes/agents-md-patterns-for-codex-repos.md)
+  - [Executable Runbook Drift Check](./recipes/executable-runbook-drift-check.md)
+  - [Flagship Repo Proof Packet](./recipes/flagship-repo-proof-packet.md)
   - [Verification by Change Type](./recipes/verification-by-change-type.md)
 
 ## Principles
