@@ -37,7 +37,7 @@ These are small on purpose. I prefer inspectable tools that solve real workflow 
 
 ## Latest Proof
 
-- Latest lab note: [2026-05-25 - Runbook Drift in Agent Repo Automation](./labs/2026/2026-05-25-runbook-drift-in-agent-repo-automation.md)
+- Latest lab note: [2026-05-26 - Latest Proof Sync After Publish Script Repair](./labs/2026/2026-05-26-latest-proof-sync-after-publish-script-repair.md)
 - Latest recipes:
   - [Executable Runbook Drift Check](./recipes/executable-runbook-drift-check.md)
   - [Flagship Repo Proof Packet](./recipes/flagship-repo-proof-packet.md)
