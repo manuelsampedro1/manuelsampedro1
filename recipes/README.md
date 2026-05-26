@@ -13,6 +13,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 ## Entries
 
 - [Verification by Change Type](./verification-by-change-type.md)
+- [Real Diff to Recipe](./real-diff-to-recipe.md)
 - [Flagship Repo Proof Packet](./flagship-repo-proof-packet.md)
 - [Executable Runbook Drift Check](./executable-runbook-drift-check.md)
 - [Coding Agent Repo Loop](./coding-agent-repo-loop.md)
