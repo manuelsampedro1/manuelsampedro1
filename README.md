@@ -39,9 +39,9 @@ These are small on purpose. I prefer inspectable tools that solve real workflow 
 
 - Latest lab note: [2026-05-26 - Latest Proof Sync After Publish Script Repair](./labs/2026/2026-05-26-latest-proof-sync-after-publish-script-repair.md)
 - Latest recipes:
+  - [Public Surface Sync for Agent Repos](./recipes/public-surface-sync-for-agent-repos.md)
   - [Real Diff to Recipe](./recipes/real-diff-to-recipe.md)
   - [Executable Runbook Drift Check](./recipes/executable-runbook-drift-check.md)
-  - [Flagship Repo Proof Packet](./recipes/flagship-repo-proof-packet.md)
 
 ## Principles
 
