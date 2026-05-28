@@ -37,7 +37,7 @@ These are small on purpose. I prefer inspectable tools that solve real workflow 
 
 ## Latest Proof
 
-- Latest lab note: [2026-05-26 - Latest Proof Sync After Publish Script Repair](./labs/2026/2026-05-26-latest-proof-sync-after-publish-script-repair.md)
+- Latest lab note: [2026-05-28 - Curated Staging for Agent Publish Scripts](./labs/2026/2026-05-28-curated-staging-for-agent-publish-scripts.md)
 - Latest recipes:
   - [Public Surface Sync for Agent Repos](./recipes/public-surface-sync-for-agent-repos.md)
   - [Real Diff to Recipe](./recipes/real-diff-to-recipe.md)
