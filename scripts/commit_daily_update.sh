@@ -8,6 +8,18 @@ if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
   exit 1
 fi
 
+git_name="$(git config --get user.name || true)"
+git_email="$(git config --get user.email || true)"
+
+if [ -z "$git_name" ] || [ -z "$git_email" ] || [[ "$git_email" == *.local ]]; then
+  echo "Configure a Git identity with a verified GitHub email before committing:"
+  echo "  git config user.name \"Manuel Sampedro\""
+  echo "  git config user.email \"YOUR_VERIFIED_GITHUB_EMAIL\""
+  echo "Then amend the existing commit if needed:"
+  echo "  git commit --amend --reset-author"
+  exit 1
+fi
+
 scripts/update_lab_index.sh
 scripts/update_recipe_index.sh
 scripts/update_radar_index.sh
@@ -35,18 +47,6 @@ done < <(git status --porcelain -- .)
 if [ "$surface_only" = true ]; then
   echo "Maintenance-only surface diff detected. Skipping commit until a substantive artifact changes."
   exit 0
-fi
-
-git_name="$(git config --get user.name || true)"
-git_email="$(git config --get user.email || true)"
-
-if [ -z "$git_name" ] || [ -z "$git_email" ] || [[ "$git_email" == *.local ]]; then
-  echo "Configure a Git identity with a verified GitHub email before committing:"
-  echo "  git config user.name \"Manuel Sampedro\""
-  echo "  git config user.email \"YOUR_VERIFIED_GITHUB_EMAIL\""
-  echo "Then amend the existing commit if needed:"
-  echo "  git commit --amend --reset-author"
-  exit 1
 fi
 
 paths_to_stage=(
