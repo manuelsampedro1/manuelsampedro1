@@ -7,3 +7,4 @@
 - Apply `recipes/real-diff-to-recipe.md` to one flagship repo change and publish the strongest result.
 - Let the weekly quality audit run once under the new client-credibility rules, then tighten anything that still feels too meta.
 - Decide whether `scripts/commit_daily_update.sh` should warn when non-staged scratch files remain after a successful publish run.
+- Decide whether `scripts/commit_daily_update.sh` should block or warn when tracked changes already exist inside staged public paths before a publish run starts.

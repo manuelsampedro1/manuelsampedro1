@@ -37,7 +37,7 @@ These are small on purpose. I prefer inspectable tools that solve real workflow 
 
 ## Latest Proof
 
-- Latest lab note: [2026-05-29 - Fail-Fast Git Identity for Agent Publish Flows](./labs/2026/2026-05-29-fail-fast-git-identity-for-agent-publish-flows.md)
+- Latest lab note: [2026-05-30 - Whole-Directory Staging in Agent Publish Scripts](./labs/2026/2026-05-30-whole-directory-staging-in-agent-publish-scripts.md)
 - Latest recipes:
   - [Fail-Fast Git Identity for Agent Publish Flows](./recipes/fail-fast-git-identity-for-agent-publish-flows.md)
   - [Public Surface Sync for Agent Repos](./recipes/public-surface-sync-for-agent-repos.md)
