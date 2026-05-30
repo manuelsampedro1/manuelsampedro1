@@ -18,6 +18,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Flagship Repo Proof Packet](./flagship-repo-proof-packet.md)
 - [Fail-Fast Git Identity for Agent Publish Flows](./fail-fast-git-identity-for-agent-publish-flows.md)
 - [Executable Runbook Drift Check](./executable-runbook-drift-check.md)
+- [Dirty Public Path Preflight for Agent Publish Flows](./dirty-public-path-preflight.md)
 - [Coding Agent Repo Loop](./coding-agent-repo-loop.md)
 - [Codex Debugging Checklist](./codex-debugging-checklist.md)
 - [AI Repo Review Findings](./ai-repo-review-findings.md)

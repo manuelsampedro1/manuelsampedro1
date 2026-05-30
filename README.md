@@ -39,9 +39,9 @@ These are small on purpose. I prefer inspectable tools that solve real workflow 
 
 - Latest lab note: [2026-05-30 - Whole-Directory Staging in Agent Publish Scripts](./labs/2026/2026-05-30-whole-directory-staging-in-agent-publish-scripts.md)
 - Latest recipes:
+  - [Dirty Public Path Preflight for Agent Publish Flows](./recipes/dirty-public-path-preflight.md)
   - [Fail-Fast Git Identity for Agent Publish Flows](./recipes/fail-fast-git-identity-for-agent-publish-flows.md)
   - [Public Surface Sync for Agent Repos](./recipes/public-surface-sync-for-agent-repos.md)
-  - [Real Diff to Recipe](./recipes/real-diff-to-recipe.md)
 
 ## Principles
 
