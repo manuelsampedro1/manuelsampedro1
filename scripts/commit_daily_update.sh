@@ -49,18 +49,22 @@ while IFS= read -r line; do
 done < <(git status --porcelain -- "${public_paths[@]}")
 
 unexpected_paths=()
-for path in "${dirty_public_paths[@]}"; do
-  is_expected=false
-  for expected in "${expected_paths[@]}"; do
-    if [ "$path" = "$expected" ]; then
-      is_expected=true
-      break
+if [ "${#dirty_public_paths[@]}" -gt 0 ]; then
+  for path in "${dirty_public_paths[@]}"; do
+    is_expected=false
+    if [ "${#expected_paths[@]}" -gt 0 ]; then
+      for expected in "${expected_paths[@]}"; do
+        if [ "$path" = "$expected" ]; then
+          is_expected=true
+          break
+        fi
+      done
+    fi
+    if [ "$is_expected" = false ]; then
+      unexpected_paths+=("$path")
     fi
   done
-  if [ "$is_expected" = false ]; then
-    unexpected_paths+=("$path")
-  fi
-done
+fi
 
 if [ "${#unexpected_paths[@]}" -gt 0 ]; then
   echo "Publish blocked: pre-existing changes found in staged public paths:"
