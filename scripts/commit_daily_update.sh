@@ -2,6 +2,11 @@
 set -euo pipefail
 
 message="${1:-daily: update ai builder workbench}"
+if [ "$#" -gt 0 ]; then
+  shift
+fi
+
+expected_paths=("$@")
 
 if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
   echo "Not inside a git repository."
@@ -17,6 +22,57 @@ if [ -z "$git_name" ] || [ -z "$git_email" ] || [[ "$git_email" == *.local ]]; t
   echo "  git config user.email \"YOUR_VERIFIED_GITHUB_EMAIL\""
   echo "Then amend the existing commit if needed:"
   echo "  git commit --amend --reset-author"
+  exit 1
+fi
+
+public_paths=(
+  README.md
+  DECISIONS.md
+  TODO.md
+  docs
+  labs
+  recipes
+  radar
+  templates
+  scripts
+  .gitignore
+)
+
+dirty_public_paths=()
+while IFS= read -r line; do
+  [ -z "$line" ] && continue
+  path="${line#?? }"
+  if [[ "$path" == *" -> "* ]]; then
+    path="${path##* -> }"
+  fi
+  dirty_public_paths+=("$path")
+done < <(git status --porcelain -- "${public_paths[@]}")
+
+unexpected_paths=()
+for path in "${dirty_public_paths[@]}"; do
+  is_expected=false
+  for expected in "${expected_paths[@]}"; do
+    if [ "$path" = "$expected" ]; then
+      is_expected=true
+      break
+    fi
+  done
+  if [ "$is_expected" = false ]; then
+    unexpected_paths+=("$path")
+  fi
+done
+
+if [ "${#unexpected_paths[@]}" -gt 0 ]; then
+  echo "Publish blocked: pre-existing changes found in staged public paths:"
+  printf '  %s\n' "${unexpected_paths[@]}"
+  echo
+  if [ "${#expected_paths[@]}" -gt 0 ]; then
+    echo "Expected paths for this run:"
+    printf '  %s\n' "${expected_paths[@]}"
+  else
+    echo "Re-run with the exact expected paths after the commit message, for example:"
+    echo "  scripts/commit_daily_update.sh \"maintenance: tighten publish guard\" scripts/commit_daily_update.sh docs/automation-runbook.md"
+  fi
   exit 1
 fi
 
@@ -49,21 +105,8 @@ if [ "$surface_only" = true ]; then
   exit 0
 fi
 
-paths_to_stage=(
-  README.md
-  DECISIONS.md
-  TODO.md
-  docs
-  labs
-  recipes
-  radar
-  templates
-  scripts
-  .gitignore
-)
-
 existing_paths=()
-for path in "${paths_to_stage[@]}"; do
+for path in "${public_paths[@]}"; do
   if [ -e "$path" ]; then
     existing_paths+=("$path")
   fi

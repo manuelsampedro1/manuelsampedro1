@@ -100,3 +100,13 @@ Rationale:
 - The public workbench includes the automation logic that produces and guards its artifacts.
 - Hardening publish scripts is operational proof, not surface churn.
 - This keeps maintenance strict about README-only edits without blocking real tooling improvements.
+
+## 2026-05-31 - Block Unexpected Public-Path Changes Before Publish
+
+`scripts/commit_daily_update.sh` should block when staged public paths already contain changes outside the explicit file set intended for the current publish run.
+
+Rationale:
+
+- Whole-directory staging is convenient but can silently bundle unrelated draft work.
+- Scheduled or agent-driven publish flows need an explicit contract for what this run is allowed to ship.
+- Blocking before index refresh and `git add` is safer than relying on commit-message discipline or manual review after staging.

@@ -83,6 +83,21 @@ The maintenance script should skip a run when the diff only touches those surfac
 
 Changes under `scripts/` are eligible for a maintenance commit when they improve artifact generation, publishing safety, or verification quality.
 
+Before refreshing indexes or staging files, `scripts/commit_daily_update.sh` now checks the staged public paths for pre-existing changes.
+
+Pass the exact intended changed paths after the commit message so the run can distinguish the real artifact from unrelated draft work:
+
+```sh
+scripts/commit_daily_update.sh \
+  "maintenance: tighten publish guard" \
+  scripts/commit_daily_update.sh \
+  docs/automation-runbook.md \
+  DECISIONS.md \
+  TODO.md
+```
+
+If the script reports unexpected public-path changes, narrow the run or move the unrelated draft work before retrying.
+
 ## GitHub Setup
 
 Remote publishing is configured for `manuelsampedro1/manuelsampedro1`.
