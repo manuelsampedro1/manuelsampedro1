@@ -130,3 +130,13 @@ Rationale:
 - Serious AI teams need evidence that agent workflows can be trusted in real repos.
 - The strongest current proof repos already cluster around readiness, review context, verification, and audit trails.
 - Subtle proof reads better than direct job-pitch language for a high-caliber technical audience.
+
+## 2026-06-02 - Build Task Contracts as Next Agent Reliability Proof
+
+Use `agent-task-contract` as the next public proof project once a GitHub remote can be created.
+
+Rationale:
+
+- The current proof stack covers repo readiness, review handoffs, verification, and run auditability.
+- A task-contract checker covers the missing pre-run question: is the requested task specific enough for an agent to execute safely?
+- The project is dependency-free, local-first, testable, and aligned with the profile's reliability narrative.

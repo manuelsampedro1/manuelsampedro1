@@ -51,6 +51,8 @@ Rank public proof in this order:
 
 If a lower layer starts overshadowing a higher one, rebalance the profile.
 
+Next flagship gap: task contracts before an agent starts. The local `agent-task-contract` project fills this by checking objective, acceptance criteria, constraints, verification, risks, and out-of-scope items before a coding-agent run begins.
+
 ## CTA
 
 Primary public CTA: `@manuelsampedrop`.
