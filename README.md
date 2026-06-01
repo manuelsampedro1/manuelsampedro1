@@ -16,6 +16,8 @@ If you want to talk through a workflow, tool, or prototype, find me on [X @manue
 
 | Repo | Type | Why it matters |
 | --- | --- | --- |
+| [agent-run-ledger](https://github.com/manuelsampedro1/agent-run-ledger) | Agent audit tool | Records AI agent runs as JSONL and renders static review reports with decisions, files, commands, and blockers. |
+| [repo-flightcheck](https://github.com/manuelsampedro1/repo-flightcheck) | Repo readiness tool | Audits whether a repository is ready for Codex, Claude Code, and human reviewers before asking an agent to work in it. |
 | [codex-review-packet](https://github.com/manuelsampedro1/codex-review-packet) | Agent workflow | Packages diffs, repo rules, and context into a sharper review handoff for Codex or Claude Code. |
 | [verify-by-change](https://github.com/manuelsampedro1/verify-by-change) | Verification tool | Suggests honest checks from changed files so AI-generated work closes with evidence instead of boilerplate. |
 | [briefboard-local](https://github.com/manuelsampedro1/briefboard-local) | Local-first product | Turns messy kickoff notes into a structured build brief and a Codex-ready prompt with no backend. |
@@ -25,8 +27,10 @@ These are small on purpose. I prefer inspectable tools that solve real workflow 
 ## How I Work With Codex
 
 - Start from a real brief and explicit acceptance criteria, not vague prompts. See [briefboard-local](https://github.com/manuelsampedro1/briefboard-local).
+- Check repo readiness before handing work to an agent. See [repo-flightcheck](https://github.com/manuelsampedro1/repo-flightcheck).
 - Feed repo-aware context into review workflows so the output can be stricter and more useful. See [codex-review-packet](https://github.com/manuelsampedro1/codex-review-packet) and [AI Repo Review Findings](./recipes/ai-repo-review-findings.md).
 - Match verification to the actual change type instead of pasting the same test advice everywhere. See [verify-by-change](https://github.com/manuelsampedro1/verify-by-change) and [Verification by Change Type](./recipes/verification-by-change-type.md).
+- Keep an audit trail for non-trivial agent runs. See [agent-run-ledger](https://github.com/manuelsampedro1/agent-run-ledger).
 
 ## Public Workbench
 

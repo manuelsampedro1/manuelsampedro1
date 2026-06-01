@@ -110,3 +110,13 @@ Rationale:
 - Whole-directory staging is convenient but can silently bundle unrelated draft work.
 - Scheduled or agent-driven publish flows need an explicit contract for what this run is allowed to ship.
 - Blocking before index refresh and `git add` is safer than relying on commit-message discipline or manual review after staging.
+
+## 2026-06-01 - Add Agent Audit Repos as Primary Proof
+
+Use `repo-flightcheck` and `agent-run-ledger` as first-class proof repos on the profile.
+
+Rationale:
+
+- The strongest application signal is working public code, not profile copy alone.
+- Both repos address real AI builder friction: repo readiness before agent work and auditability after agent work.
+- They are small enough to inspect quickly but complete enough to show README quality, tests, CI, and local-first implementation judgment.
