@@ -55,6 +55,7 @@ Next flagship gaps:
 
 - Task contracts before an agent starts. The local `agent-task-contract` project fills this by checking objective, acceptance criteria, constraints, verification, risks, and out-of-scope items before a coding-agent run begins.
 - Secret scanning before an agent diff is committed or published. The local `agent-secret-sentinel` project fills this by scanning added diff lines for likely tokens, keys, and unsafe examples.
+- CI failure packets after verification fails. The local `agent-ci-failure-packet` project fills this by turning noisy logs into compact retry context for the next agent run.
 - Reusable eval cases after an agent finishes. The local `diff-to-eval` project fills this by turning real diffs into JSON cases with changed files, risk tags, suggested checks, and expected outcomes.
 
 ## CTA

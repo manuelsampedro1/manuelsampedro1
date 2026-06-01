@@ -170,3 +170,13 @@ Rationale:
 - Agent-generated diffs can accidentally include copied tokens, webhook secrets, private keys, or realistic sample credentials.
 - A local diff scanner fits the profile's safety narrative because it blocks obvious leaks before commit or publication.
 - The project is intentionally narrow: dependency-free, diff-only, and explicit that it is a preflight rather than a full security audit.
+
+## 2026-06-02 - Build CI Failure Packets for Agent Reruns
+
+Use `agent-ci-failure-packet` as another next public proof project once a GitHub remote can be created.
+
+Rationale:
+
+- CI failure logs are often too noisy for a high-quality agent retry.
+- A compact packet with failing commands, error signals, file references, and suggested checks improves the next run's context quality.
+- This completes another part of the agent workflow loop: failure triage after verification fails.

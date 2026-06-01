@@ -23,6 +23,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Diff to Eval Case](./diff-to-eval-case.md)
 - [Coding Agent Repo Loop](./coding-agent-repo-loop.md)
 - [Codex Debugging Checklist](./codex-debugging-checklist.md)
+- [CI Failure Packet for Agent Reruns](./ci-failure-packet-for-agent-reruns.md)
 - [AI Repo Review Findings](./ai-repo-review-findings.md)
 - [AGENTS.md Patterns for Codex Repos](./agents-md-patterns-for-codex-repos.md)
 - [Agent Diff Secret Sentinel](./agent-diff-secret-sentinel.md)
