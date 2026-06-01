@@ -67,7 +67,7 @@ if [ "${#dirty_public_paths[@]}" -gt 0 ]; then
 fi
 
 if [ "${#unexpected_paths[@]}" -gt 0 ]; then
-  echo "Publish blocked: pre-existing changes found in staged public paths:"
+  echo "Publish blocked: unexpected changes found in managed public paths before publish:"
   printf '  %s\n' "${unexpected_paths[@]}"
   echo
   if [ "${#expected_paths[@]}" -gt 0 ]; then

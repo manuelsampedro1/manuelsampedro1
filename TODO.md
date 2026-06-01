@@ -7,4 +7,4 @@
 - Apply `recipes/real-diff-to-recipe.md` to one flagship repo change and publish the strongest result.
 - Let the weekly quality audit run once under the new client-credibility rules, then tighten anything that still feels too meta.
 - Decide whether `scripts/commit_daily_update.sh` should warn when non-staged scratch files remain after a successful publish run.
-- Update the lab and recipe publish flows to pass exact expected paths into `scripts/commit_daily_update.sh` now that dirty public-path preflight blocks unspecified changes.
+- Audit any external lab or recipe automation wrappers to make sure they pass exact artifact paths into `scripts/commit_daily_update.sh`.
