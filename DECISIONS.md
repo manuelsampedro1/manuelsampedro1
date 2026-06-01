@@ -190,3 +190,13 @@ Rationale:
 - Serious agent workflows need a rollback answer, especially for CI, deploy, database, config, and security changes.
 - A diff-derived rollback packet makes operational risk reviewable before merge.
 - The project extends the reliability stack from "did it pass?" to "can we undo it safely?"
+
+## 2026-06-02 - Build Runbook Drift Checks for Agent Repos
+
+Use `runbook-drift-check` as another next public proof project once a GitHub remote can be created.
+
+Rationale:
+
+- Agent-ready repos rely on README, AGENTS.md, and runbook instructions staying true to executable reality.
+- Local links, path references, and script commands often drift after automation changes.
+- A dependency-free checker that flags missing paths and broken script references reinforces the profile's evidence-led reliability story.

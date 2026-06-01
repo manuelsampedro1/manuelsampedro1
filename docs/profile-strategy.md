@@ -57,6 +57,7 @@ Next flagship gaps:
 - Secret scanning before an agent diff is committed or published. The local `agent-secret-sentinel` project fills this by scanning added diff lines for likely tokens, keys, and unsafe examples.
 - CI failure packets after verification fails. The local `agent-ci-failure-packet` project fills this by turning noisy logs into compact retry context for the next agent run.
 - Rollback planning before risky agent diffs ship. The local `agent-rollback-plan` project fills this by turning changed files and risk tags into rollback steps and post-rollback checks.
+- Runbook drift checks while agent repos evolve. The local `runbook-drift-check` project fills this by checking operational Markdown against real files, links, and scripts.
 - Reusable eval cases after an agent finishes. The local `diff-to-eval` project fills this by turning real diffs into JSON cases with changed files, risk tags, suggested checks, and expected outcomes.
 
 ## CTA

@@ -13,6 +13,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 ## Entries
 
 - [Verification by Change Type](./verification-by-change-type.md)
+- [Runbook Drift Check](./runbook-drift-check.md)
 - [Rollback Plan for Agent Diffs](./rollback-plan-for-agent-diffs.md)
 - [Real Diff to Recipe](./real-diff-to-recipe.md)
 - [Public Surface Sync for Agent Repos](./public-surface-sync-for-agent-repos.md)
