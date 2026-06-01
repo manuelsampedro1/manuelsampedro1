@@ -270,3 +270,13 @@ Rationale:
 - A polished AI-builder profile needs a repeatable proof check, not only manual taste edits.
 - The audit verifies required sections, selected-work shape, latest proof, relative links, optional HTTP status, and unsupported claim language.
 - This keeps the profile honest while new local projects wait for GitHub repo creation.
+
+## 2026-06-02 - Build Eval Runners for Agent Proof Artifacts
+
+Use `agent-eval-runner` as another next public proof project once a GitHub remote can be created.
+
+Rationale:
+
+- `diff-to-eval` creates cases from real diffs, but the workflow needs a runner that checks later proof artifacts against those cases.
+- A transparent local scorer is better than model-only judgment for regression coverage of files, checks, risks, and expected outcomes.
+- This completes the profile's eval-loop story: real diff, saved case, scored artifact, and auditable result.
