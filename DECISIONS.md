@@ -180,3 +180,13 @@ Rationale:
 - CI failure logs are often too noisy for a high-quality agent retry.
 - A compact packet with failing commands, error signals, file references, and suggested checks improves the next run's context quality.
 - This completes another part of the agent workflow loop: failure triage after verification fails.
+
+## 2026-06-02 - Build Rollback Plans for Agent Diffs
+
+Use `agent-rollback-plan` as another next public proof project once a GitHub remote can be created.
+
+Rationale:
+
+- Serious agent workflows need a rollback answer, especially for CI, deploy, database, config, and security changes.
+- A diff-derived rollback packet makes operational risk reviewable before merge.
+- The project extends the reliability stack from "did it pass?" to "can we undo it safely?"
