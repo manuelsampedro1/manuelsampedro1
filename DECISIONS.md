@@ -140,3 +140,13 @@ Rationale:
 - The current proof stack covers repo readiness, review handoffs, verification, and run auditability.
 - A task-contract checker covers the missing pre-run question: is the requested task specific enough for an agent to execute safely?
 - The project is dependency-free, local-first, testable, and aligned with the profile's reliability narrative.
+
+## 2026-06-02 - Surface Agent Safety and Permission Work
+
+Expose `deploy-gate`, `mcp-guard`, `pp-cli`, and `python-sdk` as a distinct agent safety layer on the profile.
+
+Rationale:
+
+- The profile should show not only agent productivity, but also judgment around tool permissions, deploy risk, and audit receipts.
+- These repos strengthen the OpenAI-relevant narrative because serious agent systems need controls before actions execute.
+- Keeping them in a separate section avoids diluting the primary selected-work table while still making the safety work visible.
