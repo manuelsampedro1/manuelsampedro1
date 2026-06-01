@@ -55,9 +55,9 @@ These are small on purpose. I prefer tools a reviewer can clone, inspect, run, a
 
 - Latest lab note: [2026-06-01 - Expected Paths Contract for Agent Publish Runs](./labs/2026/2026-06-01-expected-paths-contract-for-agent-publish-runs.md)
 - Latest recipes:
+  - [Closeout Evidence Check for Agents](./recipes/closeout-evidence-check-for-agents.md)
   - [Scope Guard for Agent Diffs](./recipes/scope-guard-for-agent-diffs.md)
   - [Runbook Drift Check](./recipes/runbook-drift-check.md)
-  - [Rollback Plan for Agent Diffs](./recipes/rollback-plan-for-agent-diffs.md)
 
 ## Principles
 

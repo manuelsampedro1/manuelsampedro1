@@ -210,3 +210,13 @@ Rationale:
 - Agent runs should be constrained by explicit expected paths, not only by tests.
 - Scope drift is a common failure mode when agents opportunistically edit docs, config, or helper files.
 - A small diff-path guard makes task contracts enforceable in CI and publish scripts.
+
+## 2026-06-02 - Build Closeout Evidence Checks for Agents
+
+Use `agent-closeout-check` as another next public proof project once a GitHub remote can be created.
+
+Rationale:
+
+- Agent closeouts often sound confident without enough review evidence.
+- A small linter can enforce summary, changed files, exact verification, and risk notes before a handoff is accepted.
+- This strengthens the profile's message that AI work should close with evidence, not vibes.
