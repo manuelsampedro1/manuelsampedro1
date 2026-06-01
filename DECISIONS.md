@@ -250,3 +250,13 @@ Rationale:
 - Useful agent work should leave a compact review artifact, not scattered claims across chat, logs, and CI.
 - A proof packet connects changed files, checks, evidence files, risks, decisions, open questions, and a verdict.
 - Keeping it dependency-free makes it easy to run locally, in CI, or before appending to an agent run ledger.
+
+## 2026-06-02 - Build Publish Queues for Local Agent Repos
+
+Use `agent-publish-queue` as another next public proof project once a GitHub remote can be created.
+
+Rationale:
+
+- A strong profile can still drift if local proof repos, remotes, TODOs, and public README claims are not kept in sync.
+- The current blocker is GitHub repo creation for many committed local tools, so a queue makes that blocker explicit and auditable.
+- A dependency-free CLI can scan local Git state and optional public HTTP status without storing credentials or inventing access.

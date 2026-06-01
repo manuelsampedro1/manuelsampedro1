@@ -55,9 +55,9 @@ These are small on purpose. I prefer tools a reviewer can clone, inspect, run, a
 
 - Latest lab note: [2026-06-01 - Expected Paths Contract for Agent Publish Runs](./labs/2026/2026-06-01-expected-paths-contract-for-agent-publish-runs.md)
 - Latest recipes:
+  - [Publish Queue for Local Agent Repos](./recipes/publish-queue-for-local-agent-repos.md)
   - [Agent Proof Packet for Review](./recipes/agent-proof-packet-for-review.md)
   - [Merge Readiness Gate for Agent Diffs](./recipes/merge-readiness-gate-for-agent-diffs.md)
-  - [Change Risk Matrix for Agent Diffs](./recipes/change-risk-matrix-for-agent-diffs.md)
 
 ## Principles
 
