@@ -160,3 +160,13 @@ Rationale:
 - The profile should show a full improvement loop: task contract, repo readiness, execution, verification, audit, and reusable eval cases.
 - Real diffs are stronger eval seeds than generic benchmark prompts.
 - A dependency-free CLI that turns diffs into JSON eval cases is small, reviewable, and directly useful for agent teams.
+
+## 2026-06-02 - Build Secret Sentinel as Agent Diff Safety Proof
+
+Use `agent-secret-sentinel` as another next public proof project once a GitHub remote can be created.
+
+Rationale:
+
+- Agent-generated diffs can accidentally include copied tokens, webhook secrets, private keys, or realistic sample credentials.
+- A local diff scanner fits the profile's safety narrative because it blocks obvious leaks before commit or publication.
+- The project is intentionally narrow: dependency-free, diff-only, and explicit that it is a preflight rather than a full security audit.

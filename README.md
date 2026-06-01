@@ -55,9 +55,9 @@ These are small on purpose. I prefer tools a reviewer can clone, inspect, run, a
 
 - Latest lab note: [2026-06-01 - Expected Paths Contract for Agent Publish Runs](./labs/2026/2026-06-01-expected-paths-contract-for-agent-publish-runs.md)
 - Latest recipes:
+  - [Agent Diff Secret Sentinel](./recipes/agent-diff-secret-sentinel.md)
   - [Diff to Eval Case](./recipes/diff-to-eval-case.md)
   - [Expected Paths Contract for Agent Publish Flows](./recipes/expected-paths-contract-for-agent-publish-flows.md)
-  - [Dirty Public Path Preflight for Agent Publish Flows](./recipes/dirty-public-path-preflight.md)
 
 ## Principles
 
