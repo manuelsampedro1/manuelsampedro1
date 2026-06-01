@@ -14,6 +14,7 @@
 - Publish local repo `/Users/manuelsampedro/Documents/Codex/2026-05-21/agent-closeout-check` after creating empty GitHub repo `manuelsampedro1/agent-closeout-check`; then add it to the profile if CI passes.
 - Publish local repo `/Users/manuelsampedro/Documents/Codex/2026-05-21/agent-change-risk` after creating empty GitHub repo `manuelsampedro1/agent-change-risk`; then add it to the profile if CI passes.
 - Publish local repo `/Users/manuelsampedro/Documents/Codex/2026-05-21/agent-merge-readiness` after creating empty GitHub repo `manuelsampedro1/agent-merge-readiness`; then add it to the profile if CI passes.
+- Publish local repo `/Users/manuelsampedro/Documents/Codex/2026-05-21/agent-proof-packet` after creating empty GitHub repo `manuelsampedro1/agent-proof-packet`; then add it to the profile if CI passes.
 - Publish one end-to-end case note that shows a Codex run from brief to implementation, verification, and audit trail.
 - Publish one follow-up lab note or recipe that comes directly from each flagship repo, not from profile maintenance itself.
 - Apply `recipes/real-diff-to-recipe.md` to one flagship repo change and publish the strongest result.

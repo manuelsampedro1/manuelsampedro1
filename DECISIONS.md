@@ -240,3 +240,13 @@ Rationale:
 - A reviewer needs a merge decision, not only a list of suggested gates.
 - Agent closeouts should be checked against explicit evidence: passing checks, changed files, rollback coverage, risks, and blockers.
 - A dependency-free CLI that returns `ready`, `needs-review`, or `blocked` makes agent handoffs stricter without requiring a hosted service.
+
+## 2026-06-02 - Build Proof Packets for Agent Review
+
+Use `agent-proof-packet` as another next public proof project once a GitHub remote can be created.
+
+Rationale:
+
+- Useful agent work should leave a compact review artifact, not scattered claims across chat, logs, and CI.
+- A proof packet connects changed files, checks, evidence files, risks, decisions, open questions, and a verdict.
+- Keeping it dependency-free makes it easy to run locally, in CI, or before appending to an agent run ledger.

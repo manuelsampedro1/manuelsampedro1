@@ -32,5 +32,6 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Change Risk Matrix for Agent Diffs](./change-risk-matrix-for-agent-diffs.md)
 - [AI Repo Review Findings](./ai-repo-review-findings.md)
 - [AGENTS.md Patterns for Codex Repos](./agents-md-patterns-for-codex-repos.md)
+- [Agent Proof Packet for Review](./agent-proof-packet-for-review.md)
 - [Agent Diff Secret Sentinel](./agent-diff-secret-sentinel.md)
 - [Agent Artifact Gate](./agent-artifact-gate.md)
