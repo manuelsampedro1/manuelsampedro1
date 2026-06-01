@@ -200,3 +200,13 @@ Rationale:
 - Agent-ready repos rely on README, AGENTS.md, and runbook instructions staying true to executable reality.
 - Local links, path references, and script commands often drift after automation changes.
 - A dependency-free checker that flags missing paths and broken script references reinforces the profile's evidence-led reliability story.
+
+## 2026-06-02 - Build Scope Guards for Agent Diffs
+
+Use `agent-scope-guard` as another next public proof project once a GitHub remote can be created.
+
+Rationale:
+
+- Agent runs should be constrained by explicit expected paths, not only by tests.
+- Scope drift is a common failure mode when agents opportunistically edit docs, config, or helper files.
+- A small diff-path guard makes task contracts enforceable in CI and publish scripts.

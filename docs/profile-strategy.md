@@ -54,6 +54,7 @@ If a lower layer starts overshadowing a higher one, rebalance the profile.
 Next flagship gaps:
 
 - Task contracts before an agent starts. The local `agent-task-contract` project fills this by checking objective, acceptance criteria, constraints, verification, risks, and out-of-scope items before a coding-agent run begins.
+- Scope guards while an agent edits. The local `agent-scope-guard` project fills this by failing diffs that touch files outside declared paths or globs.
 - Secret scanning before an agent diff is committed or published. The local `agent-secret-sentinel` project fills this by scanning added diff lines for likely tokens, keys, and unsafe examples.
 - CI failure packets after verification fails. The local `agent-ci-failure-packet` project fills this by turning noisy logs into compact retry context for the next agent run.
 - Rollback planning before risky agent diffs ship. The local `agent-rollback-plan` project fills this by turning changed files and risk tags into rollback steps and post-rollback checks.
