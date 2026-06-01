@@ -39,9 +39,9 @@ These are small on purpose. I prefer inspectable tools that solve real workflow 
 
 - Latest lab note: [2026-06-01 - Expected Paths Contract for Agent Publish Runs](./labs/2026/2026-06-01-expected-paths-contract-for-agent-publish-runs.md)
 - Latest recipes:
+  - [Expected Paths Contract for Agent Publish Flows](./recipes/expected-paths-contract-for-agent-publish-flows.md)
   - [Dirty Public Path Preflight for Agent Publish Flows](./recipes/dirty-public-path-preflight.md)
   - [Fail-Fast Git Identity for Agent Publish Flows](./recipes/fail-fast-git-identity-for-agent-publish-flows.md)
-  - [Public Surface Sync for Agent Repos](./recipes/public-surface-sync-for-agent-repos.md)
 
 ## Principles
 
