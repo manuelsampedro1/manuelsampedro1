@@ -66,6 +66,7 @@ Next flagship gaps:
 - Publish queues before profile promotion. The local `agent-publish-queue` project fills this by scanning local repos, origin remotes, public GitHub URLs, dirty state, and setup blockers before anything is claimed publicly.
 - Profile proof audits before external review. The local `profile-proof-audit` project fills this by checking required sections, Selected Work rows, Latest Proof, relative links, external HTTP status, and unsupported claim language.
 - Eval runners after cases are saved. The local `agent-eval-runner` project fills this by scoring proof packets or closeouts against `diff-to-eval` cases for files, checks, risks, and expected outcomes.
+- Decision guards before merge. The local `agent-decision-guard` project fills this by blocking CI, automation, config, security, product-scope, or agent-instruction diffs that skip `DECISIONS.md` and `TODO.md` coverage.
 - Reusable eval cases after an agent finishes. The local `diff-to-eval` project fills this by turning real diffs into JSON cases with changed files, risk tags, suggested checks, and expected outcomes.
 
 ## CTA

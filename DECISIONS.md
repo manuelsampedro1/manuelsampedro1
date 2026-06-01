@@ -280,3 +280,13 @@ Rationale:
 - `diff-to-eval` creates cases from real diffs, but the workflow needs a runner that checks later proof artifacts against those cases.
 - A transparent local scorer is better than model-only judgment for regression coverage of files, checks, risks, and expected outcomes.
 - This completes the profile's eval-loop story: real diff, saved case, scored artifact, and auditable result.
+
+## 2026-06-02 - Build Decision Guards for Agent Diffs
+
+Use `agent-decision-guard` as another next public proof project once a GitHub remote can be created.
+
+Rationale:
+
+- Agent-generated changes can alter CI, automation, config, security, product scope, or future agent behavior without leaving a durable rationale.
+- A small diff guard can enforce `DECISIONS.md` and `TODO.md` updates before reviewers accept decision-worthy changes.
+- This strengthens the profile's reliability story by covering intent preservation, not only tests and closeout evidence.
