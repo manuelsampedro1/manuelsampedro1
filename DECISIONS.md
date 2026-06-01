@@ -230,3 +230,13 @@ Rationale:
 - The reliability stack needs a routing layer that decides which gates apply before a reviewer runs everything by default.
 - Changed paths are enough to identify many high-value risk categories: CI, database, release, security, configuration, documentation, and tests.
 - A dependency-free CLI that produces a risk packet connects the existing local tools into a coherent pre-merge workflow.
+
+## 2026-06-02 - Build Merge Readiness Gate for Agent Diffs
+
+Use `agent-merge-readiness` as another next public proof project once a GitHub remote can be created.
+
+Rationale:
+
+- A reviewer needs a merge decision, not only a list of suggested gates.
+- Agent closeouts should be checked against explicit evidence: passing checks, changed files, rollback coverage, risks, and blockers.
+- A dependency-free CLI that returns `ready`, `needs-review`, or `blocked` makes agent handoffs stricter without requiring a hosted service.

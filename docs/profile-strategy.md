@@ -61,6 +61,7 @@ Next flagship gaps:
 - Runbook drift checks while agent repos evolve. The local `runbook-drift-check` project fills this by checking operational Markdown against real files, links, and scripts.
 - Closeout evidence checks before handoff. The local `agent-closeout-check` project fills this by linting final answers for summary, files, exact verification, risks, and vague claims.
 - Change risk routing before review. The local `agent-change-risk` project fills this by classifying changed paths into risk tags and selecting the right gates instead of running a noisy one-size-fits-all checklist.
+- Merge readiness before acceptance. The local `agent-merge-readiness` project fills this by turning diff evidence, check results, and closeout quality into a strict `ready`, `needs-review`, or `blocked` verdict.
 - Reusable eval cases after an agent finishes. The local `diff-to-eval` project fills this by turning real diffs into JSON cases with changed files, risk tags, suggested checks, and expected outcomes.
 
 ## CTA
