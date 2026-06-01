@@ -28,6 +28,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Codex Debugging Checklist](./codex-debugging-checklist.md)
 - [Closeout Evidence Check for Agents](./closeout-evidence-check-for-agents.md)
 - [CI Failure Packet for Agent Reruns](./ci-failure-packet-for-agent-reruns.md)
+- [Change Risk Matrix for Agent Diffs](./change-risk-matrix-for-agent-diffs.md)
 - [AI Repo Review Findings](./ai-repo-review-findings.md)
 - [AGENTS.md Patterns for Codex Repos](./agents-md-patterns-for-codex-repos.md)
 - [Agent Diff Secret Sentinel](./agent-diff-secret-sentinel.md)

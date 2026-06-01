@@ -220,3 +220,13 @@ Rationale:
 - Agent closeouts often sound confident without enough review evidence.
 - A small linter can enforce summary, changed files, exact verification, and risk notes before a handoff is accepted.
 - This strengthens the profile's message that AI work should close with evidence, not vibes.
+
+## 2026-06-02 - Build Change Risk Matrix for Agent Diffs
+
+Use `agent-change-risk` as another next public proof project once a GitHub remote can be created.
+
+Rationale:
+
+- The reliability stack needs a routing layer that decides which gates apply before a reviewer runs everything by default.
+- Changed paths are enough to identify many high-value risk categories: CI, database, release, security, configuration, documentation, and tests.
+- A dependency-free CLI that produces a risk packet connects the existing local tools into a coherent pre-merge workflow.
