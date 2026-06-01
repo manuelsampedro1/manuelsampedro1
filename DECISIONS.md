@@ -150,3 +150,13 @@ Rationale:
 - The profile should show not only agent productivity, but also judgment around tool permissions, deploy risk, and audit receipts.
 - These repos strengthen the OpenAI-relevant narrative because serious agent systems need controls before actions execute.
 - Keeping them in a separate section avoids diluting the primary selected-work table while still making the safety work visible.
+
+## 2026-06-02 - Build Diff-to-Eval as Agent Learning Loop Proof
+
+Use `diff-to-eval` as another next public proof project once a GitHub remote can be created.
+
+Rationale:
+
+- The profile should show a full improvement loop: task contract, repo readiness, execution, verification, audit, and reusable eval cases.
+- Real diffs are stronger eval seeds than generic benchmark prompts.
+- A dependency-free CLI that turns diffs into JSON eval cases is small, reviewable, and directly useful for agent teams.
