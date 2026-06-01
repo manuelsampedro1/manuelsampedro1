@@ -260,3 +260,13 @@ Rationale:
 - A strong profile can still drift if local proof repos, remotes, TODOs, and public README claims are not kept in sync.
 - The current blocker is GitHub repo creation for many committed local tools, so a queue makes that blocker explicit and auditable.
 - A dependency-free CLI can scan local Git state and optional public HTTP status without storing credentials or inventing access.
+
+## 2026-06-02 - Build Profile Proof Audits
+
+Use `profile-proof-audit` as another next public proof project once a GitHub remote can be created.
+
+Rationale:
+
+- A polished AI-builder profile needs a repeatable proof check, not only manual taste edits.
+- The audit verifies required sections, selected-work shape, latest proof, relative links, optional HTTP status, and unsupported claim language.
+- This keeps the profile honest while new local projects wait for GitHub repo creation.

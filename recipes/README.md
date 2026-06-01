@@ -19,6 +19,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Real Diff to Recipe](./real-diff-to-recipe.md)
 - [Publish Queue for Local Agent Repos](./publish-queue-for-local-agent-repos.md)
 - [Public Surface Sync for Agent Repos](./public-surface-sync-for-agent-repos.md)
+- [Profile Proof Audit](./profile-proof-audit.md)
 - [Merge Readiness Gate for Agent Diffs](./merge-readiness-gate-for-agent-diffs.md)
 - [Flagship Repo Proof Packet](./flagship-repo-proof-packet.md)
 - [Fail-Fast Git Identity for Agent Publish Flows](./fail-fast-git-identity-for-agent-publish-flows.md)
