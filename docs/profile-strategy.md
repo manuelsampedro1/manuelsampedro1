@@ -2,11 +2,13 @@
 
 ## Positioning
 
-Public identity: AI builder for clients who need Codex workflows, small tools, automation systems, and local-first product prototypes that can actually ship.
+Public identity: AI builder for teams that need coding-agent workflows, small tools, automation systems, and local-first product prototypes that can actually ship.
+
+Lead with agent reliability: readiness checks, context packaging, verification gates, audit trails, and reviewable outputs. This is the strongest signal for serious AI teams because it shows judgment around the hard parts of using coding agents in real repos.
 
 ## Visual Direction
 
-- Tone: clear, technical, direct.
+- Tone: clear, technical, direct, and evidence-led.
 - Palette if custom assets are added later: neutral base, electric blue accent, restrained green success state.
 - Typography: GitHub markdown first; avoid image-heavy gimmicks unless there is a real project screenshot.
 - Iconography: GitHub-native badges only when they add signal.
@@ -52,3 +54,5 @@ If a lower layer starts overshadowing a higher one, rebalance the profile.
 ## CTA
 
 Primary public CTA: `@manuelsampedrop`.
+
+Avoid direct job-pitch language on the profile surface. For high-caliber AI readers, the better signal is public proof that the work is scoped, runnable, verifiable, and reviewable.

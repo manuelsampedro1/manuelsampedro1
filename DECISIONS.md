@@ -120,3 +120,13 @@ Rationale:
 - The strongest application signal is working public code, not profile copy alone.
 - Both repos address real AI builder friction: repo readiness before agent work and auditability after agent work.
 - They are small enough to inspect quickly but complete enough to show README quality, tests, CI, and local-first implementation judgment.
+
+## 2026-06-02 - Lead With Agent Reliability Proof
+
+Frame the profile around coding-agent reliability, reviewability, verification, and auditability before broader "AI builder" language.
+
+Rationale:
+
+- Serious AI teams need evidence that agent workflows can be trusted in real repos.
+- The strongest current proof repos already cluster around readiness, review context, verification, and audit trails.
+- Subtle proof reads better than direct job-pitch language for a high-caliber technical audience.

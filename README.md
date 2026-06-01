@@ -1,36 +1,37 @@
 # Manuel Sampedro
 
-I build AI systems, small internal tools, and local-first product prototypes with Codex.
+I build agentic engineering tools: repo readiness checks, review handoffs, verification gates, run ledgers, and local-first product prototypes.
 
-I help teams turn a rough automation or product idea into something scoped, inspectable, and shippable without hiding behind buzzwords or framework weight.
+My focus is the practical layer around coding agents: the prompts, scripts, workflows, and small products that make AI-generated work scoped, inspectable, and easier to trust.
 
-If you want to talk through a workflow, tool, or prototype, find me on [X @manuelsampedrop](https://x.com/manuelsampedrop).
+If you are building with Codex or evaluating how AI changes software work, find me on [X @manuelsampedrop](https://x.com/manuelsampedrop).
 
-## What I Build
+## Current Focus
 
-- AI workflow systems: review loops, agent handoffs, automation runbooks, and quality gates.
-- Small useful tools: repo helpers, verification layers, brief builders, and local-first utilities.
-- Product prototypes: pragmatic web and iOS experiments that can be tested before anyone commits to a bigger build.
+- Agent reliability: repo setup checks, context contracts, review packets, and repeatable handoffs.
+- Verification discipline: change-aware test plans, honest closeout notes, and evidence before claims.
+- Agent auditability: run ledgers, decisions, file changes, command history, and blockers a reviewer can inspect.
+- Product judgment: small local-first prototypes that test the workflow before adding backend weight.
 
 ## Selected Work
 
-| Repo | Type | Why it matters |
+| Repo | What it proves | Why it matters |
 | --- | --- | --- |
-| [agent-run-ledger](https://github.com/manuelsampedro1/agent-run-ledger) | Agent audit tool | Records AI agent runs as JSONL and renders static review reports with decisions, files, commands, and blockers. |
-| [repo-flightcheck](https://github.com/manuelsampedro1/repo-flightcheck) | Repo readiness tool | Audits whether a repository is ready for Codex, Claude Code, and human reviewers before asking an agent to work in it. |
-| [codex-review-packet](https://github.com/manuelsampedro1/codex-review-packet) | Agent workflow | Packages diffs, repo rules, and context into a sharper review handoff for Codex or Claude Code. |
-| [verify-by-change](https://github.com/manuelsampedro1/verify-by-change) | Verification tool | Suggests honest checks from changed files so AI-generated work closes with evidence instead of boilerplate. |
-| [briefboard-local](https://github.com/manuelsampedro1/briefboard-local) | Local-first product | Turns messy kickoff notes into a structured build brief and a Codex-ready prompt with no backend. |
+| [agent-run-ledger](https://github.com/manuelsampedro1/agent-run-ledger) | Agent audit trails | Records AI agent runs as JSONL and renders static review reports with decisions, files, commands, and blockers. |
+| [repo-flightcheck](https://github.com/manuelsampedro1/repo-flightcheck) | Pre-agent readiness | Audits whether a repository is ready for Codex, Claude Code, and human reviewers before asking an agent to work in it. |
+| [codex-review-packet](https://github.com/manuelsampedro1/codex-review-packet) | Review context quality | Packages diffs, repo rules, and local context into a sharper handoff for Codex or Claude Code. |
+| [verify-by-change](https://github.com/manuelsampedro1/verify-by-change) | Evidence-based closeout | Suggests honest checks from changed files so AI-generated work closes with evidence instead of boilerplate. |
+| [briefboard-local](https://github.com/manuelsampedro1/briefboard-local) | Product scoping taste | Turns messy kickoff notes into a structured build brief and a Codex-ready prompt with no backend. |
 
-These are small on purpose. I prefer inspectable tools that solve real workflow friction over bigger demos with less signal.
+These are small on purpose. I prefer tools a reviewer can clone, inspect, run, and challenge over larger demos with less operational signal.
 
 ## How I Work With Codex
 
-- Start from a real brief and explicit acceptance criteria, not vague prompts. See [briefboard-local](https://github.com/manuelsampedro1/briefboard-local).
+- Start with a real brief, explicit acceptance criteria, and the smallest useful scope. See [briefboard-local](https://github.com/manuelsampedro1/briefboard-local).
 - Check repo readiness before handing work to an agent. See [repo-flightcheck](https://github.com/manuelsampedro1/repo-flightcheck).
-- Feed repo-aware context into review workflows so the output can be stricter and more useful. See [codex-review-packet](https://github.com/manuelsampedro1/codex-review-packet) and [AI Repo Review Findings](./recipes/ai-repo-review-findings.md).
+- Package repo-aware context so reviews can be stricter and more useful. See [codex-review-packet](https://github.com/manuelsampedro1/codex-review-packet) and [AI Repo Review Findings](./recipes/ai-repo-review-findings.md).
 - Match verification to the actual change type instead of pasting the same test advice everywhere. See [verify-by-change](https://github.com/manuelsampedro1/verify-by-change) and [Verification by Change Type](./recipes/verification-by-change-type.md).
-- Keep an audit trail for non-trivial agent runs. See [agent-run-ledger](https://github.com/manuelsampedro1/agent-run-ledger).
+- Leave an audit trail for non-trivial agent runs. See [agent-run-ledger](https://github.com/manuelsampedro1/agent-run-ledger).
 
 ## Public Workbench
 
@@ -50,6 +51,7 @@ These are small on purpose. I prefer inspectable tools that solve real workflow 
 ## Principles
 
 - Ship useful proof, not activity theater.
+- Optimize for reviewability: strong AI workflows should leave evidence.
 - Prefer own repos and working artifacts over meta commentary.
 - Keep claims honest: what exists, what was tested, and what is still limited.
 - Use the workbench as supporting evidence, not as a substitute for real projects.
