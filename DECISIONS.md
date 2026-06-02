@@ -371,6 +371,16 @@ Rationale:
 - The current blocker is GitHub repo creation for many committed local tools, so a queue makes that blocker explicit and auditable.
 - A dependency-free CLI can scan local Git state and optional public HTTP status without storing credentials or inventing access.
 
+## 2026-06-02 - Promote Publish Queue as Public Surface Sync Proof
+
+Add `agent-publish-queue` to selected work once the public repo is created, hardened, pushed, and verified.
+
+Rationale:
+
+- It makes the remaining local-to-public publication backlog auditable instead of relying on memory or manual TODO scanning.
+- It is backed by a dependency-free CLI, tests, sample report, CI, and `repo-flightcheck` at `100/100`.
+- It keeps README claims, TODO blockers, GitHub remotes, and public proof status aligned before profile promotion.
+
 ## 2026-06-02 - Build Profile Proof Audits
 
 Use `profile-proof-audit` as another next public proof project once a GitHub remote can be created.

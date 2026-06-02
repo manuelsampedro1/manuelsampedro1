@@ -84,5 +84,5 @@ Tasks:
 
 ## Source Linkage
 
-- Repo / tool / workflow: local `agent-publish-queue` prototype at `/Users/manuelsampedro/Documents/Codex/2026-05-21/agent-publish-queue`.
-- Supporting prompt, script, or note: [`./public-surface-sync-for-agent-repos.md`](./public-surface-sync-for-agent-repos.md), [`./flagship-repo-proof-packet.md`](./flagship-repo-proof-packet.md), and [`../TODO.md`](../TODO.md).
+- Repo / tool / workflow: [`agent-publish-queue`](https://github.com/manuelsampedro1/agent-publish-queue), public commit [`6a221f7`](https://github.com/manuelsampedro1/agent-publish-queue/commit/6a221f7d6f9cef88f8bfce1261a1b591392d41a6), [`README`](https://raw.githubusercontent.com/manuelsampedro1/agent-publish-queue/main/README.md), [`CLI`](https://raw.githubusercontent.com/manuelsampedro1/agent-publish-queue/main/src/agent_publish_queue/cli.py), [`tests`](https://raw.githubusercontent.com/manuelsampedro1/agent-publish-queue/main/tests/test_cli.py), and [`sample report`](https://raw.githubusercontent.com/manuelsampedro1/agent-publish-queue/main/examples/sample-report.md).
+- Supporting prompt, script, or note: [`./public-surface-sync-for-agent-repos.md`](./public-surface-sync-for-agent-repos.md), [`./flagship-repo-proof-packet.md`](./flagship-repo-proof-packet.md), [`../labs/2026/2026-06-02-agent-publish-queue-public-launch.md`](../labs/2026/2026-06-02-agent-publish-queue-public-launch.md), and [`../TODO.md`](../TODO.md).
