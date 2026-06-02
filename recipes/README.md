@@ -49,6 +49,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Remote Readiness Before Public Proof](./remote-readiness-before-public-proof.md)
 - [Remote Failure Classification Before Public Proof](./remote-failure-classification-before-public-proof.md)
 - [Real Diff to Recipe](./real-diff-to-recipe.md)
+- [Readiness Task Contract to Ledger Evidence](./readiness-task-contract-to-ledger.md)
 - [Readiness Contract to Ledger Evidence](./readiness-contract-to-ledger-evidence.md)
 - [Readiness Contract in Review Packets](./readiness-contract-in-review-packets.md)
 - [Python Unittest Readiness Check](./python-unittest-readiness-check.md)
