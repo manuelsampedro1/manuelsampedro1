@@ -958,3 +958,18 @@ Rationale:
 - The demo intentionally preserves a strict-doctor non-ready state when planned
   checks remain open, which is stronger than pretending every generated packet
   means the run is complete.
+
+## 2026-06-02 - Add Reviewer Path Before Selected Work
+
+Add a short reviewer path near the top of the README so evaluators can inspect
+the strongest workflow evidence before scanning the full Selected Work table.
+
+Rationale:
+
+- The profile now has enough public proof that discoverability is the main
+  first-read risk.
+- A five-minute path through readiness, review context, verification, ledger,
+  and safety repos is clearer than asking a reviewer to infer the narrative
+  from 46 rows.
+- The path links to cross-repo examples so the claim is backed by composition,
+  not only repo names.

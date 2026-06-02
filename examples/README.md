@@ -4,6 +4,7 @@ Concrete profile-workbench examples live here. They should show how a public cla
 
 ## Entries
 
+- [External Reviewer Navigation](./external-reviewer-navigation.md)
 - [Agent Review Packet to Ledger Chain](./agent-review-packet-to-ledger-chain.md)
 - [Agent Release Readiness Chain](./agent-release-readiness-chain.md)
 - [Profile Curation Guard Proof Packet](./profile-curation-guard-proof-packet.md)
