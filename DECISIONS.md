@@ -840,3 +840,18 @@ Rationale:
   spent on a false state.
 - The tool is dependency-free, testable, CI-backed, published by terminal SSH,
   and verified with `repo-flightcheck` at `100/100`.
+
+## 2026-06-02 - Build PR Brief as Review Surface Proof
+
+Use `agent-pr-brief` as another public proof repo for checking PR descriptions
+against the real diffs they summarize.
+
+Rationale:
+
+- Reviewers usually read the PR description before the code. A vague or
+  incomplete description can hide risky files, weak verification, or oversized
+  changes behind a confident summary.
+- A local PR-description gate keeps the public review surface tied to changed
+  files, risk paths, explicit verification, and concrete language.
+- The tool is dependency-free, testable, CI-backed, published by terminal SSH,
+  and verified with `repo-flightcheck` at `100/100`.

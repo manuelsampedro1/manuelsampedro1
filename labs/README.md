@@ -90,6 +90,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 - [2026-06-02 - Agent Repo Map Public Launch](./2026/2026-06-02-agent-repo-map-public-launch.md)
 - [2026-06-02 - Agent Publish Queue Public Launch](./2026/2026-06-02-agent-publish-queue-public-launch.md)
 - [2026-06-02 - Agent Proof Packet Public Launch](./2026/2026-06-02-agent-proof-packet-public-launch.md)
+- [2026-06-02 - Agent PR Brief Public Launch](./2026/2026-06-02-agent-pr-brief-public-launch.md)
 - [2026-06-02 - Agent Merge Readiness Public Launch](./2026/2026-06-02-agent-merge-readiness-public-launch.md)
 - [2026-06-02 - Agent Memory Audit Public Launch](./2026/2026-06-02-agent-memory-audit-public-launch.md)
 - [2026-06-02 - Agent Instruction Audit Public Launch](./2026/2026-06-02-agent-instruction-audit-public-launch.md)
