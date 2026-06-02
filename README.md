@@ -22,7 +22,7 @@ If you are building with Codex or evaluating how AI changes software work, find 
 | [repo-flightcheck](https://github.com/manuelsampedro1/repo-flightcheck) | Pre-agent readiness | Audits whether a repository is ready for Codex, Claude Code, and human reviewers, including CI/local verification coverage, Python unittest detection, and stale documented commands. |
 | [codex-review-packet](https://github.com/manuelsampedro1/codex-review-packet) | Review context quality | Packages diffs, repo rules, local context, review lanes, repo readiness reports, and verification checklists into a sharper handoff for Codex or Claude Code. |
 | [verify-by-change](https://github.com/manuelsampedro1/verify-by-change) | Evidence-based closeout | Suggests honest checks from committed diffs and working-tree changes, with JSON envelope metadata, CI-local command parity, and a repo readiness contract. |
-| [briefboard-local](https://github.com/manuelsampedro1/briefboard-local) | Product scoping taste | Turns messy kickoff notes into a structured build brief, flags missing essentials, and generates a Codex-ready prompt with no backend. |
+| [briefboard-local](https://github.com/manuelsampedro1/briefboard-local) | Product scoping taste | Turns messy kickoff notes into a structured build brief, flags missing essentials, and generates a Codex-ready prompt with no backend, importable examples, and CI-local checks. |
 
 These are small on purpose. I prefer tools a reviewer can clone, inspect, run, and challenge over larger demos with less operational signal.
 
@@ -53,7 +53,7 @@ These are small on purpose. I prefer tools a reviewer can clone, inspect, run, a
 
 ## Latest Proof
 
-- Latest lab note: [2026-06-02 - Verify by Change Readiness Contract](./labs/2026/2026-06-02-verify-by-change-readiness-contract.md)
+- Latest lab note: [2026-06-02 - Briefboard Readiness Contract](./labs/2026/2026-06-02-briefboard-readiness-contract.md)
 - Latest recipes:
   - [Repo Readiness Contract for Agent Repos](./recipes/repo-readiness-contract-for-agent-repos.md)
   - [Repo Readiness to Ledger Evidence](./recipes/repo-readiness-to-ledger-evidence.md)

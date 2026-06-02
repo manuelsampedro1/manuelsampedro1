@@ -21,6 +21,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 - [2026-06-02 - Codex Review Packet Review Map](./2026/2026-06-02-codex-review-packet-review-map.md)
 - [2026-06-02 - Codex Review Packet Readiness Report](./2026/2026-06-02-codex-review-packet-readiness-report.md)
 - [2026-06-02 - Codex Review Packet Bounded Diff](./2026/2026-06-02-codex-review-packet-bounded-diff.md)
+- [2026-06-02 - Briefboard Readiness Contract](./2026/2026-06-02-briefboard-readiness-contract.md)
 - [2026-06-02 - Briefboard Readiness Before Handoff](./2026/2026-06-02-briefboard-readiness-before-handoff.md)
 - [2026-06-02 - Briefboard Local Preview](./2026/2026-06-02-briefboard-local-preview.md)
 - [2026-06-02 - Briefboard JSON Restore Loop](./2026/2026-06-02-briefboard-json-restore-loop.md)
