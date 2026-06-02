@@ -244,6 +244,21 @@ Rationale:
 - Counting visible table rows against linked entries prevents accidental
   placeholder rows or copy-only claims from reaching the public surface.
 
+## 2026-06-03 - Freeze Agent Safety Layer Growth
+
+Keep the root README `Agent Safety Layer` at the saturated 6-row baseline unless
+a future change records an explicit post-saturation growth decision.
+
+Rationale:
+
+- The section should prove safety judgment, not become a second Selected Work
+  table.
+- The current six repos already cover secrets, artifact redaction, deploy
+  authorization, MCP tool control, receipt verification, and Python workflow
+  integration.
+- Requiring a decision before growth keeps future safety promotion deliberate
+  and reviewable.
+
 ## 2026-06-02 - Audit README Section Order
 
 Treat the root README section order as part of the executable profile quality

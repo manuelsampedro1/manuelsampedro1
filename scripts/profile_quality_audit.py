@@ -96,6 +96,8 @@ PUBLIC_WORKBENCH_TARGETS = [
 MAX_SELECTED_WORK_ROWS = 50
 SELECTED_WORK_SATURATION_BASELINE_ROWS = 46
 SELECTED_WORK_GROWTH_DECISION_TITLE = "Allow Selected Work Growth After Saturation"
+AGENT_SAFETY_LAYER_BASELINE_ROWS = 6
+AGENT_SAFETY_LAYER_GROWTH_DECISION_TITLE = "Allow Agent Safety Layer Growth After Saturation"
 MAX_REVIEWER_PATH_BULLETS = 4
 MAX_HOW_I_WORK_BULLETS = 18
 OWNED_GITHUB_REPO_PREFIX = "https://github.com/manuelsampedro1/"
@@ -338,6 +340,13 @@ def audit(root: Path) -> AuditResult:
             "Agent Safety Layer has "
             f"{safety_rows} table rows but {len(safety_entries)} linked repo entries; every row needs one repo link."
         )
+    if safety_rows > AGENT_SAFETY_LAYER_BASELINE_ROWS:
+        if not has_decision_title(decisions, AGENT_SAFETY_LAYER_GROWTH_DECISION_TITLE):
+            issues.append(
+                "Agent Safety Layer has grown to "
+                f"{safety_rows} rows; document an explicit post-saturation growth decision "
+                f"before adding rows above {AGENT_SAFETY_LAYER_BASELINE_ROWS}."
+            )
     audit_repo_table("Selected Work", selected_entries, issues)
     audit_repo_table("Agent Safety Layer", safety_entries, issues)
     if selected_rows > MAX_SELECTED_WORK_ROWS:

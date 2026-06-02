@@ -79,6 +79,7 @@ The audit should also check:
 - Matching `Selected Work` labels and repo slugs so visible repo names cannot point to a different target.
 - Owned, unique, and correctly labelled `Agent Safety Layer` repo targets so the permission and safety surface cannot drift into external references or inflated proof.
 - Linked repo entries for every `Selected Work` and `Agent Safety Layer` table row so primary proof never becomes an unclickable claim.
+- `Agent Safety Layer` row-count freeze at the saturated 6-row baseline unless an explicit post-saturation growth decision is recorded.
 
 ## Commit Rule
 
