@@ -53,7 +53,7 @@ These are small on purpose. I prefer tools a reviewer can clone, inspect, run, a
 
 ## Latest Proof
 
-- Latest lab note: [2026-06-02 - Briefboard Readiness Contract](./labs/2026/2026-06-02-briefboard-readiness-contract.md)
+- Latest lab note: [2026-06-02 - Agent Run Ledger CI Parity](./labs/2026/2026-06-02-agent-run-ledger-ci-parity.md)
 - Latest recipes:
   - [Repo Readiness Contract for Agent Repos](./recipes/repo-readiness-contract-for-agent-repos.md)
   - [Repo Readiness to Ledger Evidence](./recipes/repo-readiness-to-ledger-evidence.md)
