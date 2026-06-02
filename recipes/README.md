@@ -29,6 +29,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Executable Runbook Drift Check](./executable-runbook-drift-check.md)
 - [Dirty Public Path Preflight for Agent Publish Flows](./dirty-public-path-preflight.md)
 - [Diff to Eval Case](./diff-to-eval-case.md)
+- [Command Evidence Status Contract](./command-evidence-status-contract.md)
 - [Coding Agent Repo Loop](./coding-agent-repo-loop.md)
 - [Codex Debugging Checklist](./codex-debugging-checklist.md)
 - [Closeout Evidence Check for Agents](./closeout-evidence-check-for-agents.md)
