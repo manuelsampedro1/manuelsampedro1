@@ -9,6 +9,7 @@
 - Keep every `Selected Work` repo target unique; if a repo fits two narratives, explain the second narrative in examples or recipes rather than duplicating the row.
 - Keep `Selected Work` limited to owned `manuelsampedro1` GitHub repos; use radar or recipes for external tools and references.
 - Keep each `Selected Work` visible repo label identical to the GitHub repo slug it links to.
+- Keep `Agent Safety Layer` repo targets owned, unique, and labelled exactly like their GitHub repo slugs.
 - Keep `scripts/profile_quality_audit.py` aligned with the README verification contract when new gates are added.
 - Monitor `scripts/commit_daily_update.sh` residual-change warnings during future automation runs and move scratch files before the next publish attempt.
 - Re-run `scripts/audit_github_automation_prompts.py` after any GitHub automation prompt change so external wrappers keep passing exact changed paths into `scripts/commit_daily_update.sh`.

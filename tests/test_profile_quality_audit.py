@@ -400,6 +400,89 @@ class ProfileQualityAuditTests(unittest.TestCase):
             result.issues,
         )
 
+    def test_agent_safety_layer_repo_targets_are_audited(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            examples = root / "examples"
+            examples.mkdir()
+            (root / "README.md").write_text(
+                "\n".join(
+                    [
+                        "# Test Profile",
+                        "",
+                        "## Current Focus",
+                        "",
+                        "## Reviewer Path",
+                        "\n".join(profile_quality_audit.REVIEWER_PATH_TARGETS),
+                        "",
+                        "## Selected Work",
+                        "",
+                        "| Repo | What it proves | Why it matters |",
+                        "| --- | --- | --- |",
+                        "| [repo-a](https://github.com/manuelsampedro1/repo-a) | proof | why |",
+                        "",
+                        "## Agent Safety Layer",
+                        "",
+                        "| Repo | What it proves | Why it matters |",
+                        "| --- | --- | --- |",
+                        "| [agent-secret-sentinel](https://github.com/manuelsampedro1/agent-secret-sentinel) | proof | why |",
+                        "| [friendly-name](https://github.com/manuelsampedro1/mcp-guard) | proof | why |",
+                        "| [external-tool](https://github.com/other/external-tool) | proof | why |",
+                        "| [agent-secret-sentinel](https://github.com/manuelsampedro1/agent-secret-sentinel) | proof | why |",
+                        "",
+                        "## How I Work With Codex",
+                        "",
+                        "## Public Workbench",
+                        "",
+                        "## Verify This Repo",
+                        "The check validates shell scripts, python audit tools, python unit tests, commit-script shell fixture, and profile quality audit.",
+                        "",
+                        "## Latest Proof",
+                        "",
+                        "## Principles",
+                        "",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+            (root / "DECISIONS.md").write_text("", encoding="utf-8")
+            (root / "TODO.md").write_text("", encoding="utf-8")
+            (examples / "README.md").write_text(
+                "\n".join(f"- [{Path(path).name}](./{Path(path).name})" for path in profile_quality_audit.REQUIRED_EXAMPLES),
+                encoding="utf-8",
+            )
+            for path in profile_quality_audit.REQUIRED_EXAMPLES:
+                (root / path).write_text("# Example\n", encoding="utf-8")
+            (root / "examples" / "profile-evidence-map.md").write_text(
+                "\n".join(profile_quality_audit.EVIDENCE_MAP_REPOS)
+                + "\n"
+                + "\n".join(
+                    [
+                        "agent-release-readiness-chain.md",
+                        "agent-review-packet-to-ledger-chain.md",
+                        "external-reviewer-navigation.md",
+                        "profile-verification-proof-packet.md",
+                        "profile-curation-guard-proof-packet.md",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+
+            result = profile_quality_audit.audit(root)
+
+        self.assertIn(
+            "Agent Safety Layer contains duplicate repo target: https://github.com/manuelsampedro1/agent-secret-sentinel.",
+            result.issues,
+        )
+        self.assertIn(
+            "Agent Safety Layer target is not an owned GitHub repo: https://github.com/other/external-tool.",
+            result.issues,
+        )
+        self.assertIn(
+            "Agent Safety Layer label `friendly-name` does not match repo target `mcp-guard`.",
+            result.issues,
+        )
+
     def test_saturated_selected_work_requires_curation_decision(self) -> None:
         rows = "\n".join(
             f"| [repo-{index}](https://example.com/{index}) | proof | why |"

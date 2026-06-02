@@ -69,6 +69,7 @@ The audit should also check:
 - Unique `Selected Work` repo targets so repeated links cannot inflate the proof surface.
 - Owned `Selected Work` repo targets under `https://github.com/manuelsampedro1/`; external links belong in notes, recipes, or radar, not the primary proof table.
 - Matching `Selected Work` labels and repo slugs so visible repo names cannot point to a different target.
+- Owned, unique, and correctly labelled `Agent Safety Layer` repo targets so the permission and safety surface cannot drift into external references or inflated proof.
 
 ## Commit Rule
 

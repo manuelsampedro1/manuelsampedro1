@@ -79,7 +79,7 @@ VERIFY_SECTION_REQUIRED_PHRASES = [
 
 MAX_SELECTED_WORK_ROWS = 50
 MAX_REVIEWER_PATH_BULLETS = 4
-SELECTED_WORK_TARGET_PREFIX = "https://github.com/manuelsampedro1/"
+OWNED_GITHUB_REPO_PREFIX = "https://github.com/manuelsampedro1/"
 
 
 @dataclass(frozen=True)
@@ -133,8 +133,8 @@ def count_selected_work_rows(markdown: str) -> int:
     return rows
 
 
-def selected_work_repo_entries(markdown: str) -> list[tuple[str, str]]:
-    body = section_body(markdown, "Selected Work")
+def repo_table_entries(markdown: str, section: str) -> list[tuple[str, str]]:
+    body = section_body(markdown, section)
     entries: list[tuple[str, str]] = []
     for line in body.splitlines():
         stripped = line.strip()
@@ -148,14 +148,18 @@ def selected_work_repo_entries(markdown: str) -> list[tuple[str, str]]:
     return entries
 
 
+def selected_work_repo_entries(markdown: str) -> list[tuple[str, str]]:
+    return repo_table_entries(markdown, "Selected Work")
+
+
 def selected_work_repo_targets(markdown: str) -> list[str]:
     return [target for _, target in selected_work_repo_entries(markdown)]
 
 
 def github_repo_slug(target: str) -> str:
-    if not target.startswith(SELECTED_WORK_TARGET_PREFIX):
+    if not target.startswith(OWNED_GITHUB_REPO_PREFIX):
         return ""
-    return target.removeprefix(SELECTED_WORK_TARGET_PREFIX).split("/", 1)[0]
+    return target.removeprefix(OWNED_GITHUB_REPO_PREFIX).split("/", 1)[0]
 
 
 def duplicated_values(values: list[str]) -> list[str]:
@@ -170,6 +174,19 @@ def duplicated_values(values: list[str]) -> list[str]:
 
 def count_markdown_bullets(markdown: str) -> int:
     return sum(1 for line in markdown.splitlines() if line.lstrip().startswith("- "))
+
+
+def audit_repo_table(section: str, entries: list[tuple[str, str]], issues: list[str]) -> None:
+    targets = [target for _, target in entries]
+    for target in duplicated_values(targets):
+        issues.append(f"{section} contains duplicate repo target: {target}.")
+    for label, target in entries:
+        if not target.startswith(OWNED_GITHUB_REPO_PREFIX):
+            issues.append(f"{section} target is not an owned GitHub repo: {target}.")
+            continue
+        slug = github_repo_slug(target)
+        if label != slug:
+            issues.append(f"{section} label `{label}` does not match repo target `{slug}`.")
 
 
 def audit(root: Path) -> AuditResult:
@@ -207,16 +224,9 @@ def audit(root: Path) -> AuditResult:
 
     selected_rows = count_selected_work_rows(readme)
     selected_entries = selected_work_repo_entries(readme)
-    selected_targets = [target for _, target in selected_entries]
-    for target in duplicated_values(selected_targets):
-        issues.append(f"Selected Work contains duplicate repo target: {target}.")
-    for label, target in selected_entries:
-        if not target.startswith(SELECTED_WORK_TARGET_PREFIX):
-            issues.append(f"Selected Work target is not an owned GitHub repo: {target}.")
-            continue
-        slug = github_repo_slug(target)
-        if label != slug:
-            issues.append(f"Selected Work label `{label}` does not match repo target `{slug}`.")
+    safety_entries = repo_table_entries(readme, "Agent Safety Layer")
+    audit_repo_table("Selected Work", selected_entries, issues)
+    audit_repo_table("Agent Safety Layer", safety_entries, issues)
     if selected_rows > MAX_SELECTED_WORK_ROWS:
         issues.append(
             f"Selected Work has {selected_rows} rows; curate before exceeding {MAX_SELECTED_WORK_ROWS} rows."

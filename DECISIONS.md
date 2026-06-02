@@ -219,6 +219,17 @@ Rationale:
 - A dependency-specific diff gate strengthens the profile's safety narrative
   without claiming vulnerability intelligence or relying on external feeds.
 
+## 2026-06-02 - Audit Agent Safety Layer Repo Targets
+
+Apply the same owned, unique, and label-matching repo-target checks to the
+`Agent Safety Layer` table that already protect `Selected Work`.
+
+Rationale:
+
+- The safety section is now a first-read proof surface, not just supporting context.
+- External links or duplicated repo targets would inflate or blur the agent-safety claim.
+- Label-to-slug matching keeps visible repo names honest when reviewers skim the profile.
+
 ## 2026-06-02 - Build Tool Schema Lint as Agent Interface Proof
 
 Use `agent-tool-schema-lint` as public proof for reviewing tool schemas before
