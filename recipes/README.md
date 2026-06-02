@@ -113,6 +113,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Agent Diff Budget](./agent-diff-budget.md)
 - [Agent Dependency Guard](./agent-dependency-guard.md)
 - [Agent Decision Guard](./agent-decision-guard.md)
+- [Agent Context Sentinel](./agent-context-sentinel.md)
 - [Agent Command Receipt](./agent-command-receipt.md)
 - [Agent Claim Check](./agent-claim-check.md)
 - [Agent Artifact Gate](./agent-artifact-gate.md)

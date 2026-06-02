@@ -700,3 +700,19 @@ Rationale:
   context inside a long memory file.
 - The project is dependency-free, testable, CI-backed, published by terminal
   SSH, and verified with `repo-flightcheck` at `100/100`.
+
+## 2026-06-02 - Build Context Sentinel as Prompt-Injection Preflight Proof
+
+Use `agent-context-sentinel` as another public proof repo for screening
+untrusted context before it is passed to a coding-agent handoff.
+
+Rationale:
+
+- Repo maps and handoff briefs help agents work faster, but retrieved or copied
+  context can still contain override instructions, hidden authority claims,
+  secret exfiltration requests, dangerous commands, or unattended action
+  shortcuts.
+- A local context gate makes that risk visible before the next agent sees the
+  text as task authority.
+- The project is dependency-free, testable, CI-backed, published by terminal
+  SSH, and verified with `repo-flightcheck` at `100/100`.
