@@ -38,6 +38,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Clean Working Tree Agent Preflight](./clean-working-tree-agent-preflight.md)
 - [CI Failure Packet for Agent Reruns](./ci-failure-packet-for-agent-reruns.md)
 - [Change Risk Matrix for Agent Diffs](./change-risk-matrix-for-agent-diffs.md)
+- [Bounded Diff Review Packet](./bounded-diff-review-packet.md)
 - [AI Repo Review Findings](./ai-repo-review-findings.md)
 - [AGENTS.md Patterns for Codex Repos](./agents-md-patterns-for-codex-repos.md)
 - [Agent Review Map](./agent-review-map.md)
