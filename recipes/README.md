@@ -49,6 +49,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Node CLI Change Verification](./node-cli-change-verification.md)
 - [Merge Readiness Gate for Agent Diffs](./merge-readiness-gate-for-agent-diffs.md)
 - [Machine-Readable Doctor Output](./machine-readable-doctor-output.md)
+- [Local Tool Availability Preflight](./local-tool-availability-preflight.md)
 - [Local-First Draft Round Trip](./local-first-draft-round-trip.md)
 - [JSON Envelope for Verification Gates](./json-envelope-for-verification-gates.md)
 - [GitHub Actions Run Evidence to Ledger](./github-actions-run-evidence-to-ledger.md)
