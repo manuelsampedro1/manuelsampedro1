@@ -731,3 +731,19 @@ Rationale:
   transcripts, and run ledgers can leak sensitive content outside a Git diff.
 - A dependency-free local redactor keeps the publication loop safer without
   uploading artifact content or pretending to be a full DLP system.
+
+## 2026-06-02 - Build Bug Repro as Debugging Handoff Proof
+
+Use `agent-bug-repro` as another public proof repo for converting vague bug
+reports into reproducible debugging handoffs before another agent starts work.
+
+Rationale:
+
+- The profile already covers CI failures, rollback risk, proof packets, and
+  closeout checks, but a lot of debugging waste starts earlier with a weak bug
+  report.
+- A dependency-free bug-report audit makes missing repro steps, expected versus
+  actual behavior, environment, evidence, regression context, and vague wording
+  visible before the next agent guesses at root cause.
+- The tool complements CI failure packets by handling human bug reports and
+  local evidence, not only post-CI logs.
