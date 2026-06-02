@@ -1001,3 +1001,14 @@ Rationale:
   examples, saturation control, and risky unsupported README language.
 - Integrating it into `make test`, `make lint`, and `make build` turns the
   weekly quality guard into an executable gate instead of a manual reminder.
+
+## 2026-06-02 - Test Profile Quality Audit Failure Modes
+
+Add unit coverage for the executable profile quality gate.
+
+Rationale:
+
+- A quality gate without negative tests can quietly become decorative.
+- The tests prove the current profile passes and that missing reviewer-path or
+  saturation-curation evidence fails.
+- This keeps first-read quality and curation discipline enforceable in CI.

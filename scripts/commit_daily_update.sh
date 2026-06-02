@@ -40,6 +40,7 @@ public_paths=(
   radar
   templates
   scripts
+  tests
   .gitignore
 )
 

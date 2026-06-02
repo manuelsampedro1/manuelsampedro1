@@ -85,6 +85,8 @@ The maintenance script should skip a run when the diff only touches those surfac
 
 Changes under `scripts/` are eligible for a maintenance commit when they improve artifact generation, publishing safety, or verification quality.
 
+Changes under `tests/` are eligible when they prove a public verification gate catches both passing and failing profile states.
+
 Before refreshing indexes or staging files, `scripts/commit_daily_update.sh` now checks managed public paths for pre-existing changes.
 
 Pass the exact intended changed paths after the commit message so the run can distinguish the real artifact from unrelated draft work:

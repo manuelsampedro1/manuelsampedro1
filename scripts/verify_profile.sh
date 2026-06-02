@@ -11,6 +11,7 @@ bash -n \
   scripts/verify_profile.sh
 
 python3 -m py_compile scripts/profile_quality_audit.py
+python3 -m unittest discover -s tests
 python3 scripts/profile_quality_audit.py --root . --min-score 100 >/dev/null
 
 tmp="$(mktemp -d)"
