@@ -50,6 +50,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 - [2026-06-02 - Briefboard JSON Restore Loop](./2026/2026-06-02-briefboard-json-restore-loop.md)
 - [2026-06-02 - Briefboard Handoff Scope Warnings](./2026/2026-06-02-briefboard-handoff-scope-warnings.md)
 - [2026-06-02 - Briefboard Exportable Artifacts](./2026/2026-06-02-briefboard-exportable-artifacts.md)
+- [2026-06-02 - Agent Run Ledger Task Contract Evidence](./2026/2026-06-02-agent-run-ledger-task-contract-evidence.md)
 - [2026-06-02 - Agent Run Ledger Strict Doctor](./2026/2026-06-02-agent-run-ledger-strict-doctor.md)
 - [2026-06-02 - Agent Run Ledger Sensitive Review Packets](./2026/2026-06-02-agent-run-ledger-sensitive-review-packets.md)
 - [2026-06-02 - Agent Run Ledger Review Packet Readiness](./2026/2026-06-02-agent-run-ledger-review-packet-readiness.md)

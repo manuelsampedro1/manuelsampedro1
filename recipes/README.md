@@ -20,6 +20,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Verification by Change Type](./verification-by-change-type.md)
 - [Task Contracts in Review Packets](./task-contracts-in-review-packets.md)
 - [Task Contract Readiness Before Agent Work](./task-contract-readiness-before-agent-work.md)
+- [Task Contract Evidence to Ledger](./task-contract-evidence-to-ledger.md)
 - [Strict Ledger Doctor Gate](./strict-ledger-doctor-gate.md)
 - [Sensitive Review Packet to Ledger Evidence](./sensitive-review-packet-to-ledger-evidence.md)
 - [Sensitive Change Checks in Review Packets](./sensitive-change-checks-in-review-packets.md)
