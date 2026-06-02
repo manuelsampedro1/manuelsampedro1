@@ -80,6 +80,11 @@ VERIFY_SECTION_REQUIRED_PHRASES = [
 MAX_SELECTED_WORK_ROWS = 50
 MAX_REVIEWER_PATH_BULLETS = 4
 OWNED_GITHUB_REPO_PREFIX = "https://github.com/manuelsampedro1/"
+LATEST_PROOF_INDEXES = {
+    "./labs/": "labs/README.md",
+    "./recipes/": "recipes/README.md",
+    "./radar/": "radar/README.md",
+}
 
 
 @dataclass(frozen=True)
@@ -176,6 +181,10 @@ def count_markdown_bullets(markdown: str) -> int:
     return sum(1 for line in markdown.splitlines() if line.lstrip().startswith("- "))
 
 
+def markdown_links(markdown: str) -> list[tuple[str, str]]:
+    return [(match.group(1).strip(), match.group(2).strip()) for match in re.finditer(r"\[([^\]]+)\]\(([^)]+)\)", markdown)]
+
+
 def audit_repo_table(section: str, entries: list[tuple[str, str]], issues: list[str]) -> None:
     targets = [target for _, target in entries]
     for target in duplicated_values(targets):
@@ -187,6 +196,25 @@ def audit_repo_table(section: str, entries: list[tuple[str, str]], issues: list[
         slug = github_repo_slug(target)
         if label != slug:
             issues.append(f"{section} label `{label}` does not match repo target `{slug}`.")
+
+
+def audit_latest_proof_indexes(root: Path, readme: str, issues: list[str]) -> None:
+    latest_proof = section_body(readme, "Latest Proof")
+    index_text = {
+        prefix: read_text(root / index_path)
+        for prefix, index_path in LATEST_PROOF_INDEXES.items()
+    }
+    for _, target in markdown_links(latest_proof):
+        normalized_target = target.split("#", 1)[0].rstrip("/")
+        for prefix, index_path in LATEST_PROOF_INDEXES.items():
+            if not normalized_target.startswith(prefix):
+                continue
+            relative_path = normalized_target.removeprefix("./")
+            if not (root / relative_path).exists():
+                issues.append(f"Latest Proof target is missing: {target}.")
+            if Path(relative_path).name not in index_text[prefix]:
+                issues.append(f"Latest Proof target is not indexed in {index_path}: {target}.")
+            break
 
 
 def audit(root: Path) -> AuditResult:
@@ -222,6 +250,7 @@ def audit(root: Path) -> AuditResult:
     for phrase in VERIFY_SECTION_REQUIRED_PHRASES:
         if phrase not in verify_section:
             issues.append(f"Verify This Repo is missing verification detail: {phrase}.")
+    audit_latest_proof_indexes(root, readme, issues)
 
     selected_rows = count_selected_work_rows(readme)
     selected_entries = selected_work_repo_entries(readme)

@@ -241,6 +241,17 @@ Rationale:
 - A future edit that buries safety or verification below supporting material would weaken the profile without breaking links.
 - Enforcing canonical order keeps README navigation intentional as the public workbench grows.
 
+## 2026-06-03 - Audit Latest Proof Index Coverage
+
+Require every root README `Latest Proof` link under `labs/`, `recipes/`, or
+`radar/` to also appear in its public folder index.
+
+Rationale:
+
+- A direct proof link can work while the broader public workbench becomes harder to browse.
+- Latest proof should be both highlighted on the profile and discoverable from the relevant index.
+- This catches index-refresh drift without adding more proof-repo volume or README churn.
+
 ## 2026-06-02 - Build Tool Schema Lint as Agent Interface Proof
 
 Use `agent-tool-schema-lint` as public proof for reviewing tool schemas before

@@ -267,6 +267,89 @@ class ProfileQualityAuditTests(unittest.TestCase):
             result.issues,
         )
 
+    def test_latest_proof_targets_must_be_indexed(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            examples = root / "examples"
+            labs = root / "labs"
+            lab_year = labs / "2026"
+            examples.mkdir()
+            lab_year.mkdir(parents=True)
+            (root / "recipes").mkdir()
+            (root / "radar").mkdir()
+            latest_lab = "2026-06-03-unindexed-proof.md"
+            (lab_year / latest_lab).write_text("# Unindexed Proof\n", encoding="utf-8")
+            (labs / "README.md").write_text("# AI Lab Notes\n\n## Entries\n\n", encoding="utf-8")
+            (root / "recipes" / "README.md").write_text("# Recipes\n", encoding="utf-8")
+            (root / "radar" / "README.md").write_text("# Tooling Radar\n", encoding="utf-8")
+            (root / "README.md").write_text(
+                "\n".join(
+                    [
+                        "# Test Profile",
+                        "",
+                        "## Current Focus",
+                        "",
+                        "## Reviewer Path",
+                        "\n".join(profile_quality_audit.REVIEWER_PATH_TARGETS),
+                        "",
+                        "## Selected Work",
+                        "",
+                        "| Repo | What it proves | Why it matters |",
+                        "| --- | --- | --- |",
+                        "| [repo-a](https://github.com/manuelsampedro1/repo-a) | proof | why |",
+                        "",
+                        "## Agent Safety Layer",
+                        "",
+                        "| Repo | What it proves | Why it matters |",
+                        "| --- | --- | --- |",
+                        "| [mcp-guard](https://github.com/manuelsampedro1/mcp-guard) | proof | why |",
+                        "",
+                        "## How I Work With Codex",
+                        "",
+                        "## Public Workbench",
+                        "",
+                        "## Verify This Repo",
+                        "The check validates shell scripts, python audit tools, python unit tests, commit-script shell fixture, and profile quality audit.",
+                        "",
+                        "## Latest Proof",
+                        f"- Latest lab note: [Unindexed Proof](./labs/2026/{latest_lab})",
+                        "",
+                        "## Principles",
+                        "",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+            (root / "DECISIONS.md").write_text("", encoding="utf-8")
+            (root / "TODO.md").write_text("", encoding="utf-8")
+            (examples / "README.md").write_text(
+                "\n".join(f"- [{Path(path).name}](./{Path(path).name})" for path in profile_quality_audit.REQUIRED_EXAMPLES),
+                encoding="utf-8",
+            )
+            for path in profile_quality_audit.REQUIRED_EXAMPLES:
+                (root / path).write_text("# Example\n", encoding="utf-8")
+            (root / "examples" / "profile-evidence-map.md").write_text(
+                "\n".join(profile_quality_audit.EVIDENCE_MAP_REPOS)
+                + "\n"
+                + "\n".join(
+                    [
+                        "agent-release-readiness-chain.md",
+                        "agent-review-packet-to-ledger-chain.md",
+                        "external-reviewer-navigation.md",
+                        "profile-verification-proof-packet.md",
+                        "profile-curation-guard-proof-packet.md",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+
+            result = profile_quality_audit.audit(root)
+
+        self.assertIn(
+            f"Latest Proof target is not indexed in labs/README.md: ./labs/2026/{latest_lab}.",
+            result.issues,
+        )
+
     def test_selected_work_duplicate_repo_target_fails(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
