@@ -19,6 +19,7 @@
 - Keep every `Selected Work` repo target unique; if a repo fits two narratives, explain the second narrative in examples or recipes rather than duplicating the row.
 - Keep `Selected Work` limited to owned `manuelsampedro1` GitHub repos; use radar or recipes for external tools and references.
 - Keep each `Selected Work` visible repo label identical to the GitHub repo slug it links to.
+- Keep `Selected Work` and `Agent Safety Layer` repo links pointed at repo roots, not issue, branch, file, or docs subpages.
 - Keep `Agent Safety Layer` repo targets owned, unique, and labelled exactly like their GitHub repo slugs.
 - Keep every `Selected Work` and `Agent Safety Layer` table row backed by a linked repo entry.
 - Keep `Agent Safety Layer` at the saturated 6-row baseline unless a future change records an explicit `Allow Agent Safety Layer Growth After Saturation` decision.

@@ -253,6 +253,10 @@ def github_repo_slug(target: str) -> str:
     return target.removeprefix(OWNED_GITHUB_REPO_PREFIX).split("/", 1)[0]
 
 
+def canonical_owned_repo_target(slug: str) -> str:
+    return f"{OWNED_GITHUB_REPO_PREFIX}{slug}"
+
+
 def duplicated_values(values: list[str]) -> list[str]:
     seen: set[str] = set()
     duplicates: list[str] = []
@@ -301,6 +305,9 @@ def audit_repo_table(section: str, entries: list[tuple[str, str]], issues: list[
         slug = github_repo_slug(target)
         if label != slug:
             issues.append(f"{section} label `{label}` does not match repo target `{slug}`.")
+        canonical_target = canonical_owned_repo_target(slug)
+        if target != canonical_target:
+            issues.append(f"{section} target should point to repo root `{canonical_target}`, not `{target}`.")
 
 
 def audit_latest_proof_indexes(root: Path, readme: str, issues: list[str]) -> None:

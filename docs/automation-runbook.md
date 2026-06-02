@@ -79,6 +79,7 @@ The audit should also check:
 - Unique `Selected Work` repo targets so repeated links cannot inflate the proof surface.
 - Owned `Selected Work` repo targets under `https://github.com/manuelsampedro1/`; external links belong in notes, recipes, or radar, not the primary proof table.
 - Matching `Selected Work` labels and repo slugs so visible repo names cannot point to a different target.
+- Root-level `Selected Work` and `Agent Safety Layer` repo links so primary proof rows point to cloneable repo fronts, not issues, files, branches, or docs subpages.
 - Owned, unique, and correctly labelled `Agent Safety Layer` repo targets so the permission and safety surface cannot drift into external references or inflated proof.
 - Linked repo entries for every `Selected Work` and `Agent Safety Layer` table row so primary proof never becomes an unclickable claim.
 - `Agent Safety Layer` row-count freeze at the saturated 6-row baseline unless an explicit post-saturation growth decision is recorded.

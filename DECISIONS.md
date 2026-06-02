@@ -1285,6 +1285,20 @@ Rationale:
 - Encoding this in `scripts/profile_quality_audit.py` keeps the primary proof
   table inspectable as it changes over time.
 
+## 2026-06-03 - Keep Primary Proof Links at Repo Roots
+
+Require each root README `Selected Work` and `Agent Safety Layer` repo link to
+point at the canonical owned repository root.
+
+Rationale:
+
+- Primary proof rows should send reviewers to cloneable repo fronts, not a
+  branch, issue list, file, or docs subpage.
+- Subpage links can still be useful inside examples, recipes, and lab notes,
+  but they make the primary proof table less stable and harder to skim.
+- Encoding repo-root enforcement in `scripts/profile_quality_audit.py` keeps the
+  profile's highest-signal links direct and inspectable.
+
 ## 2026-06-03 - Audit External Reviewer Navigation
 
 Keep the external reviewer navigation example concrete as the profile proof
