@@ -69,6 +69,13 @@ RISKY_README_PHRASES = [
     "premio",
 ]
 
+VERIFY_SECTION_REQUIRED_PHRASES = [
+    "shell scripts",
+    "python unit tests",
+    "commit-script shell fixture",
+    "profile quality audit",
+]
+
 MAX_SELECTED_WORK_ROWS = 50
 
 
@@ -144,6 +151,11 @@ def audit(root: Path) -> AuditResult:
     for target in REVIEWER_PATH_TARGETS:
         if target not in reviewer_path:
             issues.append(f"Reviewer Path is missing target: {target}.")
+
+    verify_section = section_body(readme, "Verify This Repo").lower()
+    for phrase in VERIFY_SECTION_REQUIRED_PHRASES:
+        if phrase not in verify_section:
+            issues.append(f"Verify This Repo is missing verification detail: {phrase}.")
 
     selected_rows = count_selected_work_rows(readme)
     if selected_rows > MAX_SELECTED_WORK_ROWS:

@@ -68,6 +68,53 @@ class ProfileQualityAuditTests(unittest.TestCase):
         self.assertLess(result.score, 100)
         self.assertIn("README is missing required section: Reviewer Path.", result.issues)
 
+    def test_verify_section_must_describe_real_gates(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "examples").mkdir()
+            (root / "README.md").write_text(
+                "\n".join(
+                    [
+                        "# Test Profile",
+                        "",
+                        "## Current Focus",
+                        "",
+                        "## Reviewer Path",
+                        "\n".join(profile_quality_audit.REVIEWER_PATH_TARGETS),
+                        "",
+                        "## Selected Work",
+                        "",
+                        "| Repo | What it proves | Why it matters |",
+                        "| --- | --- | --- |",
+                        "| [repo](https://example.com) | x | y |",
+                        "",
+                        "## Agent Safety Layer",
+                        "",
+                        "## How I Work With Codex",
+                        "",
+                        "## Public Workbench",
+                        "",
+                        "## Verify This Repo",
+                        "The check validates shell scripts and indexes.",
+                        "",
+                        "## Latest Proof",
+                        "",
+                        "## Principles",
+                        "",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+            (root / "DECISIONS.md").write_text("", encoding="utf-8")
+            (root / "TODO.md").write_text("", encoding="utf-8")
+            (root / "examples" / "README.md").write_text("", encoding="utf-8")
+
+            result = profile_quality_audit.audit(root)
+
+        self.assertIn("Verify This Repo is missing verification detail: python unit tests.", result.issues)
+        self.assertIn("Verify This Repo is missing verification detail: commit-script shell fixture.", result.issues)
+        self.assertIn("Verify This Repo is missing verification detail: profile quality audit.", result.issues)
+
     def test_saturated_selected_work_requires_curation_decision(self) -> None:
         rows = "\n".join(
             f"| [repo-{index}](https://example.com/{index}) | proof | why |"

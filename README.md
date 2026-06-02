@@ -125,7 +125,7 @@ make lint
 make build
 ```
 
-The check validates shell scripts, regenerates public indexes, refreshes latest-proof links, and fails if generated files drift.
+The check validates shell scripts, runs Python unit tests, runs the commit-script shell fixture, executes the profile quality audit, regenerates public indexes, refreshes latest-proof links, and fails if generated files drift.
 
 ## Latest Proof
 

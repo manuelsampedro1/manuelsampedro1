@@ -1025,3 +1025,17 @@ Rationale:
   automation run or reviewer.
 - A non-failing warning preserves publish momentum while making residual local
   state visible.
+
+## 2026-06-02 - Audit the README Verification Contract
+
+Keep the public verification section tied to the gates that actually run.
+
+Rationale:
+
+- The README is part of the profile proof surface; stale verification copy
+  weakens trust even when the checks themselves pass.
+- The profile now runs shell syntax checks, Python unit tests, a commit-script
+  shell fixture, index drift checks, latest-proof sync, and the profile quality
+  audit.
+- Encoding those expectations in `scripts/profile_quality_audit.py` makes future
+  verification changes visible instead of relying on manual copy review.
