@@ -823,3 +823,20 @@ Rationale:
   files.
 - The tool is dependency-free, testable, CI-backed, published by terminal SSH,
   and verified with `repo-flightcheck` at `100/100`.
+
+## 2026-06-02 - Build Handoff Drift as Live-State Proof
+
+Use `agent-handoff-drift` as another public proof repo for checking handoff and
+continuation notes against the repository state the next agent will actually
+inherit.
+
+Rationale:
+
+- A handoff can be well scoped and still stale: files can be deleted, the branch
+  or HEAD can change, the worktree can become dirty, or command-success claims
+  can lose their evidence.
+- The next agent should not have to infer whether a note still matches the repo.
+  A local drift gate catches concrete contradictions before more context is
+  spent on a false state.
+- The tool is dependency-free, testable, CI-backed, published by terminal SSH,
+  and verified with `repo-flightcheck` at `100/100`.

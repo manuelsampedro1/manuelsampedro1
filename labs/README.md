@@ -93,6 +93,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 - [2026-06-02 - Agent Merge Readiness Public Launch](./2026/2026-06-02-agent-merge-readiness-public-launch.md)
 - [2026-06-02 - Agent Memory Audit Public Launch](./2026/2026-06-02-agent-memory-audit-public-launch.md)
 - [2026-06-02 - Agent Instruction Audit Public Launch](./2026/2026-06-02-agent-instruction-audit-public-launch.md)
+- [2026-06-02 - Agent Handoff Drift Public Launch](./2026/2026-06-02-agent-handoff-drift-public-launch.md)
 - [2026-06-02 - Agent Handoff Brief Public Launch](./2026/2026-06-02-agent-handoff-brief-public-launch.md)
 - [2026-06-02 - Agent Eval Runner Public Launch](./2026/2026-06-02-agent-eval-runner-public-launch.md)
 - [2026-06-02 - Agent Diff Splitter Public Launch](./2026/2026-06-02-agent-diff-splitter-public-launch.md)
