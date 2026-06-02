@@ -112,3 +112,4 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Agent Command Receipt](./agent-command-receipt.md)
 - [Agent Claim Check](./agent-claim-check.md)
 - [Agent Artifact Gate](./agent-artifact-gate.md)
+- [Agent Acceptance Trace](./agent-acceptance-trace.md)

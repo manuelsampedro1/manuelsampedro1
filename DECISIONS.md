@@ -141,6 +141,21 @@ Rationale:
 - A task-contract checker covers the missing pre-run question: is the requested task specific enough for an agent to execute safely?
 - The project is dependency-free, local-first, testable, and aligned with the profile's reliability narrative.
 
+## 2026-06-02 - Build Acceptance Trace as Closeout Proof
+
+Use `agent-acceptance-trace` as another public proof project for criterion-level
+closeout review.
+
+Rationale:
+
+- Task contracts and handoff briefs improve pre-run clarity, but reviewers still
+  need to check whether each acceptance criterion received evidence after the
+  diff exists.
+- A trace matrix is more useful than a confident final answer because it exposes
+  `covered`, `partial`, and `missing` criteria.
+- The project stays dependency-free, local-first, testable, and reusable across
+  proof packets, claim checks, merge readiness, and run ledgers.
+
 ## 2026-06-02 - Promote Agent Task Contract as Primary Proof
 
 Add `agent-task-contract` to the profile's selected work once the public repository is created, pushed, verified, and reachable.
