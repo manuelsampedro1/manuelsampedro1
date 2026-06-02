@@ -79,6 +79,7 @@ VERIFY_SECTION_REQUIRED_PHRASES = [
 
 MAX_SELECTED_WORK_ROWS = 50
 MAX_REVIEWER_PATH_BULLETS = 4
+SELECTED_WORK_TARGET_PREFIX = "https://github.com/manuelsampedro1/"
 
 
 @dataclass(frozen=True)
@@ -195,8 +196,12 @@ def audit(root: Path) -> AuditResult:
             issues.append(f"Verify This Repo is missing verification detail: {phrase}.")
 
     selected_rows = count_selected_work_rows(readme)
-    for target in duplicated_values(selected_work_repo_targets(readme)):
+    selected_targets = selected_work_repo_targets(readme)
+    for target in duplicated_values(selected_targets):
         issues.append(f"Selected Work contains duplicate repo target: {target}.")
+    for target in selected_targets:
+        if not target.startswith(SELECTED_WORK_TARGET_PREFIX):
+            issues.append(f"Selected Work target is not an owned GitHub repo: {target}.")
     if selected_rows > MAX_SELECTED_WORK_ROWS:
         issues.append(
             f"Selected Work has {selected_rows} rows; curate before exceeding {MAX_SELECTED_WORK_ROWS} rows."

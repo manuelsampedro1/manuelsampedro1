@@ -7,6 +7,7 @@
 - Pause new proof-repo creation by default while the profile has 46 Selected Work rows and profile-proof audit holds at `100/100`; next useful work should be curation, cross-repo demonstrations, hardening, or a materially new workflow gap.
 - Keep the root README Reviewer Path at four bullets or fewer; move extra proof routes into `examples/profile-evidence-map.md` or `examples/external-reviewer-navigation.md` instead of expanding the first-read section.
 - Keep every `Selected Work` repo target unique; if a repo fits two narratives, explain the second narrative in examples or recipes rather than duplicating the row.
+- Keep `Selected Work` limited to owned `manuelsampedro1` GitHub repos; use radar or recipes for external tools and references.
 - Keep `scripts/profile_quality_audit.py` aligned with the README verification contract when new gates are added.
 - Monitor `scripts/commit_daily_update.sh` residual-change warnings during future automation runs and move scratch files before the next publish attempt.
 - Re-run `scripts/audit_github_automation_prompts.py` after any GitHub automation prompt change so external wrappers keep passing exact changed paths into `scripts/commit_daily_update.sh`.

@@ -1096,3 +1096,17 @@ Rationale:
   than repeating a link under slightly different wording.
 - Encoding duplicate detection in `scripts/profile_quality_audit.py` protects
   curation discipline during future profile maintenance.
+
+## 2026-06-02 - Keep Selected Work Owned
+
+Limit the root README Selected Work table to owned `manuelsampedro1` GitHub
+repositories.
+
+Rationale:
+
+- The primary proof table should show shipped work that a reviewer can attribute
+  directly to this account.
+- External tools, references, or ecosystem notes are still useful, but they
+  belong in recipes, lab notes, or radar instead of the main proof surface.
+- Encoding the ownership rule in `scripts/profile_quality_audit.py` prevents a
+  future maintenance pass from diluting the profile with borrowed credibility.

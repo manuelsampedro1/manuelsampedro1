@@ -67,6 +67,7 @@ The audit should also check:
 - first-read quality with `python3 scripts/profile_quality_audit.py --root . --min-score 100`.
 - Reviewer Path length staying at four bullets or fewer, with extra routes moved to examples instead of the first-read README section.
 - Unique `Selected Work` repo targets so repeated links cannot inflate the proof surface.
+- Owned `Selected Work` repo targets under `https://github.com/manuelsampedro1/`; external links belong in notes, recipes, or radar, not the primary proof table.
 
 ## Commit Rule
 
