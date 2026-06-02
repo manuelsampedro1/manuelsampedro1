@@ -7,6 +7,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 - [2026-06-02 - Verify by Change Working Tree CI](./2026/2026-06-02-verify-by-change-working-tree-ci.md)
 - [2026-06-02 - Verify by Change Review Packet Source](./2026/2026-06-02-verify-by-change-review-packet-source.md)
 - [2026-06-02 - Verify by Change Readiness Contract](./2026/2026-06-02-verify-by-change-readiness-contract.md)
+- [2026-06-02 - Verify by Change Packet Readiness Context](./2026/2026-06-02-verify-by-change-packet-readiness-context.md)
 - [2026-06-02 - Verify by Change JSON Envelope](./2026/2026-06-02-verify-by-change-json-envelope.md)
 - [2026-06-02 - Verify by Change Empty Diff Guard](./2026/2026-06-02-verify-by-change-empty-diff-guard.md)
 - [2026-06-02 - Verify by Change Base Plus Working Tree](./2026/2026-06-02-verify-by-change-base-plus-working-tree.md)
