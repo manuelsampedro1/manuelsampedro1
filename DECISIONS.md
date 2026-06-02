@@ -761,3 +761,19 @@ Rationale:
   redefining the task around whatever is easiest to finish.
 - The tool is dependency-free, testable, CI-backed, published by terminal SSH,
   and verified with `repo-flightcheck` at `100/100`.
+
+## 2026-06-02 - Build Request Brief as Raw-Ask Clarification Proof
+
+Use `agent-request-brief` as another public proof repo for converting raw,
+messy human requests into scoped coding-agent briefs before execution starts.
+
+Rationale:
+
+- Task contracts are stronger when the raw user ask has already been audited
+  for objective, scope, acceptance criteria, constraints, context, verification,
+  risks, and next actions.
+- Some requests include external outcomes such as hiring, prizes, approvals, or
+  public perception; these must stay residual uncertainty instead of being
+  treated as agent-verifiable completion.
+- The tool is dependency-free, testable, CI-backed, published by terminal SSH,
+  and verified with `repo-flightcheck` at `100/100`.
