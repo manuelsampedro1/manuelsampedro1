@@ -2,7 +2,7 @@
 
 I build agentic engineering tools: repo readiness checks, review handoffs, verification gates, run ledgers, and local-first product prototypes.
 
-My focus is the practical layer around coding agents: the prompts, scripts, workflows, and small products that make AI-generated work scoped, inspectable, and easier to trust.
+My focus is the practical layer around coding agents: the prompts, scripts, workflows, and small products that keep AI-generated work scoped, inspectable, and easier to trust.
 
 If you are building with Codex or evaluating how AI changes software work, find me on [X @manuelsampedrop](https://x.com/manuelsampedrop).
 
@@ -50,6 +50,18 @@ These are small on purpose. I prefer tools a reviewer can clone, inspect, run, a
 - [Recipes](./recipes/README.md): reusable prompts, checklists, and implementation patterns that came from actual work.
 - [Tooling radar](./radar/README.md): short research only when it changes a build or tooling decision.
 - [Automation runbook](./docs/automation-runbook.md): how the profile publishing loop works and what it refuses to publish.
+
+## Verify This Repo
+
+This profile repo has a small local check so maintenance changes are not just copy edits:
+
+```sh
+make test
+make lint
+make build
+```
+
+The check validates shell scripts, regenerates public indexes, refreshes latest-proof links, and fails if generated files drift.
 
 ## Latest Proof
 

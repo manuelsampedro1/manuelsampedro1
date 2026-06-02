@@ -26,8 +26,12 @@ if [ -z "$git_name" ] || [ -z "$git_email" ] || [[ "$git_email" == *.local ]]; t
 fi
 
 public_paths=(
+  .github
   README.md
+  AGENTS.md
   DECISIONS.md
+  LICENSE
+  Makefile
   TODO.md
   docs
   labs
