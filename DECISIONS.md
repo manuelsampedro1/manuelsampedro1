@@ -431,6 +431,16 @@ Rationale:
 - A small diff guard can enforce `DECISIONS.md` and `TODO.md` updates before reviewers accept decision-worthy changes.
 - This strengthens the profile's reliability story by covering intent preservation, not only tests and closeout evidence.
 
+## 2026-06-02 - Promote Decision Guard as Intent Preservation Proof
+
+Add `agent-decision-guard` to selected work once the public repo is created, hardened, pushed, and verified.
+
+Rationale:
+
+- It blocks decision-worthy agent diffs when durable rationale or follow-up tracking is missing.
+- It is backed by a dependency-free CLI, tests, examples including explicit no-follow-up waiver handling, CI, and `repo-flightcheck` at `100/100`.
+- It fills the gap between scope control and audit trails: future maintainers can see why CI, automation, config, product, or agent-instruction behavior changed.
+
 ## 2026-06-02 - Build Diff Budgets for Agent Reviews
 
 Use `agent-diff-budget` as another next public proof project once a GitHub remote can be created.

@@ -33,7 +33,7 @@ git diff -- . > /tmp/agent-change.diff
 2. Run the guard:
 
 ```sh
-agent-decision-guard /tmp/agent-change.diff
+PYTHONPATH=src python3 -m agent_decision_guard /tmp/agent-change.diff
 ```
 
 3. If blocked, either:
@@ -76,5 +76,5 @@ Rules:
 
 ## Source Linkage
 
-- Repo / tool / workflow: local `agent-decision-guard` prototype at `/Users/manuelsampedro/Documents/Codex/2026-05-21/agent-decision-guard`.
-- Supporting prompt, script, or note: [`./agents-md-patterns-for-codex-repos.md`](./agents-md-patterns-for-codex-repos.md), [`./runbook-drift-check.md`](./runbook-drift-check.md), and [`./closeout-evidence-check-for-agents.md`](./closeout-evidence-check-for-agents.md).
+- Repo / tool / workflow: [`agent-decision-guard`](https://github.com/manuelsampedro1/agent-decision-guard), public commit [`c7ac1bf`](https://github.com/manuelsampedro1/agent-decision-guard/commit/c7ac1bf2b9bb297a3c53bd5a5ba93aacd11ab2d4), [`README`](https://raw.githubusercontent.com/manuelsampedro1/agent-decision-guard/main/README.md), [`CLI`](https://raw.githubusercontent.com/manuelsampedro1/agent-decision-guard/main/src/agent_decision_guard/cli.py), [`tests`](https://raw.githubusercontent.com/manuelsampedro1/agent-decision-guard/main/tests/test_cli.py), [`blocking example`](https://raw.githubusercontent.com/manuelsampedro1/agent-decision-guard/main/examples/risky.diff), and [`waiver example`](https://raw.githubusercontent.com/manuelsampedro1/agent-decision-guard/main/examples/risky-with-waiver.diff).
+- Supporting prompt, script, or note: [`./agents-md-patterns-for-codex-repos.md`](./agents-md-patterns-for-codex-repos.md), [`./runbook-drift-check.md`](./runbook-drift-check.md), [`./closeout-evidence-check-for-agents.md`](./closeout-evidence-check-for-agents.md), and [`../labs/2026/2026-06-02-agent-decision-guard-public-launch.md`](../labs/2026/2026-06-02-agent-decision-guard-public-launch.md).
