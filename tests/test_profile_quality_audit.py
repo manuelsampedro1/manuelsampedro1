@@ -116,6 +116,85 @@ class ProfileQualityAuditTests(unittest.TestCase):
         self.assertIn("Verify This Repo is missing verification detail: commit-script shell fixture.", result.issues)
         self.assertIn("Verify This Repo is missing verification detail: profile quality audit.", result.issues)
 
+    def test_reviewer_path_must_stay_short(self) -> None:
+        reviewer_path = "\n".join(
+            [
+                *profile_quality_audit.REVIEWER_PATH_TARGETS,
+                "- extra route",
+                "- extra safety route",
+                "- extra proof route",
+                "- extra automation route",
+                "- extra closing route",
+            ]
+        )
+
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            examples = root / "examples"
+            examples.mkdir()
+            (root / "README.md").write_text(
+                "\n".join(
+                    [
+                        "# Test Profile",
+                        "",
+                        "## Current Focus",
+                        "",
+                        "## Reviewer Path",
+                        reviewer_path,
+                        "",
+                        "## Selected Work",
+                        "",
+                        "| Repo | What it proves | Why it matters |",
+                        "| --- | --- | --- |",
+                        "| [repo](https://example.com) | x | y |",
+                        "",
+                        "## Agent Safety Layer",
+                        "",
+                        "## How I Work With Codex",
+                        "",
+                        "## Public Workbench",
+                        "",
+                        "## Verify This Repo",
+                        "The check validates shell scripts, python audit tools, python unit tests, commit-script shell fixture, and profile quality audit.",
+                        "",
+                        "## Latest Proof",
+                        "",
+                        "## Principles",
+                        "",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+            (root / "DECISIONS.md").write_text("", encoding="utf-8")
+            (root / "TODO.md").write_text("", encoding="utf-8")
+            (examples / "README.md").write_text(
+                "\n".join(f"- [{Path(path).name}](./{Path(path).name})" for path in profile_quality_audit.REQUIRED_EXAMPLES),
+                encoding="utf-8",
+            )
+            for path in profile_quality_audit.REQUIRED_EXAMPLES:
+                (root / path).write_text("# Example\n", encoding="utf-8")
+            (root / "examples" / "profile-evidence-map.md").write_text(
+                "\n".join(profile_quality_audit.EVIDENCE_MAP_REPOS)
+                + "\n"
+                + "\n".join(
+                    [
+                        "agent-release-readiness-chain.md",
+                        "agent-review-packet-to-ledger-chain.md",
+                        "external-reviewer-navigation.md",
+                        "profile-verification-proof-packet.md",
+                        "profile-curation-guard-proof-packet.md",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+
+            result = profile_quality_audit.audit(root)
+
+        self.assertIn(
+            "Reviewer Path has 5 bullets; keep it at 4 or fewer for first-read clarity.",
+            result.issues,
+        )
+
     def test_saturated_selected_work_requires_curation_decision(self) -> None:
         rows = "\n".join(
             f"| [repo-{index}](https://example.com/{index}) | proof | why |"

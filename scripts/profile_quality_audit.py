@@ -78,6 +78,7 @@ VERIFY_SECTION_REQUIRED_PHRASES = [
 ]
 
 MAX_SELECTED_WORK_ROWS = 50
+MAX_REVIEWER_PATH_BULLETS = 4
 
 
 @dataclass(frozen=True)
@@ -131,6 +132,10 @@ def count_selected_work_rows(markdown: str) -> int:
     return rows
 
 
+def count_markdown_bullets(markdown: str) -> int:
+    return sum(1 for line in markdown.splitlines() if line.lstrip().startswith("- "))
+
+
 def audit(root: Path) -> AuditResult:
     readme = read_text(root / "README.md")
     decisions = read_text(root / "DECISIONS.md")
@@ -152,6 +157,12 @@ def audit(root: Path) -> AuditResult:
     for target in REVIEWER_PATH_TARGETS:
         if target not in reviewer_path:
             issues.append(f"Reviewer Path is missing target: {target}.")
+    reviewer_path_bullets = count_markdown_bullets(reviewer_path)
+    if reviewer_path_bullets > MAX_REVIEWER_PATH_BULLETS:
+        issues.append(
+            "Reviewer Path has "
+            f"{reviewer_path_bullets} bullets; keep it at {MAX_REVIEWER_PATH_BULLETS} or fewer for first-read clarity."
+        )
 
     verify_section = section_body(readme, "Verify This Repo").lower()
     for phrase in VERIFY_SECTION_REQUIRED_PHRASES:

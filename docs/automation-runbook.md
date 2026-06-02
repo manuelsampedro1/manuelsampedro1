@@ -65,6 +65,7 @@ The audit should also check:
 - weak README promotions,
 - drift away from the client-facing narrative.
 - first-read quality with `python3 scripts/profile_quality_audit.py --root . --min-score 100`.
+- Reviewer Path length staying at four bullets or fewer, with extra routes moved to examples instead of the first-read README section.
 
 ## Commit Rule
 

@@ -1069,3 +1069,17 @@ Rationale:
   check was previously ad hoc.
 - A versioned local audit script keeps the check reusable without storing
   credentials or requiring a new public proof repo.
+
+## 2026-06-02 - Cap Reviewer Path Length
+
+Keep the root README Reviewer Path short enough to work as a first-read route,
+not as another index.
+
+Rationale:
+
+- The profile already has a dense Selected Work table, examples, labs, and
+  recipes; the top-level reviewer path should reduce scan cost.
+- A short route through core reliability, safety, and composition evidence is
+  stronger than adding every new proof repo to the opening section.
+- Encoding the cap in `scripts/profile_quality_audit.py` keeps future profile
+  maintenance from quietly trading clarity for volume.
