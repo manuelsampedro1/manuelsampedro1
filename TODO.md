@@ -6,6 +6,7 @@
 - Keep GitHub SSH publishing durable for future public proof repos; this run restored terminal auth by loading `~/.ssh/id_ed25519_github_codex` into `ssh-agent`, after earlier HTTPS pushes failed with `could not read Username for 'https://github.com': Device not configured` and SSH pushes failed with `Permission denied (publickey)`.
 - Pause new proof-repo creation by default while the profile has 46 Selected Work rows and profile-proof audit holds at `100/100`; next useful work should be curation, cross-repo demonstrations, hardening, or a materially new workflow gap.
 - Keep root README `Current Focus` anchored on reliability, verification, auditability, safety, and product judgment.
+- Keep root README `Current Focus` shaped as exactly five bullets.
 - Keep the root README sections in canonical order so reviewer navigation, selected proof, and safety proof stay before the longer workflow archive.
 - Keep root README `Public Workbench` links complete for labs, recipes, examples, radar, and the automation runbook.
 - Keep root README `How I Work With Codex` at 18 bullets or fewer; move extra workflow routes into recipes or examples.

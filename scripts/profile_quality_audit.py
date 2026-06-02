@@ -28,6 +28,7 @@ CURRENT_FOCUS_REQUIRED_PHRASES = [
     "agent safety",
     "product judgment",
 ]
+CURRENT_FOCUS_REQUIRED_BULLETS = 5
 
 REVIEWER_PATH_TARGETS = [
     "https://github.com/manuelsampedro1/repo-flightcheck",
@@ -290,6 +291,12 @@ def audit(root: Path) -> AuditResult:
     for phrase in CURRENT_FOCUS_REQUIRED_PHRASES:
         if phrase not in current_focus:
             issues.append(f"Current Focus is missing narrative anchor: {phrase}.")
+    current_focus_bullets = count_markdown_bullets(section_body(readme, "Current Focus"))
+    if current_focus_bullets != CURRENT_FOCUS_REQUIRED_BULLETS:
+        issues.append(
+            "Current Focus has "
+            f"{current_focus_bullets} bullets; keep exactly {CURRENT_FOCUS_REQUIRED_BULLETS} first-read focus bullets."
+        )
 
     reviewer_path = section_body(readme, "Reviewer Path")
     for target in REVIEWER_PATH_TARGETS:

@@ -259,6 +259,21 @@ Rationale:
 - Requiring a decision before growth keeps future safety promotion deliberate
   and reviewable.
 
+## 2026-06-03 - Fix Current Focus Shape
+
+Keep the root README `Current Focus` section to exactly five bullets: agent
+reliability, verification discipline, agent auditability, agent safety, and
+product judgment.
+
+Rationale:
+
+- The opening profile story should be a sharp first-read summary, not a growing
+  list of adjacent interests.
+- Each bullet maps to a claim that the rest of the profile can prove with repos,
+  examples, recipes, and verification gates.
+- New focus areas should replace an existing focus deliberately or move into
+  recipes, examples, or lab notes until they have stronger evidence.
+
 ## 2026-06-02 - Audit README Section Order
 
 Treat the root README section order as part of the executable profile quality
