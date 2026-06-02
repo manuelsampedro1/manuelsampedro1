@@ -203,8 +203,9 @@ def audit(root: Path) -> AuditResult:
         if section not in order:
             issues.append(f"README is missing required section: {section}.")
 
-    if "Reviewer Path" in order and "Selected Work" in order and order["Reviewer Path"] > order["Selected Work"]:
-        issues.append("README Reviewer Path must appear before Selected Work.")
+    for first, second in zip(REQUIRED_README_SECTIONS, REQUIRED_README_SECTIONS[1:]):
+        if first in order and second in order and order[first] > order[second]:
+            issues.append(f"README section order is wrong: {first} must appear before {second}.")
 
     reviewer_path = section_body(readme, "Reviewer Path")
     for target in REVIEWER_PATH_TARGETS:

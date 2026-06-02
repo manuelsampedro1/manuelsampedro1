@@ -195,6 +195,78 @@ class ProfileQualityAuditTests(unittest.TestCase):
             result.issues,
         )
 
+    def test_readme_sections_must_keep_canonical_order(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            examples = root / "examples"
+            examples.mkdir()
+            (root / "README.md").write_text(
+                "\n".join(
+                    [
+                        "# Test Profile",
+                        "",
+                        "## Current Focus",
+                        "",
+                        "## Reviewer Path",
+                        "\n".join(profile_quality_audit.REVIEWER_PATH_TARGETS),
+                        "",
+                        "## Selected Work",
+                        "",
+                        "| Repo | What it proves | Why it matters |",
+                        "| --- | --- | --- |",
+                        "| [repo-a](https://github.com/manuelsampedro1/repo-a) | proof | why |",
+                        "",
+                        "## How I Work With Codex",
+                        "",
+                        "## Agent Safety Layer",
+                        "",
+                        "| Repo | What it proves | Why it matters |",
+                        "| --- | --- | --- |",
+                        "| [mcp-guard](https://github.com/manuelsampedro1/mcp-guard) | proof | why |",
+                        "",
+                        "## Public Workbench",
+                        "",
+                        "## Verify This Repo",
+                        "The check validates shell scripts, python audit tools, python unit tests, commit-script shell fixture, and profile quality audit.",
+                        "",
+                        "## Latest Proof",
+                        "",
+                        "## Principles",
+                        "",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+            (root / "DECISIONS.md").write_text("", encoding="utf-8")
+            (root / "TODO.md").write_text("", encoding="utf-8")
+            (examples / "README.md").write_text(
+                "\n".join(f"- [{Path(path).name}](./{Path(path).name})" for path in profile_quality_audit.REQUIRED_EXAMPLES),
+                encoding="utf-8",
+            )
+            for path in profile_quality_audit.REQUIRED_EXAMPLES:
+                (root / path).write_text("# Example\n", encoding="utf-8")
+            (root / "examples" / "profile-evidence-map.md").write_text(
+                "\n".join(profile_quality_audit.EVIDENCE_MAP_REPOS)
+                + "\n"
+                + "\n".join(
+                    [
+                        "agent-release-readiness-chain.md",
+                        "agent-review-packet-to-ledger-chain.md",
+                        "external-reviewer-navigation.md",
+                        "profile-verification-proof-packet.md",
+                        "profile-curation-guard-proof-packet.md",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+
+            result = profile_quality_audit.audit(root)
+
+        self.assertIn(
+            "README section order is wrong: Agent Safety Layer must appear before How I Work With Codex.",
+            result.issues,
+        )
+
     def test_selected_work_duplicate_repo_target_fails(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

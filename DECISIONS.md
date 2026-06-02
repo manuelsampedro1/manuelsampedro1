@@ -230,6 +230,17 @@ Rationale:
 - External links or duplicated repo targets would inflate or blur the agent-safety claim.
 - Label-to-slug matching keeps visible repo names honest when reviewers skim the profile.
 
+## 2026-06-02 - Audit README Section Order
+
+Treat the root README section order as part of the executable profile quality
+contract.
+
+Rationale:
+
+- The first read should move from focus to reviewer path, selected proof, and safety proof before the longer workflow archive.
+- A future edit that buries safety or verification below supporting material would weaken the profile without breaking links.
+- Enforcing canonical order keeps README navigation intentional as the public workbench grows.
+
 ## 2026-06-02 - Build Tool Schema Lint as Agent Interface Proof
 
 Use `agent-tool-schema-lint` as public proof for reviewing tool schemas before
