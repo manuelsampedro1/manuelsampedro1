@@ -23,6 +23,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Public Surface Sync for Agent Repos](./public-surface-sync-for-agent-repos.md)
 - [Profile Proof Audit](./profile-proof-audit.md)
 - [Merge Readiness Gate for Agent Diffs](./merge-readiness-gate-for-agent-diffs.md)
+- [Local-First Draft Round Trip](./local-first-draft-round-trip.md)
 - [Flagship Repo Proof Packet](./flagship-repo-proof-packet.md)
 - [Fail-Fast Git Identity for Agent Publish Flows](./fail-fast-git-identity-for-agent-publish-flows.md)
 - [Expected Paths Contract for Agent Publish Flows](./expected-paths-contract-for-agent-publish-flows.md)
