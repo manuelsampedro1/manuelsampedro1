@@ -1110,3 +1110,17 @@ Rationale:
   belong in recipes, lab notes, or radar instead of the main proof surface.
 - Encoding the ownership rule in `scripts/profile_quality_audit.py` prevents a
   future maintenance pass from diluting the profile with borrowed credibility.
+
+## 2026-06-02 - Match Selected Work Labels to Repo Slugs
+
+Require each visible root README Selected Work repo label to match the GitHub
+repo slug it links to.
+
+Rationale:
+
+- A mismatched label can make the profile look sloppy or misleading even when
+  the link is reachable and owned.
+- Reviewers should not need to hover links to know which repository a row
+  represents.
+- Encoding this in `scripts/profile_quality_audit.py` keeps the primary proof
+  table inspectable as it changes over time.

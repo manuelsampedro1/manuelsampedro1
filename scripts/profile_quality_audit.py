@@ -133,19 +133,29 @@ def count_selected_work_rows(markdown: str) -> int:
     return rows
 
 
-def selected_work_repo_targets(markdown: str) -> list[str]:
+def selected_work_repo_entries(markdown: str) -> list[tuple[str, str]]:
     body = section_body(markdown, "Selected Work")
-    targets: list[str] = []
+    entries: list[tuple[str, str]] = []
     for line in body.splitlines():
         stripped = line.strip()
         if not stripped.startswith("|"):
             continue
         if "---" in stripped or "Repo |" in stripped:
             continue
-        match = re.search(r"\[[^\]]+\]\(([^)]+)\)", stripped)
+        match = re.search(r"\[([^\]]+)\]\(([^)]+)\)", stripped)
         if match:
-            targets.append(match.group(1).rstrip("/"))
-    return targets
+            entries.append((match.group(1).strip(), match.group(2).rstrip("/")))
+    return entries
+
+
+def selected_work_repo_targets(markdown: str) -> list[str]:
+    return [target for _, target in selected_work_repo_entries(markdown)]
+
+
+def github_repo_slug(target: str) -> str:
+    if not target.startswith(SELECTED_WORK_TARGET_PREFIX):
+        return ""
+    return target.removeprefix(SELECTED_WORK_TARGET_PREFIX).split("/", 1)[0]
 
 
 def duplicated_values(values: list[str]) -> list[str]:
@@ -196,12 +206,17 @@ def audit(root: Path) -> AuditResult:
             issues.append(f"Verify This Repo is missing verification detail: {phrase}.")
 
     selected_rows = count_selected_work_rows(readme)
-    selected_targets = selected_work_repo_targets(readme)
+    selected_entries = selected_work_repo_entries(readme)
+    selected_targets = [target for _, target in selected_entries]
     for target in duplicated_values(selected_targets):
         issues.append(f"Selected Work contains duplicate repo target: {target}.")
-    for target in selected_targets:
+    for label, target in selected_entries:
         if not target.startswith(SELECTED_WORK_TARGET_PREFIX):
             issues.append(f"Selected Work target is not an owned GitHub repo: {target}.")
+            continue
+        slug = github_repo_slug(target)
+        if label != slug:
+            issues.append(f"Selected Work label `{label}` does not match repo target `{slug}`.")
     if selected_rows > MAX_SELECTED_WORK_ROWS:
         issues.append(
             f"Selected Work has {selected_rows} rows; curate before exceeding {MAX_SELECTED_WORK_ROWS} rows."
