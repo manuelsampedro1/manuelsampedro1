@@ -13,6 +13,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 - [2026-06-02 - Briefboard Local Preview](./2026/2026-06-02-briefboard-local-preview.md)
 - [2026-06-02 - Briefboard JSON Restore Loop](./2026/2026-06-02-briefboard-json-restore-loop.md)
 - [2026-06-02 - Briefboard Exportable Artifacts](./2026/2026-06-02-briefboard-exportable-artifacts.md)
+- [2026-06-02 - Agent Run Ledger JSON Doctor](./2026/2026-06-02-agent-run-ledger-json-doctor.md)
 - [2026-06-02 - Agent Run Ledger Command Status](./2026/2026-06-02-agent-run-ledger-command-status.md)
 - [2026-06-01 - Expected Paths Contract for Agent Publish Runs](./2026/2026-06-01-expected-paths-contract-for-agent-publish-runs.md)
 - [2026-06-01 - Agent Audit Proof Repos](./2026/2026-06-01-agent-audit-proof-repos.md)
