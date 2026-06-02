@@ -53,11 +53,11 @@ These are small on purpose. I prefer tools a reviewer can clone, inspect, run, a
 
 ## Latest Proof
 
-- Latest lab note: [2026-06-02 - Briefboard JSON Restore Loop](./labs/2026/2026-06-02-briefboard-json-restore-loop.md)
+- Latest lab note: [2026-06-02 - Repo Flightcheck Dirty Tree Preflight](./labs/2026/2026-06-02-repo-flightcheck-dirty-tree-preflight.md)
 - Latest recipes:
+  - [Clean Working Tree Agent Preflight](./recipes/clean-working-tree-agent-preflight.md)
   - [Local-First Draft Round Trip](./recipes/local-first-draft-round-trip.md)
   - [Command Evidence Status Contract](./recipes/command-evidence-status-contract.md)
-  - [Agent Instruction Quality Gate](./recipes/agent-instruction-quality-gate.md)
 
 ## Principles
 

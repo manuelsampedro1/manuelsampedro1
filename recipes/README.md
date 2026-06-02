@@ -34,6 +34,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Coding Agent Repo Loop](./coding-agent-repo-loop.md)
 - [Codex Debugging Checklist](./codex-debugging-checklist.md)
 - [Closeout Evidence Check for Agents](./closeout-evidence-check-for-agents.md)
+- [Clean Working Tree Agent Preflight](./clean-working-tree-agent-preflight.md)
 - [CI Failure Packet for Agent Reruns](./ci-failure-packet-for-agent-reruns.md)
 - [Change Risk Matrix for Agent Diffs](./change-risk-matrix-for-agent-diffs.md)
 - [AI Repo Review Findings](./ai-repo-review-findings.md)
