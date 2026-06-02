@@ -95,7 +95,7 @@ EXTERNAL_REVIEWER_REQUIRED_TERMS = [
 
 PUBLIC_TONE_FILES = [
     "README.md",
-    "docs/automation-runbook.md",
+    "docs",
     "examples",
     "labs",
     "radar",

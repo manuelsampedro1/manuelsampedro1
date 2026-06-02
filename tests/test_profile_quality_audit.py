@@ -104,9 +104,14 @@ class ProfileQualityAuditTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             (root / "recipes").mkdir()
+            (root / "docs").mkdir()
             (root / "README.md").write_text("# Test Profile\n", encoding="utf-8")
             (root / "recipes" / "note.md").write_text(
                 "A weak request says make reviewers approve this. It treats the profile as an approval signal.\n",
+                encoding="utf-8",
+            )
+            (root / "docs" / "profile-strategy.md").write_text(
+                "This doc should not say give me the award.\n",
                 encoding="utf-8",
             )
 
@@ -118,6 +123,10 @@ class ProfileQualityAuditTests(unittest.TestCase):
         )
         self.assertIn(
             "Public surface contains external-validation or approval-chasing phrase `approval signal` in recipes/note.md.",
+            result.issues,
+        )
+        self.assertIn(
+            "Public surface contains external-validation or approval-chasing phrase `give me the award` in docs/profile-strategy.md.",
             result.issues,
         )
 
