@@ -610,3 +610,13 @@ Rationale:
 - It gives the profile a concrete quality gate for the instruction layer behind Codex-style repo work.
 - It is backed by a dependency-free CLI, examples, tests, smoke checks, editable install, public clone verification, `repo-flightcheck` at `100/100`, and GitHub Actions success.
 - It complements `repo-flightcheck` by making the agent-instructions rule deeper than file existence.
+
+## 2026-06-02 - Build Agent Repo Map as Context Proof
+
+Use `agent-repo-map` as another public proof repo for pre-run coding-agent handoffs.
+
+Rationale:
+
+- Task contracts cover intent, but agents also need a compact map of repo terrain before changing files.
+- The tool fills a practical gap between task definition, repo readiness, instruction audit, and review packets.
+- It is dependency-free, bounded, testable, CI-backed, and verified with `repo-flightcheck` at `100/100`.
