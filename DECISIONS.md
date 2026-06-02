@@ -491,6 +491,16 @@ Rationale:
 - Comparing closeout text against the diff and command evidence adds a stricter evidence layer than structure-only closeout linting.
 - A dependency-free local checker supports the profile's core message: AI work should be trusted only when claims are tied to inspectable proof.
 
+## 2026-06-02 - Promote Claim Check as Closeout Evidence Proof
+
+Add `agent-claim-check` to selected work once the public repo is created, hardened, pushed, and verified.
+
+Rationale:
+
+- It checks final-answer claims against changed files, exact commands, explicit command evidence, and risky-path/no-risk contradictions.
+- It is backed by a dependency-free CLI, good and weak closeout examples, tests, CI, and `repo-flightcheck` at `100/100`.
+- It complements closeout shape checks by validating whether the final answer's claims match inspectable evidence before proof packets or PR comments reuse them.
+
 ## 2026-06-02 - Build Diff Split Plans for Oversized Agent Changes
 
 Use `agent-diff-splitter` as another next public proof project once a GitHub remote can be created.

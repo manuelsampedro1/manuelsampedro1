@@ -33,13 +33,13 @@ git diff -- . > /tmp/agent-change.diff
 2. Save or pipe the closeout:
 
 ```sh
-agent-claim-check closeout.md --diff /tmp/agent-change.diff
+PYTHONPATH=src python3 -m agent_claim_check closeout.md --diff /tmp/agent-change.diff
 ```
 
 3. Pass command evidence from the run ledger or terminal transcript:
 
 ```sh
-agent-claim-check closeout.md \
+PYTHONPATH=src python3 -m agent_claim_check closeout.md \
   --diff /tmp/agent-change.diff \
   --ran-command "PYTHONPATH=src python3 -m unittest discover -s tests"
 ```
@@ -81,5 +81,13 @@ Rules:
 
 ## Source Linkage
 
-- Repo / tool / workflow: local `agent-claim-check` prototype at `/Users/manuelsampedro/Documents/Codex/2026-05-21/agent-claim-check`.
-- Supporting prompt, script, or note: [`./closeout-evidence-check-for-agents.md`](./closeout-evidence-check-for-agents.md), [`./agent-proof-packet-for-review.md`](./agent-proof-packet-for-review.md), and [`./agent-review-map.md`](./agent-review-map.md).
+- Public repo: <https://github.com/manuelsampedro1/agent-claim-check>
+- Commit: <https://github.com/manuelsampedro1/agent-claim-check/commit/c9d6cded23fe3a069e38f7dfd9c030ec9668032f>
+- README: <https://raw.githubusercontent.com/manuelsampedro1/agent-claim-check/main/README.md>
+- CLI: <https://raw.githubusercontent.com/manuelsampedro1/agent-claim-check/main/src/agent_claim_check/cli.py>
+- Tests: <https://raw.githubusercontent.com/manuelsampedro1/agent-claim-check/main/tests/test_cli.py>
+- Sample diff: <https://raw.githubusercontent.com/manuelsampedro1/agent-claim-check/main/examples/sample.diff>
+- Good closeout: <https://raw.githubusercontent.com/manuelsampedro1/agent-claim-check/main/examples/good-closeout.md>
+- Weak closeout: <https://raw.githubusercontent.com/manuelsampedro1/agent-claim-check/main/examples/weak-closeout.md>
+- Launch note: [`../labs/2026/2026-06-02-agent-claim-check-public-launch.md`](../labs/2026/2026-06-02-agent-claim-check-public-launch.md)
+- Supporting recipes: [`./closeout-evidence-check-for-agents.md`](./closeout-evidence-check-for-agents.md), [`./agent-proof-packet-for-review.md`](./agent-proof-packet-for-review.md), and [`./agent-review-map.md`](./agent-review-map.md).
