@@ -1,7 +1,5 @@
 # TODO
 
-- Run a public-view audit after `repo-flightcheck` and `agent-run-ledger` finish propagating in pinned repos and contribution activity.
-- Check the first GitHub Actions runs for `repo-flightcheck` and `agent-run-ledger` after GitHub finishes scheduling CI.
 - Add one lightweight real screenshot or SVG preview for `briefboard-local` if it improves the README without making it noisy.
 - Publish local repo `/Users/manuelsampedro/Documents/Codex/2026-05-21/agent-task-contract` after creating empty GitHub repo `manuelsampedro1/agent-task-contract`; then add it to `README.md` Selected Work if CI passes.
 - Publish local repo `/Users/manuelsampedro/Documents/Codex/2026-05-21/diff-to-eval` after creating empty GitHub repo `manuelsampedro1/diff-to-eval`; then add it to `README.md` Selected Work if CI passes.
