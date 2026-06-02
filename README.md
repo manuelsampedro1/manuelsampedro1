@@ -22,7 +22,7 @@ If you are building with Codex or evaluating how AI changes software work, find 
 | [repo-flightcheck](https://github.com/manuelsampedro1/repo-flightcheck) | Pre-agent readiness | Audits whether a repository is ready for Codex, Claude Code, and human reviewers, including agent-readiness contract output, CI/local verification coverage, local tool availability, Python unittest detection, Python and Node CLI entrypoint readiness, GitHub Action repos, and stale documented commands. |
 | [codex-review-packet](https://github.com/manuelsampedro1/codex-review-packet) | Review context quality | Packages diffs, repo rules, local context, review lanes, sensitive-change checks, repo readiness reports or contracts, generated Markdown or JSON-envelope verification plans, and GitHub Actions CI evidence into a sharper handoff for Codex or Claude Code. |
 | [verify-by-change](https://github.com/manuelsampedro1/verify-by-change) | Evidence-based closeout | Suggests honest checks from committed diffs, working-tree changes, and generated review packets, with JSON envelope metadata, packet readiness context, CI-local command parity, GitHub Action/workflow guidance, secret-material and security-sensitive path checks, Python and Node CLI context, and a repo readiness contract. |
-| [briefboard-local](https://github.com/manuelsampedro1/briefboard-local) | Product scoping taste | Turns messy kickoff notes into a structured build brief, flags missing essentials, and generates a Codex-ready prompt with no backend, importable examples, and CI-local checks. |
+| [briefboard-local](https://github.com/manuelsampedro1/briefboard-local) | Product scoping taste | Turns messy kickoff notes into a structured build brief, flags missing essentials and weak handoff scope, and generates a Codex-ready prompt with no backend, importable examples, and CI-local checks. |
 
 These are small on purpose. I prefer tools a reviewer can clone, inspect, run, and challenge over larger demos with less operational signal.
 
@@ -37,7 +37,7 @@ These are small on purpose. I prefer tools a reviewer can clone, inspect, run, a
 
 ## How I Work With Codex
 
-- Start with a real brief, explicit acceptance criteria, and the smallest useful scope. See [briefboard-local](https://github.com/manuelsampedro1/briefboard-local) and [Brief Readiness Before Codex](./recipes/brief-readiness-before-codex.md).
+- Start with a real brief, explicit acceptance criteria, and the smallest useful scope. See [briefboard-local](https://github.com/manuelsampedro1/briefboard-local), [Handoff Scope Warnings Before Codex](./recipes/handoff-scope-warnings-before-codex.md), and [Brief Readiness Before Codex](./recipes/brief-readiness-before-codex.md).
 - Check repo readiness before handing work to an agent. See [repo-flightcheck](https://github.com/manuelsampedro1/repo-flightcheck), [Agent Readiness Contract Output](./recipes/agent-readiness-contract-output.md), [Local Tool Availability Preflight](./recipes/local-tool-availability-preflight.md), [Python CLI Entrypoint Readiness](./recipes/python-cli-entrypoint-readiness.md), [Node CLI Entrypoint Readiness](./recipes/node-cli-entrypoint-readiness.md), [Python Unittest Readiness Check](./recipes/python-unittest-readiness-check.md), [GitHub Action Repo Readiness](./recipes/github-action-repo-readiness.md), and [Documented Command Drift Check](./recipes/documented-command-drift-check.md).
 - Package repo-aware context so reviews can be stricter and more useful. See [codex-review-packet](https://github.com/manuelsampedro1/codex-review-packet), [Sensitive Change Checks in Review Packets](./recipes/sensitive-change-checks-in-review-packets.md), [CI Evidence in Review Packets](./recipes/ci-evidence-in-review-packets.md), [Readiness Contract in Review Packets](./recipes/readiness-contract-in-review-packets.md), [Repo Readiness in Review Packets](./recipes/repo-readiness-in-review-packets.md), [Review Packet With Generated Verification](./recipes/review-packet-with-generated-verification.md), [Generated Verification Envelopes in Review Packets](./recipes/generated-verification-envelope-review-packets.md), [Verification Envelope in Review Packets](./recipes/verification-envelope-in-review-packets.md), [Review Map in Agent Packets](./recipes/review-map-in-agent-packets.md), and [AI Repo Review Findings](./recipes/ai-repo-review-findings.md).
 - Match verification to the actual change type instead of pasting the same test advice everywhere. See [verify-by-change](https://github.com/manuelsampedro1/verify-by-change), [Security-Sensitive Change Verification](./recipes/security-sensitive-change-verification.md), [Review Packet Readiness to Verification Envelope](./recipes/review-packet-readiness-to-verification-envelope.md), [Verification by Change Type](./recipes/verification-by-change-type.md), [Python CLI Change Verification](./recipes/python-cli-change-verification.md), [Node CLI Change Verification](./recipes/node-cli-change-verification.md), [GitHub Action Change Verification](./recipes/github-action-change-verification.md), [JSON Envelope for Verification Gates](./recipes/json-envelope-for-verification-gates.md), [Review Packet to Verification Checklist](./recipes/review-packet-to-verification-checklist.md), and [Repo Readiness Contract for Agent Repos](./recipes/repo-readiness-contract-for-agent-repos.md).
@@ -53,11 +53,11 @@ These are small on purpose. I prefer tools a reviewer can clone, inspect, run, a
 
 ## Latest Proof
 
-- Latest lab note: [2026-06-02 - Agent Run Ledger Sensitive Review Packets](./labs/2026/2026-06-02-agent-run-ledger-sensitive-review-packets.md)
+- Latest lab note: [2026-06-02 - Briefboard Handoff Scope Warnings](./labs/2026/2026-06-02-briefboard-handoff-scope-warnings.md)
 - Latest recipes:
+  - [Handoff Scope Warnings Before Codex](./recipes/handoff-scope-warnings-before-codex.md)
   - [Sensitive Review Packet to Ledger Evidence](./recipes/sensitive-review-packet-to-ledger-evidence.md)
   - [Sensitive Change Checks in Review Packets](./recipes/sensitive-change-checks-in-review-packets.md)
-  - [Security-Sensitive Change Verification](./recipes/security-sensitive-change-verification.md)
 
 ## Principles
 
