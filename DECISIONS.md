@@ -351,6 +351,16 @@ Rationale:
 - A proof packet connects changed files, checks, evidence files, risks, decisions, open questions, and a verdict.
 - Keeping it dependency-free makes it easy to run locally, in CI, or before appending to an agent run ledger.
 
+## 2026-06-02 - Promote Proof Packets as Review Evidence
+
+Add `agent-proof-packet` to selected work once the public repo is created, hardened, pushed, and verified.
+
+Rationale:
+
+- It consolidates scattered agent evidence into one Markdown or JSON artifact a reviewer can inspect.
+- It is backed by a dependency-free CLI, non-complete exit-code semantics, relative evidence paths, tests, CI, examples, and `repo-flightcheck` at `100/100`.
+- It connects merge readiness, closeout evidence, risks, decisions, and ledger import into one handoff artifact.
+
 ## 2026-06-02 - Build Publish Queues for Local Agent Repos
 
 Use `agent-publish-queue` as another next public proof project once a GitHub remote can be created.
