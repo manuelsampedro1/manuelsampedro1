@@ -8,6 +8,7 @@
 - Keep the root README sections in canonical order so reviewer navigation, selected proof, and safety proof stay before the longer workflow archive.
 - Keep every root README `Latest Proof` link present in the matching public index (`labs/README.md`, `recipes/README.md`, or `radar/README.md`).
 - Keep the root README Reviewer Path at four bullets or fewer; move extra proof routes into `examples/profile-evidence-map.md` or `examples/external-reviewer-navigation.md` instead of expanding the first-read section.
+- Keep root README Reviewer Path links limited to the approved first-read route in `scripts/profile_quality_audit.py`.
 - Keep every `Selected Work` repo target unique; if a repo fits two narratives, explain the second narrative in examples or recipes rather than duplicating the row.
 - Keep `Selected Work` limited to owned `manuelsampedro1` GitHub repos; use radar or recipes for external tools and references.
 - Keep each `Selected Work` visible repo label identical to the GitHub repo slug it links to.

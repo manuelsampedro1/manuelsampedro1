@@ -239,6 +239,11 @@ def audit(root: Path) -> AuditResult:
     for target in REVIEWER_PATH_TARGETS:
         if target not in reviewer_path:
             issues.append(f"Reviewer Path is missing target: {target}.")
+    allowed_reviewer_targets = set(REVIEWER_PATH_TARGETS)
+    for _, target in markdown_links(reviewer_path):
+        normalized_target = target.rstrip("/")
+        if normalized_target not in allowed_reviewer_targets:
+            issues.append(f"Reviewer Path contains unapproved target: {target}.")
     reviewer_path_bullets = count_markdown_bullets(reviewer_path)
     if reviewer_path_bullets > MAX_REVIEWER_PATH_BULLETS:
         issues.append(

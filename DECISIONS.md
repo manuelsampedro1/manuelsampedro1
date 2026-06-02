@@ -252,6 +252,17 @@ Rationale:
 - Latest proof should be both highlighted on the profile and discoverable from the relevant index.
 - This catches index-refresh drift without adding more proof-repo volume or README churn.
 
+## 2026-06-03 - Allowlist Reviewer Path Targets
+
+Treat the root README `Reviewer Path` links as a focused first-read allowlist,
+not just a minimum set of required links.
+
+Rationale:
+
+- The five-minute reviewer route should stay intentional as the repo list grows.
+- Extra links in the first-read path dilute the strongest reliability and safety story.
+- New proof routes should move into examples or the evidence map unless the approved path is deliberately changed.
+
 ## 2026-06-02 - Build Tool Schema Lint as Agent Interface Proof
 
 Use `agent-tool-schema-lint` as public proof for reviewing tool schemas before

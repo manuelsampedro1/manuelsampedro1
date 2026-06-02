@@ -68,6 +68,7 @@ The audit should also check:
 - Canonical README section order so reviewer navigation, selected proof, and safety proof stay before the longer workflow archive.
 - Indexed `Latest Proof` targets so root README highlights stay discoverable from the public lab, recipe, or radar indexes.
 - Reviewer Path length staying at four bullets or fewer, with extra routes moved to examples instead of the first-read README section.
+- Reviewer Path links staying on the approved first-read route instead of accumulating extra proof links.
 - Unique `Selected Work` repo targets so repeated links cannot inflate the proof surface.
 - Owned `Selected Work` repo targets under `https://github.com/manuelsampedro1/`; external links belong in notes, recipes, or radar, not the primary proof table.
 - Matching `Selected Work` labels and repo slugs so visible repo names cannot point to a different target.
