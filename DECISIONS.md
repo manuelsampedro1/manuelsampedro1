@@ -511,6 +511,16 @@ Rationale:
 - A split planner turns broad agent diffs into ordered review slices by security, data, release, automation, tests, application, and docs.
 - Keeping it diff-only and dependency-free makes it easy to pair with budget checks, scope guards, review maps, and proof packets.
 
+## 2026-06-02 - Promote Diff Splitter as Oversized Diff Recovery Proof
+
+Add `agent-diff-splitter` to selected work once the public repo is created, hardened, pushed, and verified.
+
+Rationale:
+
+- It turns an oversized diff blocker into concrete next slices with order, files, line counts, rationale, and reviewer questions.
+- It is backed by a dependency-free CLI, mixed diff example, tests, CI, and `repo-flightcheck` at `100/100`.
+- It complements diff budgets by giving reviewers and the next agent run an actionable split plan instead of a vague "make it smaller" instruction.
+
 ## 2026-06-02 - Select Latest Lab Proof by Git Addition Time
 
 Use git addition time, not filename order, when selecting the root README's latest lab note.

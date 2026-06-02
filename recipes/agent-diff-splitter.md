@@ -34,13 +34,13 @@ git diff -- . > /tmp/agent-change.diff
 2. Check whether it is too broad:
 
 ```sh
-agent-diff-budget /tmp/agent-change.diff --max-files 6 --max-total 350
+PYTHONPATH=src python3 -m agent_diff_budget /tmp/agent-change.diff --max-files 6 --max-total 350
 ```
 
 3. If blocked, generate the split plan:
 
 ```sh
-agent-diff-splitter /tmp/agent-change.diff --max-files-per-split 3
+PYTHONPATH=src python3 -m agent_diff_splitter /tmp/agent-change.diff --max-files-per-split 3
 ```
 
 4. Feed each split into the next agent run:
@@ -88,5 +88,11 @@ Rules:
 
 ## Source Linkage
 
-- Repo / tool / workflow: local `agent-diff-splitter` prototype at `/Users/manuelsampedro/Documents/Codex/2026-05-21/agent-diff-splitter`.
-- Supporting prompt, script, or note: [`./agent-diff-budget.md`](./agent-diff-budget.md), [`./agent-review-map.md`](./agent-review-map.md), and [`./agent-proof-packet-for-review.md`](./agent-proof-packet-for-review.md).
+- Public repo: <https://github.com/manuelsampedro1/agent-diff-splitter>
+- Commit: <https://github.com/manuelsampedro1/agent-diff-splitter/commit/6554cc05857044bfb63b66a6d7e8719988c86b12>
+- README: <https://raw.githubusercontent.com/manuelsampedro1/agent-diff-splitter/main/README.md>
+- CLI: <https://raw.githubusercontent.com/manuelsampedro1/agent-diff-splitter/main/src/agent_diff_splitter/cli.py>
+- Tests: <https://raw.githubusercontent.com/manuelsampedro1/agent-diff-splitter/main/tests/test_cli.py>
+- Mixed diff example: <https://raw.githubusercontent.com/manuelsampedro1/agent-diff-splitter/main/examples/mixed.diff>
+- Launch note: [`../labs/2026/2026-06-02-agent-diff-splitter-public-launch.md`](../labs/2026/2026-06-02-agent-diff-splitter-public-launch.md)
+- Supporting recipes: [`./agent-diff-budget.md`](./agent-diff-budget.md), [`./agent-review-map.md`](./agent-review-map.md), and [`./agent-proof-packet-for-review.md`](./agent-proof-packet-for-review.md).
