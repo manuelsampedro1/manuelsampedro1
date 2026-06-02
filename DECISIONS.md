@@ -331,6 +331,16 @@ Rationale:
 - Agent closeouts should be checked against explicit evidence: passing checks, changed files, rollback coverage, risks, and blockers.
 - A dependency-free CLI that returns `ready`, `needs-review`, or `blocked` makes agent handoffs stricter without requiring a hosted service.
 
+## 2026-06-02 - Promote Merge Readiness as Verdict Proof
+
+Add `agent-merge-readiness` to selected work once the public repo is created, hardened, pushed, and verified.
+
+Rationale:
+
+- It turns the output of risk routing, checks, and closeout evidence into a strict merge verdict.
+- It is backed by a dependency-free CLI, non-ready exit-code semantics, tests, CI, examples, and `repo-flightcheck` at `100/100`.
+- It completes the handoff loop between "which gates apply?" and "is this safe enough to proceed?"
+
 ## 2026-06-02 - Build Proof Packets for Agent Review
 
 Use `agent-proof-packet` as another next public proof project once a GitHub remote can be created.
