@@ -25,6 +25,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Review Map in Agent Packets](./review-map-in-agent-packets.md)
 - [Repo Readiness to Ledger Evidence](./repo-readiness-to-ledger-evidence.md)
 - [Repo Readiness in Review Packets](./repo-readiness-in-review-packets.md)
+- [Repo Readiness Contract for Agent Repos](./repo-readiness-contract-for-agent-repos.md)
 - [Real Diff to Recipe](./real-diff-to-recipe.md)
 - [Python Unittest Readiness Check](./python-unittest-readiness-check.md)
 - [Publish Queue for Local Agent Repos](./publish-queue-for-local-agent-repos.md)
