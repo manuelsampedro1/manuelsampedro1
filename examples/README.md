@@ -4,4 +4,5 @@ Concrete profile-workbench examples live here. They should show how a public cla
 
 ## Entries
 
+- [Profile Curation Guard Proof Packet](./profile-curation-guard-proof-packet.md)
 - [Profile Verification Proof Packet](./profile-verification-proof-packet.md)

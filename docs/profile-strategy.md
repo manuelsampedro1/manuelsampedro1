@@ -51,27 +51,27 @@ Rank public proof in this order:
 
 If a lower layer starts overshadowing a higher one, rebalance the profile.
 
-Next flagship gaps:
+## Curation Guard
 
-- Task contracts before an agent starts. The local `agent-task-contract` project fills this by checking objective, acceptance criteria, constraints, verification, risks, and out-of-scope items before a coding-agent run begins.
-- Scope guards while an agent edits. The local `agent-scope-guard` project fills this by failing diffs that touch files outside declared paths or globs.
-- Secret scanning before an agent diff is committed or published. The local `agent-secret-sentinel` project fills this by scanning added diff lines for likely tokens, keys, and unsafe examples.
-- CI failure packets after verification fails. The local `agent-ci-failure-packet` project fills this by turning noisy logs into compact retry context for the next agent run.
-- Rollback planning before risky agent diffs ship. The local `agent-rollback-plan` project fills this by turning changed files and risk tags into rollback steps and post-rollback checks.
-- Runbook drift checks while agent repos evolve. The local `runbook-drift-check` project fills this by checking operational Markdown against real files, links, and scripts.
-- Closeout evidence checks before handoff. The local `agent-closeout-check` project fills this by linting final answers for summary, files, exact verification, risks, and vague claims.
-- Change risk routing before review. The local `agent-change-risk` project fills this by classifying changed paths into risk tags and selecting the right gates instead of running a noisy one-size-fits-all checklist.
-- Merge readiness before acceptance. The local `agent-merge-readiness` project fills this by turning diff evidence, check results, and closeout quality into a strict `ready`, `needs-review`, or `blocked` verdict.
-- Proof packets for reviewer handoff. The local `agent-proof-packet` project fills this by packaging changed files, checks, risks, decisions, evidence files, open questions, and missing evidence into one PR-ready artifact.
-- Publish queues before profile promotion. The local `agent-publish-queue` project fills this by scanning local repos, origin remotes, public GitHub URLs, dirty state, and setup blockers before anything is claimed publicly.
-- Profile proof audits before external review. The local `profile-proof-audit` project fills this by checking required sections, Selected Work rows, Latest Proof, relative links, external HTTP status, and unsupported claim language.
-- Eval runners after cases are saved. The local `agent-eval-runner` project fills this by scoring proof packets or closeouts against `diff-to-eval` cases for files, checks, risks, and expected outcomes.
-- Decision guards before merge. The local `agent-decision-guard` project fills this by blocking CI, automation, config, security, product-scope, or agent-instruction diffs that skip `DECISIONS.md` and `TODO.md` coverage.
-- Diff budgets before review. The local `agent-diff-budget` project fills this by blocking agent diffs that exceed explicit file, line, or high-risk-file thresholds before reviewers are asked to trust a broad handoff.
-- Split plans after oversized diffs. The local `agent-diff-splitter` project fills this by turning broad diffs into ordered, reviewable slices before the next agent run continues.
-- Review maps before handoff. The local `agent-review-map` project fills this by grouping changed files into review lanes, suggested owners, handoff order, and reviewer questions.
-- Claim checks before proof packets. The local `agent-claim-check` project fills this by comparing closeout claims against changed files, exact command evidence, and risky paths before the handoff is accepted.
-- Reusable eval cases after an agent finishes. The local `diff-to-eval` project fills this by turning real diffs into JSON cases with changed files, risk tags, suggested checks, and expected outcomes.
+The profile now has enough breadth to risk looking noisy if every maintenance
+run adds another small repo. Treat new repo creation as exceptional unless it
+covers a materially new workflow gap or substantially deepens an existing proof
+repo.
+
+The current public stack already covers:
+
+- pre-run clarity, repo mapping, context budgeting, and handoff drift,
+- scope control, diff budgets, split plans, review maps, and finding quality,
+- secret/artifact safety, dependency review, tool schemas, and tool-call replay,
+- change-aware verification, test impact, command receipts, proof packets, and
+  closeout/claim/plan checks,
+- CI debugging, retry control, bug repro, release-note accuracy, rollback
+  planning, and runbook drift,
+- eval-case generation, eval scoring, run ledgers, publish queues, and profile
+  proof audits.
+
+Next work should usually harden, combine, or demonstrate these repos in real
+workflows instead of adding another row to Selected Work.
 
 ## CTA
 

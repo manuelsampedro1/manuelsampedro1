@@ -914,3 +914,17 @@ Rationale:
   harder to trust.
 - The tool is dependency-free, testable, CI-backed, published by terminal SSH,
   and verified with `repo-flightcheck` at `100/100`.
+
+## 2026-06-02 - Pause Proof Repo Volume After Saturation
+
+Treat new proof-repo creation as exceptional until the profile needs a
+materially new workflow gap rather than another adjacent agent-quality tool.
+
+Rationale:
+
+- The public profile already has 46 Selected Work rows and profile proof audit
+  holds at `100/100` with no issues or warnings.
+- More rows can weaken first-read clarity even when each repo is individually
+  useful.
+- The next strongest signal is curation, cross-repo demonstrations, hardening,
+  and real workflow evidence, not volume for its own sake.
