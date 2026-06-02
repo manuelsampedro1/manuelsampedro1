@@ -171,6 +171,16 @@ Rationale:
 - Real diffs are stronger eval seeds than generic benchmark prompts.
 - A dependency-free CLI that turns diffs into JSON eval cases is small, reviewable, and directly useful for agent teams.
 
+## 2026-06-02 - Promote Diff to Eval as Learning Loop Proof
+
+Add `diff-to-eval` to selected work once the public repo is created, hardened, pushed, and verified.
+
+Rationale:
+
+- It extends the profile from one-off verification toward reusable agent evaluation cases.
+- It is backed by a dependency-free CLI, tests, sample diff, CI, and `repo-flightcheck` at `100/100`.
+- It makes the agent workflow story more complete: task, repo, review, verification, eval, and ledger.
+
 ## 2026-06-02 - Build Secret Sentinel as Agent Diff Safety Proof
 
 Use `agent-secret-sentinel` as another next public proof project once a GitHub remote can be created.

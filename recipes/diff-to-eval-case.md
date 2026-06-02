@@ -109,6 +109,7 @@ Tasks:
 
 ## Source Linkage
 
-- Repo / tool / workflow: profile repo automation and local `diff-to-eval` prototype.
-- Supporting prompt, script, or note: [`../recipes/verification-by-change-type.md`](./verification-by-change-type.md), [`../recipes/real-diff-to-recipe.md`](./real-diff-to-recipe.md), and [`../docs/profile-strategy.md`](../docs/profile-strategy.md).
-
+- Public repo: <https://github.com/manuelsampedro1/diff-to-eval>
+- Commit: <https://github.com/manuelsampedro1/diff-to-eval/commit/bd196719a29db55f99aec3640d20f12916d2801a>
+- Lab note: [2026-06-02 - Diff to Eval Public Launch](../labs/2026/2026-06-02-diff-to-eval-public-launch.md)
+- Supporting recipes: [`verification-by-change-type.md`](./verification-by-change-type.md) and [`real-diff-to-recipe.md`](./real-diff-to-recipe.md).
