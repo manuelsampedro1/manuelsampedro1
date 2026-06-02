@@ -320,3 +320,13 @@ Rationale:
 - Agent final answers can have the right sections and still overclaim tests, files, or risk posture.
 - Comparing closeout text against the diff and command evidence adds a stricter evidence layer than structure-only closeout linting.
 - A dependency-free local checker supports the profile's core message: AI work should be trusted only when claims are tied to inspectable proof.
+
+## 2026-06-02 - Build Diff Split Plans for Oversized Agent Changes
+
+Use `agent-diff-splitter` as another next public proof project once a GitHub remote can be created.
+
+Rationale:
+
+- Blocking oversized diffs is useful only if the next action is concrete.
+- A split planner turns broad agent diffs into ordered review slices by security, data, release, automation, tests, application, and docs.
+- Keeping it diff-only and dependency-free makes it easy to pair with budget checks, scope guards, review maps, and proof packets.

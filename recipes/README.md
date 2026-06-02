@@ -37,6 +37,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Agent Review Map](./agent-review-map.md)
 - [Agent Proof Packet for Review](./agent-proof-packet-for-review.md)
 - [Agent Eval Runner](./agent-eval-runner.md)
+- [Agent Diff Splitter](./agent-diff-splitter.md)
 - [Agent Diff Secret Sentinel](./agent-diff-secret-sentinel.md)
 - [Agent Diff Budget](./agent-diff-budget.md)
 - [Agent Decision Guard](./agent-decision-guard.md)

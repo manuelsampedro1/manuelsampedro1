@@ -68,6 +68,7 @@ Next flagship gaps:
 - Eval runners after cases are saved. The local `agent-eval-runner` project fills this by scoring proof packets or closeouts against `diff-to-eval` cases for files, checks, risks, and expected outcomes.
 - Decision guards before merge. The local `agent-decision-guard` project fills this by blocking CI, automation, config, security, product-scope, or agent-instruction diffs that skip `DECISIONS.md` and `TODO.md` coverage.
 - Diff budgets before review. The local `agent-diff-budget` project fills this by blocking agent diffs that exceed explicit file, line, or high-risk-file thresholds before reviewers are asked to trust a broad handoff.
+- Split plans after oversized diffs. The local `agent-diff-splitter` project fills this by turning broad diffs into ordered, reviewable slices before the next agent run continues.
 - Review maps before handoff. The local `agent-review-map` project fills this by grouping changed files into review lanes, suggested owners, handoff order, and reviewer questions.
 - Claim checks before proof packets. The local `agent-claim-check` project fills this by comparing closeout claims against changed files, exact command evidence, and risky paths before the handoff is accepted.
 - Reusable eval cases after an agent finishes. The local `diff-to-eval` project fills this by turning real diffs into JSON cases with changed files, risk tags, suggested checks, and expected outcomes.
