@@ -21,6 +21,14 @@ REQUIRED_README_SECTIONS = [
     "Principles",
 ]
 
+CURRENT_FOCUS_REQUIRED_PHRASES = [
+    "agent reliability",
+    "verification discipline",
+    "agent auditability",
+    "agent safety",
+    "product judgment",
+]
+
 REVIEWER_PATH_TARGETS = [
     "https://github.com/manuelsampedro1/repo-flightcheck",
     "https://github.com/manuelsampedro1/codex-review-packet",
@@ -75,6 +83,14 @@ VERIFY_SECTION_REQUIRED_PHRASES = [
     "python unit tests",
     "commit-script shell fixture",
     "profile quality audit",
+]
+
+PUBLIC_WORKBENCH_TARGETS = [
+    "./labs/README.md",
+    "./recipes/README.md",
+    "./examples/README.md",
+    "./radar/README.md",
+    "./docs/automation-runbook.md",
 ]
 
 MAX_SELECTED_WORK_ROWS = 50
@@ -242,6 +258,11 @@ def audit(root: Path) -> AuditResult:
         if first in order and second in order and order[first] > order[second]:
             issues.append(f"README section order is wrong: {first} must appear before {second}.")
 
+    current_focus = section_body(readme, "Current Focus").lower()
+    for phrase in CURRENT_FOCUS_REQUIRED_PHRASES:
+        if phrase not in current_focus:
+            issues.append(f"Current Focus is missing narrative anchor: {phrase}.")
+
     reviewer_path = section_body(readme, "Reviewer Path")
     for target in REVIEWER_PATH_TARGETS:
         if target not in reviewer_path:
@@ -263,6 +284,12 @@ def audit(root: Path) -> AuditResult:
         if phrase not in verify_section:
             issues.append(f"Verify This Repo is missing verification detail: {phrase}.")
     audit_latest_proof_indexes(root, readme, issues)
+
+    public_workbench = section_body(readme, "Public Workbench")
+    public_workbench_targets = {target.rstrip("/") for _, target in markdown_links(public_workbench)}
+    for target in PUBLIC_WORKBENCH_TARGETS:
+        if target not in public_workbench_targets:
+            issues.append(f"Public Workbench is missing target: {target}.")
 
     selected_rows = count_selected_work_rows(readme)
     selected_entries = selected_work_repo_entries(readme)

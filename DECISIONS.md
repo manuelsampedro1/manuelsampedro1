@@ -988,6 +988,22 @@ Rationale:
 - New signal should come from curation, examples, verification, and materially
   new workflow gaps before increasing the primary proof table.
 
+## 2026-06-03 - Audit Profile Narrative Anchors
+
+Require the root README `Current Focus` and `Public Workbench` sections to keep
+their core narrative and discoverability anchors.
+
+Rationale:
+
+- A profile can keep all required sections while quietly losing the first-read
+  story that makes the proof stack coherent.
+- The current strongest narrative is reliability, verification, auditability,
+  safety, and product judgment, backed by labs, recipes, examples, radar, and
+  the automation runbook.
+- Encoding those anchors in `scripts/profile_quality_audit.py` prevents future
+  maintenance from preserving the shell of the README while weakening its
+  reviewer path.
+
 ## 2026-06-02 - Prefer Cross-Repo Workflow Demos After Saturation
 
 Use examples that chain existing proof repos together when the profile needs
