@@ -102,6 +102,8 @@ scripts/commit_daily_update.sh \
 
 If the script reports unexpected public-path changes, narrow the run or move the unrelated draft work before retrying.
 
+After a publish run, the script warns when uncommitted local changes remain so scratch files do not silently carry into the next automation run.
+
 ## GitHub Setup
 
 Remote publishing is configured for `manuelsampedro1/manuelsampedro1`.

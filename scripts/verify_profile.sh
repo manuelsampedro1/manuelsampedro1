@@ -8,10 +8,12 @@ bash -n \
   scripts/update_radar_index.sh \
   scripts/update_root_readme_latest.sh \
   scripts/commit_daily_update.sh \
-  scripts/verify_profile.sh
+  scripts/verify_profile.sh \
+  tests/test_commit_daily_update.sh
 
 python3 -m py_compile scripts/profile_quality_audit.py
 python3 -m unittest discover -s tests
+bash tests/test_commit_daily_update.sh
 python3 scripts/profile_quality_audit.py --root . --min-score 100 >/dev/null
 
 tmp="$(mktemp -d)"

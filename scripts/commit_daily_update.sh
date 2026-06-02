@@ -8,6 +8,15 @@ fi
 
 expected_paths=("$@")
 
+warn_remaining_changes() {
+  remaining_changes="$(git status --porcelain -- .)"
+  if [ -n "$remaining_changes" ]; then
+    echo "Warning: working tree still has uncommitted changes after this publish run:" >&2
+    printf '%s\n' "$remaining_changes" >&2
+    echo "Review or move scratch files before the next automation run." >&2
+  fi
+}
+
 if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
   echo "Not inside a git repository."
   exit 1
@@ -131,6 +140,7 @@ git add "${existing_paths[@]}"
 
 if git diff --cached --quiet -- .; then
   echo "No useful changes to commit."
+  warn_remaining_changes
   exit 0
 fi
 
@@ -141,3 +151,5 @@ if git remote get-url origin >/dev/null 2>&1; then
 else
   echo "Committed locally. Add a remote named origin to push to GitHub."
 fi
+
+warn_remaining_changes

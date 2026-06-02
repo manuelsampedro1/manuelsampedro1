@@ -1012,3 +1012,16 @@ Rationale:
 - The tests prove the current profile passes and that missing reviewer-path or
   saturation-curation evidence fails.
 - This keeps first-read quality and curation discipline enforceable in CI.
+
+## 2026-06-02 - Warn on Residual Local Changes After Publish
+
+Keep the maintenance publish flow from silently leaving scratch files behind.
+
+Rationale:
+
+- Whole-directory staging intentionally ignores unmanaged scratch paths outside
+  public profile surfaces.
+- A successful commit can still leave local files that confuse the next
+  automation run or reviewer.
+- A non-failing warning preserves publish momentum while making residual local
+  state visible.
