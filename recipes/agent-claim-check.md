@@ -71,6 +71,24 @@ Rules:
 - Did risky paths make "no risk" language invalid?
 - Did the proof packet include claim-check output before merge readiness?
 
+## Decision Pattern
+
+Use the findings to decide the next move instead of treating claim check as a vague warning:
+
+- `ready`: every changed file is covered, each verification claim has an exact command, and risky paths are either absent or explicitly discussed.
+- `revise closeout`: the code change may be fine, but the final answer skipped a changed file, used fuzzy verification wording, or claimed a command that does not match the ledger.
+- `rerun verification`: the closeout claims tests, lint, or deploy checks passed but no command evidence exists yet.
+- `escalate review`: risky paths changed and the closeout still says `no risk`, or command evidence conflicts with the claimed result.
+
+Minimal reviewer note:
+
+```text
+Claim check verdict: revise closeout
+- Missing changed file: scripts/release.sh
+- Unsupported claim: "all tests passed"
+- Needed next step: rerun the exact test command or remove the claim
+```
+
 ## Failure Modes
 
 - Accepting a polished closeout that skips a changed file.
