@@ -540,3 +540,23 @@ Rationale:
 - Cross-tool workflows are stronger profile proof than isolated README improvements.
 - The profile should show how repo readiness, review packets, verification plans, and ledgers compose into a reliable agent workflow.
 - Requiring public links and verification keeps the workbench from drifting into speculative architecture notes.
+
+## 2026-06-02 - Build Command Receipts for Agent Evidence
+
+Use `agent-command-receipt` as another public proof project for command evidence before closeout claims are reused.
+
+Rationale:
+
+- Agent final answers and proof packets need more than copied terminal text when a command result becomes review evidence.
+- A small receipt with command status, exit code, timestamp, and evidence file hashes makes drift visible before the receipt is reused.
+- Keeping it dependency-free makes it suitable for local handoffs, CI artifacts, proof packets, and ledger import without requiring hosted infrastructure.
+
+## 2026-06-02 - Promote Command Receipt as Evidence Hash Proof
+
+Add `agent-command-receipt` to selected work once the public repo is created, browser-published, cloned, locally verified, and its GitHub Actions run succeeds.
+
+Rationale:
+
+- It strengthens the profile's closeout-evidence story by tying command claims to hashed files rather than trust in wording.
+- It is backed by a dependency-free CLI, example receipt, tests, local smoke checks, fresh public clone verification, and GitHub Actions success.
+- It complements `agent-claim-check`, `agent-proof-packet`, and `agent-run-ledger` by making command evidence reusable without hiding file drift.
