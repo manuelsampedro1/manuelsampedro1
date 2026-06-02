@@ -39,6 +39,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Readiness Contract to Ledger Evidence](./readiness-contract-to-ledger-evidence.md)
 - [Readiness Contract in Review Packets](./readiness-contract-in-review-packets.md)
 - [Python Unittest Readiness Check](./python-unittest-readiness-check.md)
+- [Python CLI Entrypoint Readiness](./python-cli-entrypoint-readiness.md)
 - [Publish Queue for Local Agent Repos](./publish-queue-for-local-agent-repos.md)
 - [Public Surface Sync for Agent Repos](./public-surface-sync-for-agent-repos.md)
 - [Profile Proof Audit](./profile-proof-audit.md)
