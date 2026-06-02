@@ -620,3 +620,13 @@ Rationale:
 - Task contracts cover intent, but agents also need a compact map of repo terrain before changing files.
 - The tool fills a practical gap between task definition, repo readiness, instruction audit, and review packets.
 - It is dependency-free, bounded, testable, CI-backed, and verified with `repo-flightcheck` at `100/100`.
+
+## 2026-06-02 - Build Agent Handoff Brief as Pre-Run Prompt Proof
+
+Use `agent-handoff-brief` as another public proof repo for converting task contracts and repo context into a concrete coding-agent prompt.
+
+Rationale:
+
+- A task contract and a repo map are stronger when the next agent receives them as one actionable handoff.
+- The tool reduces guessing before execution by surfacing required reading, commands, verification, risk paths, gaps, and closeout expectations.
+- It is dependency-free, testable, CI-backed, published by terminal SSH, and verified with `repo-flightcheck` at `100/100`.

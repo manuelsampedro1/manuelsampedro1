@@ -103,6 +103,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Agent Proof Packet for Review](./agent-proof-packet-for-review.md)
 - [Agent Instruction Quality Gate](./agent-instruction-quality-gate.md)
 - [Agent Instruction Audit](./agent-instruction-audit.md)
+- [Agent Handoff Brief](./agent-handoff-brief.md)
 - [Agent Eval Runner](./agent-eval-runner.md)
 - [Agent Diff Splitter](./agent-diff-splitter.md)
 - [Agent Diff Secret Sentinel](./agent-diff-secret-sentinel.md)

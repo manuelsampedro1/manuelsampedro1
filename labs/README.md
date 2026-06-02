@@ -87,6 +87,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 - [2026-06-02 - Agent Proof Packet Public Launch](./2026/2026-06-02-agent-proof-packet-public-launch.md)
 - [2026-06-02 - Agent Merge Readiness Public Launch](./2026/2026-06-02-agent-merge-readiness-public-launch.md)
 - [2026-06-02 - Agent Instruction Audit Public Launch](./2026/2026-06-02-agent-instruction-audit-public-launch.md)
+- [2026-06-02 - Agent Handoff Brief Public Launch](./2026/2026-06-02-agent-handoff-brief-public-launch.md)
 - [2026-06-02 - Agent Eval Runner Public Launch](./2026/2026-06-02-agent-eval-runner-public-launch.md)
 - [2026-06-02 - Agent Diff Splitter Public Launch](./2026/2026-06-02-agent-diff-splitter-public-launch.md)
 - [2026-06-02 - Agent Diff Budget Public Launch](./2026/2026-06-02-agent-diff-budget-public-launch.md)
