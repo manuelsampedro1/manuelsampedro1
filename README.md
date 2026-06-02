@@ -18,7 +18,7 @@ If you are building with Codex or evaluating how AI changes software work, find 
 
 | Repo | What it proves | Why it matters |
 | --- | --- | --- |
-| [agent-run-ledger](https://github.com/manuelsampedro1/agent-run-ledger) | Agent audit trails | Records AI agent runs as JSONL, imports review packets, repo readiness reports, and Markdown or JSON-envelope verification plans, gates unresolved evidence with strict doctor mode, and renders static review reports. |
+| [agent-run-ledger](https://github.com/manuelsampedro1/agent-run-ledger) | Agent audit trails | Records AI agent runs as JSONL, imports review packets with embedded verification checks, repo readiness reports, and Markdown or JSON-envelope verification plans, gates unresolved evidence with strict doctor mode, and renders static review reports. |
 | [repo-flightcheck](https://github.com/manuelsampedro1/repo-flightcheck) | Pre-agent readiness | Audits whether a repository is ready for Codex, Claude Code, and human reviewers, including CI/local verification coverage, Python unittest detection, GitHub Action repos, and stale documented commands. |
 | [codex-review-packet](https://github.com/manuelsampedro1/codex-review-packet) | Review context quality | Packages diffs, repo rules, local context, review lanes, repo readiness reports, and Markdown or JSON-envelope verification plans into a sharper handoff for Codex or Claude Code. |
 | [verify-by-change](https://github.com/manuelsampedro1/verify-by-change) | Evidence-based closeout | Suggests honest checks from committed diffs, working-tree changes, and generated review packets, with JSON envelope metadata, CI-local command parity, GitHub Action/workflow guidance, and a repo readiness contract. |
@@ -41,7 +41,7 @@ These are small on purpose. I prefer tools a reviewer can clone, inspect, run, a
 - Check repo readiness before handing work to an agent. See [repo-flightcheck](https://github.com/manuelsampedro1/repo-flightcheck), [Python Unittest Readiness Check](./recipes/python-unittest-readiness-check.md), [GitHub Action Repo Readiness](./recipes/github-action-repo-readiness.md), and [Documented Command Drift Check](./recipes/documented-command-drift-check.md).
 - Package repo-aware context so reviews can be stricter and more useful. See [codex-review-packet](https://github.com/manuelsampedro1/codex-review-packet), [Repo Readiness in Review Packets](./recipes/repo-readiness-in-review-packets.md), [Review Packet With Generated Verification](./recipes/review-packet-with-generated-verification.md), [Verification Envelope in Review Packets](./recipes/verification-envelope-in-review-packets.md), [Review Map in Agent Packets](./recipes/review-map-in-agent-packets.md), and [AI Repo Review Findings](./recipes/ai-repo-review-findings.md).
 - Match verification to the actual change type instead of pasting the same test advice everywhere. See [verify-by-change](https://github.com/manuelsampedro1/verify-by-change), [Verification by Change Type](./recipes/verification-by-change-type.md), [GitHub Action Change Verification](./recipes/github-action-change-verification.md), [JSON Envelope for Verification Gates](./recipes/json-envelope-for-verification-gates.md), [Review Packet to Verification Checklist](./recipes/review-packet-to-verification-checklist.md), and [Repo Readiness Contract for Agent Repos](./recipes/repo-readiness-contract-for-agent-repos.md).
-- Leave an audit trail for non-trivial agent runs. See [agent-run-ledger](https://github.com/manuelsampedro1/agent-run-ledger), [Review Packet to Ledger Evidence](./recipes/review-packet-to-ledger-evidence.md), [Repo Readiness to Ledger Evidence](./recipes/repo-readiness-to-ledger-evidence.md), and [Verification Envelope to Ledger Evidence](./recipes/verification-envelope-to-ledger-evidence.md).
+- Leave an audit trail for non-trivial agent runs. See [agent-run-ledger](https://github.com/manuelsampedro1/agent-run-ledger), [Review Packet Verification to Ledger](./recipes/review-packet-verification-to-ledger.md), [Review Packet to Ledger Evidence](./recipes/review-packet-to-ledger-evidence.md), [Repo Readiness to Ledger Evidence](./recipes/repo-readiness-to-ledger-evidence.md), and [Verification Envelope to Ledger Evidence](./recipes/verification-envelope-to-ledger-evidence.md).
 - Gate sensitive agent actions with explicit human authorization where execution risk is higher than review risk. See [deploy-gate](https://github.com/manuelsampedro1/deploy-gate) and [mcp-guard](https://github.com/manuelsampedro1/mcp-guard).
 
 ## Public Workbench
@@ -53,11 +53,11 @@ These are small on purpose. I prefer tools a reviewer can clone, inspect, run, a
 
 ## Latest Proof
 
-- Latest lab note: [2026-06-02 - Codex Review Packet Verification Envelope](./labs/2026/2026-06-02-codex-review-packet-verification-envelope.md)
+- Latest lab note: [2026-06-02 - Agent Run Ledger Packet Verification Import](./labs/2026/2026-06-02-agent-run-ledger-packet-verification-import.md)
 - Latest recipes:
+  - [Review Packet Verification to Ledger](./recipes/review-packet-verification-to-ledger.md)
   - [Verification Envelope in Review Packets](./recipes/verification-envelope-in-review-packets.md)
   - [Review Packet to Verification Checklist](./recipes/review-packet-to-verification-checklist.md)
-  - [Review Packet to Ledger Evidence](./recipes/review-packet-to-ledger-evidence.md)
 
 ## Principles
 

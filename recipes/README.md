@@ -24,6 +24,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Review Packet Working Tree Evidence](./review-packet-working-tree-evidence.md)
 - [Review Packet with Verification Plan](./review-packet-with-verification-plan.md)
 - [Review Packet With Generated Verification](./review-packet-with-generated-verification.md)
+- [Review Packet Verification to Ledger](./review-packet-verification-to-ledger.md)
 - [Review Packet to Verification Checklist](./review-packet-to-verification-checklist.md)
 - [Review Packet to Ledger Evidence](./review-packet-to-ledger-evidence.md)
 - [Review Map in Agent Packets](./review-map-in-agent-packets.md)
