@@ -855,3 +855,17 @@ Rationale:
   files, risk paths, explicit verification, and concrete language.
 - The tool is dependency-free, testable, CI-backed, published by terminal SSH,
   and verified with `repo-flightcheck` at `100/100`.
+
+## 2026-06-02 - Build Plan Trace as Execution Evidence Proof
+
+Use `agent-plan-trace` as another public proof repo for tracing completed agent
+plan items against diffs, command logs, and closeout evidence.
+
+Rationale:
+
+- Plans help coordinate multi-step agent work, but they can become theater if
+  completed items are not checked against real execution evidence.
+- Pending or in-progress plan items should not disappear behind a confident
+  final answer.
+- The tool is dependency-free, testable, CI-backed, published by terminal SSH,
+  and verified with `repo-flightcheck` at `100/100`.
