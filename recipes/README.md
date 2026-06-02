@@ -30,6 +30,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Review Packet to Ledger Evidence](./review-packet-to-ledger-evidence.md)
 - [Review Packet Readiness to Verification Envelope](./review-packet-readiness-to-verification-envelope.md)
 - [Review Packet Readiness to Ledger Evidence](./review-packet-readiness-to-ledger-evidence.md)
+- [Review Packet CI Evidence to Ledger](./review-packet-ci-evidence-to-ledger.md)
 - [Review Map in Agent Packets](./review-map-in-agent-packets.md)
 - [Repo Readiness to Ledger Evidence](./repo-readiness-to-ledger-evidence.md)
 - [Repo Readiness in Review Packets](./repo-readiness-in-review-packets.md)
