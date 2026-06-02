@@ -7,6 +7,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 - [2026-06-02 - Public Repo CLI Output Snippets](./2026/2026-06-02-public-repo-cli-output-snippets.md)
 - [2026-06-02 - Public Proof Repo CI Audit](./2026/2026-06-02-public-proof-repo-ci-audit.md)
 - [2026-06-02 - Briefboard Local Preview](./2026/2026-06-02-briefboard-local-preview.md)
+- [2026-06-02 - Briefboard Exportable Artifacts](./2026/2026-06-02-briefboard-exportable-artifacts.md)
 - [2026-06-01 - Expected Paths Contract for Agent Publish Runs](./2026/2026-06-01-expected-paths-contract-for-agent-publish-runs.md)
 - [2026-06-01 - Agent Audit Proof Repos](./2026/2026-06-01-agent-audit-proof-repos.md)
 - [2026-05-30 - Whole-Directory Staging in Agent Publish Scripts](./2026/2026-05-30-whole-directory-staging-in-agent-publish-scripts.md)
