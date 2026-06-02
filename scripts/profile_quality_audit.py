@@ -97,6 +97,7 @@ MAX_SELECTED_WORK_ROWS = 50
 SELECTED_WORK_SATURATION_BASELINE_ROWS = 46
 SELECTED_WORK_GROWTH_DECISION_TITLE = "Allow Selected Work Growth After Saturation"
 MAX_REVIEWER_PATH_BULLETS = 4
+MAX_HOW_I_WORK_BULLETS = 18
 OWNED_GITHUB_REPO_PREFIX = "https://github.com/manuelsampedro1/"
 LATEST_PROOF_INDEXES = {
     "./labs/": "labs/README.md",
@@ -290,6 +291,13 @@ def audit(root: Path) -> AuditResult:
     for target in PUBLIC_WORKBENCH_TARGETS:
         if target not in public_workbench_targets:
             issues.append(f"Public Workbench is missing target: {target}.")
+
+    how_i_work_bullets = count_markdown_bullets(section_body(readme, "How I Work With Codex"))
+    if how_i_work_bullets > MAX_HOW_I_WORK_BULLETS:
+        issues.append(
+            "How I Work With Codex has "
+            f"{how_i_work_bullets} bullets; keep it at {MAX_HOW_I_WORK_BULLETS} or fewer and move extra routes to recipes or examples."
+        )
 
     selected_rows = count_selected_work_rows(readme)
     selected_entries = selected_work_repo_entries(readme)

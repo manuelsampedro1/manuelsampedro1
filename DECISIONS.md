@@ -1004,6 +1004,19 @@ Rationale:
   maintenance from preserving the shell of the README while weakening its
   reviewer path.
 
+## 2026-06-03 - Cap Workflow Archive Growth
+
+Keep the root README `How I Work With Codex` section at 18 bullets or fewer.
+
+Rationale:
+
+- The section already links the full workflow stack and has enough depth for a
+  reviewer who wants more than the five-minute route.
+- Adding more bullets would make the README behave like another index and
+  weaken the profile's curation discipline.
+- New workflow routes should move into recipes, examples, or the evidence map
+  instead of expanding the root first-read surface.
+
 ## 2026-06-02 - Prefer Cross-Repo Workflow Demos After Saturation
 
 Use examples that chain existing proof repos together when the profile needs

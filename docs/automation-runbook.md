@@ -68,6 +68,7 @@ The audit should also check:
 - Current Focus retaining the profile's core narrative anchors: reliability, verification, auditability, safety, and product judgment.
 - Canonical README section order so reviewer navigation, selected proof, and safety proof stay before the longer workflow archive.
 - Public Workbench linking to labs, recipes, examples, radar, and the automation runbook so supporting evidence remains discoverable.
+- How I Work With Codex staying at 18 bullets or fewer so the workflow archive does not become another unbounded index.
 - Indexed `Latest Proof` targets so root README highlights stay discoverable from the public lab, recipe, or radar indexes.
 - Reviewer Path length staying at four bullets or fewer, with extra routes moved to examples instead of the first-read README section.
 - Reviewer Path links staying on the approved first-read route instead of accumulating extra proof links.

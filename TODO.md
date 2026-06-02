@@ -8,6 +8,7 @@
 - Keep root README `Current Focus` anchored on reliability, verification, auditability, safety, and product judgment.
 - Keep the root README sections in canonical order so reviewer navigation, selected proof, and safety proof stay before the longer workflow archive.
 - Keep root README `Public Workbench` links complete for labs, recipes, examples, radar, and the automation runbook.
+- Keep root README `How I Work With Codex` at 18 bullets or fewer; move extra workflow routes into recipes or examples.
 - Keep every root README `Latest Proof` link present in the matching public index (`labs/README.md`, `recipes/README.md`, or `radar/README.md`).
 - Keep the root README Reviewer Path at four bullets or fewer; move extra proof routes into `examples/profile-evidence-map.md` or `examples/external-reviewer-navigation.md` instead of expanding the first-read section.
 - Keep root README Reviewer Path links limited to the approved first-read route in `scripts/profile_quality_audit.py`.

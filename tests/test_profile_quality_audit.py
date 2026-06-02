@@ -423,6 +423,94 @@ class ProfileQualityAuditTests(unittest.TestCase):
         self.assertIn("Public Workbench is missing target: ./radar/README.md.", result.issues)
         self.assertIn("Public Workbench is missing target: ./docs/automation-runbook.md.", result.issues)
 
+    def test_how_i_work_section_must_not_keep_growing(self) -> None:
+        workflow_bullets = "\n".join(
+            f"- Workflow route {index}"
+            for index in range(profile_quality_audit.MAX_HOW_I_WORK_BULLETS + 1)
+        )
+
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            examples = root / "examples"
+            examples.mkdir()
+            (root / "README.md").write_text(
+                "\n".join(
+                    [
+                        "# Test Profile",
+                        "",
+                        "## Current Focus",
+                        "- Agent reliability.",
+                        "- Verification discipline.",
+                        "- Agent auditability.",
+                        "- Agent safety.",
+                        "- Product judgment.",
+                        "",
+                        "## Reviewer Path",
+                        "\n".join(profile_quality_audit.REVIEWER_PATH_TARGETS),
+                        "",
+                        "## Selected Work",
+                        "",
+                        "| Repo | What it proves | Why it matters |",
+                        "| --- | --- | --- |",
+                        "| [repo-a](https://github.com/manuelsampedro1/repo-a) | proof | why |",
+                        "",
+                        "## Agent Safety Layer",
+                        "",
+                        "| Repo | What it proves | Why it matters |",
+                        "| --- | --- | --- |",
+                        "| [mcp-guard](https://github.com/manuelsampedro1/mcp-guard) | proof | why |",
+                        "",
+                        "## How I Work With Codex",
+                        workflow_bullets,
+                        "",
+                        "## Public Workbench",
+                        "- [AI lab notes](./labs/README.md)",
+                        "- [Recipes](./recipes/README.md)",
+                        "- [Examples](./examples/README.md)",
+                        "- [Tooling radar](./radar/README.md)",
+                        "- [Automation runbook](./docs/automation-runbook.md)",
+                        "",
+                        "## Verify This Repo",
+                        "The check validates shell scripts, python audit tools, python unit tests, commit-script shell fixture, and profile quality audit.",
+                        "",
+                        "## Latest Proof",
+                        "",
+                        "## Principles",
+                        "",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+            (root / "DECISIONS.md").write_text("", encoding="utf-8")
+            (root / "TODO.md").write_text("", encoding="utf-8")
+            (examples / "README.md").write_text(
+                "\n".join(f"- [{Path(path).name}](./{Path(path).name})" for path in profile_quality_audit.REQUIRED_EXAMPLES),
+                encoding="utf-8",
+            )
+            for path in profile_quality_audit.REQUIRED_EXAMPLES:
+                (root / path).write_text("# Example\n", encoding="utf-8")
+            (root / "examples" / "profile-evidence-map.md").write_text(
+                "\n".join(profile_quality_audit.EVIDENCE_MAP_REPOS)
+                + "\n"
+                + "\n".join(
+                    [
+                        "agent-release-readiness-chain.md",
+                        "agent-review-packet-to-ledger-chain.md",
+                        "external-reviewer-navigation.md",
+                        "profile-verification-proof-packet.md",
+                        "profile-curation-guard-proof-packet.md",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+
+            result = profile_quality_audit.audit(root)
+
+        self.assertIn(
+            "How I Work With Codex has 19 bullets; keep it at 18 or fewer and move extra routes to recipes or examples.",
+            result.issues,
+        )
+
     def test_latest_proof_targets_must_be_indexed(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
