@@ -988,3 +988,16 @@ Rationale:
   claims.
 - This reinforces the "evidence before claims" principle without adding another
   proof repo.
+
+## 2026-06-02 - Make Profile Quality Audit Executable
+
+Add `scripts/profile_quality_audit.py` and run it from profile verification.
+
+Rationale:
+
+- First-read quality is now part of the profile's correctness, not just a taste
+  preference.
+- The audit checks reviewer-path placement, evidence-map coverage, required
+  examples, saturation control, and risky unsupported README language.
+- Integrating it into `make test`, `make lint`, and `make build` turns the
+  weekly quality guard into an executable gate instead of a manual reminder.

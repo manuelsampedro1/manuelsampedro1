@@ -64,6 +64,7 @@ The audit should also check:
 - artifacts that do not link back to real work,
 - weak README promotions,
 - drift away from the client-facing narrative.
+- first-read quality with `python3 scripts/profile_quality_audit.py --root . --min-score 100`.
 
 ## Commit Rule
 

@@ -10,6 +10,9 @@ bash -n \
   scripts/commit_daily_update.sh \
   scripts/verify_profile.sh
 
+python3 -m py_compile scripts/profile_quality_audit.py
+python3 scripts/profile_quality_audit.py --root . --min-score 100 >/dev/null
+
 tmp="$(mktemp -d)"
 cleanup() {
   rm -rf "$tmp"
