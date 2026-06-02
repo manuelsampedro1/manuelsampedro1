@@ -21,6 +21,7 @@
 - Publish local repo `/Users/manuelsampedro/Documents/Codex/2026-05-21/agent-decision-guard` after creating empty GitHub repo `manuelsampedro1/agent-decision-guard`; then add it to the profile if CI passes.
 - Publish local repo `/Users/manuelsampedro/Documents/Codex/2026-05-21/agent-diff-budget` after creating empty GitHub repo `manuelsampedro1/agent-diff-budget`; then add it to the profile if CI passes.
 - Publish local repo `/Users/manuelsampedro/Documents/Codex/2026-05-21/agent-review-map` after creating empty GitHub repo `manuelsampedro1/agent-review-map`; then add it to the profile if CI passes.
+- Publish local repo `/Users/manuelsampedro/Documents/Codex/2026-05-21/agent-claim-check` after creating empty GitHub repo `manuelsampedro1/agent-claim-check`; then add it to the profile if CI passes.
 - Publish one end-to-end case note that shows a Codex run from brief to implementation, verification, and audit trail.
 - Publish one follow-up lab note or recipe that comes directly from each flagship repo, not from profile maintenance itself.
 - Apply `recipes/real-diff-to-recipe.md` to one flagship repo change and publish the strongest result.

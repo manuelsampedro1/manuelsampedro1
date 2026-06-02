@@ -40,4 +40,5 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Agent Diff Secret Sentinel](./agent-diff-secret-sentinel.md)
 - [Agent Diff Budget](./agent-diff-budget.md)
 - [Agent Decision Guard](./agent-decision-guard.md)
+- [Agent Claim Check](./agent-claim-check.md)
 - [Agent Artifact Gate](./agent-artifact-gate.md)

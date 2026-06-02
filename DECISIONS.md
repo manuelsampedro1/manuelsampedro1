@@ -310,3 +310,13 @@ Rationale:
 - Agent proof packets still need routing: a mixed diff should not be reviewed as one flat unit.
 - Mapping files into security, data, release, automation, agent-instruction, product/docs, tests, and application lanes makes review ownership explicit.
 - A dependency-free diff mapper fits the profile's reliability story by turning agent handoffs into concrete reviewer questions instead of generic confidence.
+
+## 2026-06-02 - Build Claim Checks for Agent Closeouts
+
+Use `agent-claim-check` as another next public proof project once a GitHub remote can be created.
+
+Rationale:
+
+- Agent final answers can have the right sections and still overclaim tests, files, or risk posture.
+- Comparing closeout text against the diff and command evidence adds a stricter evidence layer than structure-only closeout linting.
+- A dependency-free local checker supports the profile's core message: AI work should be trusted only when claims are tied to inspectable proof.
