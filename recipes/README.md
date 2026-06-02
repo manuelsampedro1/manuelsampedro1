@@ -33,6 +33,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Repo Readiness Contract for Agent Repos](./repo-readiness-contract-for-agent-repos.md)
 - [Real Diff to Recipe](./real-diff-to-recipe.md)
 - [Readiness Contract to Ledger Evidence](./readiness-contract-to-ledger-evidence.md)
+- [Readiness Contract in Review Packets](./readiness-contract-in-review-packets.md)
 - [Python Unittest Readiness Check](./python-unittest-readiness-check.md)
 - [Publish Queue for Local Agent Repos](./publish-queue-for-local-agent-repos.md)
 - [Public Surface Sync for Agent Repos](./public-surface-sync-for-agent-repos.md)
