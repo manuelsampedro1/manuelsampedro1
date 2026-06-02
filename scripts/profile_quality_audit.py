@@ -132,6 +132,31 @@ def count_selected_work_rows(markdown: str) -> int:
     return rows
 
 
+def selected_work_repo_targets(markdown: str) -> list[str]:
+    body = section_body(markdown, "Selected Work")
+    targets: list[str] = []
+    for line in body.splitlines():
+        stripped = line.strip()
+        if not stripped.startswith("|"):
+            continue
+        if "---" in stripped or "Repo |" in stripped:
+            continue
+        match = re.search(r"\[[^\]]+\]\(([^)]+)\)", stripped)
+        if match:
+            targets.append(match.group(1).rstrip("/"))
+    return targets
+
+
+def duplicated_values(values: list[str]) -> list[str]:
+    seen: set[str] = set()
+    duplicates: list[str] = []
+    for value in values:
+        if value in seen and value not in duplicates:
+            duplicates.append(value)
+        seen.add(value)
+    return duplicates
+
+
 def count_markdown_bullets(markdown: str) -> int:
     return sum(1 for line in markdown.splitlines() if line.lstrip().startswith("- "))
 
@@ -170,6 +195,8 @@ def audit(root: Path) -> AuditResult:
             issues.append(f"Verify This Repo is missing verification detail: {phrase}.")
 
     selected_rows = count_selected_work_rows(readme)
+    for target in duplicated_values(selected_work_repo_targets(readme)):
+        issues.append(f"Selected Work contains duplicate repo target: {target}.")
     if selected_rows > MAX_SELECTED_WORK_ROWS:
         issues.append(
             f"Selected Work has {selected_rows} rows; curate before exceeding {MAX_SELECTED_WORK_ROWS} rows."

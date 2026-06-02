@@ -1083,3 +1083,16 @@ Rationale:
   stronger than adding every new proof repo to the opening section.
 - Encoding the cap in `scripts/profile_quality_audit.py` keeps future profile
   maintenance from quietly trading clarity for volume.
+
+## 2026-06-02 - Reject Duplicate Selected Work Rows
+
+Keep each root README Selected Work repo target unique.
+
+Rationale:
+
+- With 46 rows, an accidental duplicate would look like padding even if every
+  individual repo remains useful.
+- The profile is stronger when each row buys a distinct proof surface rather
+  than repeating a link under slightly different wording.
+- Encoding duplicate detection in `scripts/profile_quality_audit.py` protects
+  curation discipline during future profile maintenance.

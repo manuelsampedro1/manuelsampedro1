@@ -66,6 +66,7 @@ The audit should also check:
 - drift away from the client-facing narrative.
 - first-read quality with `python3 scripts/profile_quality_audit.py --root . --min-score 100`.
 - Reviewer Path length staying at four bullets or fewer, with extra routes moved to examples instead of the first-read README section.
+- Unique `Selected Work` repo targets so repeated links cannot inflate the proof surface.
 
 ## Commit Rule
 
