@@ -1466,6 +1466,77 @@ class ProfileQualityAuditTests(unittest.TestCase):
             result.issues,
         )
 
+    def test_external_reviewer_navigation_must_keep_review_route(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            examples = root / "examples"
+            examples.mkdir()
+            (root / "README.md").write_text(
+                "\n".join(
+                    [
+                        "# Test Profile",
+                        "",
+                        "## Current Focus",
+                        "",
+                        "## Reviewer Path",
+                        "",
+                        "## Selected Work",
+                        "",
+                        "| Repo | What it proves | Why it matters |",
+                        "| --- | --- | --- |",
+                        "| [repo](https://example.com) | x | y |",
+                        "",
+                        "## Agent Safety Layer",
+                        "",
+                        "## How I Work With Codex",
+                        "",
+                        "## Public Workbench",
+                        "",
+                        "## Verify This Repo",
+                        "",
+                        "## Latest Proof",
+                        "",
+                        "## Principles",
+                        "",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+            (root / "DECISIONS.md").write_text("", encoding="utf-8")
+            (root / "TODO.md").write_text("", encoding="utf-8")
+            (examples / "README.md").write_text(
+                "\n".join(f"- [{Path(path).name}](./{Path(path).name})" for path in profile_quality_audit.REQUIRED_EXAMPLES),
+                encoding="utf-8",
+            )
+            for path in profile_quality_audit.REQUIRED_EXAMPLES:
+                (root / path).write_text("# Example\n", encoding="utf-8")
+            (root / "examples" / "external-reviewer-navigation.md").write_text(
+                "\n".join(
+                    [
+                        "# External Reviewer Navigation",
+                        "",
+                        "This page should not become a generic profile essay.",
+                        "",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+
+            result = profile_quality_audit.audit(root)
+
+        self.assertIn(
+            "External reviewer navigation is missing review route detail: Five-Minute Path.",
+            result.issues,
+        )
+        self.assertIn(
+            "External reviewer navigation is missing review route detail: repo-flightcheck.",
+            result.issues,
+        )
+        self.assertIn(
+            "External reviewer navigation is missing review route detail: Review Prompt.",
+            result.issues,
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

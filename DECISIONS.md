@@ -1284,3 +1284,17 @@ Rationale:
   represents.
 - Encoding this in `scripts/profile_quality_audit.py` keeps the primary proof
   table inspectable as it changes over time.
+
+## 2026-06-03 - Audit External Reviewer Navigation
+
+Keep the external reviewer navigation example concrete as the profile proof
+surface grows.
+
+Rationale:
+
+- The profile now has enough proof that scan cost is a real review risk.
+- The reviewer example should preserve a five-minute route through the core
+  reliability loop, safety layer, composition examples, and review prompt.
+- Encoding the route in `scripts/profile_quality_audit.py` prevents future
+  maintenance from turning the example into generic profile copy or another
+  unbounded index.

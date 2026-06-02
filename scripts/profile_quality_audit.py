@@ -76,6 +76,23 @@ EVIDENCE_MAP_REPOS = [
     "agent-rollback-plan",
 ]
 
+EXTERNAL_REVIEWER_REQUIRED_TERMS = [
+    "Five-Minute Path",
+    "core loop",
+    "repo-flightcheck",
+    "codex-review-packet",
+    "verify-by-change",
+    "agent-run-ledger",
+    "safety judgment",
+    "agent-context-sentinel",
+    "agent-secret-sentinel",
+    "mcp-guard",
+    "composition",
+    "examples/agent-release-readiness-chain.md",
+    "examples/agent-review-packet-to-ledger-chain.md",
+    "Review Prompt",
+]
+
 RISKY_README_PHRASES = [
     "guaranteed",
     "production-ready",
@@ -284,6 +301,16 @@ def audit_latest_proof_indexes(root: Path, readme: str, issues: list[str]) -> No
             )
 
 
+def audit_external_reviewer_navigation(root: Path, issues: list[str]) -> None:
+    navigation = read_text(root / "examples/external-reviewer-navigation.md")
+    if not navigation or "External Reviewer Navigation" not in navigation:
+        return
+    lowered_navigation = navigation.lower()
+    for term in EXTERNAL_REVIEWER_REQUIRED_TERMS:
+        if term.lower() not in lowered_navigation:
+            issues.append(f"External reviewer navigation is missing review route detail: {term}.")
+
+
 def audit(root: Path) -> AuditResult:
     readme = read_text(root / "README.md")
     decisions = read_text(root / "DECISIONS.md")
@@ -427,6 +454,8 @@ def audit(root: Path) -> AuditResult:
         ]:
             if example not in evidence_map:
                 issues.append(f"Profile evidence map is missing example: {example}.")
+
+    audit_external_reviewer_navigation(root, issues)
 
     score = max(0, 100 - (len(issues) * 10) - (len(warnings) * 3))
     return AuditResult(
