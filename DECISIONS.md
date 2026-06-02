@@ -291,6 +291,16 @@ Rationale:
 - A small linter can enforce summary, changed files, exact verification, and risk notes before a handoff is accepted.
 - This strengthens the profile's message that AI work should close with evidence, not vibes.
 
+## 2026-06-02 - Promote Closeout Check as Evidence Proof
+
+Add `agent-closeout-check` to selected work once the public repo is created, hardened, pushed, and verified.
+
+Rationale:
+
+- It catches overconfident agent final answers before they become PR comments, handoffs, or ledger entries.
+- It is backed by a dependency-free CLI, good and bad closeout fixtures, tests, CI, and `repo-flightcheck` at `100/100`.
+- It closes the workflow loop: task scope, changed-path boundaries, verification, rollback risk, and final evidence.
+
 ## 2026-06-02 - Build Change Risk Matrix for Agent Diffs
 
 Use `agent-change-risk` as another next public proof project once a GitHub remote can be created.

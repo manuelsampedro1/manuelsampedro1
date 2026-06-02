@@ -79,6 +79,5 @@ Rules:
 
 ## Source Linkage
 
-- Repo / tool / workflow: local `agent-closeout-check` prototype and this profile repo's evidence-led closeout style.
-- Supporting prompt, script, or note: [`./verification-by-change-type.md`](./verification-by-change-type.md), [`./ci-failure-packet-for-agent-reruns.md`](./ci-failure-packet-for-agent-reruns.md), and [`../docs/profile-strategy.md`](../docs/profile-strategy.md).
-
+- Repo / tool / workflow: public [`agent-closeout-check`](https://github.com/manuelsampedro1/agent-closeout-check) repo and verified launch commit [`cb23294`](https://github.com/manuelsampedro1/agent-closeout-check/commit/cb23294cb4ec1f4dac8644d0130faab213bc27cd).
+- Supporting prompt, script, or note: [`./verification-by-change-type.md`](./verification-by-change-type.md), [`./ci-failure-packet-for-agent-reruns.md`](./ci-failure-packet-for-agent-reruns.md), [`../labs/2026/2026-06-02-agent-closeout-check-public-launch.md`](../labs/2026/2026-06-02-agent-closeout-check-public-launch.md), and [`../docs/profile-strategy.md`](../docs/profile-strategy.md).
