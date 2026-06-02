@@ -29,6 +29,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Merge Readiness Gate for Agent Diffs](./merge-readiness-gate-for-agent-diffs.md)
 - [Machine-Readable Doctor Output](./machine-readable-doctor-output.md)
 - [Local-First Draft Round Trip](./local-first-draft-round-trip.md)
+- [JSON Envelope for Verification Gates](./json-envelope-for-verification-gates.md)
 - [Flagship Repo Proof Packet](./flagship-repo-proof-packet.md)
 - [Fail-Fast Git Identity for Agent Publish Flows](./fail-fast-git-identity-for-agent-publish-flows.md)
 - [Expected Paths Contract for Agent Publish Flows](./expected-paths-contract-for-agent-publish-flows.md)
