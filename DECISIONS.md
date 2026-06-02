@@ -330,3 +330,13 @@ Rationale:
 - Blocking oversized diffs is useful only if the next action is concrete.
 - A split planner turns broad agent diffs into ordered review slices by security, data, release, automation, tests, application, and docs.
 - Keeping it diff-only and dependency-free makes it easy to pair with budget checks, scope guards, review maps, and proof packets.
+
+## 2026-06-02 - Select Latest Lab Proof by Git Addition Time
+
+Use git addition time, not filename order, when selecting the root README's latest lab note.
+
+Rationale:
+
+- Multiple lab notes can share the same date prefix.
+- Filename order can keep an older same-day note on the profile after a newer note is published.
+- Matching the recipe selection logic makes `Latest Proof` reflect the most recently added public artifact.
