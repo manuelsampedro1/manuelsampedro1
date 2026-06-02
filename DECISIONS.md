@@ -560,3 +560,23 @@ Rationale:
 - It strengthens the profile's closeout-evidence story by tying command claims to hashed files rather than trust in wording.
 - It is backed by a dependency-free CLI, example receipt, tests, local smoke checks, fresh public clone verification, and GitHub Actions success.
 - It complements `agent-claim-check`, `agent-proof-packet`, and `agent-run-ledger` by making command evidence reusable without hiding file drift.
+
+## 2026-06-02 - Build Worktree Guard for User Change Protection
+
+Use `agent-worktree-guard` as another public proof project for protecting pre-existing user edits during coding-agent runs.
+
+Rationale:
+
+- Coding agents often work in dirty repositories where user drafts, notes, or partial edits must not be touched.
+- Scope guards catch final changed paths, but they do not prove that pre-existing dirty files stayed intact.
+- A dependency-free snapshot/check CLI gives the workflow a concrete stop condition before accidental user-change loss becomes a cleanup problem.
+
+## 2026-06-02 - Promote Worktree Guard as Dirty-State Proof
+
+Add `agent-worktree-guard` to selected work once the public repo is created, browser-published, cloned, locally verified, and its GitHub Actions run succeeds.
+
+Rationale:
+
+- It fills a real reliability gap: protecting user-owned dirty state before and after an agent run.
+- It is backed by a dependency-free CLI, example snapshot, tests, local smoke checks, fresh public clone verification, and GitHub Actions success.
+- It complements `agent-scope-guard` by checking protected dirty files and unexpected dirty paths before review packets or closeout claims are trusted.

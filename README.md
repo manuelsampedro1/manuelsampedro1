@@ -20,6 +20,7 @@ If you are building with Codex or evaluating how AI changes software work, find 
 | --- | --- | --- |
 | [agent-task-contract](https://github.com/manuelsampedro1/agent-task-contract) | Task scope readiness | Validates Markdown task briefs before coding-agent work starts, with dependency-free Python CLI output for humans and JSON automation, example contracts, CI, tests, and repo readiness proof. |
 | [agent-scope-guard](https://github.com/manuelsampedro1/agent-scope-guard) | Scope boundary enforcement | Fails coding-agent diffs when changed paths fall outside an explicit file or glob allowlist, with text and JSON output, tests, CI, and repo readiness proof. |
+| [agent-worktree-guard](https://github.com/manuelsampedro1/agent-worktree-guard) | Dirty worktree protection | Snapshots pre-existing user edits before a coding-agent run and blocks protected-file drift or unexpected dirty paths outside the task allowlist. |
 | [agent-decision-guard](https://github.com/manuelsampedro1/agent-decision-guard) | Decision documentation gate | Blocks decision-worthy diffs when CI, automation, config, security, product scope, or agent-instruction changes lack `DECISIONS.md`, `TODO.md`, or an explicit no-follow-up waiver. |
 | [agent-diff-budget](https://github.com/manuelsampedro1/agent-diff-budget) | Diff size and risk budget | Fails broad coding-agent diffs when changed files, line volume, or high-risk files exceed explicit review budgets, with path-level risk tags and reviewer questions. |
 | [agent-diff-splitter](https://github.com/manuelsampedro1/agent-diff-splitter) | Oversized diff split planning | Turns broad coding-agent diffs into ordered review slices by security, data, release, automation, agent instructions, tests, application, and product/docs with files, line counts, rationale, and reviewer questions. |
@@ -58,7 +59,7 @@ These are small on purpose. I prefer tools a reviewer can clone, inspect, run, a
 ## How I Work With Codex
 
 - Start with a real brief, explicit acceptance criteria, and the smallest useful scope. See [agent-task-contract](https://github.com/manuelsampedro1/agent-task-contract), [briefboard-local](https://github.com/manuelsampedro1/briefboard-local), [Agent Task Contract Preflight](./recipes/agent-task-contract-preflight.md), [Handoff Scope Warnings Before Codex](./recipes/handoff-scope-warnings-before-codex.md), and [Brief Readiness Before Codex](./recipes/brief-readiness-before-codex.md).
-- Enforce expected changed paths instead of trusting the agent to stay inside scope. See [agent-scope-guard](https://github.com/manuelsampedro1/agent-scope-guard) and [Scope Guard for Agent Diffs](./recipes/scope-guard-for-agent-diffs.md).
+- Protect pre-existing user edits and enforce expected changed paths instead of trusting the agent to stay inside scope. See [agent-worktree-guard](https://github.com/manuelsampedro1/agent-worktree-guard), [agent-scope-guard](https://github.com/manuelsampedro1/agent-scope-guard), [Agent Worktree Guard](./recipes/agent-worktree-guard.md), and [Scope Guard for Agent Diffs](./recipes/scope-guard-for-agent-diffs.md).
 - Keep broad agent diffs below an explicit review budget, then split oversized changes into reviewable slices instead of pushing one broad patch. See [agent-diff-budget](https://github.com/manuelsampedro1/agent-diff-budget), [agent-diff-splitter](https://github.com/manuelsampedro1/agent-diff-splitter), [Agent Diff Budget](./recipes/agent-diff-budget.md), and [Agent Diff Splitter](./recipes/agent-diff-splitter.md).
 - Route mixed diffs to concrete reviewer lanes instead of accepting one flat handoff. See [agent-review-map](https://github.com/manuelsampedro1/agent-review-map) and [Agent Review Map](./recipes/agent-review-map.md).
 - Check repo readiness before handing work to an agent. See [repo-flightcheck](https://github.com/manuelsampedro1/repo-flightcheck), [Structured Task Contract Readiness](./recipes/structured-task-contract-readiness.md), [Task Contract Readiness Before Agent Work](./recipes/task-contract-readiness-before-agent-work.md), [Remote Failure Classification Before Public Proof](./recipes/remote-failure-classification-before-public-proof.md), [Published HEAD Before Public Proof](./recipes/published-head-before-public-proof.md), [Remote Readiness Before Public Proof](./recipes/remote-readiness-before-public-proof.md), [Agent Readiness Contract Output](./recipes/agent-readiness-contract-output.md), [Local Tool Availability Preflight](./recipes/local-tool-availability-preflight.md), [Python CLI Entrypoint Readiness](./recipes/python-cli-entrypoint-readiness.md), [Node CLI Entrypoint Readiness](./recipes/node-cli-entrypoint-readiness.md), [Python Unittest Readiness Check](./recipes/python-unittest-readiness-check.md), [GitHub Action Repo Readiness](./recipes/github-action-repo-readiness.md), and [Documented Command Drift Check](./recipes/documented-command-drift-check.md).
@@ -98,11 +99,11 @@ The check validates shell scripts, regenerates public indexes, refreshes latest-
 
 ## Latest Proof
 
-- Latest lab note: [2026-06-02 - Agent Command Receipt Public Launch](./labs/2026/2026-06-02-agent-command-receipt-public-launch.md)
+- Latest lab note: [2026-06-02 - Agent Worktree Guard Public Launch](./labs/2026/2026-06-02-agent-worktree-guard-public-launch.md)
 - Latest recipes:
+  - [Agent Worktree Guard](./recipes/agent-worktree-guard.md)
   - [Agent Command Receipt](./recipes/agent-command-receipt.md)
   - [Agent Task Contract Preflight](./recipes/agent-task-contract-preflight.md)
-  - [Readiness Task Contract to Ledger Evidence](./recipes/readiness-task-contract-to-ledger.md)
 
 ## Principles
 

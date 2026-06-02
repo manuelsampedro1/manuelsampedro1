@@ -95,6 +95,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Base Diff Plus Working Tree Verification](./base-diff-plus-working-tree-verification.md)
 - [AI Repo Review Findings](./ai-repo-review-findings.md)
 - [AGENTS.md Patterns for Codex Repos](./agents-md-patterns-for-codex-repos.md)
+- [Agent Worktree Guard](./agent-worktree-guard.md)
 - [Agent Task Contract Preflight](./agent-task-contract-preflight.md)
 - [Agent Review Map](./agent-review-map.md)
 - [Agent Readiness Contract Output](./agent-readiness-contract-output.md)
