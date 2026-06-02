@@ -34,6 +34,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 - [2026-06-02 - Repo Flightcheck Agent Instruction Quality](./2026/2026-06-02-repo-flightcheck-agent-instruction-quality.md)
 - [2026-06-02 - Public Repo CLI Output Snippets](./2026/2026-06-02-public-repo-cli-output-snippets.md)
 - [2026-06-02 - Public Proof Repo CI Audit](./2026/2026-06-02-public-proof-repo-ci-audit.md)
+- [2026-06-02 - Profile Proof Audit Public Launch](./2026/2026-06-02-profile-proof-audit-public-launch.md)
 - [2026-06-02 - Diff to Eval Public Launch](./2026/2026-06-02-diff-to-eval-public-launch.md)
 - [2026-06-02 - Codex Review Packet Working Tree Evidence](./2026/2026-06-02-codex-review-packet-working-tree-evidence.md)
 - [2026-06-02 - Codex Review Packet Verification Envelope](./2026/2026-06-02-codex-review-packet-verification-envelope.md)

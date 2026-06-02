@@ -391,6 +391,16 @@ Rationale:
 - The audit verifies required sections, selected-work shape, latest proof, relative links, optional HTTP status, and unsupported claim language.
 - This keeps the profile honest while new local projects wait for GitHub repo creation.
 
+## 2026-06-02 - Promote Profile Proof Audit as Profile Quality Gate
+
+Add `profile-proof-audit` to selected work once the public repo is created, hardened, pushed, and verified.
+
+Rationale:
+
+- It turns profile polish into a repeatable audit instead of a subjective README pass.
+- It is backed by a dependency-free CLI, tests, CI, example profile, and `repo-flightcheck` at `100/100`.
+- It reinforces the profile's credibility by checking required sections, links, latest proof, table shape, and unsupported claim language.
+
 ## 2026-06-02 - Build Eval Runners for Agent Proof Artifacts
 
 Use `agent-eval-runner` as another next public proof project once a GitHub remote can be created.

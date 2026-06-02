@@ -82,5 +82,5 @@ Output:
 
 ## Source Linkage
 
-- Repo / tool / workflow: local `profile-proof-audit` prototype at `/Users/manuelsampedro/Documents/Codex/2026-05-21/profile-proof-audit`.
-- Supporting prompt, script, or note: [`./publish-queue-for-local-agent-repos.md`](./publish-queue-for-local-agent-repos.md), [`./public-surface-sync-for-agent-repos.md`](./public-surface-sync-for-agent-repos.md), and [`../docs/profile-strategy.md`](../docs/profile-strategy.md).
+- Repo / tool / workflow: [`profile-proof-audit`](https://github.com/manuelsampedro1/profile-proof-audit), public commit [`ab7c8ae`](https://github.com/manuelsampedro1/profile-proof-audit/commit/ab7c8ae741a755c06e92f8f39145784c4627232a), [`README`](https://raw.githubusercontent.com/manuelsampedro1/profile-proof-audit/main/README.md), [`CLI`](https://raw.githubusercontent.com/manuelsampedro1/profile-proof-audit/main/src/profile_proof_audit/cli.py), [`tests`](https://raw.githubusercontent.com/manuelsampedro1/profile-proof-audit/main/tests/test_cli.py), and [`example profile`](https://raw.githubusercontent.com/manuelsampedro1/profile-proof-audit/main/examples/profile.md).
+- Supporting prompt, script, or note: [`./publish-queue-for-local-agent-repos.md`](./publish-queue-for-local-agent-repos.md), [`./public-surface-sync-for-agent-repos.md`](./public-surface-sync-for-agent-repos.md), [`../labs/2026/2026-06-02-profile-proof-audit-public-launch.md`](../labs/2026/2026-06-02-profile-proof-audit-public-launch.md), and [`../docs/profile-strategy.md`](../docs/profile-strategy.md).
