@@ -19,6 +19,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 - [2026-06-02 - Repo Flightcheck Remote Readiness](./2026/2026-06-02-repo-flightcheck-remote-readiness.md)
 - [2026-06-02 - Repo Flightcheck Python Unittest Detection](./2026/2026-06-02-repo-flightcheck-python-unittest.md)
 - [2026-06-02 - Repo Flightcheck Python CLI Entrypoints](./2026/2026-06-02-repo-flightcheck-python-cli-entrypoints.md)
+- [2026-06-02 - Repo Flightcheck Published HEAD Readiness](./2026/2026-06-02-repo-flightcheck-published-head.md)
 - [2026-06-02 - Repo Flightcheck Node CLI Entrypoints](./2026/2026-06-02-repo-flightcheck-node-cli-entrypoints.md)
 - [2026-06-02 - Repo Flightcheck GitHub Action Detection](./2026/2026-06-02-repo-flightcheck-github-action-detection.md)
 - [2026-06-02 - Repo Flightcheck Documented Commands](./2026/2026-06-02-repo-flightcheck-documented-commands.md)
