@@ -1302,7 +1302,7 @@ Rationale:
 ## 2026-06-03 - Audit Public Surface Tone
 
 Keep public profile-workbench artifacts focused on inspectable proof instead of
-external validation requests.
+external validation or approval-chasing requests.
 
 Rationale:
 
@@ -1312,3 +1312,5 @@ Rationale:
   also shape reviewer trust.
 - A narrow public-surface tone audit catches these phrases without blocking
   legitimate technical references to agent tooling or provider-style schemas.
+- Approval should be earned by evidence and reviewer navigation, not requested
+  inside public artifacts.

@@ -104,6 +104,7 @@ PUBLIC_TONE_FILES = [
 PUBLIC_TONE_RISKY_PHRASES = [
     "give me the prize",
     "give me the award",
+    "make reviewers approve this",
     "me tienen que dar",
     "openai prize",
     "open ai prize",
@@ -347,7 +348,7 @@ def audit_public_surface_tone(root: Path, issues: list[str]) -> None:
         relative_path = path.relative_to(root).as_posix()
         for phrase in PUBLIC_TONE_RISKY_PHRASES:
             if phrase in text:
-                issues.append(f"Public surface contains external-validation phrase `{phrase}` in {relative_path}.")
+                issues.append(f"Public surface contains external-validation or approval-chasing phrase `{phrase}` in {relative_path}.")
 
 
 def audit(root: Path) -> AuditResult:

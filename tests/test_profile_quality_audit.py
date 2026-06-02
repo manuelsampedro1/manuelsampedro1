@@ -96,7 +96,24 @@ class ProfileQualityAuditTests(unittest.TestCase):
             result = profile_quality_audit.audit(root)
 
         self.assertIn(
-            "Public surface contains external-validation phrase `give me the prize` in labs/2026/note.md.",
+            "Public surface contains external-validation or approval-chasing phrase `give me the prize` in labs/2026/note.md.",
+            result.issues,
+        )
+
+    def test_public_surface_rejects_approval_chasing_phrases(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "recipes").mkdir()
+            (root / "README.md").write_text("# Test Profile\n", encoding="utf-8")
+            (root / "recipes" / "note.md").write_text(
+                "A weak request says make reviewers approve this.\n",
+                encoding="utf-8",
+            )
+
+            result = profile_quality_audit.audit(root)
+
+        self.assertIn(
+            "Public surface contains external-validation or approval-chasing phrase `make reviewers approve this` in recipes/note.md.",
             result.issues,
         )
 
