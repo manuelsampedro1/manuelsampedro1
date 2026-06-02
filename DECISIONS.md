@@ -290,3 +290,13 @@ Rationale:
 - Agent-generated changes can alter CI, automation, config, security, product scope, or future agent behavior without leaving a durable rationale.
 - A small diff guard can enforce `DECISIONS.md` and `TODO.md` updates before reviewers accept decision-worthy changes.
 - This strengthens the profile's reliability story by covering intent preservation, not only tests and closeout evidence.
+
+## 2026-06-02 - Build Diff Budgets for Agent Reviews
+
+Use `agent-diff-budget` as another next public proof project once a GitHub remote can be created.
+
+Rationale:
+
+- Agent diffs can be technically correct but too broad for one honest review pass.
+- A budget gate covers size and complexity, which scope guards and risk classifiers do not enforce by themselves.
+- Keeping the tool dependency-free and diff-only makes it easy to run before proof packets, merge readiness, or CI promotion.
