@@ -81,6 +81,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 - [2026-06-02 - Agent Rollback Plan Public Launch](./2026/2026-06-02-agent-rollback-plan-public-launch.md)
 - [2026-06-02 - Agent Closeout Check Public Launch](./2026/2026-06-02-agent-closeout-check-public-launch.md)
 - [2026-06-02 - Agent CI Failure Packet Public Launch](./2026/2026-06-02-agent-ci-failure-packet-public-launch.md)
+- [2026-06-02 - Agent Change Risk Public Launch](./2026/2026-06-02-agent-change-risk-public-launch.md)
 - [2026-06-01 - Expected Paths Contract for Agent Publish Runs](./2026/2026-06-01-expected-paths-contract-for-agent-publish-runs.md)
 - [2026-06-01 - Agent Audit Proof Repos](./2026/2026-06-01-agent-audit-proof-repos.md)
 - [2026-05-30 - Whole-Directory Staging in Agent Publish Scripts](./2026/2026-05-30-whole-directory-staging-in-agent-publish-scripts.md)

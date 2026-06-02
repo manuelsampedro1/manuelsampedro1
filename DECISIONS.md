@@ -311,6 +311,16 @@ Rationale:
 - Changed paths are enough to identify many high-value risk categories: CI, database, release, security, configuration, documentation, and tests.
 - A dependency-free CLI that produces a risk packet connects the existing local tools into a coherent pre-merge workflow.
 
+## 2026-06-02 - Promote Change Risk Matrix as Gate Routing Proof
+
+Add `agent-change-risk` to selected work once the public repo is created, hardened, pushed, and verified.
+
+Rationale:
+
+- It decides which proof gates should run from changed paths before a reviewer treats a diff as safe.
+- It is backed by a dependency-free CLI, realistic sample diff, tests, CI, and `repo-flightcheck` at `100/100`.
+- It connects existing tools into a coherent pre-merge routing layer.
+
 ## 2026-06-02 - Build Merge Readiness Gate for Agent Diffs
 
 Use `agent-merge-readiness` as another next public proof project once a GitHub remote can be created.
