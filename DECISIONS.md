@@ -973,3 +973,18 @@ Rationale:
   from 46 rows.
 - The path links to cross-repo examples so the claim is backed by composition,
   not only repo names.
+
+## 2026-06-02 - Add Profile Evidence Map
+
+Add a claim-to-evidence map so external reviewers can audit the profile by
+assertion rather than by repo count.
+
+Rationale:
+
+- The profile now needs traceability between public claims and inspectable
+  artifacts.
+- A claim map makes it easier to challenge or verify readiness, review context,
+  verification, ledger, safety, merge-readiness, release, CI, and rollback
+  claims.
+- This reinforces the "evidence before claims" principle without adding another
+  proof repo.

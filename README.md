@@ -20,7 +20,7 @@ If you have five minutes, start with the workflow rather than the full repo list
 
 - Read [repo-flightcheck](https://github.com/manuelsampedro1/repo-flightcheck), [codex-review-packet](https://github.com/manuelsampedro1/codex-review-packet), [verify-by-change](https://github.com/manuelsampedro1/verify-by-change), and [agent-run-ledger](https://github.com/manuelsampedro1/agent-run-ledger) as the core reliability loop: readiness, review context, verification, and durable audit evidence.
 - Check [agent-context-sentinel](https://github.com/manuelsampedro1/agent-context-sentinel), [agent-secret-sentinel](https://github.com/manuelsampedro1/agent-secret-sentinel), and [mcp-guard](https://github.com/manuelsampedro1/mcp-guard) for safety judgment around untrusted context, secrets, and tool permissions.
-- Use the cross-repo examples [Agent Release Readiness Chain](./examples/agent-release-readiness-chain.md) and [Agent Review Packet to Ledger Chain](./examples/agent-review-packet-to-ledger-chain.md) to see how the tools compose.
+- Use the [Profile Evidence Map](./examples/profile-evidence-map.md) and cross-repo examples [Agent Release Readiness Chain](./examples/agent-release-readiness-chain.md) and [Agent Review Packet to Ledger Chain](./examples/agent-review-packet-to-ledger-chain.md) to see how the claims and tools compose.
 
 ## Selected Work
 
