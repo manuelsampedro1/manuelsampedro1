@@ -928,3 +928,18 @@ Rationale:
   useful.
 - The next strongest signal is curation, cross-repo demonstrations, hardening,
   and real workflow evidence, not volume for its own sake.
+
+## 2026-06-02 - Prefer Cross-Repo Workflow Demos After Saturation
+
+Use examples that chain existing proof repos together when the profile needs
+more signal but not more project volume.
+
+Rationale:
+
+- Mature agent workflows depend on sequencing: risk routing, release-note
+  coverage, merge readiness, proof packets, and ledgers have different jobs.
+- A cross-repo demo shows judgment about how the tools work together instead of
+  only listing tool names.
+- The first useful demo is release readiness because it exposes a concrete
+  reviewer trap: a complete proof packet can coexist with a `needs-review`
+  merge-readiness verdict when scope or residual-risk evidence is missing.
