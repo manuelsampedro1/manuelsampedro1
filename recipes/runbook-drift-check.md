@@ -83,6 +83,5 @@ Tasks:
 
 ## Source Linkage
 
-- Repo / tool / workflow: local `runbook-drift-check` prototype and this profile repo's automation docs.
-- Supporting prompt, script, or note: [`./executable-runbook-drift-check.md`](./executable-runbook-drift-check.md), [`./public-surface-sync-for-agent-repos.md`](./public-surface-sync-for-agent-repos.md), and [`../docs/automation-runbook.md`](../docs/automation-runbook.md).
-
+- Repo / tool / workflow: public [`runbook-drift-check`](https://github.com/manuelsampedro1/runbook-drift-check) repo and verified launch commit [`7c13df4`](https://github.com/manuelsampedro1/runbook-drift-check/commit/7c13df4464b0cea6bada5e7369b658bd562751f1).
+- Supporting prompt, script, or note: [`./executable-runbook-drift-check.md`](./executable-runbook-drift-check.md), [`./public-surface-sync-for-agent-repos.md`](./public-surface-sync-for-agent-repos.md), [`../labs/2026/2026-06-02-runbook-drift-check-public-launch.md`](../labs/2026/2026-06-02-runbook-drift-check-public-launch.md), and [`../docs/automation-runbook.md`](../docs/automation-runbook.md).

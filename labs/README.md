@@ -16,6 +16,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 - [2026-06-02 - Verify by Change Empty Diff Guard](./2026/2026-06-02-verify-by-change-empty-diff-guard.md)
 - [2026-06-02 - Verify by Change Base Plus Working Tree](./2026/2026-06-02-verify-by-change-base-plus-working-tree.md)
 - [2026-06-02 - Verify by Change Action Safety](./2026/2026-06-02-verify-by-change-action-safety.md)
+- [2026-06-02 - Runbook Drift Check Public Launch](./2026/2026-06-02-runbook-drift-check-public-launch.md)
 - [2026-06-02 - Repo Flightcheck Tool Availability](./2026/2026-06-02-repo-flightcheck-tool-availability.md)
 - [2026-06-02 - Repo Flightcheck Structured Task Contract](./2026/2026-06-02-repo-flightcheck-structured-task-contract.md)
 - [2026-06-02 - Repo Flightcheck Remote Readiness](./2026/2026-06-02-repo-flightcheck-remote-readiness.md)

@@ -251,6 +251,16 @@ Rationale:
 - Local links, path references, and script commands often drift after automation changes.
 - A dependency-free checker that flags missing paths and broken script references reinforces the profile's evidence-led reliability story.
 
+## 2026-06-02 - Promote Runbook Drift Check as Docs Reliability Proof
+
+Add `runbook-drift-check` to selected work once the public repo is created, hardened, pushed, and verified.
+
+Rationale:
+
+- It covers the operational-docs layer that agents rely on before scripts, CI, or review packets are trustworthy.
+- It is backed by a dependency-free CLI, example runbook, tests, CI, and `repo-flightcheck` at `100/100`.
+- It turns README, AGENTS.md, and runbook drift into a concrete blocker instead of a stale-docs surprise.
+
 ## 2026-06-02 - Build Scope Guards for Agent Diffs
 
 Use `agent-scope-guard` as another next public proof project once a GitHub remote can be created.
