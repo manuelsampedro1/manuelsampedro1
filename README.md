@@ -48,6 +48,7 @@ These are small on purpose. I prefer tools a reviewer can clone, inspect, run, a
 
 - [AI lab notes](./labs/README.md): build notes, decisions, and launch logs tied to real repos or workflows.
 - [Recipes](./recipes/README.md): reusable prompts, checklists, and implementation patterns that came from actual work.
+- [Examples](./examples/README.md): concrete proof-packet shapes for verifying profile and agent-workbench claims.
 - [Tooling radar](./radar/README.md): short research only when it changes a build or tooling decision.
 - [Automation runbook](./docs/automation-runbook.md): how the profile publishing loop works and what it refuses to publish.
 

@@ -78,6 +78,7 @@ Current maintenance refreshes:
 - `radar/README.md`
 - root `README.md` latest links when a newer public artifact exists
 - `TODO.md` when a review checkpoint or next step genuinely changes
+- `examples/` when a concrete proof packet or fixture helps verify public claims
 
 The maintenance script should skip a run when the diff only touches those surface files.
 

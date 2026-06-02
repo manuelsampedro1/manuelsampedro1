@@ -34,6 +34,7 @@ public_paths=(
   Makefile
   TODO.md
   docs
+  examples
   labs
   recipes
   radar
