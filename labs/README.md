@@ -5,6 +5,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 ## Entries
 
 - [2026-06-02 - Verify by Change Working Tree CI](./2026/2026-06-02-verify-by-change-working-tree-ci.md)
+- [2026-06-02 - Verify by Change Sensitive Paths](./2026/2026-06-02-verify-by-change-sensitive-paths.md)
 - [2026-06-02 - Verify by Change Review Packet Source](./2026/2026-06-02-verify-by-change-review-packet-source.md)
 - [2026-06-02 - Verify by Change Readiness Contract](./2026/2026-06-02-verify-by-change-readiness-contract.md)
 - [2026-06-02 - Verify by Change Python CLI Context](./2026/2026-06-02-verify-by-change-python-cli-context.md)
