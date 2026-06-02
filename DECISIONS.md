@@ -1039,3 +1039,19 @@ Rationale:
   audit.
 - Encoding those expectations in `scripts/profile_quality_audit.py` makes future
   verification changes visible instead of relying on manual copy review.
+
+## 2026-06-02 - Audit External GitHub Automation Prompts
+
+Keep scheduled GitHub profile automations aligned with the exact-path publish
+contract.
+
+Rationale:
+
+- The repo publish script now blocks unexpected public-path changes, but the
+  active lab, recipe, maintenance, and quality-audit automation prompts also
+  need to tell future runs to pass exact changed paths.
+- A small local prompt audit catches stale automation wording without requiring
+  the public CI environment to have access to the user's Codex automation
+  folder.
+- This closes a real automation drift risk without adding another proof repo or
+  changing the public Selected Work surface.

@@ -104,6 +104,14 @@ If the script reports unexpected public-path changes, narrow the run or move the
 
 After a publish run, the script warns when uncommitted local changes remain so scratch files do not silently carry into the next automation run.
 
+Audit the local GitHub automation prompts after changing them:
+
+```sh
+python3 scripts/audit_github_automation_prompts.py --format json
+```
+
+The audit expects the lab, recipe, maintenance, and quality-audit prompts to pass exact changed paths after the `scripts/commit_daily_update.sh` commit message.
+
 ## GitHub Setup
 
 Remote publishing is configured for `manuelsampedro1/manuelsampedro1`.

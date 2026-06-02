@@ -71,6 +71,7 @@ RISKY_README_PHRASES = [
 
 VERIFY_SECTION_REQUIRED_PHRASES = [
     "shell scripts",
+    "python audit tools",
     "python unit tests",
     "commit-script shell fixture",
     "profile quality audit",

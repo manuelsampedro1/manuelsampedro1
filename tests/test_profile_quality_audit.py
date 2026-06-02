@@ -112,6 +112,7 @@ class ProfileQualityAuditTests(unittest.TestCase):
             result = profile_quality_audit.audit(root)
 
         self.assertIn("Verify This Repo is missing verification detail: python unit tests.", result.issues)
+        self.assertIn("Verify This Repo is missing verification detail: python audit tools.", result.issues)
         self.assertIn("Verify This Repo is missing verification detail: commit-script shell fixture.", result.issues)
         self.assertIn("Verify This Repo is missing verification detail: profile quality audit.", result.issues)
 
