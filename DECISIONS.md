@@ -451,6 +451,16 @@ Rationale:
 - A budget gate covers size and complexity, which scope guards and risk classifiers do not enforce by themselves.
 - Keeping the tool dependency-free and diff-only makes it easy to run before proof packets, merge readiness, or CI promotion.
 
+## 2026-06-02 - Promote Diff Budget as Reviewability Proof
+
+Add `agent-diff-budget` to selected work once the public repo is created, hardened, pushed, and verified.
+
+Rationale:
+
+- It turns oversized agent diffs into a concrete blocker before reviewers skip files or accept a polished closeout.
+- It is backed by a dependency-free CLI, small and large diff examples, tests, CI, and `repo-flightcheck` at `100/100`.
+- It complements scope and risk tools by measuring changed-file count, line volume, high-risk file count, and review questions.
+
 ## 2026-06-02 - Build Review Maps for Agent Handoffs
 
 Use `agent-review-map` as another next public proof project once a GitHub remote can be created.
