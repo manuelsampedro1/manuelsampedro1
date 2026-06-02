@@ -38,6 +38,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [AGENTS.md Patterns for Codex Repos](./agents-md-patterns-for-codex-repos.md)
 - [Agent Review Map](./agent-review-map.md)
 - [Agent Proof Packet for Review](./agent-proof-packet-for-review.md)
+- [Agent Instruction Quality Gate](./agent-instruction-quality-gate.md)
 - [Agent Eval Runner](./agent-eval-runner.md)
 - [Agent Diff Splitter](./agent-diff-splitter.md)
 - [Agent Diff Secret Sentinel](./agent-diff-secret-sentinel.md)

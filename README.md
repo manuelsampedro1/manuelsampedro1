@@ -53,11 +53,11 @@ These are small on purpose. I prefer tools a reviewer can clone, inspect, run, a
 
 ## Latest Proof
 
-- Latest lab note: [2026-06-02 - Codex Review Packet Working Tree Evidence](./labs/2026/2026-06-02-codex-review-packet-working-tree-evidence.md)
+- Latest lab note: [2026-06-02 - Repo Flightcheck Agent Instruction Quality](./labs/2026/2026-06-02-repo-flightcheck-agent-instruction-quality.md)
 - Latest recipes:
+  - [Agent Instruction Quality Gate](./recipes/agent-instruction-quality-gate.md)
   - [Review Packet Working Tree Evidence](./recipes/review-packet-working-tree-evidence.md)
   - [Working Tree Verification Coverage](./recipes/working-tree-verification-coverage.md)
-  - [Agent Diff Splitter](./recipes/agent-diff-splitter.md)
 
 ## Principles
 
