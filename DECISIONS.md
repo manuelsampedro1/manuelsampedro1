@@ -580,3 +580,33 @@ Rationale:
 - It fills a real reliability gap: protecting user-owned dirty state before and after an agent run.
 - It is backed by a dependency-free CLI, example snapshot, tests, local smoke checks, fresh public clone verification, and GitHub Actions success.
 - It complements `agent-scope-guard` by checking protected dirty files and unexpected dirty paths before review packets or closeout claims are trusted.
+
+## 2026-06-02 - Restore Terminal GitHub SSH Publishing
+
+Load `~/.ssh/id_ed25519_github_codex` into `ssh-agent` when terminal GitHub pushes fail with `Permission denied (publickey)`.
+
+Rationale:
+
+- The SSH key already existed and was associated with the no-reply GitHub identity, but `ssh-agent` had no identities loaded.
+- Loading the key restored `git@github.com` authentication as `manuelsampedro1`.
+- Terminal pushes are materially safer and faster than browser-authenticated file-by-file publication for future proof repos.
+
+## 2026-06-02 - Build Agent Instruction Audit for Repo Readiness
+
+Use `agent-instruction-audit` as another public proof project for checking the quality of coding-agent instruction files.
+
+Rationale:
+
+- Repo readiness is weak if it only checks whether `AGENTS.md` exists.
+- Bad instruction files can authorize broad cleanup, secrets mishandling, skipped tests, or vague "be helpful" behavior before any agent sees the task.
+- A dependency-free audit CLI makes instruction quality inspectable before repo-flightcheck, review packets, or handoffs rely on it.
+
+## 2026-06-02 - Promote Agent Instruction Audit as Readiness Proof
+
+Add `agent-instruction-audit` to selected work once the public repo is created, pushed by terminal SSH, cloned, locally verified, and its GitHub Actions run succeeds.
+
+Rationale:
+
+- It gives the profile a concrete quality gate for the instruction layer behind Codex-style repo work.
+- It is backed by a dependency-free CLI, examples, tests, smoke checks, editable install, public clone verification, `repo-flightcheck` at `100/100`, and GitHub Actions success.
+- It complements `repo-flightcheck` by making the agent-instructions rule deeper than file existence.

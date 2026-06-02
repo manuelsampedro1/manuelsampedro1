@@ -129,7 +129,15 @@ Manual push if an automation leaves local commits behind:
 git push
 ```
 
-If GitHub authentication expires, sign in again in the browser or configure GitHub CLI. Do not put tokens in this repo.
+If GitHub SSH authentication fails with `Permission denied (publickey)`, check whether the Codex GitHub key is loaded:
+
+```sh
+ssh-add -l
+ssh-add ~/.ssh/id_ed25519_github_codex
+ssh -T git@github.com
+```
+
+If GitHub browser authentication expires, sign in again in the browser or configure GitHub CLI. Do not put tokens in this repo.
 
 ## Automation Safety
 
