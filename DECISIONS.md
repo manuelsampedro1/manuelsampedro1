@@ -869,3 +869,17 @@ Rationale:
   final answer.
 - The tool is dependency-free, testable, CI-backed, published by terminal SSH,
   and verified with `repo-flightcheck` at `100/100`.
+
+## 2026-06-02 - Build Review Finding Check as Review Quality Proof
+
+Use `agent-review-finding-check` as another public proof repo for auditing the
+quality of coding-agent review findings before they are sent to humans.
+
+Rationale:
+
+- Review packets and review maps improve context, but the actual findings still
+  need concrete severity, file lines, impact, evidence, and actionability.
+- Vague review comments waste reviewer attention and make agent review quality
+  harder to trust.
+- The tool is dependency-free, testable, CI-backed, published by terminal SSH,
+  and verified with `repo-flightcheck` at `100/100`.
