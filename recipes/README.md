@@ -118,6 +118,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Agent Decision Guard](./agent-decision-guard.md)
 - [Agent Continuation Brief](./agent-continuation-brief.md)
 - [Agent Context Sentinel](./agent-context-sentinel.md)
+- [Agent Context Budget](./agent-context-budget.md)
 - [Agent Command Receipt](./agent-command-receipt.md)
 - [Agent Claim Check](./agent-claim-check.md)
 - [Agent Bug Repro](./agent-bug-repro.md)

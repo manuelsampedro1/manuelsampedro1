@@ -807,3 +807,19 @@ Rationale:
   treated as agent-verifiable completion.
 - The tool is dependency-free, testable, CI-backed, published by terminal SSH,
   and verified with `repo-flightcheck` at `100/100`.
+
+## 2026-06-02 - Build Context Budget as Handoff Quality Proof
+
+Use `agent-context-budget` as another public proof repo for keeping coding-agent
+handoffs within an explicit context budget before another run starts.
+
+Rationale:
+
+- Repo maps, handoff briefs, continuation notes, and context-injection checks
+  cover what context means, but not whether the bundle is too large,
+  duplicative, or low-signal for the next agent.
+- A local budget gate makes context pressure visible as a keep, summarize, or
+  drop plan instead of hoping the next model spends attention on the right
+  files.
+- The tool is dependency-free, testable, CI-backed, published by terminal SSH,
+  and verified with `repo-flightcheck` at `100/100`.
