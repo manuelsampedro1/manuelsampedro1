@@ -191,6 +191,16 @@ Rationale:
 - A local diff scanner fits the profile's safety narrative because it blocks obvious leaks before commit or publication.
 - The project is intentionally narrow: dependency-free, diff-only, and explicit that it is a preflight rather than a full security audit.
 
+## 2026-06-02 - Promote Secret Sentinel as Safety Proof
+
+Add `agent-secret-sentinel` to the profile's agent safety layer once the public repo is created, sanitized, pushed, and verified.
+
+Rationale:
+
+- It gives the profile a concrete pre-publication secret hygiene gate for agent-generated diffs.
+- The publish attempt itself proved the risk: GitHub Push Protection blocked a token-shaped fixture, which was fixed rather than bypassed.
+- It is backed by a dependency-free CLI, tests, examples, CI, and `repo-flightcheck` at `100/100`.
+
 ## 2026-06-02 - Build CI Failure Packets for Agent Reruns
 
 Use `agent-ci-failure-packet` as another next public proof project once a GitHub remote can be created.

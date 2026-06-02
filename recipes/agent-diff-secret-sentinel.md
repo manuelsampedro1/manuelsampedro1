@@ -84,6 +84,7 @@ Tasks:
 
 ## Source Linkage
 
-- Repo / tool / workflow: local `agent-secret-sentinel` prototype and this profile repo's agent workflow stack.
-- Supporting prompt, script, or note: [`./verification-by-change-type.md`](./verification-by-change-type.md), [`./diff-to-eval-case.md`](./diff-to-eval-case.md), and [`../docs/profile-strategy.md`](../docs/profile-strategy.md).
-
+- Public repo: <https://github.com/manuelsampedro1/agent-secret-sentinel>
+- Commit: <https://github.com/manuelsampedro1/agent-secret-sentinel/commit/4e039a72fcd86c3e6f671886472a314bfc1b24e9>
+- Lab note: [2026-06-02 - Agent Secret Sentinel Public Launch](../labs/2026/2026-06-02-agent-secret-sentinel-public-launch.md)
+- Supporting recipes: [`verification-by-change-type.md`](./verification-by-change-type.md) and [`diff-to-eval-case.md`](./diff-to-eval-case.md).
