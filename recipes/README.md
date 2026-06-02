@@ -43,6 +43,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [CI Runs Local Verification](./ci-runs-local-verification.md)
 - [CI Failure Packet for Agent Reruns](./ci-failure-packet-for-agent-reruns.md)
 - [Change Risk Matrix for Agent Diffs](./change-risk-matrix-for-agent-diffs.md)
+- [Brief Readiness Before Codex](./brief-readiness-before-codex.md)
 - [Bounded Diff Review Packet](./bounded-diff-review-packet.md)
 - [Base Diff Plus Working Tree Verification](./base-diff-plus-working-tree-verification.md)
 - [AI Repo Review Findings](./ai-repo-review-findings.md)
