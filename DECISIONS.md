@@ -716,3 +716,18 @@ Rationale:
   text as task authority.
 - The project is dependency-free, testable, CI-backed, published by terminal
   SSH, and verified with `repo-flightcheck` at `100/100`.
+
+## 2026-06-02 - Build Artifact Redactor as Public-Proof Hygiene
+
+Use `agent-artifact-redactor` as another public proof repo for cleaning logs,
+transcripts, proof packets, and command artifacts before they are published.
+
+Rationale:
+
+- Agent proof workflows need evidence, but copied evidence can include auth
+  headers, secret-looking assignments, contact details, local paths, SSH paths,
+  or JWT-like values.
+- Diff secret scanning is not enough because lab notes, review packets,
+  transcripts, and run ledgers can leak sensitive content outside a Git diff.
+- A dependency-free local redactor keeps the publication loop safer without
+  uploading artifact content or pretending to be a full DLP system.

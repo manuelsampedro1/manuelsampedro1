@@ -116,5 +116,6 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Agent Context Sentinel](./agent-context-sentinel.md)
 - [Agent Command Receipt](./agent-command-receipt.md)
 - [Agent Claim Check](./agent-claim-check.md)
+- [Agent Artifact Redactor](./agent-artifact-redactor.md)
 - [Agent Artifact Gate](./agent-artifact-gate.md)
 - [Agent Acceptance Trace](./agent-acceptance-trace.md)
