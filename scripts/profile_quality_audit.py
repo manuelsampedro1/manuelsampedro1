@@ -104,6 +104,10 @@ LATEST_PROOF_INDEXES = {
     "./recipes/": "recipes/README.md",
     "./radar/": "radar/README.md",
 }
+LATEST_PROOF_REQUIRED_PREFIX_COUNTS = {
+    "./labs/": 1,
+    "./recipes/": 3,
+}
 
 
 @dataclass(frozen=True)
@@ -228,17 +232,34 @@ def audit_latest_proof_indexes(root: Path, readme: str, issues: list[str]) -> No
         prefix: read_text(root / index_path)
         for prefix, index_path in LATEST_PROOF_INDEXES.items()
     }
+    managed_prefix_counts = {prefix: 0 for prefix in LATEST_PROOF_REQUIRED_PREFIX_COUNTS}
+    managed_link_count = 0
     for _, target in markdown_links(latest_proof):
         normalized_target = target.split("#", 1)[0].rstrip("/")
         for prefix, index_path in LATEST_PROOF_INDEXES.items():
             if not normalized_target.startswith(prefix):
                 continue
+            managed_link_count += 1
+            if prefix in managed_prefix_counts:
+                managed_prefix_counts[prefix] += 1
             relative_path = normalized_target.removeprefix("./")
             if not (root / relative_path).exists():
                 issues.append(f"Latest Proof target is missing: {target}.")
             if Path(relative_path).name not in index_text[prefix]:
                 issues.append(f"Latest Proof target is not indexed in {index_path}: {target}.")
             break
+    required_link_count = sum(LATEST_PROOF_REQUIRED_PREFIX_COUNTS.values())
+    if managed_link_count != required_link_count:
+        issues.append(
+            "Latest Proof has "
+            f"{managed_link_count} indexed lab, recipe, or radar links; keep exactly {required_link_count}."
+        )
+    for prefix, expected_count in LATEST_PROOF_REQUIRED_PREFIX_COUNTS.items():
+        actual_count = managed_prefix_counts[prefix]
+        if actual_count != expected_count:
+            issues.append(
+                f"Latest Proof must include exactly {expected_count} link(s) under {prefix}; found {actual_count}."
+            )
 
 
 def audit(root: Path) -> AuditResult:

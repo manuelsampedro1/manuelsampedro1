@@ -252,6 +252,20 @@ Rationale:
 - Latest proof should be both highlighted on the profile and discoverable from the relevant index.
 - This catches index-refresh drift without adding more proof-repo volume or README churn.
 
+## 2026-06-03 - Audit Latest Proof Shape
+
+Keep the root README `Latest Proof` section to one lab note and three recipe
+links.
+
+Rationale:
+
+- The profile is already saturated with repo-backed proof, so the latest-proof
+  surface should stay a concise highlight, not another index.
+- One lab note plus three recipes balances recent execution evidence with
+  reusable workflow patterns.
+- Encoding the shape in `scripts/profile_quality_audit.py` catches empty,
+  recipe-only, or overgrown latest-proof edits before they reach the profile.
+
 ## 2026-06-03 - Allowlist Reviewer Path Targets
 
 Treat the root README `Reviewer Path` links as a focused first-read allowlist,

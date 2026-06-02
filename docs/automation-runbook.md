@@ -70,6 +70,7 @@ The audit should also check:
 - Public Workbench linking to labs, recipes, examples, radar, and the automation runbook so supporting evidence remains discoverable.
 - How I Work With Codex staying at 18 bullets or fewer so the workflow archive does not become another unbounded index.
 - Indexed `Latest Proof` targets so root README highlights stay discoverable from the public lab, recipe, or radar indexes.
+- `Latest Proof` staying shaped as one lab note and three recipe links so the highlight remains concise instead of becoming another index.
 - Reviewer Path length staying at four bullets or fewer, with extra routes moved to examples instead of the first-read README section.
 - Reviewer Path links staying on the approved first-read route instead of accumulating extra proof links.
 - Selected Work row-count freeze at the saturated 46-row baseline unless an explicit post-saturation growth decision is recorded.
