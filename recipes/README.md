@@ -34,6 +34,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Expected Paths Contract for Agent Publish Flows](./expected-paths-contract-for-agent-publish-flows.md)
 - [Executable Runbook Drift Check](./executable-runbook-drift-check.md)
 - [Empty Diff Verification Guard](./empty-diff-verification-guard.md)
+- [Documented Command Drift Check](./documented-command-drift-check.md)
 - [Dirty Public Path Preflight for Agent Publish Flows](./dirty-public-path-preflight.md)
 - [Diff to Eval Case](./diff-to-eval-case.md)
 - [Command Evidence Status Contract](./command-evidence-status-contract.md)
