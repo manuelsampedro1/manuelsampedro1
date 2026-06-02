@@ -17,6 +17,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Scope Guard for Agent Diffs](./scope-guard-for-agent-diffs.md)
 - [Runbook Drift Check](./runbook-drift-check.md)
 - [Rollback Plan for Agent Diffs](./rollback-plan-for-agent-diffs.md)
+- [Review Packet Working Tree Evidence](./review-packet-working-tree-evidence.md)
 - [Real Diff to Recipe](./real-diff-to-recipe.md)
 - [Publish Queue for Local Agent Repos](./publish-queue-for-local-agent-repos.md)
 - [Public Surface Sync for Agent Repos](./public-surface-sync-for-agent-repos.md)

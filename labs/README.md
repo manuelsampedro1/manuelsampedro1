@@ -7,6 +7,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 - [2026-06-02 - Verify by Change Working Tree CI](./2026/2026-06-02-verify-by-change-working-tree-ci.md)
 - [2026-06-02 - Public Repo CLI Output Snippets](./2026/2026-06-02-public-repo-cli-output-snippets.md)
 - [2026-06-02 - Public Proof Repo CI Audit](./2026/2026-06-02-public-proof-repo-ci-audit.md)
+- [2026-06-02 - Codex Review Packet Working Tree Evidence](./2026/2026-06-02-codex-review-packet-working-tree-evidence.md)
 - [2026-06-02 - Briefboard Local Preview](./2026/2026-06-02-briefboard-local-preview.md)
 - [2026-06-02 - Briefboard Exportable Artifacts](./2026/2026-06-02-briefboard-exportable-artifacts.md)
 - [2026-06-01 - Expected Paths Contract for Agent Publish Runs](./2026/2026-06-01-expected-paths-contract-for-agent-publish-runs.md)

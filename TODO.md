@@ -21,7 +21,7 @@
 - Publish local repo `/Users/manuelsampedro/Documents/Codex/2026-05-21/agent-claim-check` after creating empty GitHub repo `manuelsampedro1/agent-claim-check`; then add it to the profile if CI passes.
 - Publish local repo `/Users/manuelsampedro/Documents/Codex/2026-05-21/agent-diff-splitter` after creating empty GitHub repo `manuelsampedro1/agent-diff-splitter`; then add it to the profile if CI passes.
 - Publish one end-to-end case note that shows a Codex run from brief to implementation, verification, and audit trail.
-- Publish one follow-up lab note or recipe that comes directly from each flagship repo, not from profile maintenance itself.
+- Continue publishing follow-up lab notes or recipes directly from flagship repo changes; `verify-by-change` and `codex-review-packet` now have behavior-changing follow-ups with public CI evidence.
 - Apply `recipes/real-diff-to-recipe.md` to the next behavior-changing flagship repo diff, following the `verify-by-change` working-tree coverage recipe as the quality bar.
 - Let the weekly quality audit run once under the new client-credibility rules, then tighten anything that still feels too meta.
 - Decide whether `scripts/commit_daily_update.sh` should warn when non-staged scratch files remain after a successful publish run.
