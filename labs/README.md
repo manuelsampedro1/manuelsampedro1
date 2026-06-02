@@ -17,6 +17,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 - [2026-06-02 - Verify by Change Action Safety](./2026/2026-06-02-verify-by-change-action-safety.md)
 - [2026-06-02 - Repo Flightcheck Tool Availability](./2026/2026-06-02-repo-flightcheck-tool-availability.md)
 - [2026-06-02 - Repo Flightcheck Remote Readiness](./2026/2026-06-02-repo-flightcheck-remote-readiness.md)
+- [2026-06-02 - Repo Flightcheck Remote Failure Classification](./2026/2026-06-02-repo-flightcheck-remote-failure-classification.md)
 - [2026-06-02 - Repo Flightcheck Python Unittest Detection](./2026/2026-06-02-repo-flightcheck-python-unittest.md)
 - [2026-06-02 - Repo Flightcheck Python CLI Entrypoints](./2026/2026-06-02-repo-flightcheck-python-cli-entrypoints.md)
 - [2026-06-02 - Repo Flightcheck Published HEAD Readiness](./2026/2026-06-02-repo-flightcheck-published-head.md)
