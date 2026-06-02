@@ -685,3 +685,18 @@ Rationale:
 - A task contract and a repo map are stronger when the next agent receives them as one actionable handoff.
 - The tool reduces guessing before execution by surfacing required reading, commands, verification, risk paths, gaps, and closeout expectations.
 - It is dependency-free, testable, CI-backed, published by terminal SSH, and verified with `repo-flightcheck` at `100/100`.
+
+## 2026-06-02 - Build Memory Audit as Agent Context Hygiene Proof
+
+Use `agent-memory-audit` as another public proof repo for checking long-lived
+agent memory before it is reused as context.
+
+Rationale:
+
+- Agent memory can preserve useful decisions, but it can also preserve stale
+  auth claims, outdated "current" facts, public-action shortcuts, local paths,
+  or credential-handling mistakes.
+- A local audit gate is stronger than trusting a future agent to notice stale
+  context inside a long memory file.
+- The project is dependency-free, testable, CI-backed, published by terminal
+  SSH, and verified with `repo-flightcheck` at `100/100`.
