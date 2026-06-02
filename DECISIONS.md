@@ -219,6 +219,21 @@ Rationale:
 - A dependency-specific diff gate strengthens the profile's safety narrative
   without claiming vulnerability intelligence or relying on external feeds.
 
+## 2026-06-02 - Build Tool Schema Lint as Agent Interface Proof
+
+Use `agent-tool-schema-lint` as public proof for reviewing tool schemas before
+they are exposed to coding agents.
+
+Rationale:
+
+- Tool-call risk starts before runtime authorization when names, descriptions,
+  parameters, enums, and object schemas are vague.
+- A dependency-free CLI gives reviewers a concrete preflight for OpenAI-style
+  function tools, MCP-like `inputSchema` definitions, and local automation hooks.
+- This complements `agent-context-sentinel`, `agent-tool-call-audit`, and
+  `mcp-guard` by checking the agent-facing interface before a tool becomes
+  callable.
+
 ## 2026-06-02 - Promote Secret Sentinel as Safety Proof
 
 Add `agent-secret-sentinel` to the profile's agent safety layer once the public repo is created, sanitized, pushed, and verified.
