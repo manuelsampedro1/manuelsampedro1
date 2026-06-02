@@ -206,6 +206,19 @@ Rationale:
 - A local diff scanner fits the profile's safety narrative because it blocks obvious leaks before commit or publication.
 - The project is intentionally narrow: dependency-free, diff-only, and explicit that it is a preflight rather than a full security audit.
 
+## 2026-06-02 - Build Dependency Guard as Supply-Chain Review Proof
+
+Use `agent-dependency-guard` as another public proof project for dependency
+surface changes in coding-agent diffs.
+
+Rationale:
+
+- Dependency changes alter trust boundaries even when tests pass.
+- Coding agents often add libraries, broad version ranges, direct URLs, or
+  install scripts to solve narrow tasks without preserving review context.
+- A dependency-specific diff gate strengthens the profile's safety narrative
+  without claiming vulnerability intelligence or relying on external feeds.
+
 ## 2026-06-02 - Promote Secret Sentinel as Safety Proof
 
 Add `agent-secret-sentinel` to the profile's agent safety layer once the public repo is created, sanitized, pushed, and verified.

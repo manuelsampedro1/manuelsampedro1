@@ -41,6 +41,7 @@ If you are building with Codex or evaluating how AI changes software work, find 
 | [agent-claim-check](https://github.com/manuelsampedro1/agent-claim-check) | Closeout claim verification | Checks coding-agent closeout claims against changed files, exact claimed commands, explicit command evidence, risky paths, and no-risk language before PR comments or proof packets reuse the final answer. |
 | [agent-command-receipt](https://github.com/manuelsampedro1/agent-command-receipt) | Command evidence receipts | Creates and verifies hashed command-outcome receipts with evidence file hashes before closeouts, proof packets, or ledgers reuse test and verification claims. |
 | [agent-change-risk](https://github.com/manuelsampedro1/agent-change-risk) | Review-gate routing | Classifies coding-agent diffs into risk tags and required gates for scope, secrets, runbook drift, CI failure packets, rollback, eval cases, closeout checks, and change-aware verification. |
+| [agent-dependency-guard](https://github.com/manuelsampedro1/agent-dependency-guard) | Dependency-surface review | Classifies dependency manifest, lockfile, package spec, and install-script changes in coding-agent diffs before tests or closeouts treat the change as safe. |
 | [agent-merge-readiness](https://github.com/manuelsampedro1/agent-merge-readiness) | Merge verdict gate | Turns diff risk, explicit check results, and closeout evidence into strict `ready`, `needs-review`, or `blocked` verdicts with non-ready exit codes for automation. |
 | [agent-proof-packet](https://github.com/manuelsampedro1/agent-proof-packet) | Review proof packets | Packages coding-agent diffs, explicit checks, evidence files, risks, decisions, open questions, and missing evidence into Markdown or JSON proof packets. |
 | [agent-publish-queue](https://github.com/manuelsampedro1/agent-publish-queue) | Publication queue audit | Audits local proof repos for branch, HEAD, dirty state, GitHub remote, optional public HTTP status, blockers, and next actions before profile promotion. |
@@ -70,7 +71,7 @@ These are small on purpose. I prefer tools a reviewer can clone, inspect, run, a
 - Keep operational docs tied to executable reality after agent or automation changes. See [runbook-drift-check](https://github.com/manuelsampedro1/runbook-drift-check) and [Runbook Drift Check](./recipes/runbook-drift-check.md).
 - Record durable intent when diffs alter CI, automation, config, security, product scope, or future agent behavior. See [agent-decision-guard](https://github.com/manuelsampedro1/agent-decision-guard) and [Agent Decision Guard](./recipes/agent-decision-guard.md).
 - Package repo-aware context so reviews can be stricter and more useful. See [codex-review-packet](https://github.com/manuelsampedro1/codex-review-packet), [Task Contracts in Review Packets](./recipes/task-contracts-in-review-packets.md), [Task Contract Envelope Summary in Review Packets](./recipes/task-contract-envelope-summary-in-review-packets.md), [Published HEAD Proof in Review Packets](./recipes/published-head-proof-in-review-packets.md), [Sensitive Change Checks in Review Packets](./recipes/sensitive-change-checks-in-review-packets.md), [CI Evidence in Review Packets](./recipes/ci-evidence-in-review-packets.md), [Readiness Contract in Review Packets](./recipes/readiness-contract-in-review-packets.md), [Repo Readiness in Review Packets](./recipes/repo-readiness-in-review-packets.md), [Review Packet With Generated Verification](./recipes/review-packet-with-generated-verification.md), [Generated Verification Envelopes in Review Packets](./recipes/generated-verification-envelope-review-packets.md), [Verification Envelope in Review Packets](./recipes/verification-envelope-in-review-packets.md), [Review Map in Agent Packets](./recipes/review-map-in-agent-packets.md), and [AI Repo Review Findings](./recipes/ai-repo-review-findings.md).
-- Route each diff to the gates it actually needs before review. See [agent-change-risk](https://github.com/manuelsampedro1/agent-change-risk) and [Change Risk Matrix for Agent Diffs](./recipes/change-risk-matrix-for-agent-diffs.md).
+- Route each diff to the gates it actually needs before review. See [agent-change-risk](https://github.com/manuelsampedro1/agent-change-risk), [agent-dependency-guard](https://github.com/manuelsampedro1/agent-dependency-guard), [Change Risk Matrix for Agent Diffs](./recipes/change-risk-matrix-for-agent-diffs.md), and [Agent Dependency Guard](./recipes/agent-dependency-guard.md).
 - Make merge readiness an explicit verdict, not a confident sentence. See [agent-merge-readiness](https://github.com/manuelsampedro1/agent-merge-readiness) and [Merge Readiness Gate for Agent Diffs](./recipes/merge-readiness-gate-for-agent-diffs.md).
 - Package final evidence into a compact review artifact. See [agent-proof-packet](https://github.com/manuelsampedro1/agent-proof-packet) and [Agent Proof Packet for Review](./recipes/agent-proof-packet-for-review.md).
 - Keep local proof repos, remotes, TODOs, and public profile claims in sync before promotion. See [agent-publish-queue](https://github.com/manuelsampedro1/agent-publish-queue) and [Publish Queue for Local Agent Repos](./recipes/publish-queue-for-local-agent-repos.md).
@@ -103,11 +104,11 @@ The check validates shell scripts, regenerates public indexes, refreshes latest-
 
 ## Latest Proof
 
-- Latest lab note: [2026-06-02 - Agent Acceptance Trace Public Launch](./labs/2026/2026-06-02-agent-acceptance-trace-public-launch.md)
+- Latest lab note: [2026-06-02 - Agent Dependency Guard Public Launch](./labs/2026/2026-06-02-agent-dependency-guard-public-launch.md)
 - Latest recipes:
+  - [Agent Dependency Guard](./recipes/agent-dependency-guard.md)
   - [Agent Acceptance Trace](./recipes/agent-acceptance-trace.md)
   - [Agent Handoff Brief](./recipes/agent-handoff-brief.md)
-  - [Agent Repo Map](./recipes/agent-repo-map.md)
 
 ## Principles
 
