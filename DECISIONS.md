@@ -300,3 +300,13 @@ Rationale:
 - Agent diffs can be technically correct but too broad for one honest review pass.
 - A budget gate covers size and complexity, which scope guards and risk classifiers do not enforce by themselves.
 - Keeping the tool dependency-free and diff-only makes it easy to run before proof packets, merge readiness, or CI promotion.
+
+## 2026-06-02 - Build Review Maps for Agent Handoffs
+
+Use `agent-review-map` as another next public proof project once a GitHub remote can be created.
+
+Rationale:
+
+- Agent proof packets still need routing: a mixed diff should not be reviewed as one flat unit.
+- Mapping files into security, data, release, automation, agent-instruction, product/docs, tests, and application lanes makes review ownership explicit.
+- A dependency-free diff mapper fits the profile's reliability story by turning agent handoffs into concrete reviewer questions instead of generic confidence.
