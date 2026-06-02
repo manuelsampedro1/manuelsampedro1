@@ -16,6 +16,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 - [2026-06-02 - Repo Flightcheck Documented Commands](./2026/2026-06-02-repo-flightcheck-documented-commands.md)
 - [2026-06-02 - Repo Flightcheck Dirty Tree Preflight](./2026/2026-06-02-repo-flightcheck-dirty-tree-preflight.md)
 - [2026-06-02 - Repo Flightcheck CI Verification](./2026/2026-06-02-repo-flightcheck-ci-verification.md)
+- [2026-06-02 - Repo Flightcheck Agent Readiness Contract](./2026/2026-06-02-repo-flightcheck-agent-readiness-contract.md)
 - [2026-06-02 - Repo Flightcheck Agent Instruction Quality](./2026/2026-06-02-repo-flightcheck-agent-instruction-quality.md)
 - [2026-06-02 - Public Repo CLI Output Snippets](./2026/2026-06-02-public-repo-cli-output-snippets.md)
 - [2026-06-02 - Public Proof Repo CI Audit](./2026/2026-06-02-public-proof-repo-ci-audit.md)

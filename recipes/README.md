@@ -64,6 +64,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [AI Repo Review Findings](./ai-repo-review-findings.md)
 - [AGENTS.md Patterns for Codex Repos](./agents-md-patterns-for-codex-repos.md)
 - [Agent Review Map](./agent-review-map.md)
+- [Agent Readiness Contract Output](./agent-readiness-contract-output.md)
 - [Agent Proof Packet for Review](./agent-proof-packet-for-review.md)
 - [Agent Instruction Quality Gate](./agent-instruction-quality-gate.md)
 - [Agent Eval Runner](./agent-eval-runner.md)
