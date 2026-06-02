@@ -141,6 +141,16 @@ Rationale:
 - A task-contract checker covers the missing pre-run question: is the requested task specific enough for an agent to execute safely?
 - The project is dependency-free, local-first, testable, and aligned with the profile's reliability narrative.
 
+## 2026-06-02 - Promote Agent Task Contract as Primary Proof
+
+Add `agent-task-contract` to the profile's selected work once the public repository is created, pushed, verified, and reachable.
+
+Rationale:
+
+- It closes the pre-run gap in the agent reliability stack: task clarity before repo readiness, review packets, verification, and ledgers.
+- The repo is small, dependency-free, testable, and has a clear user-facing CLI with JSON automation output.
+- Public proof is now stronger than a TODO entry because the repo, commit, CI badge, raw source, tests, and self-scan are reachable.
+
 ## 2026-06-02 - Surface Agent Safety and Permission Work
 
 Expose `deploy-gate`, `mcp-guard`, `pp-cli`, and `python-sdk` as a distinct agent safety layer on the profile.
