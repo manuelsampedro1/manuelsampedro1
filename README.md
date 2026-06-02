@@ -53,11 +53,11 @@ These are small on purpose. I prefer tools a reviewer can clone, inspect, run, a
 
 ## Latest Proof
 
-- Latest lab note: [2026-06-02 - Codex Review Packet Bounded Diff](./labs/2026/2026-06-02-codex-review-packet-bounded-diff.md)
+- Latest lab note: [2026-06-02 - Verify by Change Empty Diff Guard](./labs/2026/2026-06-02-verify-by-change-empty-diff-guard.md)
 - Latest recipes:
+  - [Empty Diff Verification Guard](./recipes/empty-diff-verification-guard.md)
   - [Bounded Diff Review Packet](./recipes/bounded-diff-review-packet.md)
   - [Machine-Readable Doctor Output](./recipes/machine-readable-doctor-output.md)
-  - [Clean Working Tree Agent Preflight](./recipes/clean-working-tree-agent-preflight.md)
 
 ## Principles
 
