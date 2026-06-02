@@ -53,6 +53,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [GitHub Actions Run Evidence to Ledger](./github-actions-run-evidence-to-ledger.md)
 - [GitHub Action Repo Readiness](./github-action-repo-readiness.md)
 - [GitHub Action Change Verification](./github-action-change-verification.md)
+- [Generated Verification Envelopes in Review Packets](./generated-verification-envelope-review-packets.md)
 - [Flagship Repo Proof Packet](./flagship-repo-proof-packet.md)
 - [Fail-Fast Git Identity for Agent Publish Flows](./fail-fast-git-identity-for-agent-publish-flows.md)
 - [Expected Paths Contract for Agent Publish Flows](./expected-paths-contract-for-agent-publish-flows.md)
