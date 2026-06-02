@@ -253,6 +253,19 @@ Rationale:
 - The project stays dependency-free, local-first, testable, and aligned with
   the profile's verification discipline narrative.
 
+## 2026-06-02 - Build Tool Call Audit as Post-Run Safety Proof
+
+Use `agent-tool-call-audit` as a public proof project for post-run review of
+coding-agent tool-call history.
+
+Rationale:
+
+- Pre-execution guards do not prove the actual run stayed clean.
+- Reviewers need to see destructive commands, sensitive tools, repeated
+  failures, skipped hooks, and secret markers before trusting a closeout.
+- The project complements `mcp-guard`, `agent-run-ledger`, and
+  `agent-command-receipt` without becoming a sandbox or external service.
+
 ## 2026-06-02 - Promote CI Failure Packets as Retry Proof
 
 Add `agent-ci-failure-packet` to selected work once the public repo is created, hardened, pushed, and verified.
