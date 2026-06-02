@@ -78,6 +78,8 @@ VERIFY_SECTION_REQUIRED_PHRASES = [
 ]
 
 MAX_SELECTED_WORK_ROWS = 50
+SELECTED_WORK_SATURATION_BASELINE_ROWS = 46
+SELECTED_WORK_GROWTH_DECISION_TITLE = "Allow Selected Work Growth After Saturation"
 MAX_REVIEWER_PATH_BULLETS = 4
 OWNED_GITHUB_REPO_PREFIX = "https://github.com/manuelsampedro1/"
 LATEST_PROOF_INDEXES = {
@@ -122,6 +124,11 @@ def section_body(markdown: str, section: str) -> str:
     if next_match:
         return rest[: next_match.start()]
     return rest
+
+
+def has_decision_title(markdown: str, title: str) -> bool:
+    pattern = rf"^##\s+\d{{4}}-\d{{2}}-\d{{2}}\s+-\s+{re.escape(title)}\s*$"
+    return re.search(pattern, markdown, re.MULTILINE) is not None
 
 
 def count_selected_work_rows(markdown: str) -> int:
@@ -266,6 +273,13 @@ def audit(root: Path) -> AuditResult:
         issues.append(
             f"Selected Work has {selected_rows} rows; curate before exceeding {MAX_SELECTED_WORK_ROWS} rows."
         )
+    elif selected_rows > SELECTED_WORK_SATURATION_BASELINE_ROWS:
+        if not has_decision_title(decisions, SELECTED_WORK_GROWTH_DECISION_TITLE):
+            issues.append(
+                "Selected Work has grown to "
+                f"{selected_rows} rows; document an explicit post-saturation growth decision "
+                f"before adding rows above {SELECTED_WORK_SATURATION_BASELINE_ROWS}."
+            )
     elif selected_rows >= 45:
         if "Pause Proof Repo Volume After Saturation" not in decisions:
             issues.append("Selected Work is saturated but DECISIONS.md lacks the curation decision.")

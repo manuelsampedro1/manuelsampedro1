@@ -973,6 +973,21 @@ Rationale:
 - The next strongest signal is curation, cross-repo demonstrations, hardening,
   and real workflow evidence, not volume for its own sake.
 
+## 2026-06-03 - Freeze Selected Work Row Count After Saturation
+
+Keep the root README `Selected Work` table at the saturated 46-row baseline
+unless a future change records an explicit `Allow Selected Work Growth After
+Saturation` decision.
+
+Rationale:
+
+- The profile is already dense enough that adding rows can reduce reviewer
+  clarity even when the new repo is useful.
+- A hard gate makes the pause rule executable instead of relying on future
+  maintenance judgment under pressure.
+- New signal should come from curation, examples, verification, and materially
+  new workflow gaps before increasing the primary proof table.
+
 ## 2026-06-02 - Prefer Cross-Repo Workflow Demos After Saturation
 
 Use examples that chain existing proof repos together when the profile needs

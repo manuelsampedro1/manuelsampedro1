@@ -788,6 +788,97 @@ class ProfileQualityAuditTests(unittest.TestCase):
         self.assertIn("Selected Work is saturated but DECISIONS.md lacks the curation decision.", result.issues)
         self.assertIn("Selected Work is saturated but TODO.md lacks the pause-new-repo rule.", result.issues)
 
+    def test_selected_work_growth_requires_post_saturation_decision(self) -> None:
+        rows = "\n".join(
+            f"| [repo-{index}](https://github.com/manuelsampedro1/repo-{index}) | proof | why |"
+            for index in range(profile_quality_audit.SELECTED_WORK_SATURATION_BASELINE_ROWS + 1)
+        )
+        reviewer_path = "\n".join(profile_quality_audit.REVIEWER_PATH_TARGETS)
+
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            examples = root / "examples"
+            examples.mkdir()
+            (root / "README.md").write_text(
+                "\n".join(
+                    [
+                        "# Test Profile",
+                        "",
+                        "## Current Focus",
+                        "",
+                        "## Reviewer Path",
+                        reviewer_path,
+                        "",
+                        "## Selected Work",
+                        "",
+                        "| Repo | What it proves | Why it matters |",
+                        "| --- | --- | --- |",
+                        rows,
+                        "",
+                        "## Agent Safety Layer",
+                        "",
+                        "| Repo | What it proves | Why it matters |",
+                        "| --- | --- | --- |",
+                        "| [mcp-guard](https://github.com/manuelsampedro1/mcp-guard) | proof | why |",
+                        "",
+                        "## How I Work With Codex",
+                        "",
+                        "## Public Workbench",
+                        "",
+                        "## Verify This Repo",
+                        "The check validates shell scripts, python audit tools, python unit tests, commit-script shell fixture, and profile quality audit.",
+                        "",
+                        "## Latest Proof",
+                        "",
+                        "## Principles",
+                        "",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+            (root / "DECISIONS.md").write_text(
+                "\n".join(
+                    [
+                        "## 2026-06-02 - Pause Proof Repo Volume After Saturation",
+                        "",
+                        "Inline mention: Allow Selected Work Growth After Saturation.",
+                        "",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+            (root / "TODO.md").write_text(
+                "Pause new proof-repo creation by default\n",
+                encoding="utf-8",
+            )
+            (examples / "README.md").write_text(
+                "\n".join(f"- [{Path(path).name}](./{Path(path).name})" for path in profile_quality_audit.REQUIRED_EXAMPLES),
+                encoding="utf-8",
+            )
+            for path in profile_quality_audit.REQUIRED_EXAMPLES:
+                (root / path).write_text("# Example\n", encoding="utf-8")
+            (root / "examples" / "profile-evidence-map.md").write_text(
+                "\n".join(profile_quality_audit.EVIDENCE_MAP_REPOS)
+                + "\n"
+                + "\n".join(
+                    [
+                        "agent-release-readiness-chain.md",
+                        "agent-review-packet-to-ledger-chain.md",
+                        "external-reviewer-navigation.md",
+                        "profile-verification-proof-packet.md",
+                        "profile-curation-guard-proof-packet.md",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+
+            result = profile_quality_audit.audit(root)
+
+        self.assertIn(
+            "Selected Work has grown to 47 rows; document an explicit post-saturation growth decision before adding rows above 46.",
+            result.issues,
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
