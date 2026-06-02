@@ -106,7 +106,7 @@ class ProfileQualityAuditTests(unittest.TestCase):
             (root / "recipes").mkdir()
             (root / "README.md").write_text("# Test Profile\n", encoding="utf-8")
             (root / "recipes" / "note.md").write_text(
-                "A weak request says make reviewers approve this.\n",
+                "A weak request says make reviewers approve this. It treats the profile as an approval signal.\n",
                 encoding="utf-8",
             )
 
@@ -114,6 +114,10 @@ class ProfileQualityAuditTests(unittest.TestCase):
 
         self.assertIn(
             "Public surface contains external-validation or approval-chasing phrase `make reviewers approve this` in recipes/note.md.",
+            result.issues,
+        )
+        self.assertIn(
+            "Public surface contains external-validation or approval-chasing phrase `approval signal` in recipes/note.md.",
             result.issues,
         )
 

@@ -2,7 +2,7 @@
 
 ## Context
 
-The public profile needed stronger proof than recipes and lab notes alone. The approval signal was an active GitHub account with real projects, so the useful move was to ship small tools that an AI builder can inspect, run, and understand quickly.
+The public profile needed stronger proof than recipes and lab notes alone. A GitHub account with real projects gives reviewers concrete artifacts to inspect, so the useful move was to ship small tools that an AI builder can inspect, run, and understand quickly.
 
 ## Useful Artifact
 

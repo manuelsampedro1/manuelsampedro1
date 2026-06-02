@@ -104,6 +104,7 @@ PUBLIC_TONE_FILES = [
 PUBLIC_TONE_RISKY_PHRASES = [
     "give me the prize",
     "give me the award",
+    "approval signal",
     "make reviewers approve this",
     "me tienen que dar",
     "openai prize",
