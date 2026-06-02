@@ -112,6 +112,14 @@ python3 scripts/audit_github_automation_prompts.py --format json
 
 The audit expects the lab, recipe, maintenance, and quality-audit prompts to pass exact changed paths after the `scripts/commit_daily_update.sh` commit message.
 
+Audit local proof-repo Git identity before first public pushes:
+
+```sh
+python3 scripts/audit_local_repo_identity.py --root .. --format json
+```
+
+The expected identity is `Manuel Sampedro` with `202281585+manuelsampedro1@users.noreply.github.com`.
+
 ## GitHub Setup
 
 Remote publishing is configured for `manuelsampedro1/manuelsampedro1`.

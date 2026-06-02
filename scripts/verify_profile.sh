@@ -11,7 +11,10 @@ bash -n \
   scripts/verify_profile.sh \
   tests/test_commit_daily_update.sh
 
-python3 -m py_compile scripts/profile_quality_audit.py scripts/audit_github_automation_prompts.py
+python3 -m py_compile \
+  scripts/profile_quality_audit.py \
+  scripts/audit_github_automation_prompts.py \
+  scripts/audit_local_repo_identity.py
 python3 -m unittest discover -s tests
 bash tests/test_commit_daily_update.sh
 python3 scripts/profile_quality_audit.py --root . --min-score 100 >/dev/null

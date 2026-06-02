@@ -1055,3 +1055,17 @@ Rationale:
   folder.
 - This closes a real automation drift risk without adding another proof repo or
   changing the public Selected Work surface.
+
+## 2026-06-02 - Audit Local Proof Repo Git Identity
+
+Make Git author identity checks repeatable before local proof repos are pushed
+or promoted.
+
+Rationale:
+
+- Public proof repos should be authored with the documented GitHub no-reply
+  identity, not an accidental local or placeholder email.
+- The current sibling proof repos already use the expected identity, but that
+  check was previously ad hoc.
+- A versioned local audit script keeps the check reusable without storing
+  credentials or requiring a new public proof repo.
