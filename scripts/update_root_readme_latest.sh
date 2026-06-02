@@ -8,11 +8,19 @@ if [ ! -f "$readme" ]; then
   exit 1
 fi
 
+file_mtime() {
+  if stat -c '%Y' "$1" >/dev/null 2>&1; then
+    stat -c '%Y' "$1"
+  else
+    stat -f '%m' "$1"
+  fi
+}
+
 lab_file="$(
   find labs -type f -name "*.md" ! -path "labs/README.md" | while read -r file; do
     added_at="$(git log --diff-filter=A --follow --format='%ct' -- "$file" | tail -n 1)"
     if [ -z "$added_at" ]; then
-      added_at="$(stat -f '%m' "$file")"
+      added_at="$(file_mtime "$file")"
     fi
     printf '%s\t%s\n' "$added_at" "$file"
   done | sort -r -n | head -n 1 | cut -f2-
@@ -27,7 +35,7 @@ latest_recipe_files="$(
   find recipes -type f -name "*.md" ! -path "recipes/README.md" | while read -r file; do
     added_at="$(git log --diff-filter=A --follow --format='%ct' -- "$file" | tail -n 1)"
     if [ -z "$added_at" ]; then
-      added_at="$(stat -f '%m' "$file")"
+      added_at="$(file_mtime "$file")"
     fi
     printf '%s\t%s\n' "$added_at" "$file"
   done | sort -r -n | head -n 3 | cut -f2-
