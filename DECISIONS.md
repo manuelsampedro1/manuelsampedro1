@@ -271,6 +271,16 @@ Rationale:
 - Scope drift is a common failure mode when agents opportunistically edit docs, config, or helper files.
 - A small diff-path guard makes task contracts enforceable in CI and publish scripts.
 
+## 2026-06-02 - Promote Scope Guard as Boundary Proof
+
+Add `agent-scope-guard` to selected work once the public repo is created, hardened, pushed, and verified.
+
+Rationale:
+
+- It turns task scope from a prompt instruction into an enforceable diff-path gate.
+- It is backed by a dependency-free CLI, fake sample diff, tests, CI, and `repo-flightcheck` at `100/100`.
+- It fills the gap between task-contract clarity and review evidence: the agent must stay inside the expected file boundary.
+
 ## 2026-06-02 - Build Closeout Evidence Checks for Agents
 
 Use `agent-closeout-check` as another next public proof project once a GitHub remote can be created.

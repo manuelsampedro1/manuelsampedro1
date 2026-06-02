@@ -87,6 +87,5 @@ Tasks:
 
 ## Source Linkage
 
-- Repo / tool / workflow: local `agent-scope-guard` prototype and this profile repo's expected-path publish guard.
-- Supporting prompt, script, or note: [`./dirty-public-path-preflight.md`](./dirty-public-path-preflight.md), [`./expected-paths-contract-for-agent-publish-flows.md`](./expected-paths-contract-for-agent-publish-flows.md), and [`../scripts/commit_daily_update.sh`](../scripts/commit_daily_update.sh).
-
+- Repo / tool / workflow: public [`agent-scope-guard`](https://github.com/manuelsampedro1/agent-scope-guard) repo and verified launch commit [`c472eed`](https://github.com/manuelsampedro1/agent-scope-guard/commit/c472eedeeafd1d4baf0128fdbcd54bc123891436).
+- Supporting prompt, script, or note: [`./dirty-public-path-preflight.md`](./dirty-public-path-preflight.md), [`./expected-paths-contract-for-agent-publish-flows.md`](./expected-paths-contract-for-agent-publish-flows.md), [`../labs/2026/2026-06-02-agent-scope-guard-public-launch.md`](../labs/2026/2026-06-02-agent-scope-guard-public-launch.md), and [`../scripts/commit_daily_update.sh`](../scripts/commit_daily_update.sh).

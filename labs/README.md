@@ -57,6 +57,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 - [2026-06-02 - Briefboard Exportable Artifacts](./2026/2026-06-02-briefboard-exportable-artifacts.md)
 - [2026-06-02 - Agent Task Contract Public Launch](./2026/2026-06-02-agent-task-contract-public-launch.md)
 - [2026-06-02 - Agent Secret Sentinel Public Launch](./2026/2026-06-02-agent-secret-sentinel-public-launch.md)
+- [2026-06-02 - Agent Scope Guard Public Launch](./2026/2026-06-02-agent-scope-guard-public-launch.md)
 - [2026-06-02 - Agent Run Ledger Task Contract Evidence](./2026/2026-06-02-agent-run-ledger-task-contract-evidence.md)
 - [2026-06-02 - Agent Run Ledger Task Contract Envelope Import](./2026/2026-06-02-agent-run-ledger-task-contract-envelope-import.md)
 - [2026-06-02 - Agent Run Ledger Strict Doctor](./2026/2026-06-02-agent-run-ledger-strict-doctor.md)
