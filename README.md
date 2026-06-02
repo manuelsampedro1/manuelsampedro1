@@ -21,6 +21,7 @@ If you are building with Codex or evaluating how AI changes software work, find 
 | [agent-task-contract](https://github.com/manuelsampedro1/agent-task-contract) | Task scope readiness | Validates Markdown task briefs before coding-agent work starts, with dependency-free Python CLI output for humans and JSON automation, example contracts, CI, tests, and repo readiness proof. |
 | [agent-repo-map](https://github.com/manuelsampedro1/agent-repo-map) | Repository context mapping | Generates compact pre-run maps of docs, languages, entrypoints, commands, verification signals, CI, Git state, and risk paths before a coding-agent handoff. |
 | [agent-handoff-brief](https://github.com/manuelsampedro1/agent-handoff-brief) | Pre-run agent handoffs | Turns task contracts and repo context into compact coding-agent briefs with required reading, commands, verification, risk paths, gaps, and a ready-to-use prompt. |
+| [agent-continuation-brief](https://github.com/manuelsampedro1/agent-continuation-brief) | Long-run continuation handoffs | Audits continuation notes for original objective, current state, completed work, blockers, changed files, commands, next actions, risks, and next-agent instructions before another coding agent resumes. |
 | [agent-context-sentinel](https://github.com/manuelsampedro1/agent-context-sentinel) | Context injection preflight | Audits untrusted context for prompt-injection language, hidden authority claims, secret exfiltration requests, dangerous commands, unattended sensitive actions, local paths, and missing source metadata before agent handoff. |
 | [agent-acceptance-trace](https://github.com/manuelsampedro1/agent-acceptance-trace) | Acceptance criteria traceability | Turns task acceptance criteria, diffs, and closeout evidence into a criterion-by-criterion matrix with covered, partial, or missing status before a final answer is accepted. |
 | [agent-scope-guard](https://github.com/manuelsampedro1/agent-scope-guard) | Scope boundary enforcement | Fails coding-agent diffs when changed paths fall outside an explicit file or glob allowlist, with text and JSON output, tests, CI, and repo readiness proof. |
@@ -69,7 +70,7 @@ These are small on purpose. I prefer tools a reviewer can clone, inspect, run, a
 
 ## How I Work With Codex
 
-- Start with a real brief, explicit acceptance criteria, and the smallest useful scope. See [agent-task-contract](https://github.com/manuelsampedro1/agent-task-contract), [agent-handoff-brief](https://github.com/manuelsampedro1/agent-handoff-brief), [agent-acceptance-trace](https://github.com/manuelsampedro1/agent-acceptance-trace), [briefboard-local](https://github.com/manuelsampedro1/briefboard-local), [Agent Task Contract Preflight](./recipes/agent-task-contract-preflight.md), [Agent Handoff Brief](./recipes/agent-handoff-brief.md), [Agent Acceptance Trace](./recipes/agent-acceptance-trace.md), [Handoff Scope Warnings Before Codex](./recipes/handoff-scope-warnings-before-codex.md), and [Brief Readiness Before Codex](./recipes/brief-readiness-before-codex.md).
+- Start with a real brief, explicit acceptance criteria, and the smallest useful scope. Preserve that state across long-running agent sessions instead of asking the next run to infer what happened. See [agent-task-contract](https://github.com/manuelsampedro1/agent-task-contract), [agent-handoff-brief](https://github.com/manuelsampedro1/agent-handoff-brief), [agent-continuation-brief](https://github.com/manuelsampedro1/agent-continuation-brief), [agent-acceptance-trace](https://github.com/manuelsampedro1/agent-acceptance-trace), [briefboard-local](https://github.com/manuelsampedro1/briefboard-local), [Agent Task Contract Preflight](./recipes/agent-task-contract-preflight.md), [Agent Handoff Brief](./recipes/agent-handoff-brief.md), [Agent Continuation Brief](./recipes/agent-continuation-brief.md), [Agent Acceptance Trace](./recipes/agent-acceptance-trace.md), [Handoff Scope Warnings Before Codex](./recipes/handoff-scope-warnings-before-codex.md), and [Brief Readiness Before Codex](./recipes/brief-readiness-before-codex.md).
 - Protect pre-existing user edits and enforce expected changed paths instead of trusting the agent to stay inside scope. See [agent-worktree-guard](https://github.com/manuelsampedro1/agent-worktree-guard), [agent-scope-guard](https://github.com/manuelsampedro1/agent-scope-guard), [Agent Worktree Guard](./recipes/agent-worktree-guard.md), and [Scope Guard for Agent Diffs](./recipes/scope-guard-for-agent-diffs.md).
 - Keep broad agent diffs below an explicit review budget, then split oversized changes into reviewable slices instead of pushing one broad patch. See [agent-diff-budget](https://github.com/manuelsampedro1/agent-diff-budget), [agent-diff-splitter](https://github.com/manuelsampedro1/agent-diff-splitter), [Agent Diff Budget](./recipes/agent-diff-budget.md), and [Agent Diff Splitter](./recipes/agent-diff-splitter.md).
 - Route mixed diffs to concrete reviewer lanes instead of accepting one flat handoff. See [agent-review-map](https://github.com/manuelsampedro1/agent-review-map) and [Agent Review Map](./recipes/agent-review-map.md).
@@ -110,11 +111,11 @@ The check validates shell scripts, regenerates public indexes, refreshes latest-
 
 ## Latest Proof
 
-- Latest lab note: [2026-06-02 - Agent Bug Repro Public Launch](./labs/2026/2026-06-02-agent-bug-repro-public-launch.md)
+- Latest lab note: [2026-06-02 - Agent Continuation Brief Public Launch](./labs/2026/2026-06-02-agent-continuation-brief-public-launch.md)
 - Latest recipes:
+  - [Agent Continuation Brief](./recipes/agent-continuation-brief.md)
   - [Agent Bug Repro](./recipes/agent-bug-repro.md)
   - [Agent Artifact Redactor](./recipes/agent-artifact-redactor.md)
-  - [Agent Context Sentinel](./recipes/agent-context-sentinel.md)
 
 ## Principles
 

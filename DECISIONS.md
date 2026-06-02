@@ -747,3 +747,17 @@ Rationale:
   visible before the next agent guesses at root cause.
 - The tool complements CI failure packets by handling human bug reports and
   local evidence, not only post-CI logs.
+
+## 2026-06-02 - Build Continuation Brief as Long-Run Handoff Proof
+
+Use `agent-continuation-brief` as another public proof repo for preserving
+task state when long-running coding-agent work spans multiple runs.
+
+Rationale:
+
+- Pre-run handoff briefs are not enough when the next agent inherits partial
+  work, previous commands, changed files, blockers, and residual uncertainty.
+- Continuation notes should preserve the original objective instead of
+  redefining the task around whatever is easiest to finish.
+- The tool is dependency-free, testable, CI-backed, published by terminal SSH,
+  and verified with `repo-flightcheck` at `100/100`.
