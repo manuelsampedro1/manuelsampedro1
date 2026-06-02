@@ -340,3 +340,13 @@ Rationale:
 - Multiple lab notes can share the same date prefix.
 - Filename order can keep an older same-day note on the profile after a newer note is published.
 - Matching the recipe selection logic makes `Latest Proof` reflect the most recently added public artifact.
+
+## 2026-06-02 - Promote Cross-Tool Agent Loops With Public Evidence
+
+When a flagship repo change connects two or more public agent tools, document the loop as a lab note or recipe only after the commit, CI run, local checks, and raw public files are verified.
+
+Rationale:
+
+- Cross-tool workflows are stronger profile proof than isolated README improvements.
+- The profile should show how repo readiness, review packets, verification plans, and ledgers compose into a reliable agent workflow.
+- Requiring public links and verification keeps the workbench from drifting into speculative architecture notes.
