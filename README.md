@@ -20,7 +20,7 @@ If you are building with Codex or evaluating how AI changes software work, find 
 | --- | --- | --- |
 | [agent-run-ledger](https://github.com/manuelsampedro1/agent-run-ledger) | Agent audit trails | Records AI agent runs as JSONL, imports verification checklists, gates unresolved evidence with strict doctor mode, and renders static review reports. |
 | [repo-flightcheck](https://github.com/manuelsampedro1/repo-flightcheck) | Pre-agent readiness | Audits whether a repository is ready for Codex, Claude Code, and human reviewers, including whether CI runs the local verification command. |
-| [codex-review-packet](https://github.com/manuelsampedro1/codex-review-packet) | Review context quality | Packages diffs, repo rules, local context, and verification checklists into a sharper handoff for Codex or Claude Code. |
+| [codex-review-packet](https://github.com/manuelsampedro1/codex-review-packet) | Review context quality | Packages diffs, repo rules, local context, review lanes, and verification checklists into a sharper handoff for Codex or Claude Code. |
 | [verify-by-change](https://github.com/manuelsampedro1/verify-by-change) | Evidence-based closeout | Suggests honest checks from committed diffs and working-tree changes so AI-generated work closes with evidence instead of boilerplate. |
 | [briefboard-local](https://github.com/manuelsampedro1/briefboard-local) | Product scoping taste | Turns messy kickoff notes into a structured build brief, flags missing essentials, and generates a Codex-ready prompt with no backend. |
 
@@ -39,7 +39,7 @@ These are small on purpose. I prefer tools a reviewer can clone, inspect, run, a
 
 - Start with a real brief, explicit acceptance criteria, and the smallest useful scope. See [briefboard-local](https://github.com/manuelsampedro1/briefboard-local) and [Brief Readiness Before Codex](./recipes/brief-readiness-before-codex.md).
 - Check repo readiness before handing work to an agent. See [repo-flightcheck](https://github.com/manuelsampedro1/repo-flightcheck).
-- Package repo-aware context so reviews can be stricter and more useful. See [codex-review-packet](https://github.com/manuelsampedro1/codex-review-packet) and [AI Repo Review Findings](./recipes/ai-repo-review-findings.md).
+- Package repo-aware context so reviews can be stricter and more useful. See [codex-review-packet](https://github.com/manuelsampedro1/codex-review-packet), [Review Map in Agent Packets](./recipes/review-map-in-agent-packets.md), and [AI Repo Review Findings](./recipes/ai-repo-review-findings.md).
 - Match verification to the actual change type instead of pasting the same test advice everywhere. See [verify-by-change](https://github.com/manuelsampedro1/verify-by-change) and [Verification by Change Type](./recipes/verification-by-change-type.md).
 - Leave an audit trail for non-trivial agent runs. See [agent-run-ledger](https://github.com/manuelsampedro1/agent-run-ledger).
 - Gate sensitive agent actions with explicit human authorization where execution risk is higher than review risk. See [deploy-gate](https://github.com/manuelsampedro1/deploy-gate) and [mcp-guard](https://github.com/manuelsampedro1/mcp-guard).
@@ -53,11 +53,11 @@ These are small on purpose. I prefer tools a reviewer can clone, inspect, run, a
 
 ## Latest Proof
 
-- Latest lab note: [2026-06-02 - Briefboard Readiness Before Handoff](./labs/2026/2026-06-02-briefboard-readiness-before-handoff.md)
+- Latest lab note: [2026-06-02 - Codex Review Packet Review Map](./labs/2026/2026-06-02-codex-review-packet-review-map.md)
 - Latest recipes:
+  - [Review Map in Agent Packets](./recipes/review-map-in-agent-packets.md)
   - [Brief Readiness Before Codex](./recipes/brief-readiness-before-codex.md)
   - [Strict Ledger Doctor Gate](./recipes/strict-ledger-doctor-gate.md)
-  - [Base Diff Plus Working Tree Verification](./recipes/base-diff-plus-working-tree-verification.md)
 
 ## Principles
 
