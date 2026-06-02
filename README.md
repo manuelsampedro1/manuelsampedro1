@@ -19,7 +19,7 @@ If you are building with Codex or evaluating how AI changes software work, find 
 | Repo | What it proves | Why it matters |
 | --- | --- | --- |
 | [agent-run-ledger](https://github.com/manuelsampedro1/agent-run-ledger) | Agent audit trails | Records AI agent runs as JSONL, imports repo readiness reports plus Markdown or JSON-envelope verification plans, gates unresolved evidence with strict doctor mode, and renders static review reports. |
-| [repo-flightcheck](https://github.com/manuelsampedro1/repo-flightcheck) | Pre-agent readiness | Audits whether a repository is ready for Codex, Claude Code, and human reviewers, including CI/local verification coverage, Python unittest detection, and stale documented commands. |
+| [repo-flightcheck](https://github.com/manuelsampedro1/repo-flightcheck) | Pre-agent readiness | Audits whether a repository is ready for Codex, Claude Code, and human reviewers, including CI/local verification coverage, Python unittest detection, GitHub Action repos, and stale documented commands. |
 | [codex-review-packet](https://github.com/manuelsampedro1/codex-review-packet) | Review context quality | Packages diffs, repo rules, local context, review lanes, repo readiness reports, and verification checklists into a sharper handoff for Codex or Claude Code. |
 | [verify-by-change](https://github.com/manuelsampedro1/verify-by-change) | Evidence-based closeout | Suggests honest checks from committed diffs and working-tree changes, with JSON envelope metadata, CI-local command parity, and a repo readiness contract. |
 | [briefboard-local](https://github.com/manuelsampedro1/briefboard-local) | Product scoping taste | Turns messy kickoff notes into a structured build brief, flags missing essentials, and generates a Codex-ready prompt with no backend, importable examples, and CI-local checks. |
@@ -38,7 +38,7 @@ These are small on purpose. I prefer tools a reviewer can clone, inspect, run, a
 ## How I Work With Codex
 
 - Start with a real brief, explicit acceptance criteria, and the smallest useful scope. See [briefboard-local](https://github.com/manuelsampedro1/briefboard-local) and [Brief Readiness Before Codex](./recipes/brief-readiness-before-codex.md).
-- Check repo readiness before handing work to an agent. See [repo-flightcheck](https://github.com/manuelsampedro1/repo-flightcheck), [Python Unittest Readiness Check](./recipes/python-unittest-readiness-check.md), and [Documented Command Drift Check](./recipes/documented-command-drift-check.md).
+- Check repo readiness before handing work to an agent. See [repo-flightcheck](https://github.com/manuelsampedro1/repo-flightcheck), [Python Unittest Readiness Check](./recipes/python-unittest-readiness-check.md), [GitHub Action Repo Readiness](./recipes/github-action-repo-readiness.md), and [Documented Command Drift Check](./recipes/documented-command-drift-check.md).
 - Package repo-aware context so reviews can be stricter and more useful. See [codex-review-packet](https://github.com/manuelsampedro1/codex-review-packet), [Repo Readiness in Review Packets](./recipes/repo-readiness-in-review-packets.md), [Review Map in Agent Packets](./recipes/review-map-in-agent-packets.md), and [AI Repo Review Findings](./recipes/ai-repo-review-findings.md).
 - Match verification to the actual change type instead of pasting the same test advice everywhere. See [verify-by-change](https://github.com/manuelsampedro1/verify-by-change), [Verification by Change Type](./recipes/verification-by-change-type.md), [JSON Envelope for Verification Gates](./recipes/json-envelope-for-verification-gates.md), and [Repo Readiness Contract for Agent Repos](./recipes/repo-readiness-contract-for-agent-repos.md).
 - Leave an audit trail for non-trivial agent runs. See [agent-run-ledger](https://github.com/manuelsampedro1/agent-run-ledger), [Repo Readiness to Ledger Evidence](./recipes/repo-readiness-to-ledger-evidence.md), and [Verification Envelope to Ledger Evidence](./recipes/verification-envelope-to-ledger-evidence.md).
@@ -53,11 +53,11 @@ These are small on purpose. I prefer tools a reviewer can clone, inspect, run, a
 
 ## Latest Proof
 
-- Latest lab note: [2026-06-02 - Agent Run Ledger CI Parity](./labs/2026/2026-06-02-agent-run-ledger-ci-parity.md)
+- Latest lab note: [2026-06-02 - Repo Flightcheck GitHub Action Detection](./labs/2026/2026-06-02-repo-flightcheck-github-action-detection.md)
 - Latest recipes:
+  - [GitHub Action Repo Readiness](./recipes/github-action-repo-readiness.md)
   - [Repo Readiness Contract for Agent Repos](./recipes/repo-readiness-contract-for-agent-repos.md)
   - [Repo Readiness to Ledger Evidence](./recipes/repo-readiness-to-ledger-evidence.md)
-  - [Repo Readiness in Review Packets](./recipes/repo-readiness-in-review-packets.md)
 
 ## Principles
 
