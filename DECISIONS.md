@@ -239,6 +239,20 @@ Rationale:
 - A compact packet with failing commands, error signals, file references, and suggested checks improves the next run's context quality.
 - This completes another part of the agent workflow loop: failure triage after verification fails.
 
+## 2026-06-02 - Build Test Impact as Verification Evidence Proof
+
+Use `agent-test-impact` as a public proof project for path-level test evidence
+in coding-agent diffs.
+
+Rationale:
+
+- Broad test commands can pass while changed source files lack nearby test
+  evidence.
+- Reviewers need a deterministic way to separate direct, partial, and missing
+  test evidence before accepting a closeout.
+- The project stays dependency-free, local-first, testable, and aligned with
+  the profile's verification discipline narrative.
+
 ## 2026-06-02 - Promote CI Failure Packets as Retry Proof
 
 Add `agent-ci-failure-packet` to selected work once the public repo is created, hardened, pushed, and verified.
