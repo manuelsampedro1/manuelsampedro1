@@ -19,7 +19,7 @@ If you are building with Codex or evaluating how AI changes software work, find 
 | Repo | What it proves | Why it matters |
 | --- | --- | --- |
 | [agent-run-ledger](https://github.com/manuelsampedro1/agent-run-ledger) | Agent audit trails | Records AI agent runs as JSONL, imports Markdown or JSON-envelope verification plans, gates unresolved evidence with strict doctor mode, and renders static review reports. |
-| [repo-flightcheck](https://github.com/manuelsampedro1/repo-flightcheck) | Pre-agent readiness | Audits whether a repository is ready for Codex, Claude Code, and human reviewers, including CI/local verification coverage and stale documented commands. |
+| [repo-flightcheck](https://github.com/manuelsampedro1/repo-flightcheck) | Pre-agent readiness | Audits whether a repository is ready for Codex, Claude Code, and human reviewers, including CI/local verification coverage, Python unittest detection, and stale documented commands. |
 | [codex-review-packet](https://github.com/manuelsampedro1/codex-review-packet) | Review context quality | Packages diffs, repo rules, local context, review lanes, and verification checklists into a sharper handoff for Codex or Claude Code. |
 | [verify-by-change](https://github.com/manuelsampedro1/verify-by-change) | Evidence-based closeout | Suggests honest checks from committed diffs and working-tree changes, with JSON envelope metadata for downstream gates. |
 | [briefboard-local](https://github.com/manuelsampedro1/briefboard-local) | Product scoping taste | Turns messy kickoff notes into a structured build brief, flags missing essentials, and generates a Codex-ready prompt with no backend. |
@@ -38,7 +38,7 @@ These are small on purpose. I prefer tools a reviewer can clone, inspect, run, a
 ## How I Work With Codex
 
 - Start with a real brief, explicit acceptance criteria, and the smallest useful scope. See [briefboard-local](https://github.com/manuelsampedro1/briefboard-local) and [Brief Readiness Before Codex](./recipes/brief-readiness-before-codex.md).
-- Check repo readiness before handing work to an agent. See [repo-flightcheck](https://github.com/manuelsampedro1/repo-flightcheck) and [Documented Command Drift Check](./recipes/documented-command-drift-check.md).
+- Check repo readiness before handing work to an agent. See [repo-flightcheck](https://github.com/manuelsampedro1/repo-flightcheck), [Python Unittest Readiness Check](./recipes/python-unittest-readiness-check.md), and [Documented Command Drift Check](./recipes/documented-command-drift-check.md).
 - Package repo-aware context so reviews can be stricter and more useful. See [codex-review-packet](https://github.com/manuelsampedro1/codex-review-packet), [Review Map in Agent Packets](./recipes/review-map-in-agent-packets.md), and [AI Repo Review Findings](./recipes/ai-repo-review-findings.md).
 - Match verification to the actual change type instead of pasting the same test advice everywhere. See [verify-by-change](https://github.com/manuelsampedro1/verify-by-change), [Verification by Change Type](./recipes/verification-by-change-type.md), and [JSON Envelope for Verification Gates](./recipes/json-envelope-for-verification-gates.md).
 - Leave an audit trail for non-trivial agent runs. See [agent-run-ledger](https://github.com/manuelsampedro1/agent-run-ledger) and [Verification Envelope to Ledger Evidence](./recipes/verification-envelope-to-ledger-evidence.md).
@@ -53,11 +53,11 @@ These are small on purpose. I prefer tools a reviewer can clone, inspect, run, a
 
 ## Latest Proof
 
-- Latest lab note: [2026-06-02 - Agent Run Ledger JSON Envelope Import](./labs/2026/2026-06-02-agent-run-ledger-json-envelope-import.md)
+- Latest lab note: [2026-06-02 - Repo Flightcheck Python Unittest Detection](./labs/2026/2026-06-02-repo-flightcheck-python-unittest.md)
 - Latest recipes:
+  - [Python Unittest Readiness Check](./recipes/python-unittest-readiness-check.md)
   - [Verification Envelope to Ledger Evidence](./recipes/verification-envelope-to-ledger-evidence.md)
   - [JSON Envelope for Verification Gates](./recipes/json-envelope-for-verification-gates.md)
-  - [Documented Command Drift Check](./recipes/documented-command-drift-check.md)
 
 ## Principles
 

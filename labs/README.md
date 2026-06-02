@@ -8,6 +8,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 - [2026-06-02 - Verify by Change JSON Envelope](./2026/2026-06-02-verify-by-change-json-envelope.md)
 - [2026-06-02 - Verify by Change Empty Diff Guard](./2026/2026-06-02-verify-by-change-empty-diff-guard.md)
 - [2026-06-02 - Verify by Change Base Plus Working Tree](./2026/2026-06-02-verify-by-change-base-plus-working-tree.md)
+- [2026-06-02 - Repo Flightcheck Python Unittest Detection](./2026/2026-06-02-repo-flightcheck-python-unittest.md)
 - [2026-06-02 - Repo Flightcheck Documented Commands](./2026/2026-06-02-repo-flightcheck-documented-commands.md)
 - [2026-06-02 - Repo Flightcheck Dirty Tree Preflight](./2026/2026-06-02-repo-flightcheck-dirty-tree-preflight.md)
 - [2026-06-02 - Repo Flightcheck CI Verification](./2026/2026-06-02-repo-flightcheck-ci-verification.md)

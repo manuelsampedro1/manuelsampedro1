@@ -24,6 +24,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Review Packet with Verification Plan](./review-packet-with-verification-plan.md)
 - [Review Map in Agent Packets](./review-map-in-agent-packets.md)
 - [Real Diff to Recipe](./real-diff-to-recipe.md)
+- [Python Unittest Readiness Check](./python-unittest-readiness-check.md)
 - [Publish Queue for Local Agent Repos](./publish-queue-for-local-agent-repos.md)
 - [Public Surface Sync for Agent Repos](./public-surface-sync-for-agent-repos.md)
 - [Profile Proof Audit](./profile-proof-audit.md)
