@@ -943,3 +943,18 @@ Rationale:
 - The first useful demo is release readiness because it exposes a concrete
   reviewer trap: a complete proof packet can coexist with a `needs-review`
   merge-readiness verdict when scope or residual-risk evidence is missing.
+
+## 2026-06-02 - Add Durable Run Evidence Chain
+
+Document a cross-repo handoff chain from review packet to verification envelope
+to run ledger.
+
+Rationale:
+
+- A serious agent workflow needs more than a final answer; it needs durable
+  evidence that survives outside the chat transcript.
+- `codex-review-packet`, `verify-by-change`, and `agent-run-ledger` already
+  support this sequence, and the profile should show how they compose.
+- The demo intentionally preserves a strict-doctor non-ready state when planned
+  checks remain open, which is stronger than pretending every generated packet
+  means the run is complete.
