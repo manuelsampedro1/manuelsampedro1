@@ -15,6 +15,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Working Tree Verification Coverage](./working-tree-verification-coverage.md)
 - [Verification Checklist to Ledger Evidence](./verification-checklist-to-ledger.md)
 - [Verification by Change Type](./verification-by-change-type.md)
+- [Strict Ledger Doctor Gate](./strict-ledger-doctor-gate.md)
 - [Scope Guard for Agent Diffs](./scope-guard-for-agent-diffs.md)
 - [Runbook Drift Check](./runbook-drift-check.md)
 - [Rollback Plan for Agent Diffs](./rollback-plan-for-agent-diffs.md)

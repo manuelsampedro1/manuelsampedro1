@@ -18,7 +18,7 @@ If you are building with Codex or evaluating how AI changes software work, find 
 
 | Repo | What it proves | Why it matters |
 | --- | --- | --- |
-| [agent-run-ledger](https://github.com/manuelsampedro1/agent-run-ledger) | Agent audit trails | Records AI agent runs as JSONL, imports verification checklists, and renders static review reports with decisions, files, commands, and blockers. |
+| [agent-run-ledger](https://github.com/manuelsampedro1/agent-run-ledger) | Agent audit trails | Records AI agent runs as JSONL, imports verification checklists, gates unresolved evidence with strict doctor mode, and renders static review reports. |
 | [repo-flightcheck](https://github.com/manuelsampedro1/repo-flightcheck) | Pre-agent readiness | Audits whether a repository is ready for Codex, Claude Code, and human reviewers, including whether CI runs the local verification command. |
 | [codex-review-packet](https://github.com/manuelsampedro1/codex-review-packet) | Review context quality | Packages diffs, repo rules, local context, and verification checklists into a sharper handoff for Codex or Claude Code. |
 | [verify-by-change](https://github.com/manuelsampedro1/verify-by-change) | Evidence-based closeout | Suggests honest checks from committed diffs and working-tree changes so AI-generated work closes with evidence instead of boilerplate. |
@@ -53,11 +53,11 @@ These are small on purpose. I prefer tools a reviewer can clone, inspect, run, a
 
 ## Latest Proof
 
-- Latest lab note: [2026-06-02 - Verify by Change Base Plus Working Tree](./labs/2026/2026-06-02-verify-by-change-base-plus-working-tree.md)
+- Latest lab note: [2026-06-02 - Agent Run Ledger Strict Doctor](./labs/2026/2026-06-02-agent-run-ledger-strict-doctor.md)
 - Latest recipes:
+  - [Strict Ledger Doctor Gate](./recipes/strict-ledger-doctor-gate.md)
   - [Base Diff Plus Working Tree Verification](./recipes/base-diff-plus-working-tree-verification.md)
   - [CI Runs Local Verification](./recipes/ci-runs-local-verification.md)
-  - [Review Packet with Verification Plan](./recipes/review-packet-with-verification-plan.md)
 
 ## Principles
 
