@@ -234,6 +234,21 @@ Rationale:
   `mcp-guard` by checking the agent-facing interface before a tool becomes
   callable.
 
+## 2026-06-02 - Build Retry Guard as Failure-Loop Proof
+
+Use `agent-retry-guard` as public proof for detecting repeated command failures
+before another coding-agent run continues.
+
+Rationale:
+
+- Repeating the same failed command with the same error and no investigation is
+  a common token-wasting failure mode in agent workflows.
+- A small transcript gate makes the stop-and-investigate rule executable instead
+  of relying on a human to remember it during a long run.
+- This complements `agent-bug-repro`, `agent-ci-failure-packet`, and
+  `agent-continuation-brief` by deciding whether a failed run is ready for
+  continuation or needs a strategy shift first.
+
 ## 2026-06-02 - Promote Secret Sentinel as Safety Proof
 
 Add `agent-secret-sentinel` to the profile's agent safety layer once the public repo is created, sanitized, pushed, and verified.
