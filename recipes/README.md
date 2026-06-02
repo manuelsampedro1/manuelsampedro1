@@ -12,6 +12,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 
 ## Entries
 
+- [Working Tree Verification Coverage](./working-tree-verification-coverage.md)
 - [Verification by Change Type](./verification-by-change-type.md)
 - [Scope Guard for Agent Diffs](./scope-guard-for-agent-diffs.md)
 - [Runbook Drift Check](./runbook-drift-check.md)

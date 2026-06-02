@@ -53,11 +53,11 @@ These are small on purpose. I prefer tools a reviewer can clone, inspect, run, a
 
 ## Latest Proof
 
-- Latest lab note: [2026-06-02 - Briefboard Exportable Artifacts](./labs/2026/2026-06-02-briefboard-exportable-artifacts.md)
+- Latest lab note: [2026-06-02 - Verify by Change Working Tree CI](./labs/2026/2026-06-02-verify-by-change-working-tree-ci.md)
 - Latest recipes:
+  - [Working Tree Verification Coverage](./recipes/working-tree-verification-coverage.md)
   - [Agent Diff Splitter](./recipes/agent-diff-splitter.md)
   - [Agent Claim Check](./recipes/agent-claim-check.md)
-  - [Agent Review Map](./recipes/agent-review-map.md)
 
 ## Principles
 

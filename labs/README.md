@@ -4,6 +4,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 
 ## Entries
 
+- [2026-06-02 - Verify by Change Working Tree CI](./2026/2026-06-02-verify-by-change-working-tree-ci.md)
 - [2026-06-02 - Public Repo CLI Output Snippets](./2026/2026-06-02-public-repo-cli-output-snippets.md)
 - [2026-06-02 - Public Proof Repo CI Audit](./2026/2026-06-02-public-proof-repo-ci-audit.md)
 - [2026-06-02 - Briefboard Local Preview](./2026/2026-06-02-briefboard-local-preview.md)
