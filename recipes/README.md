@@ -13,6 +13,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 ## Entries
 
 - [Working Tree Verification Coverage](./working-tree-verification-coverage.md)
+- [Verification Envelope to Ledger Evidence](./verification-envelope-to-ledger-evidence.md)
 - [Verification Checklist to Ledger Evidence](./verification-checklist-to-ledger.md)
 - [Verification by Change Type](./verification-by-change-type.md)
 - [Strict Ledger Doctor Gate](./strict-ledger-doctor-gate.md)
