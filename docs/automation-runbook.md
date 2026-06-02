@@ -65,6 +65,7 @@ The audit should also check:
 - weak README promotions,
 - drift away from the client-facing narrative.
 - first-read quality with `python3 scripts/profile_quality_audit.py --root . --min-score 100`.
+- The profile heading, opening agentic-engineering positioning, and `@manuelsampedrop` CTA staying intact.
 - Current Focus retaining the profile's core narrative anchors: reliability, verification, auditability, safety, and product judgment.
 - Current Focus staying shaped as exactly five bullets so the opening narrative does not turn into a generic interest list.
 - Canonical README section order so reviewer navigation, selected proof, and safety proof stay before the longer workflow archive.

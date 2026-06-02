@@ -274,6 +274,20 @@ Rationale:
 - New focus areas should replace an existing focus deliberately or move into
   recipes, examples, or lab notes until they have stronger evidence.
 
+## 2026-06-03 - Audit Profile Intro and CTA
+
+Keep the root README heading, opening positioning, and public CTA fixed unless
+the profile strategy is deliberately changed.
+
+Rationale:
+
+- The first three paragraphs decide whether a reviewer understands the profile
+  before scanning the repo table.
+- The opening should stay anchored on agentic engineering tools, coding-agent
+  trust, and inspectable work rather than drifting into generic AI-builder copy.
+- The `@manuelsampedrop` CTA is the documented public next step, so removing or
+  changing it should fail the profile quality gate.
+
 ## 2026-06-02 - Audit README Section Order
 
 Treat the root README section order as part of the executable profile quality

@@ -21,6 +21,14 @@ REQUIRED_README_SECTIONS = [
     "Principles",
 ]
 
+PROFILE_HEADING = "# Manuel Sampedro"
+PROFILE_INTRO_REQUIRED_PHRASES = [
+    "agentic engineering tools",
+    "coding agents",
+    "scoped, inspectable, and easier to trust",
+]
+PROFILE_CTA_TARGET = "https://x.com/manuelsampedrop"
+
 CURRENT_FOCUS_REQUIRED_PHRASES = [
     "agent reliability",
     "verification discipline",
@@ -150,6 +158,13 @@ def section_body(markdown: str, section: str) -> str:
     return rest
 
 
+def preamble_body(markdown: str) -> str:
+    first_section = re.search(r"^##\s+", markdown, re.MULTILINE)
+    if first_section:
+        return markdown[: first_section.start()]
+    return markdown
+
+
 def has_decision_title(markdown: str, title: str) -> bool:
     pattern = rf"^##\s+\d{{4}}-\d{{2}}-\d{{2}}\s+-\s+{re.escape(title)}\s*$"
     return re.search(pattern, markdown, re.MULTILINE) is not None
@@ -277,6 +292,18 @@ def audit(root: Path) -> AuditResult:
     examples_index = read_text(root / "examples/README.md")
     issues: list[str] = []
     warnings: list[str] = []
+
+    first_line = readme.splitlines()[0].strip() if readme.splitlines() else ""
+    if first_line != PROFILE_HEADING:
+        issues.append(f"README heading must be `{PROFILE_HEADING}`.")
+
+    intro = preamble_body(readme).lower()
+    for phrase in PROFILE_INTRO_REQUIRED_PHRASES:
+        if phrase not in intro:
+            issues.append(f"README intro is missing positioning phrase: {phrase}.")
+    intro_targets = {target.rstrip("/") for _, target in markdown_links(preamble_body(readme))}
+    if PROFILE_CTA_TARGET not in intro_targets:
+        issues.append(f"README intro is missing public CTA target: {PROFILE_CTA_TARGET}.")
 
     order = section_order(readme)
     for section in REQUIRED_README_SECTIONS:

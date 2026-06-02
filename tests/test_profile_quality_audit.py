@@ -26,6 +26,63 @@ class ProfileQualityAuditTests(unittest.TestCase):
         self.assertEqual(result.warnings, [])
         self.assertGreaterEqual(result.selected_work_rows, 45)
 
+    def test_profile_intro_must_keep_positioning_and_cta(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "examples").mkdir()
+            (root / "README.md").write_text(
+                "\n".join(
+                    [
+                        "# Generic Builder",
+                        "",
+                        "I make software and AI demos.",
+                        "",
+                        "Find me online.",
+                        "",
+                        "## Current Focus",
+                        "",
+                        "## Reviewer Path",
+                        "",
+                        "## Selected Work",
+                        "",
+                        "| Repo | What it proves | Why it matters |",
+                        "| --- | --- | --- |",
+                        "| [repo](https://example.com) | x | y |",
+                        "",
+                        "## Agent Safety Layer",
+                        "",
+                        "## How I Work With Codex",
+                        "",
+                        "## Public Workbench",
+                        "",
+                        "## Verify This Repo",
+                        "",
+                        "## Latest Proof",
+                        "",
+                        "## Principles",
+                        "",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+            (root / "DECISIONS.md").write_text("", encoding="utf-8")
+            (root / "TODO.md").write_text("", encoding="utf-8")
+            (root / "examples" / "README.md").write_text("", encoding="utf-8")
+
+            result = profile_quality_audit.audit(root)
+
+        self.assertIn("README heading must be `# Manuel Sampedro`.", result.issues)
+        self.assertIn("README intro is missing positioning phrase: agentic engineering tools.", result.issues)
+        self.assertIn("README intro is missing positioning phrase: coding agents.", result.issues)
+        self.assertIn(
+            "README intro is missing positioning phrase: scoped, inspectable, and easier to trust.",
+            result.issues,
+        )
+        self.assertIn(
+            "README intro is missing public CTA target: https://x.com/manuelsampedrop.",
+            result.issues,
+        )
+
     def test_missing_reviewer_path_fails(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
