@@ -19,6 +19,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Verification Checklist to Ledger Evidence](./verification-checklist-to-ledger.md)
 - [Verification by Change Type](./verification-by-change-type.md)
 - [Strict Ledger Doctor Gate](./strict-ledger-doctor-gate.md)
+- [Sensitive Change Checks in Review Packets](./sensitive-change-checks-in-review-packets.md)
 - [Security-Sensitive Change Verification](./security-sensitive-change-verification.md)
 - [Scope Guard for Agent Diffs](./scope-guard-for-agent-diffs.md)
 - [Runbook Drift Check](./runbook-drift-check.md)
