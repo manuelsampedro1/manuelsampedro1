@@ -39,6 +39,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Repo Readiness in Review Packets](./repo-readiness-in-review-packets.md)
 - [Repo Readiness Contract for Agent Repos](./repo-readiness-contract-for-agent-repos.md)
 - [Rendered Verification Envelope to Ledger Evidence](./rendered-verification-envelope-to-ledger.md)
+- [Remote Readiness Before Public Proof](./remote-readiness-before-public-proof.md)
 - [Real Diff to Recipe](./real-diff-to-recipe.md)
 - [Readiness Contract to Ledger Evidence](./readiness-contract-to-ledger-evidence.md)
 - [Readiness Contract in Review Packets](./readiness-contract-in-review-packets.md)
