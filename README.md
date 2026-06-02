@@ -18,7 +18,7 @@ If you are building with Codex or evaluating how AI changes software work, find 
 
 | Repo | What it proves | Why it matters |
 | --- | --- | --- |
-| [agent-run-ledger](https://github.com/manuelsampedro1/agent-run-ledger) | Agent audit trails | Records AI agent runs as JSONL and renders static review reports with decisions, files, commands, and blockers. |
+| [agent-run-ledger](https://github.com/manuelsampedro1/agent-run-ledger) | Agent audit trails | Records AI agent runs as JSONL, imports verification checklists, and renders static review reports with decisions, files, commands, and blockers. |
 | [repo-flightcheck](https://github.com/manuelsampedro1/repo-flightcheck) | Pre-agent readiness | Audits whether a repository is ready for Codex, Claude Code, and human reviewers before asking an agent to work in it. |
 | [codex-review-packet](https://github.com/manuelsampedro1/codex-review-packet) | Review context quality | Packages diffs, repo rules, and local context into a sharper handoff for Codex or Claude Code. |
 | [verify-by-change](https://github.com/manuelsampedro1/verify-by-change) | Evidence-based closeout | Suggests honest checks from changed files so AI-generated work closes with evidence instead of boilerplate. |
@@ -53,11 +53,11 @@ These are small on purpose. I prefer tools a reviewer can clone, inspect, run, a
 
 ## Latest Proof
 
-- Latest lab note: [2026-06-02 - Verify by Change Empty Diff Guard](./labs/2026/2026-06-02-verify-by-change-empty-diff-guard.md)
+- Latest lab note: [2026-06-02 - Agent Run Ledger Checklist Import](./labs/2026/2026-06-02-agent-run-ledger-checklist-import.md)
 - Latest recipes:
+  - [Verification Checklist to Ledger Evidence](./recipes/verification-checklist-to-ledger.md)
   - [Empty Diff Verification Guard](./recipes/empty-diff-verification-guard.md)
   - [Bounded Diff Review Packet](./recipes/bounded-diff-review-packet.md)
-  - [Machine-Readable Doctor Output](./recipes/machine-readable-doctor-output.md)
 
 ## Principles
 
