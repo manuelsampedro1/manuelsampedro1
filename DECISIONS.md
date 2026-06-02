@@ -471,6 +471,16 @@ Rationale:
 - Mapping files into security, data, release, automation, agent-instruction, product/docs, tests, and application lanes makes review ownership explicit.
 - A dependency-free diff mapper fits the profile's reliability story by turning agent handoffs into concrete reviewer questions instead of generic confidence.
 
+## 2026-06-02 - Promote Review Map as Handoff Routing Proof
+
+Add `agent-review-map` to selected work once the public repo is created, hardened, pushed, and verified.
+
+Rationale:
+
+- It turns a flat mixed diff into concrete review lanes, owners, questions, and handoff order.
+- It is backed by a dependency-free CLI, mixed diff example, tests, CI, and `repo-flightcheck` at `100/100`.
+- It complements scope, budget, decision, and risk tools by making review ownership explicit before proof packets or merge readiness.
+
 ## 2026-06-02 - Build Claim Checks for Agent Closeouts
 
 Use `agent-claim-check` as another next public proof project once a GitHub remote can be created.

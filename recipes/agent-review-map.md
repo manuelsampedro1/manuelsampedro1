@@ -33,13 +33,13 @@ git diff -- . > /tmp/agent-change.diff
 2. Generate a Markdown handoff:
 
 ```sh
-agent-review-map /tmp/agent-change.diff
+PYTHONPATH=src python3 -m agent_review_map /tmp/agent-change.diff
 ```
 
 3. Generate JSON for a proof packet or CI artifact:
 
 ```sh
-agent-review-map /tmp/agent-change.diff --format json > /tmp/review-map.json
+PYTHONPATH=src python3 -m agent_review_map /tmp/agent-change.diff --format json > /tmp/review-map.json
 ```
 
 4. Use the handoff order to route review:
@@ -83,5 +83,11 @@ Rules:
 
 ## Source Linkage
 
-- Repo / tool / workflow: local `agent-review-map` prototype at `/Users/manuelsampedro/Documents/Codex/2026-05-21/agent-review-map`.
-- Supporting prompt, script, or note: [`./agent-diff-budget.md`](./agent-diff-budget.md), [`./change-risk-matrix-for-agent-diffs.md`](./change-risk-matrix-for-agent-diffs.md), and [`./agent-proof-packet-for-review.md`](./agent-proof-packet-for-review.md).
+- Public repo: <https://github.com/manuelsampedro1/agent-review-map>
+- Commit: <https://github.com/manuelsampedro1/agent-review-map/commit/9e392da69b5a96c80777ba6292c7bbd205e01ea5>
+- README: <https://raw.githubusercontent.com/manuelsampedro1/agent-review-map/main/README.md>
+- CLI: <https://raw.githubusercontent.com/manuelsampedro1/agent-review-map/main/src/agent_review_map/cli.py>
+- Tests: <https://raw.githubusercontent.com/manuelsampedro1/agent-review-map/main/tests/test_cli.py>
+- Mixed diff example: <https://raw.githubusercontent.com/manuelsampedro1/agent-review-map/main/examples/mixed.diff>
+- Launch note: [`../labs/2026/2026-06-02-agent-review-map-public-launch.md`](../labs/2026/2026-06-02-agent-review-map-public-launch.md)
+- Supporting recipes: [`./agent-diff-budget.md`](./agent-diff-budget.md), [`./change-risk-matrix-for-agent-diffs.md`](./change-risk-matrix-for-agent-diffs.md), and [`./agent-proof-packet-for-review.md`](./agent-proof-packet-for-review.md).
