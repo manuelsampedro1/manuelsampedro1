@@ -211,6 +211,16 @@ Rationale:
 - A compact packet with failing commands, error signals, file references, and suggested checks improves the next run's context quality.
 - This completes another part of the agent workflow loop: failure triage after verification fails.
 
+## 2026-06-02 - Promote CI Failure Packets as Retry Proof
+
+Add `agent-ci-failure-packet` to selected work once the public repo is created, hardened, pushed, and verified.
+
+Rationale:
+
+- It gives the profile a concrete answer for agent retry loops after CI failures.
+- It is backed by a dependency-free CLI, sample log, tests, CI, and `repo-flightcheck` at `100/100`.
+- It keeps failed verification actionable without asking the next agent to parse an entire noisy CI archive.
+
 ## 2026-06-02 - Build Rollback Plans for Agent Diffs
 
 Use `agent-rollback-plan` as another next public proof project once a GitHub remote can be created.
@@ -220,6 +230,16 @@ Rationale:
 - Serious agent workflows need a rollback answer, especially for CI, deploy, database, config, and security changes.
 - A diff-derived rollback packet makes operational risk reviewable before merge.
 - The project extends the reliability stack from "did it pass?" to "can we undo it safely?"
+
+## 2026-06-02 - Promote Rollback Plans as Operational Proof
+
+Add `agent-rollback-plan` to selected work once the public repo is created, hardened, pushed, and verified.
+
+Rationale:
+
+- It makes rollback review a first-class part of agent-generated changes instead of an afterthought.
+- It is backed by a dependency-free CLI, realistic sample diff, tests, CI, and `repo-flightcheck` at `100/100`.
+- It broadens the profile from verification to operational safety: how to undo risky diffs if the agent was wrong.
 
 ## 2026-06-02 - Build Runbook Drift Checks for Agent Repos
 

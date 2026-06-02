@@ -100,6 +100,7 @@ Rules:
 
 ## Source Linkage
 
-- Repo / tool / workflow: local `agent-rollback-plan` prototype and this profile repo's agent workflow stack.
-- Supporting prompt, script, or note: [`./ci-failure-packet-for-agent-reruns.md`](./ci-failure-packet-for-agent-reruns.md), [`./agent-diff-secret-sentinel.md`](./agent-diff-secret-sentinel.md), and [`../docs/profile-strategy.md`](../docs/profile-strategy.md).
-
+- Public repo: <https://github.com/manuelsampedro1/agent-rollback-plan>
+- Commit: <https://github.com/manuelsampedro1/agent-rollback-plan/commit/c1905c224e4813ddf01922dab50aa157529c8a25>
+- Lab note: [2026-06-02 - Agent Rollback Plan Public Launch](../labs/2026/2026-06-02-agent-rollback-plan-public-launch.md)
+- Supporting recipes: [`ci-failure-packet-for-agent-reruns.md`](./ci-failure-packet-for-agent-reruns.md) and [`agent-diff-secret-sentinel.md`](./agent-diff-secret-sentinel.md).

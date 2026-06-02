@@ -91,6 +91,7 @@ Rules:
 
 ## Source Linkage
 
-- Repo / tool / workflow: local `agent-ci-failure-packet` prototype and this profile repo's agent workflow stack.
-- Supporting prompt, script, or note: [`./codex-debugging-checklist.md`](./codex-debugging-checklist.md), [`./diff-to-eval-case.md`](./diff-to-eval-case.md), and [`../docs/profile-strategy.md`](../docs/profile-strategy.md).
-
+- Public repo: <https://github.com/manuelsampedro1/agent-ci-failure-packet>
+- Commit: <https://github.com/manuelsampedro1/agent-ci-failure-packet/commit/fc21a18f088e34734239ba69b47789d5bdb5d1da>
+- Lab note: [2026-06-02 - Agent CI Failure Packet Public Launch](../labs/2026/2026-06-02-agent-ci-failure-packet-public-launch.md)
+- Supporting recipes: [`codex-debugging-checklist.md`](./codex-debugging-checklist.md) and [`diff-to-eval-case.md`](./diff-to-eval-case.md).
