@@ -152,8 +152,8 @@ def has_decision_title(markdown: str, title: str) -> bool:
     return re.search(pattern, markdown, re.MULTILINE) is not None
 
 
-def count_selected_work_rows(markdown: str) -> int:
-    body = section_body(markdown, "Selected Work")
+def count_repo_table_rows(markdown: str, section: str) -> int:
+    body = section_body(markdown, section)
     rows = 0
     for line in body.splitlines():
         stripped = line.strip()
@@ -164,6 +164,10 @@ def count_selected_work_rows(markdown: str) -> int:
         if stripped.count("|") >= 3:
             rows += 1
     return rows
+
+
+def count_selected_work_rows(markdown: str) -> int:
+    return count_repo_table_rows(markdown, "Selected Work")
 
 
 def repo_table_entries(markdown: str, section: str) -> list[tuple[str, str]]:
@@ -322,7 +326,18 @@ def audit(root: Path) -> AuditResult:
 
     selected_rows = count_selected_work_rows(readme)
     selected_entries = selected_work_repo_entries(readme)
+    safety_rows = count_repo_table_rows(readme, "Agent Safety Layer")
     safety_entries = repo_table_entries(readme, "Agent Safety Layer")
+    if selected_rows != len(selected_entries):
+        issues.append(
+            "Selected Work has "
+            f"{selected_rows} table rows but {len(selected_entries)} linked repo entries; every row needs one repo link."
+        )
+    if safety_rows != len(safety_entries):
+        issues.append(
+            "Agent Safety Layer has "
+            f"{safety_rows} table rows but {len(safety_entries)} linked repo entries; every row needs one repo link."
+        )
     audit_repo_table("Selected Work", selected_entries, issues)
     audit_repo_table("Agent Safety Layer", safety_entries, issues)
     if selected_rows > MAX_SELECTED_WORK_ROWS:

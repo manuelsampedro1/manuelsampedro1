@@ -230,6 +230,20 @@ Rationale:
 - External links or duplicated repo targets would inflate or blur the agent-safety claim.
 - Label-to-slug matching keeps visible repo names honest when reviewers skim the profile.
 
+## 2026-06-03 - Require Linked Repo Rows on Proof Tables
+
+Require every root README row in `Selected Work` and `Agent Safety Layer` to
+contain a linked repository entry.
+
+Rationale:
+
+- A table row without a repo link looks like proof but gives reviewers no
+  inspectable artifact.
+- The profile is strongest when every primary proof row points to owned,
+  cloneable, and already-audited work.
+- Counting visible table rows against linked entries prevents accidental
+  placeholder rows or copy-only claims from reaching the public surface.
+
 ## 2026-06-02 - Audit README Section Order
 
 Treat the root README section order as part of the executable profile quality
