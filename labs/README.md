@@ -20,6 +20,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 - [2026-06-02 - Public Repo CLI Output Snippets](./2026/2026-06-02-public-repo-cli-output-snippets.md)
 - [2026-06-02 - Public Proof Repo CI Audit](./2026/2026-06-02-public-proof-repo-ci-audit.md)
 - [2026-06-02 - Codex Review Packet Working Tree Evidence](./2026/2026-06-02-codex-review-packet-working-tree-evidence.md)
+- [2026-06-02 - Codex Review Packet Verification Envelope](./2026/2026-06-02-codex-review-packet-verification-envelope.md)
 - [2026-06-02 - Codex Review Packet Verification Checklist](./2026/2026-06-02-codex-review-packet-verification-checklist.md)
 - [2026-06-02 - Codex Review Packet Review Map](./2026/2026-06-02-codex-review-packet-review-map.md)
 - [2026-06-02 - Codex Review Packet Readiness Report](./2026/2026-06-02-codex-review-packet-readiness-report.md)
