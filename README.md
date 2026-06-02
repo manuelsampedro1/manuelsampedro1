@@ -19,7 +19,7 @@ If you are building with Codex or evaluating how AI changes software work, find 
 | Repo | What it proves | Why it matters |
 | --- | --- | --- |
 | [agent-run-ledger](https://github.com/manuelsampedro1/agent-run-ledger) | Agent audit trails | Records AI agent runs as JSONL, imports verification checklists, and renders static review reports with decisions, files, commands, and blockers. |
-| [repo-flightcheck](https://github.com/manuelsampedro1/repo-flightcheck) | Pre-agent readiness | Audits whether a repository is ready for Codex, Claude Code, and human reviewers before asking an agent to work in it. |
+| [repo-flightcheck](https://github.com/manuelsampedro1/repo-flightcheck) | Pre-agent readiness | Audits whether a repository is ready for Codex, Claude Code, and human reviewers, including whether CI runs the local verification command. |
 | [codex-review-packet](https://github.com/manuelsampedro1/codex-review-packet) | Review context quality | Packages diffs, repo rules, local context, and verification checklists into a sharper handoff for Codex or Claude Code. |
 | [verify-by-change](https://github.com/manuelsampedro1/verify-by-change) | Evidence-based closeout | Suggests honest checks from changed files so AI-generated work closes with evidence instead of boilerplate. |
 | [briefboard-local](https://github.com/manuelsampedro1/briefboard-local) | Product scoping taste | Turns messy kickoff notes into a structured build brief and a Codex-ready prompt with no backend. |
@@ -53,11 +53,11 @@ These are small on purpose. I prefer tools a reviewer can clone, inspect, run, a
 
 ## Latest Proof
 
-- Latest lab note: [2026-06-02 - Codex Review Packet Verification Checklist](./labs/2026/2026-06-02-codex-review-packet-verification-checklist.md)
+- Latest lab note: [2026-06-02 - Repo Flightcheck CI Verification](./labs/2026/2026-06-02-repo-flightcheck-ci-verification.md)
 - Latest recipes:
+  - [CI Runs Local Verification](./recipes/ci-runs-local-verification.md)
   - [Review Packet with Verification Plan](./recipes/review-packet-with-verification-plan.md)
   - [Verification Checklist to Ledger Evidence](./recipes/verification-checklist-to-ledger.md)
-  - [Empty Diff Verification Guard](./recipes/empty-diff-verification-guard.md)
 
 ## Principles
 
