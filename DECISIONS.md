@@ -411,6 +411,16 @@ Rationale:
 - A transparent local scorer is better than model-only judgment for regression coverage of files, checks, risks, and expected outcomes.
 - This completes the profile's eval-loop story: real diff, saved case, scored artifact, and auditable result.
 
+## 2026-06-02 - Promote Agent Eval Runner as Regression Proof
+
+Add `agent-eval-runner` to selected work once the public repo is created, hardened, pushed, and verified.
+
+Rationale:
+
+- It closes the eval loop by checking whether later proof artifacts still cover saved `diff-to-eval` cases.
+- It is backed by a dependency-free CLI, tests, example case and candidate, CI, and `repo-flightcheck` at `100/100`.
+- It keeps the profile's agent-quality story concrete: real diff, saved case, scored proof artifact, and auditable pass/fail.
+
 ## 2026-06-02 - Build Decision Guards for Agent Diffs
 
 Use `agent-decision-guard` as another next public proof project once a GitHub remote can be created.

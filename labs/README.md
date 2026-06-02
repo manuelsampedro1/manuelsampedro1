@@ -83,6 +83,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 - [2026-06-02 - Agent Publish Queue Public Launch](./2026/2026-06-02-agent-publish-queue-public-launch.md)
 - [2026-06-02 - Agent Proof Packet Public Launch](./2026/2026-06-02-agent-proof-packet-public-launch.md)
 - [2026-06-02 - Agent Merge Readiness Public Launch](./2026/2026-06-02-agent-merge-readiness-public-launch.md)
+- [2026-06-02 - Agent Eval Runner Public Launch](./2026/2026-06-02-agent-eval-runner-public-launch.md)
 - [2026-06-02 - Agent Closeout Check Public Launch](./2026/2026-06-02-agent-closeout-check-public-launch.md)
 - [2026-06-02 - Agent CI Failure Packet Public Launch](./2026/2026-06-02-agent-ci-failure-packet-public-launch.md)
 - [2026-06-02 - Agent Change Risk Public Launch](./2026/2026-06-02-agent-change-risk-public-launch.md)
