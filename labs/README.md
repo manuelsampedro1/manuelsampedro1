@@ -36,6 +36,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 - [2026-06-02 - Codex Review Packet Verification Envelope](./2026/2026-06-02-codex-review-packet-verification-envelope.md)
 - [2026-06-02 - Codex Review Packet Verification Checklist](./2026/2026-06-02-codex-review-packet-verification-checklist.md)
 - [2026-06-02 - Codex Review Packet Task Contracts](./2026/2026-06-02-codex-review-packet-task-contracts.md)
+- [2026-06-02 - Codex Review Packet Task Contract Envelope Summary](./2026/2026-06-02-codex-review-packet-task-contract-envelope-summary.md)
 - [2026-06-02 - Codex Review Packet Sensitive Change Check](./2026/2026-06-02-codex-review-packet-sensitive-change-check.md)
 - [2026-06-02 - Codex Review Packet Review Map](./2026/2026-06-02-codex-review-packet-review-map.md)
 - [2026-06-02 - Codex Review Packet Readiness Report](./2026/2026-06-02-codex-review-packet-readiness-report.md)
