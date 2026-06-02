@@ -259,6 +259,22 @@ Rationale:
 - The publish attempt itself proved the risk: GitHub Push Protection blocked a token-shaped fixture, which was fixed rather than bypassed.
 - It is backed by a dependency-free CLI, tests, examples, CI, and `repo-flightcheck` at `100/100`.
 
+## 2026-06-02 - Build Tool Call Replay as Schema Drift Proof
+
+Use `agent-tool-call-replay` as public proof for validating captured tool calls
+against current tool schemas before reruns, proof packets, evals, or run ledgers
+reuse them.
+
+Rationale:
+
+- Tool-call failures often come from drift between the schema an agent saw and
+  the schema a reviewer is about to trust.
+- `agent-tool-schema-lint` checks interface quality and `agent-tool-call-audit`
+  checks risky run behavior, but neither replays recorded arguments against the
+  current schema.
+- A dependency-free replay validator strengthens the OpenAI-relevant agent-tool
+  narrative without executing tools or claiming full JSON Schema compliance.
+
 ## 2026-06-02 - Build CI Failure Packets for Agent Reruns
 
 Use `agent-ci-failure-packet` as another next public proof project once a GitHub remote can be created.

@@ -97,6 +97,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [AGENTS.md Patterns for Codex Repos](./agents-md-patterns-for-codex-repos.md)
 - [Agent Worktree Guard](./agent-worktree-guard.md)
 - [Agent Tool Schema Lint](./agent-tool-schema-lint.md)
+- [Agent Tool Call Replay](./agent-tool-call-replay.md)
 - [Agent Tool Call Audit](./agent-tool-call-audit.md)
 - [Agent Test Impact](./agent-test-impact.md)
 - [Agent Task Contract Preflight](./agent-task-contract-preflight.md)
