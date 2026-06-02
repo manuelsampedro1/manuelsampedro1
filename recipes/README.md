@@ -106,6 +106,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Agent Retry Guard](./agent-retry-guard.md)
 - [Agent Request Brief](./agent-request-brief.md)
 - [Agent Repo Map](./agent-repo-map.md)
+- [Agent Release Note Check](./agent-release-note-check.md)
 - [Agent Readiness Contract Output](./agent-readiness-contract-output.md)
 - [Agent Proof Packet for Review](./agent-proof-packet-for-review.md)
 - [Agent PR Brief](./agent-pr-brief.md)

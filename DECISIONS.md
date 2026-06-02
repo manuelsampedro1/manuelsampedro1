@@ -275,6 +275,21 @@ Rationale:
 - A dependency-free replay validator strengthens the OpenAI-relevant agent-tool
   narrative without executing tools or claiming full JSON Schema compliance.
 
+## 2026-06-02 - Build Release Note Check as Maintainer Workflow Proof
+
+Use `agent-release-note-check` as public proof for auditing generated release
+notes against real diffs before maintainer-facing publication.
+
+Rationale:
+
+- Open-source maintenance includes releases and changelogs, not only PR review
+  and CI triage.
+- Agent-generated release notes can omit breaking, security, dependency, CI, or
+  test changes while sounding polished.
+- A dependency-free diff-to-release-note checker strengthens the profile's
+  maintainer workflow narrative without claiming vulnerability intelligence or
+  replacing human release review.
+
 ## 2026-06-02 - Build CI Failure Packets for Agent Reruns
 
 Use `agent-ci-failure-packet` as another next public proof project once a GitHub remote can be created.
