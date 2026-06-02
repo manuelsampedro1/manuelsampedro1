@@ -47,6 +47,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Machine-Readable Doctor Output](./machine-readable-doctor-output.md)
 - [Local-First Draft Round Trip](./local-first-draft-round-trip.md)
 - [JSON Envelope for Verification Gates](./json-envelope-for-verification-gates.md)
+- [GitHub Actions Run Evidence to Ledger](./github-actions-run-evidence-to-ledger.md)
 - [GitHub Action Repo Readiness](./github-action-repo-readiness.md)
 - [GitHub Action Change Verification](./github-action-change-verification.md)
 - [Flagship Repo Proof Packet](./flagship-repo-proof-packet.md)
