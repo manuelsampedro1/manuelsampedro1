@@ -1314,3 +1314,17 @@ Rationale:
   legitimate technical references to agent tooling or provider-style schemas.
 - Approval should be earned by evidence and reviewer navigation, not requested
   inside public artifacts.
+
+## 2026-06-03 - Audit Public Relative Links
+
+Keep public profile-workbench Markdown links resolvable inside this repo unless
+they intentionally point to external URLs.
+
+Rationale:
+
+- Labs, recipes, docs, examples, and radar pages are reviewer-facing proof, so
+  broken local links create avoidable trust friction.
+- A broad public-surface link audit catches drift outside the root README and
+  `Latest Proof` highlight.
+- Code examples are ignored so snippets that show upstream README Markdown do
+  not become false positives.

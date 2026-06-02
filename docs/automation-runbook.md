@@ -84,6 +84,7 @@ The audit should also check:
 - `Agent Safety Layer` row-count freeze at the saturated 6-row baseline unless an explicit post-saturation growth decision is recorded.
 - `examples/external-reviewer-navigation.md` keeping a concrete five-minute review path through the core loop, safety layer, composition examples, and review prompt instead of drifting into generic profile copy.
 - Public notes, recipes, docs, radar, and examples staying free of external-validation or approval-chasing language; the profile should show useful proof, not ask for outcomes it cannot verify.
+- Relative links in public notes, recipes, docs, radar, and examples resolving inside this repo, with code examples ignored so upstream Markdown snippets do not create false positives.
 
 ## Commit Rule
 

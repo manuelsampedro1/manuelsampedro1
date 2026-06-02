@@ -271,6 +271,25 @@ def markdown_links(markdown: str) -> list[tuple[str, str]]:
     return [(match.group(1).strip(), match.group(2).strip()) for match in re.finditer(r"\[([^\]]+)\]\(([^)]+)\)", markdown)]
 
 
+def markdown_without_code(markdown: str) -> str:
+    without_fenced_code = re.sub(r"```.*?```", "", markdown, flags=re.DOTALL)
+    return re.sub(r"`[^`\n]*`", "", without_fenced_code)
+
+
+def relative_markdown_targets(markdown: str) -> list[tuple[str, str]]:
+    targets: list[tuple[str, str]] = []
+    for _, target in markdown_links(markdown_without_code(markdown)):
+        normalized_target = target.strip()
+        if normalized_target.startswith("<") and normalized_target.endswith(">"):
+            normalized_target = normalized_target[1:-1]
+        if normalized_target.startswith(("http://", "https://", "mailto:", "#")):
+            continue
+        path_target = normalized_target.split("#", 1)[0]
+        if path_target:
+            targets.append((target, path_target))
+    return targets
+
+
 def audit_repo_table(section: str, entries: list[tuple[str, str]], issues: list[str]) -> None:
     targets = [target for _, target in entries]
     for target in duplicated_values(targets):
@@ -350,6 +369,24 @@ def audit_public_surface_tone(root: Path, issues: list[str]) -> None:
         for phrase in PUBLIC_TONE_RISKY_PHRASES:
             if phrase in text:
                 issues.append(f"Public surface contains external-validation or approval-chasing phrase `{phrase}` in {relative_path}.")
+
+
+def audit_public_relative_links(root: Path, issues: list[str]) -> None:
+    root_resolved = root.resolve()
+    for path in public_tone_paths(root):
+        text = read_text(path)
+        if not text:
+            continue
+        relative_path = path.relative_to(root).as_posix()
+        for target, path_target in relative_markdown_targets(text):
+            resolved_target = (path.parent / path_target).resolve()
+            try:
+                resolved_target.relative_to(root_resolved)
+            except ValueError:
+                issues.append(f"Public surface relative link points outside the repo in {relative_path}: {target}.")
+                continue
+            if not resolved_target.exists():
+                issues.append(f"Public surface relative link is missing in {relative_path}: {target}.")
 
 
 def audit(root: Path) -> AuditResult:
@@ -498,6 +535,7 @@ def audit(root: Path) -> AuditResult:
 
     audit_external_reviewer_navigation(root, issues)
     audit_public_surface_tone(root, issues)
+    audit_public_relative_links(root, issues)
 
     score = max(0, 100 - (len(issues) * 10) - (len(warnings) * 3))
     return AuditResult(

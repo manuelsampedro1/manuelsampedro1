@@ -130,6 +130,40 @@ class ProfileQualityAuditTests(unittest.TestCase):
             result.issues,
         )
 
+    def test_public_surface_rejects_missing_relative_links(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "labs" / "2026").mkdir(parents=True)
+            (root / "README.md").write_text("# Test Profile\n", encoding="utf-8")
+            (root / "labs" / "2026" / "note.md").write_text(
+                "See [missing recipe](../../recipes/missing.md).\n",
+                encoding="utf-8",
+            )
+
+            result = profile_quality_audit.audit(root)
+
+        self.assertIn(
+            "Public surface relative link is missing in labs/2026/note.md: ../../recipes/missing.md.",
+            result.issues,
+        )
+
+    def test_public_surface_relative_links_ignore_code_examples(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "labs" / "2026").mkdir(parents=True)
+            (root / "README.md").write_text("# Test Profile\n", encoding="utf-8")
+            (root / "labs" / "2026" / "note.md").write_text(
+                "The upstream README contains `![Preview](docs/preview.svg)`.\n",
+                encoding="utf-8",
+            )
+
+            result = profile_quality_audit.audit(root)
+
+        self.assertNotIn(
+            "Public surface relative link is missing in labs/2026/note.md: docs/preview.svg.",
+            result.issues,
+        )
+
     def test_missing_reviewer_path_fails(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
