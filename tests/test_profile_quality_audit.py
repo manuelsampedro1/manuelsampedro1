@@ -83,6 +83,23 @@ class ProfileQualityAuditTests(unittest.TestCase):
             result.issues,
         )
 
+    def test_public_surface_rejects_external_validation_phrases(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "labs" / "2026").mkdir(parents=True)
+            (root / "README.md").write_text("# Test Profile\n", encoding="utf-8")
+            (root / "labs" / "2026" / "note.md").write_text(
+                "This public note says they need to give me the prize.\n",
+                encoding="utf-8",
+            )
+
+            result = profile_quality_audit.audit(root)
+
+        self.assertIn(
+            "Public surface contains external-validation phrase `give me the prize` in labs/2026/note.md.",
+            result.issues,
+        )
+
     def test_missing_reviewer_path_fails(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

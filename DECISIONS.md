@@ -1298,3 +1298,17 @@ Rationale:
 - Encoding the route in `scripts/profile_quality_audit.py` prevents future
   maintenance from turning the example into generic profile copy or another
   unbounded index.
+
+## 2026-06-03 - Audit Public Surface Tone
+
+Keep public profile-workbench artifacts focused on inspectable proof instead of
+external validation requests.
+
+Rationale:
+
+- The strongest profile signal is shipped, verifiable work; public notes should
+  not preserve casual outcome-chasing language after the lesson is captured.
+- The root README already rejects unsupported hype, but lab notes and recipes
+  also shape reviewer trust.
+- A narrow public-surface tone audit catches these phrases without blocking
+  legitimate technical references to agent tooling or provider-style schemas.

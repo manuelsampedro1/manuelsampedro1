@@ -93,6 +93,23 @@ EXTERNAL_REVIEWER_REQUIRED_TERMS = [
     "Review Prompt",
 ]
 
+PUBLIC_TONE_FILES = [
+    "README.md",
+    "docs/automation-runbook.md",
+    "examples",
+    "labs",
+    "radar",
+    "recipes",
+]
+PUBLIC_TONE_RISKY_PHRASES = [
+    "give me the prize",
+    "give me the award",
+    "me tienen que dar",
+    "openai prize",
+    "open ai prize",
+    "premio",
+]
+
 RISKY_README_PHRASES = [
     "guaranteed",
     "production-ready",
@@ -311,6 +328,28 @@ def audit_external_reviewer_navigation(root: Path, issues: list[str]) -> None:
             issues.append(f"External reviewer navigation is missing review route detail: {term}.")
 
 
+def public_tone_paths(root: Path) -> list[Path]:
+    paths: list[Path] = []
+    for relative_path in PUBLIC_TONE_FILES:
+        path = root / relative_path
+        if path.is_file():
+            paths.append(path)
+        elif path.is_dir():
+            paths.extend(sorted(candidate for candidate in path.rglob("*.md") if candidate.is_file()))
+    return paths
+
+
+def audit_public_surface_tone(root: Path, issues: list[str]) -> None:
+    for path in public_tone_paths(root):
+        text = read_text(path).lower()
+        if not text:
+            continue
+        relative_path = path.relative_to(root).as_posix()
+        for phrase in PUBLIC_TONE_RISKY_PHRASES:
+            if phrase in text:
+                issues.append(f"Public surface contains external-validation phrase `{phrase}` in {relative_path}.")
+
+
 def audit(root: Path) -> AuditResult:
     readme = read_text(root / "README.md")
     decisions = read_text(root / "DECISIONS.md")
@@ -456,6 +495,7 @@ def audit(root: Path) -> AuditResult:
                 issues.append(f"Profile evidence map is missing example: {example}.")
 
     audit_external_reviewer_navigation(root, issues)
+    audit_public_surface_tone(root, issues)
 
     score = max(0, 100 - (len(issues) * 10) - (len(warnings) * 3))
     return AuditResult(

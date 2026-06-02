@@ -83,6 +83,7 @@ The audit should also check:
 - Linked repo entries for every `Selected Work` and `Agent Safety Layer` table row so primary proof never becomes an unclickable claim.
 - `Agent Safety Layer` row-count freeze at the saturated 6-row baseline unless an explicit post-saturation growth decision is recorded.
 - `examples/external-reviewer-navigation.md` keeping a concrete five-minute review path through the core loop, safety layer, composition examples, and review prompt instead of drifting into generic profile copy.
+- Public notes, recipes, docs, radar, and examples staying free of external-validation chase language; the profile should show useful proof, not ask for outcomes it cannot verify.
 
 ## Commit Rule
 

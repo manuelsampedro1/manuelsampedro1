@@ -30,7 +30,7 @@ via `--write-brief`, score gates via `--min-score`, and status gates via
 
 Coding-agent quality often depends on the first sentence a human writes. A raw
 request can be emotionally clear but operationally weak: "make it more pro",
-"fix it", "finish this", or "they need to give me the prize" does not define
+"fix it", "finish this", or "make reviewers approve this" does not define
 scope, acceptance criteria, verification, or external uncertainty.
 
 `agent-request-brief` gives the workflow a pre-contract gate. It does not
