@@ -46,6 +46,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Python Unittest Readiness Check](./python-unittest-readiness-check.md)
 - [Python CLI Entrypoint Readiness](./python-cli-entrypoint-readiness.md)
 - [Python CLI Change Verification](./python-cli-change-verification.md)
+- [Published HEAD Proof to Ledger](./published-head-proof-to-ledger.md)
 - [Published HEAD Proof in Review Packets](./published-head-proof-in-review-packets.md)
 - [Published HEAD Before Public Proof](./published-head-before-public-proof.md)
 - [Publish Queue for Local Agent Repos](./publish-queue-for-local-agent-repos.md)

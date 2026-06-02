@@ -55,6 +55,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 - [2026-06-02 - Agent Run Ledger Rendered Envelope Import](./2026/2026-06-02-agent-run-ledger-rendered-envelope-import.md)
 - [2026-06-02 - Agent Run Ledger Readiness Import](./2026/2026-06-02-agent-run-ledger-readiness-import.md)
 - [2026-06-02 - Agent Run Ledger Readiness Contract Import](./2026/2026-06-02-agent-run-ledger-readiness-contract-import.md)
+- [2026-06-02 - Agent Run Ledger Published HEAD Proof](./2026/2026-06-02-agent-run-ledger-published-head-proof.md)
 - [2026-06-02 - Agent Run Ledger Packet Verification Import](./2026/2026-06-02-agent-run-ledger-packet-verification-import.md)
 - [2026-06-02 - Agent Run Ledger JSON Envelope Import](./2026/2026-06-02-agent-run-ledger-json-envelope-import.md)
 - [2026-06-02 - Agent Run Ledger JSON Doctor](./2026/2026-06-02-agent-run-ledger-json-doctor.md)
