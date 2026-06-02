@@ -41,6 +41,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Publish Queue for Local Agent Repos](./publish-queue-for-local-agent-repos.md)
 - [Public Surface Sync for Agent Repos](./public-surface-sync-for-agent-repos.md)
 - [Profile Proof Audit](./profile-proof-audit.md)
+- [Node CLI Entrypoint Readiness](./node-cli-entrypoint-readiness.md)
 - [Node CLI Change Verification](./node-cli-change-verification.md)
 - [Merge Readiness Gate for Agent Diffs](./merge-readiness-gate-for-agent-diffs.md)
 - [Machine-Readable Doctor Output](./machine-readable-doctor-output.md)
