@@ -1,6 +1,6 @@
 # TODO
 
-- Add one lightweight real screenshot or SVG preview for `briefboard-local` if it improves the README without making it noisy.
+- Configure explicit local Git author identity for public maintenance commits; do not rely on auto-generated `Mac-mini` committer email and do not amend existing commits unless explicitly requested.
 - Publish local repo `/Users/manuelsampedro/Documents/Codex/2026-05-21/agent-task-contract` after creating empty GitHub repo `manuelsampedro1/agent-task-contract`; then add it to `README.md` Selected Work if CI passes.
 - Publish local repo `/Users/manuelsampedro/Documents/Codex/2026-05-21/diff-to-eval` after creating empty GitHub repo `manuelsampedro1/diff-to-eval`; then add it to `README.md` Selected Work if CI passes.
 - Publish local repo `/Users/manuelsampedro/Documents/Codex/2026-05-21/agent-secret-sentinel` after creating empty GitHub repo `manuelsampedro1/agent-secret-sentinel`; then add it to the profile if CI passes.

@@ -53,7 +53,7 @@ These are small on purpose. I prefer tools a reviewer can clone, inspect, run, a
 
 ## Latest Proof
 
-- Latest lab note: [2026-06-02 - Public Proof Repo CI Audit](./labs/2026/2026-06-02-public-proof-repo-ci-audit.md)
+- Latest lab note: [2026-06-02 - Briefboard Local Preview](./labs/2026/2026-06-02-briefboard-local-preview.md)
 - Latest recipes:
   - [Agent Diff Splitter](./recipes/agent-diff-splitter.md)
   - [Agent Claim Check](./recipes/agent-claim-check.md)
