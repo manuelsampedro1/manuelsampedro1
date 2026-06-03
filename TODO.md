@@ -24,6 +24,7 @@
 - Keep every `Selected Work` and `Agent Safety Layer` table row backed by a linked repo entry.
 - Keep `Agent Safety Layer` at the saturated 6-row baseline unless a future change records an explicit `Allow Agent Safety Layer Growth After Saturation` decision.
 - Keep `examples/external-reviewer-navigation.md` anchored on the five-minute core loop, safety layer, composition examples, and review prompt.
+- Keep every file under `examples/` linked from `examples/README.md` so proof packets stay discoverable.
 - Keep public notes, recipes, docs, radar, and examples free of external-validation or approval-chasing language.
 - Keep relative links in public notes, recipes, docs, radar, and examples resolving inside this repo.
 - Keep `scripts/profile_quality_audit.py` aligned with the README verification contract when new gates are added.

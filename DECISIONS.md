@@ -1342,3 +1342,17 @@ Rationale:
   `Latest Proof` highlight.
 - Code examples are ignored so snippets that show upstream README Markdown do
   not become false positives.
+
+## 2026-06-03 - Audit Examples Index Coverage
+
+Require every public example Markdown file to be linked from
+`examples/README.md`.
+
+Rationale:
+
+- Examples are the profile's compact proof-packet layer; hidden examples reduce
+  reviewer navigation quality even when the files exist.
+- Labs, recipes, and radar already have generated indexes, but examples are
+  curated manually and need an executable coverage check.
+- Encoding index coverage in `scripts/profile_quality_audit.py` keeps future
+  examples discoverable without expanding the root README.

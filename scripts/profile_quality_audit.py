@@ -396,6 +396,20 @@ def audit_public_relative_links(root: Path, issues: list[str]) -> None:
                 issues.append(f"Public surface relative link is missing in {relative_path}: {target}.")
 
 
+def audit_examples_index_coverage(root: Path, examples_index: str, issues: list[str]) -> None:
+    examples_dir = root / "examples"
+    if not examples_dir.exists():
+        return
+    index_targets = {target.rstrip("/") for _, target in markdown_links(examples_index)}
+    for path in sorted(examples_dir.rglob("*.md")):
+        if path.name == "README.md":
+            continue
+        relative_path = path.relative_to(root).as_posix()
+        index_target = f"./{path.relative_to(examples_dir).as_posix()}"
+        if index_target not in index_targets:
+            issues.append(f"examples/README.md does not link example: {relative_path}.")
+
+
 def audit(root: Path) -> AuditResult:
     readme = read_text(root / "README.md")
     decisions = read_text(root / "DECISIONS.md")
@@ -523,6 +537,7 @@ def audit(root: Path) -> AuditResult:
             issues.append(f"Missing required example: {relative_path}.")
         if f"./{Path(relative_path).name}" not in examples_index and Path(relative_path).name not in examples_index:
             issues.append(f"examples/README.md does not link {relative_path}.")
+    audit_examples_index_coverage(root, examples_index, issues)
 
     if not evidence_map:
         issues.append("Missing profile evidence map.")
