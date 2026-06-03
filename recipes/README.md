@@ -66,6 +66,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Publish Queue for Local Agent Repos](./publish-queue-for-local-agent-repos.md)
 - [Public Surface Sync for Agent Repos](./public-surface-sync-for-agent-repos.md)
 - [Proof Packet Backed Test Impact](./proof-packet-backed-test-impact.md)
+- [Proof Packet Backed Scope Guards](./proof-packet-backed-scope-guards.md)
 - [Proof Packet Backed Review Maps](./proof-packet-backed-review-maps.md)
 - [Proof Packet Backed Review Findings](./proof-packet-backed-review-findings.md)
 - [Proof Packet Backed Release Notes](./proof-packet-backed-release-notes.md)

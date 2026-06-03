@@ -1,5 +1,22 @@
 # Decisions
 
+## 2026-06-03 - Verify Proof Packets in Scope Guards
+
+Use `agent-scope-guard --proof-packet` when scope reports should show
+structured packet evidence for the same changed paths.
+
+Rationale:
+
+- Scope verdicts should stay derived from explicit path and glob allowlists.
+- Proof packets can show which checks already exist for changed paths, but only
+  after schema, verdict, missing-evidence, passing-check, and diff-alignment
+  checks pass.
+- Invalid, incomplete, missing-evidence, failing-check, or diff-mismatched
+  packets should fail before their checks are reused in scope reports.
+- Packet checks should never authorize unexpected paths or widen task scope.
+- This hardens an existing selected repo without increasing the root proof
+  table.
+
 ## 2026-06-03 - Verify Proof Packets in Diff Splits
 
 Use `agent-diff-splitter --proof-packet` when split plans should show
