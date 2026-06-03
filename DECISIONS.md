@@ -1,5 +1,24 @@
 # Decisions
 
+## 2026-06-03 - Verify Proof Packets in Diff Splits
+
+Use `agent-diff-splitter --proof-packet` when split plans should show
+structured packet evidence beside matching split files.
+
+Rationale:
+
+- Split order should stay derived from risk-first lanes, not from broad proof
+  claims.
+- Proof packets can show which checks already exist for files in each split,
+  but only after schema, verdict, missing-evidence, passing-check, and
+  diff-alignment checks pass.
+- Invalid, incomplete, missing-evidence, failing-check, or diff-mismatched
+  packets should fail before their checks are reused in split plans.
+- Packet checks should never reorder lanes, merge splits, or mark risky splits
+  as safe.
+- This hardens an existing selected repo without increasing the root proof
+  table.
+
 ## 2026-06-03 - Verify Proof Packets in Diff Budgets
 
 Use `agent-diff-budget --proof-packet` when budget reports should show

@@ -19,7 +19,8 @@ Turn a unified diff into a split plan:
 - proposed split order,
 - files per split,
 - rationale for each split,
-- reviewer question per split.
+- reviewer question per split,
+- validated proof-packet checks beside matching split files.
 
 This makes "split the PR" actionable. The tool does not rewrite commits; it tells the human or agent how to cut the work.
 
@@ -43,7 +44,16 @@ PYTHONPATH=src python3 -m agent_diff_budget /tmp/agent-change.diff --max-files 6
 PYTHONPATH=src python3 -m agent_diff_splitter /tmp/agent-change.diff --max-files-per-split 3
 ```
 
-4. Feed each split into the next agent run:
+4. If a proof packet exists for the same diff, attach it without changing the
+   split order:
+
+```sh
+PYTHONPATH=src python3 -m agent_diff_splitter /tmp/agent-change.diff \
+  --max-files-per-split 3 \
+  --proof-packet /tmp/proof-packet.json
+```
+
+5. Feed each split into the next agent run:
 
 ```text
 Implement only split 1 from the split plan.
@@ -53,7 +63,7 @@ Allowed files:
 Do not touch files from later splits.
 ```
 
-5. Verify each split independently before merging the broader change.
+6. Verify each split independently before merging the broader change.
 
 ## Prompt Pattern
 
@@ -76,7 +86,7 @@ Rules:
 - Can each split be reviewed and verified independently?
 - Does each follow-up agent run have expected paths from the split?
 - Did docs/public claims move to the final split?
-- Does the proof packet preserve the split rationale?
+- Does the proof packet match the diff and preserve the split rationale?
 
 ## Failure Modes
 
@@ -89,10 +99,12 @@ Rules:
 ## Source Linkage
 
 - Public repo: <https://github.com/manuelsampedro1/agent-diff-splitter>
-- Commit: <https://github.com/manuelsampedro1/agent-diff-splitter/commit/6554cc05857044bfb63b66a6d7e8719988c86b12>
+- Commit: <https://github.com/manuelsampedro1/agent-diff-splitter/commit/e70ae0b58152eb2761f46d1a9647765af7f4c858>
 - README: <https://raw.githubusercontent.com/manuelsampedro1/agent-diff-splitter/main/README.md>
 - CLI: <https://raw.githubusercontent.com/manuelsampedro1/agent-diff-splitter/main/src/agent_diff_splitter/cli.py>
 - Tests: <https://raw.githubusercontent.com/manuelsampedro1/agent-diff-splitter/main/tests/test_cli.py>
 - Mixed diff example: <https://raw.githubusercontent.com/manuelsampedro1/agent-diff-splitter/main/examples/mixed.diff>
+- Proof-packet fixture: <https://raw.githubusercontent.com/manuelsampedro1/agent-diff-splitter/main/examples/proof-packet.json>
 - Launch note: [`../labs/2026/2026-06-02-agent-diff-splitter-public-launch.md`](../labs/2026/2026-06-02-agent-diff-splitter-public-launch.md)
-- Supporting recipes: [`./agent-diff-budget.md`](./agent-diff-budget.md), [`./agent-review-map.md`](./agent-review-map.md), and [`./agent-proof-packet-for-review.md`](./agent-proof-packet-for-review.md).
+- Follow-up note: [`../labs/2026/2026-06-03-agent-diff-splitter-proof-packets.md`](../labs/2026/2026-06-03-agent-diff-splitter-proof-packets.md)
+- Supporting recipes: [`./agent-diff-budget.md`](./agent-diff-budget.md), [`./proof-packet-backed-diff-splits.md`](./proof-packet-backed-diff-splits.md), [`./agent-review-map.md`](./agent-review-map.md), and [`./agent-proof-packet-for-review.md`](./agent-proof-packet-for-review.md).

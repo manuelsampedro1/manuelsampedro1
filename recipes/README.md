@@ -72,6 +72,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Proof Packet Backed PR Briefs](./proof-packet-backed-pr-briefs.md)
 - [Proof Packet Backed Plan Traces](./proof-packet-backed-plan-traces.md)
 - [Proof Packet Backed Merge Readiness](./proof-packet-backed-merge-readiness.md)
+- [Proof Packet Backed Diff Splits](./proof-packet-backed-diff-splits.md)
 - [Proof Packet Backed Diff Budgets](./proof-packet-backed-diff-budgets.md)
 - [Proof Packet Backed Dependency Review](./proof-packet-backed-dependency-review.md)
 - [Proof Packet Backed Closeouts](./proof-packet-backed-closeouts.md)
