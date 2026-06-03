@@ -219,6 +219,20 @@ Rationale:
 - A dependency-specific diff gate strengthens the profile's safety narrative
   without claiming vulnerability intelligence or relying on external feeds.
 
+## 2026-06-03 - Make Profile Proof Audit Strict by Explicit Opt-In
+
+Keep `profile-proof-audit` informational by default, but add explicit CI gate
+flags for score thresholds and warnings.
+
+Rationale:
+
+- Reviewers need a readable profile proof report while drafting or inspecting
+  changes.
+- CI needs a non-zero exit path when the public profile falls below a stated
+  proof bar.
+- Putting the threshold in the command is clearer than burying the policy in
+  prose or relying on maintainers to interpret a report manually.
+
 ## 2026-06-02 - Audit Agent Safety Layer Repo Targets
 
 Apply the same owned, unique, and label-matching repo-target checks to the
