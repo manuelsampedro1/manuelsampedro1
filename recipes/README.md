@@ -13,6 +13,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 ## Entries
 
 - [Working Tree Verification Coverage](./working-tree-verification-coverage.md)
+- [Verified Command Receipts for Closeout Claims](./verified-command-receipts-for-closeout-claims.md)
 - [Verification Envelope to Ledger Evidence](./verification-envelope-to-ledger-evidence.md)
 - [Verification Envelope Readiness to Ledger Evidence](./verification-envelope-readiness-to-ledger.md)
 - [Verification Envelope in Review Packets](./verification-envelope-in-review-packets.md)

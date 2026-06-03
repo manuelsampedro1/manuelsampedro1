@@ -247,6 +247,20 @@ Rationale:
 - Drifted or missing evidence should keep strict ledger review open instead of
   letting a stale command claim look closed.
 
+## 2026-06-03 - Verify Closeout Commands With Receipts
+
+Teach `agent-claim-check` to accept verified `agent-command-receipt.v1`
+artifacts as command evidence for closeout claims.
+
+Rationale:
+
+- `--ran-command` is compatible and lightweight, but it is still a manually
+  supplied string.
+- Receipt-backed command evidence lets the claim checker reject stale, missing,
+  empty, non-pass, or drifted command output.
+- The same receipt can then be preserved by `agent-run-ledger`, keeping closeout
+  verification and durable run evidence aligned.
+
 ## 2026-06-02 - Audit Agent Safety Layer Repo Targets
 
 Apply the same owned, unique, and label-matching repo-target checks to the

@@ -133,11 +133,11 @@ The check validates shell scripts, compiles local Python audit tools, runs Pytho
 
 ## Latest Proof
 
-- Latest lab note: [2026-06-03 - Agent Run Ledger Command Receipts](./labs/2026/2026-06-03-agent-run-ledger-command-receipts.md)
+- Latest lab note: [2026-06-03 - Agent Claim Check Command Receipts](./labs/2026/2026-06-03-agent-claim-check-command-receipts.md)
 - Latest recipes:
+  - [Verified Command Receipts for Closeout Claims](./recipes/verified-command-receipts-for-closeout-claims.md)
   - [Command Receipt to Ledger Evidence](./recipes/command-receipt-to-ledger-evidence.md)
   - [Profile Proof Audit CI Thresholds](./recipes/profile-proof-audit-ci-thresholds.md)
-  - [Profile Evidence Map Link Gate](./recipes/profile-evidence-map-link-gate.md)
 
 ## Principles
 
