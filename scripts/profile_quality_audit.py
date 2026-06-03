@@ -135,6 +135,7 @@ PUBLIC_WORKBENCH_TARGETS = [
     "./recipes/README.md",
     "./examples/README.md",
     "./radar/README.md",
+    "./docs/README.md",
     "./docs/automation-runbook.md",
 ]
 

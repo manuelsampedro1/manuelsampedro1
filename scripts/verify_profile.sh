@@ -4,6 +4,7 @@ set -euo pipefail
 bash -n \
   scripts/new_daily_lab_note.sh \
   scripts/update_lab_index.sh \
+  scripts/update_docs_index.sh \
   scripts/update_recipe_index.sh \
   scripts/update_radar_index.sh \
   scripts/update_root_readme_latest.sh \
@@ -27,16 +28,19 @@ trap cleanup EXIT
 
 mkdir -p "$tmp/labs" "$tmp/recipes" "$tmp/radar"
 cp README.md "$tmp/README.md"
+mkdir -p "$tmp/docs"
+cp docs/README.md "$tmp/docs/README.md"
 cp labs/README.md "$tmp/labs/README.md"
 cp recipes/README.md "$tmp/recipes/README.md"
 cp radar/README.md "$tmp/radar/README.md"
 
 scripts/update_lab_index.sh
+scripts/update_docs_index.sh
 scripts/update_recipe_index.sh
 scripts/update_radar_index.sh
 scripts/update_root_readme_latest.sh
 
-for file in README.md labs/README.md recipes/README.md radar/README.md; do
+for file in README.md docs/README.md labs/README.md recipes/README.md radar/README.md; do
   if ! cmp -s "$file" "$tmp/$file"; then
     echo "$file changed after regeneration. Re-run the update scripts and review the diff."
     exit 1

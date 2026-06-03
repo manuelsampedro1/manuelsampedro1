@@ -9,7 +9,7 @@
 - Keep root README `Current Focus` anchored on reliability, verification, auditability, safety, and product judgment.
 - Keep root README `Current Focus` shaped as exactly five bullets.
 - Keep the root README sections in canonical order so reviewer navigation, selected proof, and safety proof stay before the longer workflow archive.
-- Keep root README `Public Workbench` links complete for labs, recipes, examples, radar, and the automation runbook.
+- Keep root README `Public Workbench` links complete for labs, recipes, examples, radar, the docs index, and the automation runbook.
 - Keep root README `How I Work With Codex` at 18 bullets or fewer; move extra workflow routes into recipes or examples.
 - Keep every root README `Latest Proof` link present in the matching public index (`labs/README.md`, `recipes/README.md`, or `radar/README.md`).
 - Keep root README `Latest Proof` shaped as exactly one lab note plus three recipe links.
@@ -25,6 +25,7 @@
 - Keep `Agent Safety Layer` at the saturated 6-row baseline unless a future change records an explicit `Allow Agent Safety Layer Growth After Saturation` decision.
 - Keep `examples/external-reviewer-navigation.md` anchored on the five-minute core loop, safety layer, composition examples, and review prompt.
 - Keep every file under `examples/` linked from `examples/README.md` so proof packets stay discoverable.
+- Keep every public doc under `docs/` linked from generated `docs/README.md`.
 - Keep public notes, recipes, docs, radar, and examples free of external-validation or approval-chasing language.
 - Keep relative links in public notes, recipes, docs, radar, and examples resolving inside this repo.
 - Keep public Markdown pages to exactly one real page H1; H1 examples inside fenced code are allowed.

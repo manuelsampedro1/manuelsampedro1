@@ -113,7 +113,7 @@ These are small on purpose. I prefer tools a reviewer can clone, inspect, run, a
 - [Recipes](./recipes/README.md): reusable prompts, checklists, and implementation patterns that came from actual work.
 - [Examples](./examples/README.md): concrete proof-packet shapes for verifying profile and agent-workbench claims.
 - [Tooling radar](./radar/README.md): short research only when it changes a build or tooling decision.
-- [Automation runbook](./docs/automation-runbook.md): how the profile publishing loop works and what it refuses to publish.
+- [Docs](./docs/README.md): public operating docs, including the [automation runbook](./docs/automation-runbook.md) and profile strategy.
 
 ## Verify This Repo
 

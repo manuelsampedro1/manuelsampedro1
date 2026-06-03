@@ -602,6 +602,7 @@ class ProfileQualityAuditTests(unittest.TestCase):
         self.assertIn("Current Focus is missing narrative anchor: product judgment.", result.issues)
         self.assertIn("Public Workbench is missing target: ./examples/README.md.", result.issues)
         self.assertIn("Public Workbench is missing target: ./radar/README.md.", result.issues)
+        self.assertIn("Public Workbench is missing target: ./docs/README.md.", result.issues)
         self.assertIn("Public Workbench is missing target: ./docs/automation-runbook.md.", result.issues)
 
     def test_current_focus_must_stay_five_bullets(self) -> None:

@@ -96,6 +96,7 @@ if [ "${#unexpected_paths[@]}" -gt 0 ]; then
 fi
 
 scripts/update_lab_index.sh
+scripts/update_docs_index.sh
 scripts/update_recipe_index.sh
 scripts/update_radar_index.sh
 scripts/update_root_readme_latest.sh

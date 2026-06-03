@@ -69,7 +69,7 @@ The audit should also check:
 - Current Focus retaining the profile's core narrative anchors: reliability, verification, auditability, safety, and product judgment.
 - Current Focus staying shaped as exactly five bullets so the opening narrative does not turn into a generic interest list.
 - Canonical README section order so reviewer navigation, selected proof, and safety proof stay before the longer workflow archive.
-- Public Workbench linking to labs, recipes, examples, radar, and the automation runbook so supporting evidence remains discoverable.
+- Public Workbench linking to labs, recipes, examples, radar, the docs index, and the automation runbook so supporting evidence remains discoverable.
 - How I Work With Codex staying at 18 bullets or fewer so the workflow archive does not become another unbounded index.
 - Indexed `Latest Proof` targets so root README highlights stay discoverable from the public lab, recipe, or radar indexes.
 - `Latest Proof` staying shaped as one lab note and three recipe links so the highlight remains concise instead of becoming another index.
@@ -98,6 +98,7 @@ The scripts should commit only when files changed and should push only when a re
 Current maintenance refreshes:
 
 - `labs/README.md`
+- `docs/README.md`
 - `recipes/README.md`
 - `radar/README.md`
 - root `README.md` latest links when a newer public artifact exists

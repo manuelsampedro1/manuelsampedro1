@@ -1370,3 +1370,17 @@ Rationale:
   so the audit must ignore fenced code instead of flattening useful examples.
 - Encoding the rule in `scripts/profile_quality_audit.py` keeps public notes,
   recipes, docs, examples, and radar pages structurally consistent.
+
+## 2026-06-03 - Generate Public Docs Index
+
+Add a generated `docs/README.md` index and expose it from the root
+`Public Workbench` section.
+
+Rationale:
+
+- The repo already generated indexes for labs, recipes, and radar, but public
+  docs still relied on scattered direct references.
+- Profile strategy and priority-topic docs are useful reviewer context when
+  discoverable, but they should not expand the root README.
+- Generating and verifying the docs index keeps operating docs visible while
+  preserving the curated first-read profile surface.

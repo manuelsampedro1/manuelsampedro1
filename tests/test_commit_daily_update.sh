@@ -18,7 +18,7 @@ mkdir -p scripts
 cp "$repo_root/scripts/commit_daily_update.sh" scripts/commit_daily_update.sh
 chmod +x scripts/commit_daily_update.sh
 
-for script in update_lab_index.sh update_recipe_index.sh update_radar_index.sh update_root_readme_latest.sh; do
+for script in update_lab_index.sh update_docs_index.sh update_recipe_index.sh update_radar_index.sh update_root_readme_latest.sh; do
   {
     echo '#!/usr/bin/env bash'
     echo 'set -euo pipefail'
