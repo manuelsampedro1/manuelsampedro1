@@ -88,6 +88,7 @@ The audit should also check:
 - merge-readiness packet evidence with `agent-merge-readiness --proof-packet` when a merge gate should import proof-packet checks only after verifying packet verdict and diff alignment.
 - closeout proof-packet evidence with `agent-closeout-check --proof-packet` when a final answer cites packet evidence and should fail on incomplete, missing-evidence, or file-misaligned packets.
 - closeout-claim integrity with `agent-claim-check --receipt` when exact command claims should be backed by hashed evidence files.
+- redacted-artifact manifest evidence with `agent-artifact-redactor --manifest` when public proof needs a shareable sanitized artifact plus source/redacted hashes.
 - The profile heading, opening agentic-engineering positioning, and `@manuelsampedrop` CTA staying intact.
 - Current Focus retaining the profile's core narrative anchors: reliability, verification, auditability, safety, and product judgment.
 - Current Focus staying shaped as exactly five bullets so the opening narrative does not turn into a generic interest list.

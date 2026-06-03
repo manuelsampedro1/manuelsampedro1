@@ -22,20 +22,31 @@ agent-artifact-redactor /tmp/proof-packet.md --fail-on high
 agent-artifact-redactor /tmp/proof-packet.md --write-dir /tmp/redacted --min-score 80
 ```
 
-3. For automation, emit JSON and fail on high-severity findings:
+3. When the redacted artifact will be referenced later, write a hash manifest:
+
+```sh
+agent-artifact-redactor /tmp/proof-packet.md \
+  --write-dir /tmp/redacted \
+  --manifest /tmp/redacted/manifest.json \
+  --min-score 80
+```
+
+4. For automation, emit JSON and fail on high-severity findings:
 
 ```sh
 agent-artifact-redactor /tmp/proof-packet.md --format json --fail-on high
 ```
 
-4. Publish or attach only the redacted copy, then preserve the original locally
-if a reviewer needs deeper evidence.
+5. Publish or attach only the redacted copy and manifest, then preserve the
+original locally if a reviewer needs deeper evidence.
 
 ## What Good Looks Like
 
 - Public proof packets do not include bearer headers, secret assignments,
   JWT-like strings, emails, phone-like values, local paths, or SSH key paths.
 - Findings include line numbers and redacted evidence, not raw sensitive values.
+- Manifests include source and redacted SHA-256 values so the redaction step is
+  reviewable without publishing the source artifact.
 - Automation fails before risky artifacts are committed or copied into profile
   notes.
 - The original artifact stays local unless a reviewer explicitly needs it.
@@ -48,6 +59,7 @@ Prepare this agent artifact for public sharing.
 Rules:
 - Run agent-artifact-redactor before publishing.
 - Use the redacted copy, not the original artifact.
+- Generate a manifest when the redacted artifact will be cited as evidence.
 - Do not claim the artifact is fully safe; say which configured risks were checked.
 - If high or critical findings appear, stop publication and rotate any real secret.
 
@@ -61,6 +73,7 @@ Rules:
 - `agent-proof-packet` when building review evidence,
 - `agent-run-ledger` when storing durable run history,
 - `agent-claim-check` before reusing closeout claims publicly,
+- `redacted-artifact-manifests` when attaching public proof,
 - `profile-proof-audit` before treating profile claims as ready.
 
 ## Failure Mode

@@ -1,5 +1,21 @@
 # Decisions
 
+## 2026-06-03 - Hash Redacted Artifacts Before Public Proof
+
+Use `agent-artifact-redactor --manifest` when a redacted proof artifact should
+be attached to a public note, recipe, run ledger, or review packet.
+
+Rationale:
+
+- Redaction should leave a reviewable receipt, not only a transformed file.
+- Source and redacted SHA-256 values let reviewers connect the sanitized copy
+  to the local source without publishing the source artifact.
+- Requiring `--write-dir` with `--manifest` avoids manifests that point at
+  redacted artifacts that were never written.
+- The manifest should summarize rules and severity counts without echoing the
+  sensitive value that triggered a finding.
+- This hardens an existing safety repo without increasing the root proof table.
+
 ## 2026-06-03 - Validate Tool Input Examples
 
 Use `agent-tool-schema-lint` to check `input_examples`, `inputExamples`, or

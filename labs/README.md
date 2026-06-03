@@ -32,6 +32,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 - [2026-06-03 - Agent Claim Check Command Receipts](./2026/2026-06-03-agent-claim-check-command-receipts.md)
 - [2026-06-03 - Agent CI Failure Packet Command Receipts](./2026/2026-06-03-agent-ci-failure-packet-command-receipts.md)
 - [2026-06-03 - Agent Change Risk Proof Packets](./2026/2026-06-03-agent-change-risk-proof-packets.md)
+- [2026-06-03 - Agent Artifact Redactor Manifests](./2026/2026-06-03-agent-artifact-redactor-manifests.md)
 - [2026-06-03 - Agent Acceptance Trace Proof Packets](./2026/2026-06-03-agent-acceptance-trace-proof-packets.md)
 - [2026-06-02 - Verify by Change Working Tree CI](./2026/2026-06-02-verify-by-change-working-tree-ci.md)
 - [2026-06-02 - Verify by Change Task Contract Metadata](./2026/2026-06-02-verify-by-change-task-contract-metadata.md)
