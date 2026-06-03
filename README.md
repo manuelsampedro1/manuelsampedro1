@@ -133,11 +133,11 @@ The check validates shell scripts, compiles local Python audit tools, runs Pytho
 
 ## Latest Proof
 
-- Latest lab note: [2026-06-03 - Agent PR Brief Proof Packets](./labs/2026/2026-06-03-agent-pr-brief-proof-packets.md)
+- Latest lab note: [2026-06-03 - Agent Acceptance Trace Proof Packets](./labs/2026/2026-06-03-agent-acceptance-trace-proof-packets.md)
 - Latest recipes:
+  - [Proof Packet Backed Acceptance Traces](./recipes/proof-packet-backed-acceptance-traces.md)
   - [Proof Packet Backed PR Briefs](./recipes/proof-packet-backed-pr-briefs.md)
   - [Proof Packet Backed Plan Traces](./recipes/proof-packet-backed-plan-traces.md)
-  - [Proof Packet Backed Closeouts](./recipes/proof-packet-backed-closeouts.md)
 
 ## Principles
 

@@ -262,6 +262,21 @@ Rationale:
 - Exposing packet status in Markdown and JSON reports keeps the proof visible
   instead of hidden behind a filename.
 
+## 2026-06-03 - Verify Proof Packets in Acceptance Traces
+
+Teach `agent-acceptance-trace` to accept `agent-proof-packet.v1` JSON only after
+checking packet completeness, passing checks, missing evidence, and diff
+alignment.
+
+Rationale:
+
+- Acceptance criteria are the task contract, so stale packet evidence can make
+  a criterion look covered when the current diff does not support it.
+- The trace already joins task criteria, diff evidence, and closeout text;
+  structured proof packets should enter that matrix only after validation.
+- Exposing packet status beside criterion status keeps acceptance review
+  inspectable instead of relying on a separate artifact name.
+
 ## 2026-06-03 - Verify Closeout Commands With Receipts
 
 Teach `agent-claim-check` to accept verified `agent-command-receipt.v1`
