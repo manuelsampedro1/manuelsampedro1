@@ -133,11 +133,11 @@ The check validates shell scripts, compiles local Python audit tools, runs Pytho
 
 ## Latest Proof
 
-- Latest lab note: [2026-06-03 - Latest Proof Freshness Gate](./labs/2026/2026-06-03-latest-proof-freshness-gate.md)
+- Latest lab note: [2026-06-03 - Profile Evidence Map Canonical Links](./labs/2026/2026-06-03-profile-evidence-map-canonical-links.md)
 - Latest recipes:
+  - [Profile Evidence Map Link Gate](./recipes/profile-evidence-map-link-gate.md)
   - [Latest Proof Freshness Gate](./recipes/latest-proof-freshness-gate.md)
   - [Agent Source Grounding](./recipes/agent-source-grounding.md)
-  - [Agent Evidence Chain](./recipes/agent-evidence-chain.md)
 
 ## Principles
 

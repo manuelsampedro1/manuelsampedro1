@@ -1466,3 +1466,17 @@ Rationale:
 - Matching the same Git-add-time ordering used by the refresh script keeps the
   first-read profile surface tied to the newest public evidence.
 - This improves profile maintenance without adding another root proof row.
+
+## 2026-06-03 - Audit Evidence Map Canonical Links
+
+Require `examples/profile-evidence-map.md` to link each primary claim repo to
+its canonical owned GitHub repo root.
+
+Rationale:
+
+- A claim map can look complete if it mentions repo names, while still leaving a
+  reviewer without direct proof links.
+- Canonical repo-root links make the capability map inspectable and avoid
+  drifting into branch, file, issue, or plain-text references.
+- This strengthens the profile's review path without growing the root proof
+  table.

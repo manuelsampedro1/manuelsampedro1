@@ -85,7 +85,7 @@ The audit should also check:
 - Linked repo entries for every `Selected Work` and `Agent Safety Layer` table row so primary proof never becomes an unclickable claim.
 - `Agent Safety Layer` row-count freeze at the saturated 6-row baseline unless an explicit post-saturation growth decision is recorded.
 - `examples/external-reviewer-navigation.md` keeping a concrete five-minute review path through the core loop, safety layer, composition examples, and review prompt instead of drifting into generic profile copy.
-- `examples/profile-evidence-map.md` keeping the primary claim repos, including `agent-start-gate`, `agent-output-contract`, `agent-evidence-chain`, and `agent-source-grounding`, linked so the profile can be reviewed by capability instead of repo count.
+- `examples/profile-evidence-map.md` keeping the primary claim repos, including `agent-start-gate`, `agent-output-contract`, `agent-evidence-chain`, and `agent-source-grounding`, linked to canonical owned GitHub repo roots so the profile can be reviewed by capability instead of repo count.
 - Public folder indexes linking every Markdown file under `docs`, `examples`, `labs`, `radar`, and `recipes` so proof packets, notes, and operating docs do not become hidden artifacts.
 - Public notes, recipes, docs, radar, and examples staying free of external-validation or approval-chasing language; the profile should show useful proof, not ask for outcomes it cannot verify.
 - Relative links in public notes, recipes, docs, radar, and examples resolving inside this repo, with code examples ignored so upstream Markdown snippets do not create false positives.

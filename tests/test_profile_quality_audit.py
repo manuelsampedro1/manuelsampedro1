@@ -1172,6 +1172,38 @@ class ProfileQualityAuditTests(unittest.TestCase):
             result.issues,
         )
 
+    def test_profile_evidence_map_requires_canonical_repo_links(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            examples = root / "examples"
+            examples.mkdir()
+            (root / "README.md").write_text("# Test Profile\n", encoding="utf-8")
+            (root / "DECISIONS.md").write_text("", encoding="utf-8")
+            (root / "TODO.md").write_text("", encoding="utf-8")
+            (examples / "README.md").write_text(
+                "\n".join(f"- [{Path(path).name}](./{Path(path).name})" for path in profile_quality_audit.REQUIRED_EXAMPLES),
+                encoding="utf-8",
+            )
+            for path in profile_quality_audit.REQUIRED_EXAMPLES:
+                (root / path).write_text("# Example\n", encoding="utf-8")
+            (examples / "profile-evidence-map.md").write_text(
+                "# Profile Evidence Map\n\n"
+                + "\n".join(profile_quality_audit.EVIDENCE_MAP_REPOS)
+                + "\nagent-release-readiness-chain.md\n"
+                + "agent-review-packet-to-ledger-chain.md\n"
+                + "external-reviewer-navigation.md\n"
+                + "profile-verification-proof-packet.md\n"
+                + "profile-curation-guard-proof-packet.md\n",
+                encoding="utf-8",
+            )
+
+            result = profile_quality_audit.audit(root)
+
+        self.assertIn(
+            "Profile evidence map is missing canonical repo link: https://github.com/manuelsampedro1/agent-start-gate.",
+            result.issues,
+        )
+
     def test_selected_work_duplicate_repo_target_fails(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

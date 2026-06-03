@@ -650,9 +650,11 @@ def audit(root: Path) -> AuditResult:
     if not evidence_map:
         issues.append("Missing profile evidence map.")
     else:
+        evidence_map_targets = {normalized_link_target(target) for _, target in markdown_links(evidence_map)}
         for repo in EVIDENCE_MAP_REPOS:
-            if repo not in evidence_map:
-                issues.append(f"Profile evidence map is missing repo: {repo}.")
+            target = canonical_owned_repo_target(repo)
+            if target not in evidence_map_targets:
+                issues.append(f"Profile evidence map is missing canonical repo link: {target}.")
         for example in [
             "agent-release-readiness-chain.md",
             "agent-review-packet-to-ledger-chain.md",

@@ -4,6 +4,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 
 ## Entries
 
+- [2026-06-03 - Profile Evidence Map Canonical Links](./2026/2026-06-03-profile-evidence-map-canonical-links.md)
 - [2026-06-03 - Latest Proof Freshness Gate](./2026/2026-06-03-latest-proof-freshness-gate.md)
 - [2026-06-03 - Agent Start Gate Public Launch](./2026/2026-06-03-agent-start-gate-public-launch.md)
 - [2026-06-03 - Agent Source Grounding Public Launch](./2026/2026-06-03-agent-source-grounding-public-launch.md)
