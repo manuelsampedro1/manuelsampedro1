@@ -1,5 +1,23 @@
 # Decisions
 
+## 2026-06-03 - Hash Worktree Snapshots Before Agent Runs
+
+Use `agent-worktree-guard --expect-snapshot-sha256` when a dirty-worktree
+baseline is reused after a coding-agent run.
+
+Rationale:
+
+- Worktree guards depend on the pre-agent snapshot being the same artifact
+  captured before edits begin.
+- A changed snapshot can hide protected user edits and make a later guard
+  report look safer than it is.
+- Printing and requiring a snapshot SHA-256 connects the pre-run handoff to the
+  post-run guard result.
+- Snapshot hashes should prove baseline integrity, not authorize unexpected
+  dirty paths or protected-file drift.
+- This hardens an existing selected repo without increasing the root proof
+  table.
+
 ## 2026-06-03 - Verify Proof Packets in Scope Guards
 
 Use `agent-scope-guard --proof-packet` when scope reports should show

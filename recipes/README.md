@@ -90,6 +90,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Local-First Draft Round Trip](./local-first-draft-round-trip.md)
 - [Latest Proof Freshness Gate](./latest-proof-freshness-gate.md)
 - [JSON Envelope for Verification Gates](./json-envelope-for-verification-gates.md)
+- [Hash-Backed Worktree Snapshots](./hash-backed-worktree-snapshots.md)
 - [Handoff Scope Warnings Before Codex](./handoff-scope-warnings-before-codex.md)
 - [GitHub Actions Run Evidence to Ledger](./github-actions-run-evidence-to-ledger.md)
 - [GitHub Action Repo Readiness](./github-action-repo-readiness.md)
