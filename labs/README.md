@@ -11,6 +11,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 - [2026-06-03 - Agent Source Grounding Public Launch](./2026/2026-06-03-agent-source-grounding-public-launch.md)
 - [2026-06-03 - Agent Run Ledger Command Receipts](./2026/2026-06-03-agent-run-ledger-command-receipts.md)
 - [2026-06-03 - Agent Proof Packet Command Receipts](./2026/2026-06-03-agent-proof-packet-command-receipts.md)
+- [2026-06-03 - Agent PR Brief Proof Packets](./2026/2026-06-03-agent-pr-brief-proof-packets.md)
 - [2026-06-03 - Agent Plan Trace Proof Packets](./2026/2026-06-03-agent-plan-trace-proof-packets.md)
 - [2026-06-03 - Agent Output Contract Public Launch](./2026/2026-06-03-agent-output-contract-public-launch.md)
 - [2026-06-03 - Agent Merge Readiness Proof Packets](./2026/2026-06-03-agent-merge-readiness-proof-packets.md)

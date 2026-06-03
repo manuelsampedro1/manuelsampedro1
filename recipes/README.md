@@ -63,6 +63,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Published HEAD Before Public Proof](./published-head-before-public-proof.md)
 - [Publish Queue for Local Agent Repos](./publish-queue-for-local-agent-repos.md)
 - [Public Surface Sync for Agent Repos](./public-surface-sync-for-agent-repos.md)
+- [Proof Packet Backed PR Briefs](./proof-packet-backed-pr-briefs.md)
 - [Proof Packet Backed Plan Traces](./proof-packet-backed-plan-traces.md)
 - [Proof Packet Backed Merge Readiness](./proof-packet-backed-merge-readiness.md)
 - [Proof Packet Backed Closeouts](./proof-packet-backed-closeouts.md)

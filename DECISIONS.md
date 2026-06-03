@@ -247,6 +247,21 @@ Rationale:
 - Drifted or missing evidence should keep strict ledger review open instead of
   letting a stale command claim look closed.
 
+## 2026-06-03 - Verify Proof Packets in PR Briefs
+
+Teach `agent-pr-brief` to accept `agent-proof-packet.v1` JSON only after
+checking packet completeness, passing checks, missing evidence, and diff
+alignment.
+
+Rationale:
+
+- PR descriptions are reviewer-facing, so stale proof packets can make a weak
+  handoff look verified.
+- The PR brief checker already compares description text with the diff; packet
+  evidence should obey the same current-diff contract.
+- Exposing packet status in Markdown and JSON reports keeps the proof visible
+  instead of hidden behind a filename.
+
 ## 2026-06-03 - Verify Closeout Commands With Receipts
 
 Teach `agent-claim-check` to accept verified `agent-command-receipt.v1`
