@@ -15,6 +15,7 @@
 - Keep root README `Latest Proof` shaped as exactly one lab note plus three recipe links.
 - Keep root README `Latest Proof` synchronized to the newest public lab note and the three newest public recipes by Git add time, with filesystem modification time only as a fallback for uncommitted files.
 - Use `profile-proof-audit --min-score 100 --fail-on-warnings` when a profile or public-proof change should fail CI on weak proof instead of only rendering an informational report.
+- Prefer `agent-command-receipt` plus `agent-run-ledger import-receipt` for important command evidence so closeouts can point at verified receipts instead of prose-only test claims.
 - Keep the root README Reviewer Path at four bullets or fewer; move extra proof routes into `examples/profile-evidence-map.md` or `examples/external-reviewer-navigation.md` instead of expanding the first-read section.
 - Keep root README Reviewer Path links limited to the approved first-read route in `scripts/profile_quality_audit.py`.
 - Keep `Selected Work` at the current 50-row cap; future project work should improve existing repos or move into examples, recipes, labs, or profile curation rather than adding another root row.

@@ -133,11 +133,11 @@ The check validates shell scripts, compiles local Python audit tools, runs Pytho
 
 ## Latest Proof
 
-- Latest lab note: [2026-06-03 - Profile Proof Audit CI Thresholds](./labs/2026/2026-06-03-profile-proof-audit-ci-thresholds.md)
+- Latest lab note: [2026-06-03 - Agent Run Ledger Command Receipts](./labs/2026/2026-06-03-agent-run-ledger-command-receipts.md)
 - Latest recipes:
+  - [Command Receipt to Ledger Evidence](./recipes/command-receipt-to-ledger-evidence.md)
   - [Profile Proof Audit CI Thresholds](./recipes/profile-proof-audit-ci-thresholds.md)
   - [Profile Evidence Map Link Gate](./recipes/profile-evidence-map-link-gate.md)
-  - [Latest Proof Freshness Gate](./recipes/latest-proof-freshness-gate.md)
 
 ## Principles
 

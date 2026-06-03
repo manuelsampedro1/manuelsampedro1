@@ -233,6 +233,20 @@ Rationale:
 - Putting the threshold in the command is clearer than burying the policy in
   prose or relying on maintainers to interpret a report manually.
 
+## 2026-06-03 - Preserve Command Receipts in Run Ledgers
+
+Teach `agent-run-ledger` to import and verify `agent-command-receipt.v1`
+artifacts as command evidence.
+
+Rationale:
+
+- Command claims are weak when they exist only as closeout prose.
+- Receipt files carry evidence hashes, but they are easier to review when they
+  become part of the same durable run ledger as decisions, blockers, CI, and
+  review-packet imports.
+- Drifted or missing evidence should keep strict ledger review open instead of
+  letting a stale command claim look closed.
+
 ## 2026-06-02 - Audit Agent Safety Layer Repo Targets
 
 Apply the same owned, unique, and label-matching repo-target checks to the
