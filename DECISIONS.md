@@ -277,6 +277,21 @@ Rationale:
 - Exposing packet status beside criterion status keeps acceptance review
   inspectable instead of relying on a separate artifact name.
 
+## 2026-06-03 - Verify Proof Packets in Test Impact
+
+Teach `agent-test-impact` to accept `agent-proof-packet.v1` JSON only after
+checking packet completeness, passing checks, missing evidence, and diff
+alignment.
+
+Rationale:
+
+- Broad test passes are useful, but they should not be mistaken for direct
+  source-level test evidence.
+- Test-impact review already separates direct, partial, and missing evidence;
+  packet-backed checks belong in `partial` unless a related changed test exists.
+- Exposing packet status in Markdown and JSON keeps broad verification evidence
+  inspectable inside the same report.
+
 ## 2026-06-03 - Verify Closeout Commands With Receipts
 
 Teach `agent-claim-check` to accept verified `agent-command-receipt.v1`
