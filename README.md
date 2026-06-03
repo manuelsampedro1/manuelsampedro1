@@ -135,9 +135,9 @@ The check validates shell scripts, compiles local Python audit tools, runs Pytho
 
 - Latest lab note: [2026-06-03 - Agent Task Contract Acceptance IDs](./labs/2026/2026-06-03-agent-task-contract-acceptance-ids.md)
 - Latest recipes:
+  - [Copy-Paste Start Packet for Codex](./recipes/copy-paste-start-packet-for-codex.md)
   - [Stable Acceptance Criteria IDs](./recipes/stable-acceptance-criteria-ids.md)
   - [Traceable Start Packets](./recipes/traceable-start-packets.md)
-  - [Run Identity Evidence Chains](./recipes/run-identity-evidence-chains.md)
 
 ## Principles
 
