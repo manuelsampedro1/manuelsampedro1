@@ -10,6 +10,8 @@ Require each artifact to include:
 - shared repository identity, such as `repo`, `repository`, or `repository_url`.
 - shared commit identity, such as `head_sha`, `commit`, or `source_commit`.
 - shared `task_id` when the workflow has one.
+- shared `run_id` when the workflow can rerun or produce multiple evidence
+  bundles.
 - a non-blocking outcome when the artifact is being reused as ready evidence.
 - empty blocker-like lists such as `blocking_findings`, `blockers`, and `missing_evidence`.
 
@@ -20,13 +22,17 @@ agent-evidence-chain check \
   review-packet.json \
   verification-envelope.json \
   ledger-summary.json \
-  --require-task-id
+  --require-task-id \
+  --require-run-id
 ```
 
 For automation:
 
 ```sh
-agent-evidence-chain check artifacts/*.json --require-task-id --format json
+agent-evidence-chain check artifacts/*.json \
+  --require-task-id \
+  --require-run-id \
+  --format json
 ```
 
 ## Review Rule
@@ -36,6 +42,7 @@ Do not treat several artifacts as one proof chain until the shared identity is e
 Check:
 
 - Do all artifacts point at the same task?
+- Do all artifacts point at the same run?
 - Do all artifacts point at the same repository?
 - Do all artifacts point at the same commit?
 - Is every artifact versioned?

@@ -1,5 +1,23 @@
 # Decisions
 
+## 2026-06-03 - Require Run Identity in Evidence Chains
+
+Use `agent-evidence-chain check --require-task-id --require-run-id` when
+multiple JSON artifacts will be reused as one proof chain after reruns,
+review-packet generation, ledger import, closeout support, or profile proof.
+
+Rationale:
+
+- Task, repo, and commit identity can still mix artifacts from separate agent
+  runs.
+- Stable `run_id` keeps review packets, verification envelopes, and ledger
+  summaries tied to one run.
+- Optional run-id mismatches should stay visible as warnings, while strict
+  evidence reuse should fail on missing or mismatched `run_id`.
+- Shared identity output should expose `run_id` for quick reviewer scanning.
+- This hardens an existing selected repo without increasing the root proof
+  table.
+
 ## 2026-06-03 - Require Stable IDs in Tool-Call Replay Evidence
 
 Use `agent-tool-call-replay --require-call-ids` when a saved tool-call

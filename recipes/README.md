@@ -36,6 +36,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Scope Guard for Agent Diffs](./scope-guard-for-agent-diffs.md)
 - [Schema-Backed Tool Examples](./schema-backed-tool-examples.md)
 - [Runbook Drift Check](./runbook-drift-check.md)
+- [Run Identity Evidence Chains](./run-identity-evidence-chains.md)
 - [Rollback Plan for Agent Diffs](./rollback-plan-for-agent-diffs.md)
 - [Review Packet Working Tree Evidence](./review-packet-working-tree-evidence.md)
 - [Review Packet with Verification Plan](./review-packet-with-verification-plan.md)
