@@ -31,6 +31,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Strict Ledger Doctor Gate](./strict-ledger-doctor-gate.md)
 - [Strict Command Receipt Verification](./strict-command-receipt-verification.md)
 - [Stable Tool Call IDs](./stable-tool-call-ids.md)
+- [Stable Acceptance Criteria IDs](./stable-acceptance-criteria-ids.md)
 - [Sensitive Review Packet to Ledger Evidence](./sensitive-review-packet-to-ledger-evidence.md)
 - [Sensitive Change Checks in Review Packets](./sensitive-change-checks-in-review-packets.md)
 - [Security-Sensitive Change Verification](./security-sensitive-change-verification.md)

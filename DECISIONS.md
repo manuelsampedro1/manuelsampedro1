@@ -1,5 +1,24 @@
 # Decisions
 
+## 2026-06-03 - Require Acceptance IDs in Task Contracts
+
+Use `agent-task-contract check --require-acceptance-ids` when a task contract
+will feed acceptance traces, proof packets, PR briefs, closeouts, run ledgers,
+or profile proof.
+
+Rationale:
+
+- Anonymous acceptance bullets are hard to reference once they move through
+  review packets, verification envelopes, ledgers, and final closeouts.
+- Stable IDs such as `AC-1` make each criterion traceable without relying on
+  bullet order or copied prose.
+- Duplicate acceptance IDs should fail because they make criterion-level
+  evidence ambiguous.
+- JSON and text output should expose acceptance-id counts for quick reviewer
+  scanning.
+- This hardens an existing selected repo without increasing the root proof
+  table.
+
 ## 2026-06-03 - Require Evidence Pointers in Start Gates
 
 Use `agent-start-gate check --require-evidence-pointers` when a start packet
