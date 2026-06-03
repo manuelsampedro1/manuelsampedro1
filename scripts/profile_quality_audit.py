@@ -63,6 +63,7 @@ REQUIRED_EXAMPLES = [
 EVIDENCE_MAP_REPOS = [
     "agent-start-gate",
     "agent-output-contract",
+    "agent-evidence-chain",
     "repo-flightcheck",
     "codex-review-packet",
     "verify-by-change",

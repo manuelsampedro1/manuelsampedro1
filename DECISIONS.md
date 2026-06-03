@@ -1426,3 +1426,17 @@ Rationale:
   `repo-flightcheck --check-remote` at `100/100` before profile promotion.
 - It strengthens the agent-tooling story without duplicating pre-run, scope,
   review, or closeout gates already present in the profile.
+
+## 2026-06-03 - Promote Agent Evidence Chain as Cross-Artifact Proof
+
+Add `agent-evidence-chain` as a third post-saturation `Selected Work`
+exception.
+
+Rationale:
+
+- It covers a different failure mode from individual output validation: multiple
+  valid artifacts can still disagree about task, repository, or commit.
+- The repo is public, dependency-free, tested, has CI, and passed
+  `repo-flightcheck --check-remote` at `100/100` before profile promotion.
+- It keeps the profile focused on inspectable agent reliability by validating a
+  proof chain before review packets, ledgers, or closeouts reuse it.

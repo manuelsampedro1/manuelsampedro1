@@ -118,6 +118,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Agent Instruction Audit](./agent-instruction-audit.md)
 - [Agent Handoff Drift](./agent-handoff-drift.md)
 - [Agent Handoff Brief](./agent-handoff-brief.md)
+- [Agent Evidence Chain](./agent-evidence-chain.md)
 - [Agent Eval Runner](./agent-eval-runner.md)
 - [Agent Diff Splitter](./agent-diff-splitter.md)
 - [Agent Diff Secret Sentinel](./agent-diff-secret-sentinel.md)
