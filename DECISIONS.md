@@ -1,5 +1,18 @@
 # Decisions
 
+## 2026-06-03 - Audit Proof Packets in Dependency Review
+
+Use `agent-dependency-guard --proof-packet` to show which required dependency
+checks already have structured packet evidence.
+
+Rationale:
+
+- Dependency findings should stay derived from the diff, especially for
+  floating versions, direct URLs, install scripts, and missing lockfiles.
+- Reviewers still need to see which dependency checks have evidence attached.
+- Invalid, incomplete, missing-evidence, or diff-mismatched packets should fail
+  before their checks are reused in dependency review.
+
 ## 2026-06-03 - Audit Proof Packets in Change Risk
 
 Use `agent-change-risk --proof-packet` to show which diff-derived review gates
