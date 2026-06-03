@@ -1535,3 +1535,19 @@ Rationale:
 - `--require-status pass` makes the required command outcome explicit.
 - `--min-evidence 1` prevents empty receipts from satisfying proof workflows.
 - This hardens an existing visible repo without adding another root proof row.
+
+## 2026-06-03 - Verify Command Receipts in Proof Packets
+
+Teach `agent-proof-packet` to verify `agent-command-receipt.v1` artifacts before
+using them as passing review evidence.
+
+Rationale:
+
+- A proof packet should not turn a command claim into a review artifact without
+  checking the receipt behind it.
+- Receipt-backed packets keep command status, evidence hashes, and drift
+  findings visible in the review packet.
+- Failed, skipped, missing, empty, or drifted receipts now block the packet
+  instead of letting a weak pass-check string carry the review.
+- This strengthens an existing selected repo without growing the root proof
+  table.

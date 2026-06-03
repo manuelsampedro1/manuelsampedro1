@@ -68,6 +68,7 @@ The audit should also check:
 - strict profile proof gates with `profile-proof-audit --min-score 100 --fail-on-warnings` when profile or public-proof changes need a non-zero CI failure instead of an informational report.
 - command-evidence integrity with `agent-command-receipt` plus `agent-run-ledger import-receipt` when a closeout relies on important local command output.
 - command-receipt proof reuse with `agent-command-receipt verify --require-status pass --min-evidence 1` before a receipt supports a passing closeout, ledger entry, review packet, or claim-check result.
+- proof-packet command evidence with `agent-proof-packet --receipt --receipt-base-dir` when a review packet should carry verified command output instead of a manual pass-check string.
 - closeout-claim integrity with `agent-claim-check --receipt` when exact command claims should be backed by hashed evidence files.
 - The profile heading, opening agentic-engineering positioning, and `@manuelsampedrop` CTA staying intact.
 - Current Focus retaining the profile's core narrative anchors: reliability, verification, auditability, safety, and product judgment.
