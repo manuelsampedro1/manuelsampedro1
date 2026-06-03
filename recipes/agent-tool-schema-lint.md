@@ -38,6 +38,8 @@ missing safety language before the tools are made callable.
 - Extra properties are rejected unless open input is intentional.
 - Parameter descriptions include format, constraints, or examples.
 - Enums explain how values should be selected.
+- Input examples are present for important tools and match required fields,
+  closed-schema properties, simple JSON types, and enum values.
 - Sensitive tools mention approval, dry-run, validation, or authorization.
 
 ## Prompt Pattern
@@ -47,7 +49,7 @@ Review these tool schemas before I expose them to a coding agent.
 
 Rules:
 - Do not judge runtime implementation yet; judge whether the schema is safe and clear enough to call.
-- Flag vague tool descriptions, missing object schemas, absent required fields, open extra properties, weak parameter descriptions, unclear enums, and sensitive tools without safety language.
+- Flag vague tool descriptions, missing object schemas, absent required fields, open extra properties, weak parameter descriptions, unclear enums, schema-drifting input examples, and sensitive tools without safety language.
 - Return the smallest concrete schema changes needed before the tools become callable.
 
 <agent-tool-schema-lint output>
@@ -60,6 +62,8 @@ Rules:
 - `mcp-guard` when runtime calls need allow, block, or approval rules,
 - `agent-tool-call-audit` after a run to review what the agent actually called,
 - `agent-command-receipt` when command outcomes need reusable evidence.
+
+Follow-up: [Schema-Backed Tool Examples](./schema-backed-tool-examples.md).
 
 ## Failure Mode
 

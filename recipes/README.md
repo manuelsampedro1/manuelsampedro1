@@ -32,6 +32,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Sensitive Change Checks in Review Packets](./sensitive-change-checks-in-review-packets.md)
 - [Security-Sensitive Change Verification](./security-sensitive-change-verification.md)
 - [Scope Guard for Agent Diffs](./scope-guard-for-agent-diffs.md)
+- [Schema-Backed Tool Examples](./schema-backed-tool-examples.md)
 - [Runbook Drift Check](./runbook-drift-check.md)
 - [Rollback Plan for Agent Diffs](./rollback-plan-for-agent-diffs.md)
 - [Review Packet Working Tree Evidence](./review-packet-working-tree-evidence.md)

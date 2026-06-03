@@ -6,6 +6,7 @@ Concrete profile-workbench examples live here. They should show how a public cla
 
 - [Profile Evidence Map](./profile-evidence-map.md)
 - [External Reviewer Navigation](./external-reviewer-navigation.md)
+- [Schema-Backed Tool Example Chain](./schema-backed-tool-example-chain.md)
 - [Hash-Backed Worktree Guard Chain](./hash-backed-worktree-guard-chain.md)
 - [Proof Packet Scope Guard Chain](./proof-packet-scope-guard-chain.md)
 - [Proof Packet Diff Budget Chain](./proof-packet-diff-budget-chain.md)

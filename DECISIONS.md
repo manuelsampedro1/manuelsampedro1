@@ -1,5 +1,23 @@
 # Decisions
 
+## 2026-06-03 - Validate Tool Input Examples
+
+Use `agent-tool-schema-lint` to check `input_examples`, `inputExamples`, or
+`examples` before a JSON tool catalog becomes callable by a coding agent.
+
+Rationale:
+
+- Tool examples are part of the agent-facing interface, not only
+  documentation.
+- Examples should include required fields, avoid closed-schema extras, respect
+  simple JSON types, and use declared enum values.
+- Missing examples should stay visible as weak guidance, while schema-drifting
+  examples should block medium-strict gates.
+- The report should expose example counts so reviewers can scan interface
+  quality quickly.
+- This hardens an existing selected repo without increasing the root proof
+  table.
+
 ## 2026-06-03 - Hash Worktree Snapshots Before Agent Runs
 
 Use `agent-worktree-guard --expect-snapshot-sha256` when a dirty-worktree
