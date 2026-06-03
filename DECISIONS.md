@@ -1,5 +1,23 @@
 # Decisions
 
+## 2026-06-03 - Require Approval Evidence in Tool-Call Audits
+
+Use `agent-tool-call-audit --require-approval` when a saved tool-call history
+contains sensitive tools or external action commands.
+
+Rationale:
+
+- Post-run review should distinguish local verification from actions that send,
+  delete, deploy, publish, push, charge, or touch credentials.
+- Sensitive actions should carry explicit approval, permission, authorization,
+  or receipt evidence in the run history before the closeout is trusted.
+- The audit should count approval-required calls and calls with approval
+  evidence so reviewers can see the authority surface quickly.
+- Approval evidence should not suppress normal sensitive-tool review; it only
+  proves that an authority marker was present.
+- This hardens an existing selected repo without increasing the root proof
+  table.
+
 ## 2026-06-03 - Hash Redacted Artifacts Before Public Proof
 
 Use `agent-artifact-redactor --manifest` when a redacted proof artifact should

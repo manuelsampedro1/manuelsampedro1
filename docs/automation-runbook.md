@@ -89,6 +89,7 @@ The audit should also check:
 - closeout proof-packet evidence with `agent-closeout-check --proof-packet` when a final answer cites packet evidence and should fail on incomplete, missing-evidence, or file-misaligned packets.
 - closeout-claim integrity with `agent-claim-check --receipt` when exact command claims should be backed by hashed evidence files.
 - redacted-artifact manifest evidence with `agent-artifact-redactor --manifest` when public proof needs a shareable sanitized artifact plus source/redacted hashes.
+- tool-call approval evidence with `agent-tool-call-audit --require-approval` when sensitive external actions appear in run history.
 - The profile heading, opening agentic-engineering positioning, and `@manuelsampedrop` CTA staying intact.
 - Current Focus retaining the profile's core narrative anchors: reliability, verification, auditability, safety, and product judgment.
 - Current Focus staying shaped as exactly five bullets so the opening narrative does not turn into a generic interest list.
