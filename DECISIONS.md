@@ -1,5 +1,18 @@
 # Decisions
 
+## 2026-06-03 - Audit Proof Packets in Change Risk
+
+Use `agent-change-risk --proof-packet` to show which diff-derived review gates
+already have structured packet evidence.
+
+Rationale:
+
+- Risk level and required gates should remain derived from the diff, not from a
+  broad proof packet.
+- Reviewers still need to see which recommended gates have evidence attached.
+- Invalid, incomplete, missing-evidence, or diff-mismatched packets should fail
+  before their checks are reused in risk routing.
+
 ## 2026-05-21 - Profile Repo as AI Builder Workbench
 
 Use the GitHub profile repository as the professional front door and daily AI workbench.

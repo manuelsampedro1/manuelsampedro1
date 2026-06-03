@@ -68,6 +68,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Proof Packet Backed Plan Traces](./proof-packet-backed-plan-traces.md)
 - [Proof Packet Backed Merge Readiness](./proof-packet-backed-merge-readiness.md)
 - [Proof Packet Backed Closeouts](./proof-packet-backed-closeouts.md)
+- [Proof Packet Backed Change Risk](./proof-packet-backed-change-risk.md)
 - [Proof Packet Backed Acceptance Traces](./proof-packet-backed-acceptance-traces.md)
 - [Profile Proof Audit](./profile-proof-audit.md)
 - [Profile Proof Audit CI Thresholds](./profile-proof-audit-ci-thresholds.md)
