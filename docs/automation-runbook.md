@@ -75,6 +75,7 @@ The audit should also check:
 - test-impact packet evidence with `agent-test-impact --proof-packet` when broad test checks should appear as partial evidence and fail on incomplete or diff-mismatched packets.
 - change-risk packet evidence with `agent-change-risk --proof-packet` when recommended gates should show packet-backed evidence without reducing the diff-derived risk level.
 - dependency-review packet evidence with `agent-dependency-guard --proof-packet` when required dependency checks should show packet-backed evidence without reducing dependency findings.
+- diff-budget packet evidence with `agent-diff-budget --proof-packet` when budget reports should show packet-backed checks without raising limits or removing budget failures.
 - release-note proof-packet evidence with `agent-release-note-check --proof-packet` when release notes make verification claims from structured packet evidence without suppressing diff-derived release findings.
 - review-map proof-packet evidence with `agent-review-map --proof-packet` when review lanes should show packet-backed checks without changing diff-derived owners, questions, or handoff order.
 - review-finding proof-packet evidence with `agent-review-finding-check --proof-packet` when review findings should show packet-backed checks without suppressing severity, location, impact, actionability, vague-language, or outside-diff issues.

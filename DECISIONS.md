@@ -1,5 +1,23 @@
 # Decisions
 
+## 2026-06-03 - Verify Proof Packets in Diff Budgets
+
+Use `agent-diff-budget --proof-packet` when budget reports should show
+structured packet evidence beside matching changed files.
+
+Rationale:
+
+- Diff-budget verdicts should stay derived from file count, line volume, and
+  high-risk file count.
+- Proof packets can show which checks already exist for changed files, but only
+  after schema, verdict, missing-evidence, passing-check, and diff-alignment
+  checks pass.
+- Invalid, incomplete, missing-evidence, failing-check, or diff-mismatched
+  packets should fail before their checks are reused in budget reports.
+- Packet checks should never raise limits or remove budget failures.
+- This hardens an existing selected repo without increasing the root proof
+  table.
+
 ## 2026-06-03 - Verify Proof Packets in Review Findings
 
 Use `agent-review-finding-check --proof-packet` when review findings should

@@ -56,6 +56,17 @@ PYTHONPATH=src python3 -m agent_diff_budget /tmp/agent-change.diff \
 - add explicit rationale for why this broad diff is still reviewable,
 - escalate high-risk files into rollback, secret, and runbook gates.
 
+5. Attach structured proof-packet evidence when checks exist for the same diff:
+
+```sh
+PYTHONPATH=src python3 -m agent_diff_budget /tmp/agent-change.diff \
+  --max-files 6 \
+  --max-total 350 \
+  --max-high-risk-files 2 \
+  --proof-packet /tmp/proof-packet.json \
+  --format json
+```
+
 ## Prompt Pattern
 
 ```text
@@ -78,16 +89,20 @@ Rules:
 - Are tests, rollback, and runbook checks proportional to the risk tags?
 - Would splitting the diff improve review quality without losing context?
 - Does the final proof packet mention budget failures or the reason the budget was relaxed?
+- If a proof packet is attached, does it match the same diff without removing
+  budget failures?
 
 ## Failure Modes
 
 - Accepting a giant diff because the agent produced a polished closeout.
 - Letting documentation, CI, config, and product changes ship in one mixed review.
 - Relaxing budgets silently instead of recording why.
+- Treating a passing proof packet as permission to exceed file, line, or
+  high-risk limits.
 - Counting only files and missing line volume.
 - Counting only line volume and missing one high-risk file.
 
 ## Source Linkage
 
-- Repo / tool / workflow: [`agent-diff-budget`](https://github.com/manuelsampedro1/agent-diff-budget), public commit [`1ce33d9`](https://github.com/manuelsampedro1/agent-diff-budget/commit/1ce33d9cf6ba69c838bd3f29fd219dd2568b4870), [`README`](https://raw.githubusercontent.com/manuelsampedro1/agent-diff-budget/main/README.md), [`CLI`](https://raw.githubusercontent.com/manuelsampedro1/agent-diff-budget/main/src/agent_diff_budget/cli.py), [`tests`](https://raw.githubusercontent.com/manuelsampedro1/agent-diff-budget/main/tests/test_cli.py), [`small example`](https://raw.githubusercontent.com/manuelsampedro1/agent-diff-budget/main/examples/small.diff), and [`large example`](https://raw.githubusercontent.com/manuelsampedro1/agent-diff-budget/main/examples/large.diff).
-- Supporting prompt, script, or note: [`./scope-guard-for-agent-diffs.md`](./scope-guard-for-agent-diffs.md), [`./change-risk-matrix-for-agent-diffs.md`](./change-risk-matrix-for-agent-diffs.md), [`./agent-proof-packet-for-review.md`](./agent-proof-packet-for-review.md), and [`../labs/2026/2026-06-02-agent-diff-budget-public-launch.md`](../labs/2026/2026-06-02-agent-diff-budget-public-launch.md).
+- Repo / tool / workflow: [`agent-diff-budget`](https://github.com/manuelsampedro1/agent-diff-budget), public commit [`c336a9b`](https://github.com/manuelsampedro1/agent-diff-budget/commit/c336a9b41858800002d4d47d34f99b75500faf73), [`README`](https://raw.githubusercontent.com/manuelsampedro1/agent-diff-budget/main/README.md), [`CLI`](https://raw.githubusercontent.com/manuelsampedro1/agent-diff-budget/main/src/agent_diff_budget/cli.py), [`tests`](https://raw.githubusercontent.com/manuelsampedro1/agent-diff-budget/main/tests/test_cli.py), [`proof packet`](https://raw.githubusercontent.com/manuelsampedro1/agent-diff-budget/main/examples/proof-packet.json), [`small example`](https://raw.githubusercontent.com/manuelsampedro1/agent-diff-budget/main/examples/small.diff), and [`large example`](https://raw.githubusercontent.com/manuelsampedro1/agent-diff-budget/main/examples/large.diff).
+- Supporting prompt, script, or note: [`./proof-packet-backed-diff-budgets.md`](./proof-packet-backed-diff-budgets.md), [`./scope-guard-for-agent-diffs.md`](./scope-guard-for-agent-diffs.md), [`./change-risk-matrix-for-agent-diffs.md`](./change-risk-matrix-for-agent-diffs.md), [`./agent-proof-packet-for-review.md`](./agent-proof-packet-for-review.md), [`../labs/2026/2026-06-03-agent-diff-budget-proof-packets.md`](../labs/2026/2026-06-03-agent-diff-budget-proof-packets.md), and [`../labs/2026/2026-06-02-agent-diff-budget-public-launch.md`](../labs/2026/2026-06-02-agent-diff-budget-public-launch.md).

@@ -21,6 +21,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 - [2026-06-03 - Agent Output Contract Public Launch](./2026/2026-06-03-agent-output-contract-public-launch.md)
 - [2026-06-03 - Agent Merge Readiness Proof Packets](./2026/2026-06-03-agent-merge-readiness-proof-packets.md)
 - [2026-06-03 - Agent Evidence Chain Public Launch](./2026/2026-06-03-agent-evidence-chain-public-launch.md)
+- [2026-06-03 - Agent Diff Budget Proof Packets](./2026/2026-06-03-agent-diff-budget-proof-packets.md)
 - [2026-06-03 - Agent Dependency Guard Proof Packets](./2026/2026-06-03-agent-dependency-guard-proof-packets.md)
 - [2026-06-03 - Agent Command Receipt Strict Verification](./2026/2026-06-03-agent-command-receipt-strict-verification.md)
 - [2026-06-03 - Agent Closeout Check Proof Packets](./2026/2026-06-03-agent-closeout-check-proof-packets.md)
