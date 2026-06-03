@@ -1522,3 +1522,16 @@ Rationale:
   drifting into branch, file, issue, or plain-text references.
 - This strengthens the profile's review path without growing the root proof
   table.
+
+## 2026-06-03 - Require Strict Command Receipt Verification for Proof Reuse
+
+Prefer strict `agent-command-receipt verify` gates before a receipt is reused as
+passing proof.
+
+Rationale:
+
+- Hash integrity and pass readiness are different claims; a failed receipt can
+  be historically valid while still unsuitable for a passing closeout.
+- `--require-status pass` makes the required command outcome explicit.
+- `--min-evidence 1` prevents empty receipts from satisfying proof workflows.
+- This hardens an existing visible repo without adding another root proof row.

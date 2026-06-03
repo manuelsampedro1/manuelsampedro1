@@ -27,6 +27,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Task Contract Envelope Summary in Review Packets](./task-contract-envelope-summary-in-review-packets.md)
 - [Structured Task Contract Readiness](./structured-task-contract-readiness.md)
 - [Strict Ledger Doctor Gate](./strict-ledger-doctor-gate.md)
+- [Strict Command Receipt Verification](./strict-command-receipt-verification.md)
 - [Sensitive Review Packet to Ledger Evidence](./sensitive-review-packet-to-ledger-evidence.md)
 - [Sensitive Change Checks in Review Packets](./sensitive-change-checks-in-review-packets.md)
 - [Security-Sensitive Change Verification](./security-sensitive-change-verification.md)
