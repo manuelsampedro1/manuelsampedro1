@@ -966,10 +966,12 @@ class ProfileQualityAuditTests(unittest.TestCase):
             result.issues,
         )
 
-    def test_examples_index_must_link_every_example_file(self) -> None:
+    def test_public_indexes_must_link_every_markdown_file(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
+            docs = root / "docs"
             examples = root / "examples"
+            docs.mkdir()
             examples.mkdir()
             (root / "README.md").write_text(
                 "\n".join(
@@ -1000,6 +1002,8 @@ class ProfileQualityAuditTests(unittest.TestCase):
             )
             (root / "DECISIONS.md").write_text("", encoding="utf-8")
             (root / "TODO.md").write_text("", encoding="utf-8")
+            (docs / "README.md").write_text("# Docs\n\n## Entries\n", encoding="utf-8")
+            (docs / "hidden-runbook.md").write_text("# Hidden Runbook\n", encoding="utf-8")
             (examples / "README.md").write_text(
                 "\n".join(f"- [{Path(path).name}](./{Path(path).name})" for path in profile_quality_audit.REQUIRED_EXAMPLES),
                 encoding="utf-8",
@@ -1025,7 +1029,11 @@ class ProfileQualityAuditTests(unittest.TestCase):
             result = profile_quality_audit.audit(root)
 
         self.assertIn(
-            "examples/README.md does not link example: examples/unindexed-proof.md.",
+            "docs/README.md does not link public Markdown file: docs/hidden-runbook.md.",
+            result.issues,
+        )
+        self.assertIn(
+            "examples/README.md does not link public Markdown file: examples/unindexed-proof.md.",
             result.issues,
         )
 

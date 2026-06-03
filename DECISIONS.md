@@ -1384,3 +1384,17 @@ Rationale:
   discoverable, but they should not expand the root README.
 - Generating and verifying the docs index keeps operating docs visible while
   preserving the curated first-read profile surface.
+
+## 2026-06-03 - Audit Public Folder Index Coverage
+
+Require every public Markdown file under `docs`, `examples`, `labs`, `radar`,
+and `recipes` to be linked from its folder index.
+
+Rationale:
+
+- The public workbench is only useful if reviewers can navigate it from stable
+  indexes instead of discovering files by repository search.
+- Generated indexes already prevent drift during local verification, but the
+  profile quality audit should catch hidden public artifacts directly.
+- Applying one rule across all public folders keeps labs, recipes, radar,
+  examples, and operating docs equally discoverable.
