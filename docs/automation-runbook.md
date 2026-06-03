@@ -70,6 +70,7 @@ The audit should also check:
 - command-receipt proof reuse with `agent-command-receipt verify --require-status pass --min-evidence 1` before a receipt supports a passing closeout, ledger entry, review packet, or claim-check result.
 - proof-packet command evidence with `agent-proof-packet --receipt --receipt-base-dir` when a review packet should carry verified command output instead of a manual pass-check string.
 - structured output checks with `agent-output-contract check --require-checks` when JSON outputs will feed CI summaries, ledgers, review packets, merge gates, profile proof, or regression fixtures.
+- stable tool-call ids with `agent-tool-call-replay --require-call-ids` when saved transcripts will feed review evidence, regression inputs, run ledgers, or proof packets.
 - concrete source grounding with `agent-source-grounding check --require-concrete` when public notes, decisions, review packets, closeouts, or profile proof should contain inspectable pointers instead of source-shaped prose.
 - tool-example schema alignment with `agent-tool-schema-lint --fail-on medium` when examples should guide agent calls without drifting from required fields, closed schemas, simple types, or enums.
 - concrete-source memory evidence with `agent-memory-audit --fail-on medium` when reused memory contains current-state claims that should point at URLs, file paths, command/logs, run IDs, issues/PRs, receipts, reports, or commits.

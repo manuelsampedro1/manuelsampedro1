@@ -1,5 +1,24 @@
 # Decisions
 
+## 2026-06-03 - Require Stable IDs in Tool-Call Replay Evidence
+
+Use `agent-tool-call-replay --require-call-ids` when a saved tool-call
+transcript will be reused as review evidence, regression input, run-ledger
+context, or proof-packet support.
+
+Rationale:
+
+- Schema-valid arguments are not enough if a reviewer cannot point back to the
+  exact captured tool call.
+- Stable ids from `id`, `call_id`, or `tool_call_id` make replay output easier
+  to compare with transcripts, receipts, ledgers, and provider logs.
+- Duplicate call ids should block strict evidence reuse because they make
+  per-call findings ambiguous.
+- JSON and text output should expose `call_id_count` for quick reviewer
+  scanning.
+- This hardens an existing selected repo without increasing the root proof
+  table.
+
 ## 2026-06-03 - Require Structured Checks in Output Contracts
 
 Use `agent-output-contract check --require-checks` when a JSON output will be
