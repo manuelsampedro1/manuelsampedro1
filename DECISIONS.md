@@ -1412,3 +1412,17 @@ Rationale:
   `repo-flightcheck --check-remote` at `100/100` before profile promotion.
 - Growth remains constrained; this decision documents this specific addition
   rather than reopening the profile to unbounded repo volume.
+
+## 2026-06-03 - Promote Agent Output Contract as Structured Evidence Proof
+
+Add `agent-output-contract` as a second post-saturation `Selected Work`
+exception.
+
+Rationale:
+
+- It covers a distinct automation boundary: checking JSON outputs before CI,
+  ledgers, review packets, or profile proof reuse them as evidence.
+- The repo is public, dependency-free, tested, has CI, and passed
+  `repo-flightcheck --check-remote` at `100/100` before profile promotion.
+- It strengthens the agent-tooling story without duplicating pre-run, scope,
+  review, or closeout gates already present in the profile.

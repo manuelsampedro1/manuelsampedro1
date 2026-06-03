@@ -112,6 +112,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Agent Proof Packet for Review](./agent-proof-packet-for-review.md)
 - [Agent PR Brief](./agent-pr-brief.md)
 - [Agent Plan Trace](./agent-plan-trace.md)
+- [Agent Output Contract](./agent-output-contract.md)
 - [Agent Memory Audit](./agent-memory-audit.md)
 - [Agent Instruction Quality Gate](./agent-instruction-quality-gate.md)
 - [Agent Instruction Audit](./agent-instruction-audit.md)
