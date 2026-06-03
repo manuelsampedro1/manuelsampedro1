@@ -1,5 +1,21 @@
 # Decisions
 
+## 2026-06-03 - Verify Failed Command Receipts in Retry Guards
+
+Use `agent-retry-guard --receipt` when retry-loop evidence spans failed command
+receipts instead of one plain transcript.
+
+Rationale:
+
+- Repeated failure detection should not trust copied logs when hashed command
+  receipts are available.
+- Receipt status must be `fail`; passing, missing, empty, or drifted evidence
+  should fail before retry-loop scoring.
+- Receipt paths in the report make repeated failures easier to audit across
+  separate agent turns.
+- This hardens an existing selected repo without increasing the root proof
+  table.
+
 ## 2026-06-03 - Verify Failed Command Receipts in CI Failure Packets
 
 Use `agent-ci-failure-packet --receipt` when retry context should be generated

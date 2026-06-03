@@ -50,6 +50,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Rendered Verification Envelope to Ledger Evidence](./rendered-verification-envelope-to-ledger.md)
 - [Remote Readiness Before Public Proof](./remote-readiness-before-public-proof.md)
 - [Remote Failure Classification Before Public Proof](./remote-failure-classification-before-public-proof.md)
+- [Receipt-Backed Retry Guard](./receipt-backed-retry-guard.md)
 - [Receipt-Backed Proof Packets](./receipt-backed-proof-packets.md)
 - [Receipt-Backed CI Failure Packets](./receipt-backed-ci-failure-packets.md)
 - [Real Diff to Recipe](./real-diff-to-recipe.md)
