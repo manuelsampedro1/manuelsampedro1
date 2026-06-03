@@ -1566,3 +1566,18 @@ Rationale:
   quietly supplying checks.
 - This hardens an existing selected repo without increasing the root proof
   table.
+
+## 2026-06-03 - Verify Proof Packets in Closeout Checks
+
+Teach `agent-closeout-check` to verify `agent-proof-packet.v1` artifacts before
+using packet evidence to support a final answer.
+
+Rationale:
+
+- A closeout can cite a proof packet that is incomplete, stale, or missing
+  evidence.
+- Final-answer review should still require an exact verification section while
+  allowing a complete packet to supply changed-path evidence.
+- Closeout checks should fail when cited files are not covered by the packet.
+- This hardens an existing selected repo without increasing the root proof
+  table.

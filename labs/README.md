@@ -15,6 +15,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 - [2026-06-03 - Agent Merge Readiness Proof Packets](./2026/2026-06-03-agent-merge-readiness-proof-packets.md)
 - [2026-06-03 - Agent Evidence Chain Public Launch](./2026/2026-06-03-agent-evidence-chain-public-launch.md)
 - [2026-06-03 - Agent Command Receipt Strict Verification](./2026/2026-06-03-agent-command-receipt-strict-verification.md)
+- [2026-06-03 - Agent Closeout Check Proof Packets](./2026/2026-06-03-agent-closeout-check-proof-packets.md)
 - [2026-06-03 - Agent Claim Check Command Receipts](./2026/2026-06-03-agent-claim-check-command-receipts.md)
 - [2026-06-02 - Verify by Change Working Tree CI](./2026/2026-06-02-verify-by-change-working-tree-ci.md)
 - [2026-06-02 - Verify by Change Task Contract Metadata](./2026/2026-06-02-verify-by-change-task-contract-metadata.md)

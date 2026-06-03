@@ -64,6 +64,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Publish Queue for Local Agent Repos](./publish-queue-for-local-agent-repos.md)
 - [Public Surface Sync for Agent Repos](./public-surface-sync-for-agent-repos.md)
 - [Proof Packet Backed Merge Readiness](./proof-packet-backed-merge-readiness.md)
+- [Proof Packet Backed Closeouts](./proof-packet-backed-closeouts.md)
 - [Profile Proof Audit](./profile-proof-audit.md)
 - [Profile Proof Audit CI Thresholds](./profile-proof-audit-ci-thresholds.md)
 - [Profile Evidence Map Link Gate](./profile-evidence-map-link-gate.md)

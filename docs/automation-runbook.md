@@ -70,6 +70,7 @@ The audit should also check:
 - command-receipt proof reuse with `agent-command-receipt verify --require-status pass --min-evidence 1` before a receipt supports a passing closeout, ledger entry, review packet, or claim-check result.
 - proof-packet command evidence with `agent-proof-packet --receipt --receipt-base-dir` when a review packet should carry verified command output instead of a manual pass-check string.
 - merge-readiness packet evidence with `agent-merge-readiness --proof-packet` when a merge gate should import proof-packet checks only after verifying packet verdict and diff alignment.
+- closeout proof-packet evidence with `agent-closeout-check --proof-packet` when a final answer cites packet evidence and should fail on incomplete, missing-evidence, or file-misaligned packets.
 - closeout-claim integrity with `agent-claim-check --receipt` when exact command claims should be backed by hashed evidence files.
 - The profile heading, opening agentic-engineering positioning, and `@manuelsampedrop` CTA staying intact.
 - Current Focus retaining the profile's core narrative anchors: reliability, verification, auditability, safety, and product judgment.

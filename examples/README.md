@@ -6,6 +6,7 @@ Concrete profile-workbench examples live here. They should show how a public cla
 
 - [Profile Evidence Map](./profile-evidence-map.md)
 - [External Reviewer Navigation](./external-reviewer-navigation.md)
+- [Proof Packet Closeout Chain](./proof-packet-closeout-chain.md)
 - [Proof Packet Merge Readiness Chain](./proof-packet-merge-readiness-chain.md)
 - [Command Receipt Proof Packet Chain](./command-receipt-proof-packet-chain.md)
 - [Command Receipt Claim Check Chain](./command-receipt-claim-check-chain.md)
