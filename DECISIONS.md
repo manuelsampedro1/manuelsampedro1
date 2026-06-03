@@ -1,5 +1,20 @@
 # Decisions
 
+## 2026-06-03 - Verify Failed Command Receipts in CI Failure Packets
+
+Use `agent-ci-failure-packet --receipt` when retry context should be generated
+from a failed command receipt instead of loose copied CI logs.
+
+Rationale:
+
+- CI retry packets should prove which command failed before another agent uses
+  the log as debugging context.
+- Receipt status must be `fail`; passing, missing, empty, or drifted evidence
+  should not produce retry packets.
+- Size and SHA-256 checks keep copied CI logs from becoming stale hidden state.
+- This hardens an existing selected repo without increasing the root proof
+  table.
+
 ## 2026-06-03 - Audit Proof Packets in Dependency Review
 
 Use `agent-dependency-guard --proof-packet` to show which required dependency
