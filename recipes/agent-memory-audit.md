@@ -24,17 +24,25 @@ agent-memory-audit ~/.codex/automations/github-profile-maintenance/memory.md \
 agent-memory-audit memory.md --format json --min-score 80
 ```
 
-3. If the audit finds stale current-state claims, missing sources, public-action
-shortcuts, or secret markers, re-check the fact and edit the memory before
-passing it to another agent.
+3. When current-state claims matter, fail on medium findings so missing or weak
+source evidence blocks reuse:
 
-4. Preserve the audit result in the handoff, proof packet, or run ledger when
+```sh
+agent-memory-audit memory.md --format json --fail-on medium
+```
+
+4. If the audit finds stale current-state claims, missing sources, weak source
+evidence, public-action shortcuts, or secret markers, re-check the fact and
+edit the memory before passing it to another agent.
+
+5. Preserve the audit result in the handoff, proof packet, or run ledger when
 memory materially affects the next action.
 
 ## What Good Looks Like
 
 - Memory says how it may be used and says it is not ground truth.
-- Recent or external claims include source context.
+- Recent or external claims include concrete source context that points at a
+  URL, file path, command/log, run ID, issue/PR, receipt, report, or commit.
 - Old "current", "authenticated", or "latest" claims are re-verified before use.
 - Public actions stay attended unless explicit approval is recorded outside
   public memory.

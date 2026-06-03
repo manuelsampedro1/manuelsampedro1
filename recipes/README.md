@@ -106,6 +106,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Documented Command Drift Check](./documented-command-drift-check.md)
 - [Dirty Public Path Preflight for Agent Publish Flows](./dirty-public-path-preflight.md)
 - [Diff to Eval Case](./diff-to-eval-case.md)
+- [Concrete Source Memory Audits](./concrete-source-memory-audits.md)
 - [Command Receipt to Ledger Evidence](./command-receipt-to-ledger-evidence.md)
 - [Command Evidence Status Contract](./command-evidence-status-contract.md)
 - [Coding Agent Repo Loop](./coding-agent-repo-loop.md)

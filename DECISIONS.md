@@ -1,5 +1,23 @@
 # Decisions
 
+## 2026-06-03 - Require Concrete Sources in Memory Audits
+
+Use `agent-memory-audit --fail-on medium` when reused memory contains
+current-state or external claims that should be backed by inspectable evidence.
+
+Rationale:
+
+- Source-shaped prose such as `Sources: manual note` can make stale memory look
+  safer than it is.
+- Current-state claims should point at reusable evidence such as URLs, files,
+  command/log outputs, run IDs, issues/PRs, receipts, reports, or commits.
+- Source lookup should stay bound to the same Markdown paragraph or list item
+  so evidence from one memory entry cannot cover the next.
+- JSON and Markdown summaries should expose concrete source counts for quick
+  review.
+- This hardens an existing selected repo without increasing the root proof
+  table.
+
 ## 2026-06-03 - Require Approval Evidence in Tool-Call Audits
 
 Use `agent-tool-call-audit --require-approval` when a saved tool-call history

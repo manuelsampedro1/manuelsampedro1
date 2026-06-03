@@ -25,6 +25,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 - [2026-06-03 - Agent Plan Trace Proof Packets](./2026/2026-06-03-agent-plan-trace-proof-packets.md)
 - [2026-06-03 - Agent Output Contract Public Launch](./2026/2026-06-03-agent-output-contract-public-launch.md)
 - [2026-06-03 - Agent Merge Readiness Proof Packets](./2026/2026-06-03-agent-merge-readiness-proof-packets.md)
+- [2026-06-03 - Agent Memory Audit Concrete Sources](./2026/2026-06-03-agent-memory-audit-concrete-sources.md)
 - [2026-06-03 - Agent Evidence Chain Public Launch](./2026/2026-06-03-agent-evidence-chain-public-launch.md)
 - [2026-06-03 - Agent Diff Splitter Proof Packets](./2026/2026-06-03-agent-diff-splitter-proof-packets.md)
 - [2026-06-03 - Agent Diff Budget Proof Packets](./2026/2026-06-03-agent-diff-budget-proof-packets.md)
