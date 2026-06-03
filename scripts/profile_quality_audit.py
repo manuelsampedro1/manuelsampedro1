@@ -410,6 +410,23 @@ def audit_examples_index_coverage(root: Path, examples_index: str, issues: list[
             issues.append(f"examples/README.md does not link example: {relative_path}.")
 
 
+def audit_public_h1_structure(root: Path, issues: list[str]) -> None:
+    for path in public_tone_paths(root):
+        text = read_text(path)
+        if not text:
+            continue
+        headings = [
+            line
+            for line in markdown_without_code(text).splitlines()
+            if re.match(r"^#\s+\S", line)
+        ]
+        if len(headings) != 1:
+            relative_path = path.relative_to(root).as_posix()
+            issues.append(
+                f"Public surface Markdown has {len(headings)} page H1 headings in {relative_path}; keep exactly one."
+            )
+
+
 def audit(root: Path) -> AuditResult:
     readme = read_text(root / "README.md")
     decisions = read_text(root / "DECISIONS.md")
@@ -558,6 +575,7 @@ def audit(root: Path) -> AuditResult:
     audit_external_reviewer_navigation(root, issues)
     audit_public_surface_tone(root, issues)
     audit_public_relative_links(root, issues)
+    audit_public_h1_structure(root, issues)
 
     score = max(0, 100 - (len(issues) * 10) - (len(warnings) * 3))
     return AuditResult(

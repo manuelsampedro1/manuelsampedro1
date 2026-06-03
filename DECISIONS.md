@@ -1356,3 +1356,17 @@ Rationale:
   curated manually and need an executable coverage check.
 - Encoding index coverage in `scripts/profile_quality_audit.py` keeps future
   examples discoverable without expanding the root README.
+
+## 2026-06-03 - Audit Public Markdown H1 Structure
+
+Require each public Markdown page in the profile workbench to have exactly one
+real page H1, while ignoring fenced code examples.
+
+Rationale:
+
+- The public workbench uses generated indexes that derive titles from page H1s;
+  missing or repeated H1s make navigation and anchors less reliable.
+- Recipe templates sometimes need to show Markdown snippets with their own H1s,
+  so the audit must ignore fenced code instead of flattening useful examples.
+- Encoding the rule in `scripts/profile_quality_audit.py` keeps public notes,
+  recipes, docs, examples, and radar pages structurally consistent.

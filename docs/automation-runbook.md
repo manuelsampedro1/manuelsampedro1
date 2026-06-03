@@ -87,6 +87,7 @@ The audit should also check:
 - `examples/README.md` linking every example file so proof packets and reviewer routes do not become hidden artifacts.
 - Public notes, recipes, docs, radar, and examples staying free of external-validation or approval-chasing language; the profile should show useful proof, not ask for outcomes it cannot verify.
 - Relative links in public notes, recipes, docs, radar, and examples resolving inside this repo, with code examples ignored so upstream Markdown snippets do not create false positives.
+- Public Markdown pages keeping exactly one real page H1, with fenced code examples ignored, so indexes and reviewer anchors stay stable.
 
 ## Commit Rule
 

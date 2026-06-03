@@ -164,6 +164,49 @@ class ProfileQualityAuditTests(unittest.TestCase):
             result.issues,
         )
 
+    def test_public_surface_markdown_must_have_one_page_h1(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "recipes").mkdir()
+            (root / "README.md").write_text("# Test Profile\n", encoding="utf-8")
+            (root / "recipes" / "note.md").write_text(
+                "# First Title\n\nSome useful body.\n\n# Second Title\n",
+                encoding="utf-8",
+            )
+
+            result = profile_quality_audit.audit(root)
+
+        self.assertIn(
+            "Public surface Markdown has 2 page H1 headings in recipes/note.md; keep exactly one.",
+            result.issues,
+        )
+
+    def test_public_surface_h1_audit_ignores_code_examples(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "recipes").mkdir()
+            (root / "README.md").write_text("# Test Profile\n", encoding="utf-8")
+            (root / "recipes" / "note.md").write_text(
+                "\n".join(
+                    [
+                        "# Real Recipe Title",
+                        "",
+                        "```md",
+                        "# Template Title",
+                        "```",
+                        "",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+
+            result = profile_quality_audit.audit(root)
+
+        self.assertNotIn(
+            "Public surface Markdown has 2 page H1 headings in recipes/note.md; keep exactly one.",
+            result.issues,
+        )
+
     def test_missing_reviewer_path_fails(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
