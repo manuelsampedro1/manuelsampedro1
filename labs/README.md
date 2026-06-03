@@ -14,6 +14,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 - [2026-06-03 - Agent Tool Call Audit Approval Evidence](./2026/2026-06-03-agent-tool-call-audit-approval-evidence.md)
 - [2026-06-03 - Agent Test Impact Proof Packets](./2026/2026-06-03-agent-test-impact-proof-packets.md)
 - [2026-06-03 - Agent Start Gate Public Launch](./2026/2026-06-03-agent-start-gate-public-launch.md)
+- [2026-06-03 - Agent Start Gate Evidence Pointers](./2026/2026-06-03-agent-start-gate-evidence-pointers.md)
 - [2026-06-03 - Agent Source Grounding Public Launch](./2026/2026-06-03-agent-source-grounding-public-launch.md)
 - [2026-06-03 - Agent Source Grounding Concrete Pointers](./2026/2026-06-03-agent-source-grounding-concrete-pointers.md)
 - [2026-06-03 - Agent Scope Guard Proof Packets](./2026/2026-06-03-agent-scope-guard-proof-packets.md)

@@ -20,9 +20,15 @@ Create a Markdown start packet with these sections:
 agent-start-gate init AGENT_START.md
 agent-start-gate check AGENT_START.md
 agent-start-gate check AGENT_START.md --format json
+agent-start-gate check AGENT_START.md --require-evidence-pointers
 ```
 
 The gate should return `0` only when the packet is ready. Missing sections, failed evidence, absent commands, or weak stop conditions should return non-zero with actionable issues.
+
+Use `--require-evidence-pointers` when the packet will be reused beyond the
+current local run. In that mode, ready task, repo, and context evidence should
+include inspectable pointers such as paths, URLs, commands, run ids, commits,
+receipts, reports, or artifacts.
 
 ## Review Rule
 
@@ -31,6 +37,7 @@ Do not treat a long prompt as equivalent to start readiness. A reviewer should b
 - What the agent may change.
 - What it must not change.
 - Which evidence says the repo and task are ready.
+- Which pointer lets a reviewer inspect that evidence.
 - What context is trusted or untrusted.
 - How completion will be checked.
 - When the agent should stop before causing drift.

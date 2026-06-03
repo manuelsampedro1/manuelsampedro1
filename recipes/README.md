@@ -19,6 +19,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Verification Envelope in Review Packets](./verification-envelope-in-review-packets.md)
 - [Verification Checklist to Ledger Evidence](./verification-checklist-to-ledger.md)
 - [Verification by Change Type](./verification-by-change-type.md)
+- [Traceable Start Packets](./traceable-start-packets.md)
 - [Task Contracts in Review Packets](./task-contracts-in-review-packets.md)
 - [Task Contract Readiness Before Agent Work](./task-contract-readiness-before-agent-work.md)
 - [Task Contract Metadata in Verification Envelopes](./task-contract-metadata-in-verification-envelopes.md)

@@ -1,5 +1,24 @@
 # Decisions
 
+## 2026-06-03 - Require Evidence Pointers in Start Gates
+
+Use `agent-start-gate check --require-evidence-pointers` when a start packet
+will feed another agent, run ledger, review packet, closeout, or public proof
+note.
+
+Rationale:
+
+- A `pass` label in a start packet is too weak if a later reviewer cannot find
+  the task, readiness, or context evidence behind it.
+- Start evidence should point at inspectable paths, URLs, commands, run ids,
+  commits, receipts, reports, or artifacts before the first edit.
+- JSON and text output should expose evidence-pointer counts for quick
+  reviewer scanning.
+- The strict mode should harden the final pre-run gate without replacing the
+  upstream tools that produce the evidence.
+- This hardens an existing selected repo without increasing the root proof
+  table.
+
 ## 2026-06-03 - Require Run Identity in Evidence Chains
 
 Use `agent-evidence-chain check --require-task-id --require-run-id` when

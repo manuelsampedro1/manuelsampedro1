@@ -72,6 +72,7 @@ The audit should also check:
 - structured output checks with `agent-output-contract check --require-checks` when JSON outputs will feed CI summaries, ledgers, review packets, merge gates, profile proof, or regression fixtures.
 - stable tool-call ids with `agent-tool-call-replay --require-call-ids` when saved transcripts will feed review evidence, regression inputs, run ledgers, or proof packets.
 - run identity evidence chains with `agent-evidence-chain check --require-task-id --require-run-id` when JSON artifacts from review packets, verification envelopes, ledgers, or closeouts will be treated as one proof chain.
+- traceable start packets with `agent-start-gate check --require-evidence-pointers` when a pre-run packet will feed another agent, ledger, review packet, closeout, or public proof note.
 - concrete source grounding with `agent-source-grounding check --require-concrete` when public notes, decisions, review packets, closeouts, or profile proof should contain inspectable pointers instead of source-shaped prose.
 - tool-example schema alignment with `agent-tool-schema-lint --fail-on medium` when examples should guide agent calls without drifting from required fields, closed schemas, simple types, or enums.
 - concrete-source memory evidence with `agent-memory-audit --fail-on medium` when reused memory contains current-state claims that should point at URLs, file paths, command/logs, run IDs, issues/PRs, receipts, reports, or commits.

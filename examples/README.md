@@ -6,6 +6,7 @@ Concrete profile-workbench examples live here. They should show how a public cla
 
 - [Profile Evidence Map](./profile-evidence-map.md)
 - [External Reviewer Navigation](./external-reviewer-navigation.md)
+- [Traceable Start Gate Chain](./traceable-start-gate-chain.md)
 - [Run Identity Evidence Chain](./run-identity-evidence-chain.md)
 - [Stable Tool Call ID Chain](./stable-tool-call-id-chain.md)
 - [Structured Output Check Chain](./structured-output-check-chain.md)
