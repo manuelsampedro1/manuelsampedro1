@@ -75,6 +75,7 @@ The audit should also check:
 - test-impact packet evidence with `agent-test-impact --proof-packet` when broad test checks should appear as partial evidence and fail on incomplete or diff-mismatched packets.
 - change-risk packet evidence with `agent-change-risk --proof-packet` when recommended gates should show packet-backed evidence without reducing the diff-derived risk level.
 - dependency-review packet evidence with `agent-dependency-guard --proof-packet` when required dependency checks should show packet-backed evidence without reducing dependency findings.
+- release-note proof-packet evidence with `agent-release-note-check --proof-packet` when release notes make verification claims from structured packet evidence without suppressing diff-derived release findings.
 - plan-trace packet evidence with `agent-plan-trace --proof-packet` when completed plan items depend on structured proof packets and should fail on incomplete or diff-mismatched packets.
 - PR-description packet evidence with `agent-pr-brief --proof-packet` when a PR body relies on structured proof packets and should fail on incomplete or diff-mismatched packets.
 - merge-readiness packet evidence with `agent-merge-readiness --proof-packet` when a merge gate should import proof-packet checks only after verifying packet verdict and diff alignment.

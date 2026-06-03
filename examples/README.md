@@ -9,6 +9,7 @@ Concrete profile-workbench examples live here. They should show how a public cla
 - [Proof Packet Acceptance Trace Chain](./proof-packet-acceptance-trace-chain.md)
 - [Proof Packet Change Risk Chain](./proof-packet-change-risk-chain.md)
 - [Proof Packet Dependency Review Chain](./proof-packet-dependency-review-chain.md)
+- [Proof Packet Release Note Chain](./proof-packet-release-note-chain.md)
 - [Proof Packet Test Impact Chain](./proof-packet-test-impact-chain.md)
 - [Proof Packet Plan Trace Chain](./proof-packet-plan-trace-chain.md)
 - [Proof Packet PR Brief Chain](./proof-packet-pr-brief-chain.md)

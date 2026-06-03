@@ -1,5 +1,22 @@
 # Decisions
 
+## 2026-06-03 - Verify Proof Packets in Release Notes
+
+Use `agent-release-note-check --proof-packet` when release notes make
+verification claims from structured proof evidence.
+
+Rationale:
+
+- Release-note coverage findings should stay derived from the diff and note,
+  especially for breaking, security, dependency, CI, test, and docs-only risks.
+- Proof packets can support verification claims such as `fully tested`, but
+  only after schema, verdict, missing-evidence, passing-check, and diff-alignment
+  checks pass.
+- Invalid, incomplete, missing-evidence, failing-check, or diff-mismatched
+  packets should fail before their checks are reused in release notes.
+- This hardens an existing selected repo without increasing the root proof
+  table.
+
 ## 2026-06-03 - Verify Failed Command Receipts in Retry Guards
 
 Use `agent-retry-guard --receipt` when retry-loop evidence spans failed command
