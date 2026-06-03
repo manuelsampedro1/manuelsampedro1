@@ -7,6 +7,7 @@ or human reviewer.
 
 - Public tool: https://github.com/manuelsampedro1/agent-review-finding-check
 - Launch note: [2026-06-02 - Agent Review Finding Check Public Launch](../labs/2026/2026-06-02-agent-review-finding-check-public-launch.md)
+- Proof-packet follow-up: [2026-06-03 - Agent Review Finding Check Proof Packets](../labs/2026/2026-06-03-agent-review-finding-check-proof-packets.md)
 
 ## Pattern
 
@@ -48,6 +49,16 @@ agent-review-finding-check /tmp/review-findings.md \
   --write-report /tmp/review-finding-check.md
 ```
 
+6. Attach structured proof-packet evidence when available:
+
+```sh
+agent-review-finding-check /tmp/review-findings.md \
+  --diff /tmp/review.diff \
+  --proof-packet /tmp/proof-packet.json \
+  --min-score 90 \
+  --fail-on medium
+```
+
 ## What Good Looks Like
 
 - Each finding has severity and a concrete `file:line`.
@@ -57,6 +68,9 @@ agent-review-finding-check /tmp/review-findings.md \
 - The finding gives a fix path or next action.
 - High-priority findings include evidence language, not just assertion.
 - Empty reviews still mention residual risks or testing gaps.
+- Proof-packet checks can support matching file references, but they do not hide
+  missing severity, missing location, missing impact, missing action, vague
+  language, or outside-diff issues.
 
 ## Prompt Pattern
 
@@ -80,8 +94,8 @@ Rules:
 
 - `codex-review-packet` for repo-aware review context,
 - `agent-review-map` for lane routing,
-- `agent-pr-brief` before posting the PR description,
-- `agent-proof-packet` when review findings become durable evidence.
+- `agent-proof-packet` for structured command and file evidence,
+- `agent-pr-brief` before posting the PR description.
 
 ## Failure Mode
 

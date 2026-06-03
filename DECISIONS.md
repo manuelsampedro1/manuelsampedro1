@@ -1,5 +1,23 @@
 # Decisions
 
+## 2026-06-03 - Verify Proof Packets in Review Findings
+
+Use `agent-review-finding-check --proof-packet` when review findings should
+show structured packet evidence beside matching file references.
+
+Rationale:
+
+- Review-finding quality should stay derived from the comments themselves:
+  severity, file lines, impact, actionability, vague language, and diff
+  membership.
+- Proof packets can show which checks already exist for files mentioned by a
+  finding, but only after schema, verdict, missing-evidence, passing-check, and
+  diff-alignment checks pass.
+- Invalid, incomplete, missing-evidence, failing-check, or diff-mismatched
+  packets should fail before their checks are reused in finding reports.
+- This hardens an existing selected repo without increasing the root proof
+  table.
+
 ## 2026-06-03 - Verify Proof Packets in Review Maps
 
 Use `agent-review-map --proof-packet` when review-lane routing should show
