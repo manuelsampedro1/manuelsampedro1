@@ -1,5 +1,23 @@
 # Decisions
 
+## 2026-06-03 - Require Structured Checks in Output Contracts
+
+Use `agent-output-contract check --require-checks` when a JSON output will be
+reused by CI summaries, run ledgers, review packets, merge gates, profile proof,
+or regression fixtures.
+
+Rationale:
+
+- A bare passing outcome is too weak when another system will trust the output
+  as evidence.
+- `checks` should expose which internal checks ran, each with a name and a
+  single recognized outcome.
+- Passing outputs should fail the contract if any embedded check is failed,
+  blocked, partial, or needs review.
+- JSON and text output should expose `check_count` for quick reviewer scanning.
+- This hardens an existing selected repo without increasing the root proof
+  table.
+
 ## 2026-06-03 - Require Concrete Pointers in Source Grounding
 
 Use `agent-source-grounding check --require-sources --require-concrete` when

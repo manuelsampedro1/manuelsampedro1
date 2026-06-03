@@ -13,6 +13,8 @@ Require each output to include:
 - issue-like fields as arrays, not strings.
 - actionable evidence when the outcome is failing or blocked.
 - no blocking findings when the outcome is passing.
+- structured `checks` when `--require-checks` is used.
+- no failed, blocked, partial, or needs-review checks inside a passing output.
 
 ## CLI Pattern
 
@@ -20,6 +22,7 @@ Require each output to include:
 agent-output-contract check output.json
 agent-output-contract check reports/*.json
 agent-output-contract check output.json --format json
+agent-output-contract check output.json --require-checks
 ```
 
 The important distinction: a tool output with `status: fail` can still pass the output contract when it includes clear issues. The contract should fail when the JSON is invalid, ambiguous, contradictory, or unsafe to reuse.
@@ -31,7 +34,9 @@ Do not let downstream automation infer meaning from arbitrary JSON. Before a led
 - Can the consumer identify the schema?
 - Can it find one outcome without guessing?
 - Are blockers represented as structured lists?
+- Does the output expose structured checks when another system will trust it?
 - Does a passing outcome avoid hidden blockers?
+- Does a passing outcome avoid hidden failed checks?
 - Does a failing outcome provide actionable evidence?
 - Is the output free of obvious secrets and local absolute paths?
 
