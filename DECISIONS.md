@@ -1,5 +1,22 @@
 # Decisions
 
+## 2026-06-03 - Verify Proof Packets in Review Maps
+
+Use `agent-review-map --proof-packet` when review-lane routing should show
+structured packet evidence beside matching lane files.
+
+Rationale:
+
+- Review lanes, owners, questions, and handoff order should stay derived from
+  the diff.
+- Proof packets can show which checks already exist for lane files, but only
+  after schema, verdict, missing-evidence, passing-check, and diff-alignment
+  checks pass.
+- Invalid, incomplete, missing-evidence, failing-check, or diff-mismatched
+  packets should fail before their checks are reused in review routing.
+- This hardens an existing selected repo without increasing the root proof
+  table.
+
 ## 2026-06-03 - Verify Proof Packets in Release Notes
 
 Use `agent-release-note-check --proof-packet` when release notes make
