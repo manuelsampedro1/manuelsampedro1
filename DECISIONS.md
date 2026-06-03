@@ -1551,3 +1551,18 @@ Rationale:
   instead of letting a weak pass-check string carry the review.
 - This strengthens an existing selected repo without growing the root proof
   table.
+
+## 2026-06-03 - Verify Proof Packets Before Merge Readiness
+
+Teach `agent-merge-readiness` to verify `agent-proof-packet.v1` artifacts before
+using packet checks as merge evidence.
+
+Rationale:
+
+- A proof packet can be stale, blocked, or generated for a different diff.
+- Merge readiness should import packet checks only after the packet verdict is
+  `complete` and its changed files match the current diff.
+- Mismatched or incomplete proof packets now block the merge gate instead of
+  quietly supplying checks.
+- This hardens an existing selected repo without increasing the root proof
+  table.
