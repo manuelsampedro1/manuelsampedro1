@@ -1453,3 +1453,16 @@ Rationale:
   `repo-flightcheck --check-remote` at `100/100` before profile promotion.
 - Reaching the 50-row cap should stop root proof-table growth; future work
   should harden, combine, or curate the existing public stack.
+
+## 2026-06-03 - Audit Latest Proof Freshness
+
+Require the root README `Latest Proof` links to match the newest public lab note
+and the three newest public recipes.
+
+Rationale:
+
+- A highlight can be valid, indexed, and correctly shaped while still pointing
+  at older proof after a newer lab note or recipe ships.
+- Matching the same Git-add-time ordering used by the refresh script keeps the
+  first-read profile surface tied to the newest public evidence.
+- This improves profile maintenance without adding another root proof row.

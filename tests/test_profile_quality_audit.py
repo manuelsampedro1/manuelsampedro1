@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import importlib.util
+import os
 import sys
 import tempfile
 import unittest
@@ -296,6 +297,7 @@ class ProfileQualityAuditTests(unittest.TestCase):
         self.assertIn("Verify This Repo is missing verification detail: python audit tools.", result.issues)
         self.assertIn("Verify This Repo is missing verification detail: commit-script shell fixture.", result.issues)
         self.assertIn("Verify This Repo is missing verification detail: profile quality audit.", result.issues)
+        self.assertIn("Verify This Repo is missing verification detail: latest-proof freshness.", result.issues)
 
     def test_reviewer_path_must_stay_short(self) -> None:
         reviewer_path = "\n".join(
@@ -963,6 +965,139 @@ class ProfileQualityAuditTests(unittest.TestCase):
         )
         self.assertIn(
             "Latest Proof must include exactly 3 link(s) under ./recipes/; found 2.",
+            result.issues,
+        )
+
+    def test_latest_proof_must_match_newest_public_artifacts(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            examples = root / "examples"
+            labs = root / "labs"
+            lab_year = labs / "2026"
+            recipes = root / "recipes"
+            radar = root / "radar"
+            examples.mkdir()
+            lab_year.mkdir(parents=True)
+            recipes.mkdir()
+            radar.mkdir()
+
+            old_lab = lab_year / "2026-06-03-old-proof.md"
+            new_lab = lab_year / "2026-06-03-new-proof.md"
+            old_lab.write_text("# Old Proof\n", encoding="utf-8")
+            new_lab.write_text("# New Proof\n", encoding="utf-8")
+            os.utime(old_lab, (1_000, 1_000))
+            os.utime(new_lab, (2_000, 2_000))
+
+            recipe_times = {
+                "old-one.md": 1_000,
+                "old-two.md": 1_100,
+                "old-three.md": 1_200,
+                "new-one.md": 2_300,
+                "new-two.md": 2_200,
+                "new-three.md": 2_100,
+            }
+            for recipe_name, timestamp in recipe_times.items():
+                recipe_path = recipes / recipe_name
+                recipe_path.write_text(f"# {recipe_name}\n", encoding="utf-8")
+                os.utime(recipe_path, (timestamp, timestamp))
+
+            (labs / "README.md").write_text(
+                "\n".join(
+                    [
+                        f"- [Old Proof](./2026/{old_lab.name})",
+                        f"- [New Proof](./2026/{new_lab.name})",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+            (recipes / "README.md").write_text(
+                "\n".join(f"- [{recipe_name}](./{recipe_name})" for recipe_name in recipe_times),
+                encoding="utf-8",
+            )
+            (radar / "README.md").write_text("# Tooling Radar\n", encoding="utf-8")
+            (root / "README.md").write_text(
+                "\n".join(
+                    [
+                        "# Test Profile",
+                        "",
+                        "## Current Focus",
+                        "- Agent reliability.",
+                        "- Verification discipline.",
+                        "- Agent auditability.",
+                        "- Agent safety.",
+                        "- Product judgment.",
+                        "",
+                        "## Reviewer Path",
+                        "\n".join(profile_quality_audit.REVIEWER_PATH_TARGETS),
+                        "",
+                        "## Selected Work",
+                        "",
+                        "| Repo | What it proves | Why it matters |",
+                        "| --- | --- | --- |",
+                        "| [repo-a](https://github.com/manuelsampedro1/repo-a) | proof | why |",
+                        "",
+                        "## Agent Safety Layer",
+                        "",
+                        "| Repo | What it proves | Why it matters |",
+                        "| --- | --- | --- |",
+                        "| [mcp-guard](https://github.com/manuelsampedro1/mcp-guard) | proof | why |",
+                        "",
+                        "## How I Work With Codex",
+                        "",
+                        "## Public Workbench",
+                        "- [AI lab notes](./labs/README.md)",
+                        "- [Recipes](./recipes/README.md)",
+                        "- [Examples](./examples/README.md)",
+                        "- [Tooling radar](./radar/README.md)",
+                        "- [Automation runbook](./docs/automation-runbook.md)",
+                        "",
+                        "## Verify This Repo",
+                        "The check validates shell scripts, python audit tools, python unit tests, commit-script shell fixture, and profile quality audit.",
+                        "",
+                        "## Latest Proof",
+                        f"- Latest lab note: [Old Proof](./labs/2026/{old_lab.name})",
+                        "- Latest recipes:",
+                        "  - [Old One](./recipes/old-one.md)",
+                        "  - [Old Two](./recipes/old-two.md)",
+                        "  - [Old Three](./recipes/old-three.md)",
+                        "",
+                        "## Principles",
+                        "",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+            (root / "DECISIONS.md").write_text("", encoding="utf-8")
+            (root / "TODO.md").write_text("", encoding="utf-8")
+            (examples / "README.md").write_text(
+                "\n".join(f"- [{Path(path).name}](./{Path(path).name})" for path in profile_quality_audit.REQUIRED_EXAMPLES),
+                encoding="utf-8",
+            )
+            for path in profile_quality_audit.REQUIRED_EXAMPLES:
+                (root / path).write_text("# Example\n", encoding="utf-8")
+            (root / "examples" / "profile-evidence-map.md").write_text(
+                "\n".join(profile_quality_audit.EVIDENCE_MAP_REPOS)
+                + "\n"
+                + "\n".join(
+                    [
+                        "agent-release-readiness-chain.md",
+                        "agent-review-packet-to-ledger-chain.md",
+                        "external-reviewer-navigation.md",
+                        "profile-verification-proof-packet.md",
+                        "profile-curation-guard-proof-packet.md",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+
+            result = profile_quality_audit.audit(root)
+
+        self.assertIn(
+            "Latest Proof targets are stale for ./labs/: expected ./labs/2026/2026-06-03-new-proof.md; found ./labs/2026/2026-06-03-old-proof.md.",
+            result.issues,
+        )
+        self.assertIn(
+            "Latest Proof targets are stale for ./recipes/: expected ./recipes/new-one.md, ./recipes/new-two.md, ./recipes/new-three.md; found ./recipes/old-one.md, ./recipes/old-two.md, ./recipes/old-three.md.",
             result.issues,
         )
 

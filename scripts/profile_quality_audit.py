@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import subprocess
 import sys
 from dataclasses import asdict, dataclass
 from pathlib import Path
@@ -132,6 +133,7 @@ VERIFY_SECTION_REQUIRED_PHRASES = [
     "python unit tests",
     "commit-script shell fixture",
     "profile quality audit",
+    "latest-proof freshness",
 ]
 
 PUBLIC_WORKBENCH_TARGETS = [
@@ -287,6 +289,13 @@ def markdown_links(markdown: str) -> list[tuple[str, str]]:
     return [(match.group(1).strip(), match.group(2).strip()) for match in re.finditer(r"\[([^\]]+)\]\(([^)]+)\)", markdown)]
 
 
+def normalized_link_target(target: str) -> str:
+    normalized_target = target.strip()
+    if normalized_target.startswith("<") and normalized_target.endswith(">"):
+        normalized_target = normalized_target[1:-1]
+    return normalized_target.split("#", 1)[0].rstrip("/")
+
+
 def markdown_without_code(markdown: str) -> str:
     without_fenced_code = re.sub(r"```.*?```", "", markdown, flags=re.DOTALL)
     return re.sub(r"`[^`\n]*`", "", without_fenced_code)
@@ -295,15 +304,68 @@ def markdown_without_code(markdown: str) -> str:
 def relative_markdown_targets(markdown: str) -> list[tuple[str, str]]:
     targets: list[tuple[str, str]] = []
     for _, target in markdown_links(markdown_without_code(markdown)):
-        normalized_target = target.strip()
-        if normalized_target.startswith("<") and normalized_target.endswith(">"):
-            normalized_target = normalized_target[1:-1]
+        normalized_target = normalized_link_target(target)
         if normalized_target.startswith(("http://", "https://", "mailto:", "#")):
             continue
-        path_target = normalized_target.split("#", 1)[0]
-        if path_target:
-            targets.append((target, path_target))
+        if normalized_target:
+            targets.append((target, normalized_target))
     return targets
+
+
+def git_added_timestamp(root: Path, path: Path) -> int | None:
+    try:
+        relative_path = path.relative_to(root).as_posix()
+    except ValueError:
+        return None
+    try:
+        completed = subprocess.run(
+            [
+                "git",
+                "-C",
+                str(root),
+                "log",
+                "--diff-filter=A",
+                "--follow",
+                "--format=%ct",
+                "--",
+                relative_path,
+            ],
+            check=False,
+            capture_output=True,
+            text=True,
+            timeout=5,
+        )
+    except (OSError, subprocess.SubprocessError):
+        return None
+    if completed.returncode != 0:
+        return None
+    timestamps = [line.strip() for line in completed.stdout.splitlines() if line.strip()]
+    if not timestamps:
+        return None
+    try:
+        return int(timestamps[-1])
+    except ValueError:
+        return None
+
+
+def public_artifact_timestamp(root: Path, path: Path) -> int:
+    return git_added_timestamp(root, path) or int(path.stat().st_mtime)
+
+
+def latest_public_artifacts(root: Path, directory: str, limit: int) -> list[Path]:
+    artifact_root = root / directory
+    if not artifact_root.exists():
+        return []
+    paths = sorted(
+        (path for path in artifact_root.rglob("*.md") if path.name != "README.md"),
+        key=lambda path: (public_artifact_timestamp(root, path), path.as_posix()),
+        reverse=True,
+    )
+    return paths[:limit]
+
+
+def latest_artifact_targets(root: Path, directory: str, limit: int) -> list[str]:
+    return [f"./{path.relative_to(root).as_posix()}" for path in latest_public_artifacts(root, directory, limit)]
 
 
 def audit_repo_table(section: str, entries: list[tuple[str, str]], issues: list[str]) -> None:
@@ -329,15 +391,17 @@ def audit_latest_proof_indexes(root: Path, readme: str, issues: list[str]) -> No
         for prefix, index_path in LATEST_PROOF_INDEXES.items()
     }
     managed_prefix_counts = {prefix: 0 for prefix in LATEST_PROOF_REQUIRED_PREFIX_COUNTS}
+    managed_targets = {prefix: [] for prefix in LATEST_PROOF_REQUIRED_PREFIX_COUNTS}
     managed_link_count = 0
     for _, target in markdown_links(latest_proof):
-        normalized_target = target.split("#", 1)[0].rstrip("/")
+        normalized_target = normalized_link_target(target)
         for prefix, index_path in LATEST_PROOF_INDEXES.items():
             if not normalized_target.startswith(prefix):
                 continue
             managed_link_count += 1
             if prefix in managed_prefix_counts:
                 managed_prefix_counts[prefix] += 1
+                managed_targets[prefix].append(normalized_target)
             relative_path = normalized_target.removeprefix("./")
             if not (root / relative_path).exists():
                 issues.append(f"Latest Proof target is missing: {target}.")
@@ -355,6 +419,14 @@ def audit_latest_proof_indexes(root: Path, readme: str, issues: list[str]) -> No
         if actual_count != expected_count:
             issues.append(
                 f"Latest Proof must include exactly {expected_count} link(s) under {prefix}; found {actual_count}."
+            )
+        expected_targets = latest_artifact_targets(root, prefix.removeprefix("./").rstrip("/"), expected_count)
+        actual_targets = managed_targets[prefix]
+        if actual_targets != expected_targets:
+            issues.append(
+                "Latest Proof targets are stale for "
+                f"{prefix}: expected {', '.join(expected_targets) or 'none'}; "
+                f"found {', '.join(actual_targets) or 'none'}."
             )
 
 

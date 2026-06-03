@@ -67,6 +67,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Machine-Readable Doctor Output](./machine-readable-doctor-output.md)
 - [Local Tool Availability Preflight](./local-tool-availability-preflight.md)
 - [Local-First Draft Round Trip](./local-first-draft-round-trip.md)
+- [Latest Proof Freshness Gate](./latest-proof-freshness-gate.md)
 - [JSON Envelope for Verification Gates](./json-envelope-for-verification-gates.md)
 - [Handoff Scope Warnings Before Codex](./handoff-scope-warnings-before-codex.md)
 - [GitHub Actions Run Evidence to Ledger](./github-actions-run-evidence-to-ledger.md)

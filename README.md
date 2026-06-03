@@ -129,15 +129,15 @@ make lint
 make build
 ```
 
-The check validates shell scripts, compiles local Python audit tools, runs Python unit tests, runs the commit-script shell fixture, executes the profile quality audit, regenerates public indexes, refreshes latest-proof links, and fails if generated files drift.
+The check validates shell scripts, compiles local Python audit tools, runs Python unit tests, runs the commit-script shell fixture, executes the profile quality audit, regenerates public indexes, checks latest-proof freshness, refreshes latest-proof links, and fails if generated files drift.
 
 ## Latest Proof
 
-- Latest lab note: [2026-06-03 - Agent Source Grounding Public Launch](./labs/2026/2026-06-03-agent-source-grounding-public-launch.md)
+- Latest lab note: [2026-06-03 - Latest Proof Freshness Gate](./labs/2026/2026-06-03-latest-proof-freshness-gate.md)
 - Latest recipes:
+  - [Latest Proof Freshness Gate](./recipes/latest-proof-freshness-gate.md)
   - [Agent Source Grounding](./recipes/agent-source-grounding.md)
   - [Agent Evidence Chain](./recipes/agent-evidence-chain.md)
-  - [Agent Output Contract](./recipes/agent-output-contract.md)
 
 ## Principles
 
