@@ -64,6 +64,7 @@ EVIDENCE_MAP_REPOS = [
     "agent-start-gate",
     "agent-output-contract",
     "agent-evidence-chain",
+    "agent-source-grounding",
     "repo-flightcheck",
     "codex-review-packet",
     "verify-by-change",

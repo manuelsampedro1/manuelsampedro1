@@ -102,6 +102,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Agent Test Impact](./agent-test-impact.md)
 - [Agent Task Contract Preflight](./agent-task-contract-preflight.md)
 - [Agent Start Gate](./agent-start-gate.md)
+- [Agent Source Grounding](./agent-source-grounding.md)
 - [Agent Review Map](./agent-review-map.md)
 - [Agent Review Finding Check](./agent-review-finding-check.md)
 - [Agent Retry Guard](./agent-retry-guard.md)

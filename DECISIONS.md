@@ -1440,3 +1440,16 @@ Rationale:
   `repo-flightcheck --check-remote` at `100/100` before profile promotion.
 - It keeps the profile focused on inspectable agent reliability by validating a
   proof chain before review packets, ledgers, or closeouts reuse it.
+
+## 2026-06-03 - Promote Agent Source Grounding as Claim Evidence Proof
+
+Add `agent-source-grounding` as the final 50-row `Selected Work` exception.
+
+Rationale:
+
+- It covers a distinct review failure mode: agent-written Markdown or JSON can
+  sound useful while its claims lack sources, evidence, or inspectable links.
+- The repo is public, dependency-free, tested, has CI, and passed
+  `repo-flightcheck --check-remote` at `100/100` before profile promotion.
+- Reaching the 50-row cap should stop root proof-table growth; future work
+  should harden, combine, or curate the existing public stack.

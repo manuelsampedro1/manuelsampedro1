@@ -5,6 +5,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 ## Entries
 
 - [2026-06-03 - Agent Start Gate Public Launch](./2026/2026-06-03-agent-start-gate-public-launch.md)
+- [2026-06-03 - Agent Source Grounding Public Launch](./2026/2026-06-03-agent-source-grounding-public-launch.md)
 - [2026-06-03 - Agent Output Contract Public Launch](./2026/2026-06-03-agent-output-contract-public-launch.md)
 - [2026-06-03 - Agent Evidence Chain Public Launch](./2026/2026-06-03-agent-evidence-chain-public-launch.md)
 - [2026-06-02 - Verify by Change Working Tree CI](./2026/2026-06-02-verify-by-change-working-tree-ci.md)

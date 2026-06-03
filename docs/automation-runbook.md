@@ -75,7 +75,7 @@ The audit should also check:
 - `Latest Proof` staying shaped as one lab note and three recipe links so the highlight remains concise instead of becoming another index.
 - Reviewer Path length staying at four bullets or fewer, with extra routes moved to examples instead of the first-read README section.
 - Reviewer Path links staying on the approved first-read route instead of accumulating extra proof links.
-- Selected Work row-count freeze at the current 49-row post-saturation state unless another explicit growth rationale is recorded.
+- Selected Work row-count freeze at the current 50-row cap; future useful work should improve existing repos or add examples, recipes, labs, or curation instead of another root row.
 - Unique `Selected Work` repo targets so repeated links cannot inflate the proof surface.
 - Owned `Selected Work` repo targets under `https://github.com/manuelsampedro1/`; external links belong in notes, recipes, or radar, not the primary proof table.
 - Matching `Selected Work` labels and repo slugs so visible repo names cannot point to a different target.
@@ -84,7 +84,7 @@ The audit should also check:
 - Linked repo entries for every `Selected Work` and `Agent Safety Layer` table row so primary proof never becomes an unclickable claim.
 - `Agent Safety Layer` row-count freeze at the saturated 6-row baseline unless an explicit post-saturation growth decision is recorded.
 - `examples/external-reviewer-navigation.md` keeping a concrete five-minute review path through the core loop, safety layer, composition examples, and review prompt instead of drifting into generic profile copy.
-- `examples/profile-evidence-map.md` keeping the primary claim repos, including `agent-start-gate`, `agent-output-contract`, and `agent-evidence-chain`, linked so the profile can be reviewed by capability instead of repo count.
+- `examples/profile-evidence-map.md` keeping the primary claim repos, including `agent-start-gate`, `agent-output-contract`, `agent-evidence-chain`, and `agent-source-grounding`, linked so the profile can be reviewed by capability instead of repo count.
 - Public folder indexes linking every Markdown file under `docs`, `examples`, `labs`, `radar`, and `recipes` so proof packets, notes, and operating docs do not become hidden artifacts.
 - Public notes, recipes, docs, radar, and examples staying free of external-validation or approval-chasing language; the profile should show useful proof, not ask for outcomes it cannot verify.
 - Relative links in public notes, recipes, docs, radar, and examples resolving inside this repo, with code examples ignored so upstream Markdown snippets do not create false positives.
