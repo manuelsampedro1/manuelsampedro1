@@ -1581,3 +1581,19 @@ Rationale:
 - Closeout checks should fail when cited files are not covered by the packet.
 - This hardens an existing selected repo without increasing the root proof
   table.
+
+## 2026-06-03 - Trace Proof Packets in Agent Plans
+
+Teach `agent-plan-trace` to verify `agent-proof-packet.v1` artifacts before
+using packet evidence to support completed plan items.
+
+Rationale:
+
+- A completed plan item can be backed by a stale or incomplete proof packet.
+- Plan tracing should accept structured packet evidence only when the packet is
+  `complete`, has passing checks, carries changed-file evidence, and has no
+  missing evidence.
+- When a diff is provided, packet changed files should match the diff before
+  supporting the trace.
+- This hardens an existing selected repo without increasing the root proof
+  table.
