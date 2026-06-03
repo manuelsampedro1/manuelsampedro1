@@ -1398,3 +1398,17 @@ Rationale:
   profile quality audit should catch hidden public artifacts directly.
 - Applying one rule across all public folders keeps labs, recipes, radar,
   examples, and operating docs equally discoverable.
+
+## 2026-06-03 - Allow Selected Work Growth After Saturation
+
+Add `agent-start-gate` as a single post-saturation `Selected Work` exception.
+
+Rationale:
+
+- It covers a real workflow gap before the first edit: deciding whether a
+  coding-agent run should start based on objective, scope, inputs, worktree,
+  context, verification, and stop conditions.
+- The repo is public, dependency-free, tested, has CI, and passed
+  `repo-flightcheck --check-remote` at `100/100` before profile promotion.
+- Growth remains constrained; this decision documents this specific addition
+  rather than reopening the profile to unbounded repo volume.

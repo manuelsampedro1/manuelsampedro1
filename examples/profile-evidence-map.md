@@ -6,6 +6,7 @@ Use this map to review the profile by claim instead of by repo count.
 
 | Claim | Primary evidence | What to inspect |
 | --- | --- | --- |
+| I gate agent starts before the first edit. | [`agent-start-gate`](https://github.com/manuelsampedro1/agent-start-gate), [`agent-task-contract`](https://github.com/manuelsampedro1/agent-task-contract), [`repo-flightcheck`](https://github.com/manuelsampedro1/repo-flightcheck) | Start-packet checks, task-contract checks, repo readiness output, non-zero failures, tests, and CI. |
 | I build repo-readiness gates for coding agents. | [`repo-flightcheck`](https://github.com/manuelsampedro1/repo-flightcheck) | README usage, `bin/repo-flightcheck.js`, tests, CI, and `--check-remote --strict` output. |
 | I package better review context for agents and humans. | [`codex-review-packet`](https://github.com/manuelsampedro1/codex-review-packet) | Review-map output, task-contract support, verification envelope rendering, CI/published-HEAD sections. |
 | I tie verification to actual changed files. | [`verify-by-change`](https://github.com/manuelsampedro1/verify-by-change) | Path-category rules, JSON envelope output, review-packet input, empty-diff behavior. |

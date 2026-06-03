@@ -32,6 +32,7 @@ If you have five minutes, start with the workflow rather than the full repo list
 | [agent-handoff-brief](https://github.com/manuelsampedro1/agent-handoff-brief) | Pre-run agent handoffs | Turns task contracts and repo context into compact coding-agent briefs with required reading, commands, verification, risk paths, gaps, and a ready-to-use prompt. |
 | [agent-continuation-brief](https://github.com/manuelsampedro1/agent-continuation-brief) | Long-run continuation handoffs | Audits continuation notes for original objective, current state, completed work, blockers, changed files, commands, next actions, risks, and next-agent instructions before another coding agent resumes. |
 | [agent-handoff-drift](https://github.com/manuelsampedro1/agent-handoff-drift) | Handoff state drift | Checks handoff notes against the live repo for missing files, stale HEAD or branch claims, false clean-tree claims, and weak command-success evidence before another agent continues. |
+| [agent-start-gate](https://github.com/manuelsampedro1/agent-start-gate) | Pre-run start gate | Gates coding-agent starts from a Markdown packet with objective, scope, inputs, worktree state, context screening, verification commands, and stop conditions before the first edit. |
 | [agent-context-sentinel](https://github.com/manuelsampedro1/agent-context-sentinel) | Context injection preflight | Audits untrusted context for prompt-injection language, hidden authority claims, secret exfiltration requests, dangerous commands, unattended sensitive actions, local paths, and missing source metadata before agent handoff. |
 | [agent-context-budget](https://github.com/manuelsampedro1/agent-context-budget) | Context budget planning | Estimates token pressure, detects oversized or duplicate context, and produces keep/summarize/drop plans before coding-agent handoffs. |
 | [agent-tool-schema-lint](https://github.com/manuelsampedro1/agent-tool-schema-lint) | Tool schema quality | Lints JSON tool definitions for strong descriptions, object schemas, required fields, extra-property control, parameter guidance, enum clarity, and safety language before agents can call them. |
@@ -129,11 +130,11 @@ The check validates shell scripts, compiles local Python audit tools, runs Pytho
 
 ## Latest Proof
 
-- Latest lab note: [2026-06-02 - Agent Release Note Check Public Launch](./labs/2026/2026-06-02-agent-release-note-check-public-launch.md)
+- Latest lab note: [2026-06-03 - Agent Start Gate Public Launch](./labs/2026/2026-06-03-agent-start-gate-public-launch.md)
 - Latest recipes:
+  - [Agent Start Gate](./recipes/agent-start-gate.md)
   - [Agent Release Note Check](./recipes/agent-release-note-check.md)
   - [Agent Tool Call Replay](./recipes/agent-tool-call-replay.md)
-  - [Agent Review Finding Check](./recipes/agent-review-finding-check.md)
 
 ## Principles
 
