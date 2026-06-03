@@ -1,5 +1,24 @@
 # Decisions
 
+## 2026-06-03 - Require Concrete Pointers in Source Grounding
+
+Use `agent-source-grounding check --require-sources --require-concrete` when
+agent-written Markdown or JSON will become public proof, decisions, review
+packets, closeouts, or profile claims.
+
+Rationale:
+
+- Source-shaped prose can make claims look grounded while leaving reviewers
+  nothing to inspect.
+- Concrete pointers should include URLs, file paths, command/log evidence, run
+  IDs, job/artifact IDs, issue/PR references, receipts, reports, transcripts,
+  or commits.
+- JSON and text output should expose `concrete_source_count` so reviewers can
+  scan grounding strength quickly.
+- Placeholder citations and missing evidence remain separate blockers.
+- This hardens an existing selected repo without increasing the root proof
+  table.
+
 ## 2026-06-03 - Require Concrete Sources in Memory Audits
 
 Use `agent-memory-audit --fail-on medium` when reused memory contains

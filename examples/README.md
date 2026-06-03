@@ -6,6 +6,7 @@ Concrete profile-workbench examples live here. They should show how a public cla
 
 - [Profile Evidence Map](./profile-evidence-map.md)
 - [External Reviewer Navigation](./external-reviewer-navigation.md)
+- [Concrete Source Grounding Chain](./concrete-source-grounding-chain.md)
 - [Approval-Backed Tool Call Audit Chain](./approval-backed-tool-call-audit-chain.md)
 - [Concrete Source Memory Audit Chain](./concrete-source-memory-audit-chain.md)
 - [Redacted Artifact Manifest Chain](./redacted-artifact-manifest-chain.md)
