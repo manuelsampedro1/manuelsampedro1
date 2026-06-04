@@ -135,9 +135,9 @@ The check validates shell scripts, compiles local Python audit tools, runs Pytho
 
 - Latest lab note: [2026-06-04 - Retro-Dated Lab Notes and Latest Proof](./labs/2026/2026-06-04-retro-dated-lab-notes-and-latest-proof.md)
 - Latest recipes:
+  - [Automation Memory for Recurring Codex Runs](./recipes/automation-memory-for-recurring-codex-runs.md)
   - [Copy-Paste Start Packet for Codex](./recipes/copy-paste-start-packet-for-codex.md)
   - [Stable Acceptance Criteria IDs](./recipes/stable-acceptance-criteria-ids.md)
-  - [Traceable Start Packets](./recipes/traceable-start-packets.md)
 
 ## Principles
 
