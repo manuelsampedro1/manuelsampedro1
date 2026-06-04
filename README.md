@@ -133,7 +133,7 @@ The check validates shell scripts, compiles local Python audit tools, runs Pytho
 
 ## Latest Proof
 
-- Latest lab note: [2026-06-03 - Agent Task Contract Acceptance IDs](./labs/2026/2026-06-03-agent-task-contract-acceptance-ids.md)
+- Latest lab note: [2026-06-04 - Retro-Dated Lab Notes and Latest Proof](./labs/2026/2026-06-04-retro-dated-lab-notes-and-latest-proof.md)
 - Latest recipes:
   - [Copy-Paste Start Packet for Codex](./recipes/copy-paste-start-packet-for-codex.md)
   - [Stable Acceptance Criteria IDs](./recipes/stable-acceptance-criteria-ids.md)

@@ -4,6 +4,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 
 ## Entries
 
+- [2026-06-04 - Retro-Dated Lab Notes and Latest Proof](./2026/2026-06-04-retro-dated-lab-notes-and-latest-proof.md)
 - [2026-06-03 - Residual Scratch Warnings After Agent Publish](./2026/2026-06-03-residual-scratch-warnings-after-agent-publish.md)
 - [2026-06-03 - Profile Proof Audit CI Thresholds](./2026/2026-06-03-profile-proof-audit-ci-thresholds.md)
 - [2026-06-03 - Profile Evidence Map Canonical Links](./2026/2026-06-03-profile-evidence-map-canonical-links.md)
