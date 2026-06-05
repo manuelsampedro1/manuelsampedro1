@@ -127,6 +127,7 @@ Reusable AI-building patterns live here. Keep each recipe short, practical, and 
 - [Brief Readiness Before Codex](./brief-readiness-before-codex.md)
 - [Bounded Diff Review Packet](./bounded-diff-review-packet.md)
 - [Base Diff Plus Working Tree Verification](./base-diff-plus-working-tree-verification.md)
+- [Backfilled Lab Note Latest Proof Check](./backfilled-lab-note-latest-proof-check.md)
 - [Automation Memory for Recurring Codex Runs](./automation-memory-for-recurring-codex-runs.md)
 - [Approval-Backed Tool Call Audits](./approval-backed-tool-call-audits.md)
 - [AI Repo Review Findings](./ai-repo-review-findings.md)
