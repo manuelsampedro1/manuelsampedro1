@@ -11,15 +11,31 @@ Use this when a Codex, Claude Code, or scheduled repo automation calls a publish
 
 ## Goal
 
-Make every artifact-producing automation pass the exact pre-existing file paths created for that run, and nothing broader.
+Make every artifact-producing automation pass the exact pre-existing file paths created for that run before broad staging begins.
 
 In this repo, [`../scripts/commit_daily_update.sh`](../scripts/commit_daily_update.sh) now treats paths after the commit message as `expected_paths`. If a new recipe file already exists in `recipes/` before the script starts, the caller must pass that exact file path or the run is blocked.
 
 Generated files such as `README.md`, `recipes/README.md`, or `labs/README.md` do not belong in that argument list when the publish script regenerates them later in the run.
 
+The important limit is scope: this contract protects the preflight before refresh scripts run. It does not automatically guarantee that the final commit is limited to `expected_paths`.
+
+## Trust Boundary
+
+Treat `expected_paths` as a caller-side preflight contract, not as a final staging allowlist.
+
+That means:
+
+- the caller still needs to name the real artifact paths that already exist before publish,
+- generated surfaces can still appear later if refresh scripts update them after preflight,
+- a buggy or widened refresh step can still expand the final commit beyond the original `expected_paths`.
+
+If you need the final commit to stay inside a strict file set, add one more guard after refresh or replace broad staging with an explicit post-refresh allowlist.
+
 ## Decision Rule
 
 Pass only files that already exist as intentional artifacts before the publish entrypoint begins.
+
+Assume those paths constrain preflight only unless you also verify the post-refresh changed-path set.
 
 Good examples:
 
@@ -38,7 +54,10 @@ If you need to allow a directory, the publish contract is too loose for an agent
 
 ## Workflow
 
-1. Read the real publish entrypoint and confirm when its dirty-path preflight runs.
+1. Read the real publish entrypoint and confirm:
+   - when its dirty-path preflight runs,
+   - when refresh scripts mutate generated surfaces,
+   - and when the final `git add` happens.
 2. Identify the one substantive artifact this run creates or edits before publish.
 3. Capture that artifact path explicitly in the caller:
    - from a note-generator script output,
@@ -53,7 +72,10 @@ If you need to allow a directory, the publish contract is too loose for an agent
    - confirm the script blocks and prints the unexpected path.
 7. Verify the success path:
    - rerun with the exact artifact path,
-   - inspect the final commit to confirm the artifact and generated surfaces were included.
+   - inspect the final commit to confirm which generated surfaces were included.
+8. If strict final-path control matters, add one more post-refresh check:
+   - compare the final changed-path set against the artifact plus known generated surfaces,
+   - or stage only an explicit post-refresh allowlist.
 
 ## Caller Pattern
 
@@ -77,6 +99,44 @@ scripts/commit_daily_update.sh \
 
 The important contract is not how the path is discovered. It is that the caller names the exact artifact file before broad staging begins.
 
+## Strict Variant
+
+If the repo refreshes indexes or latest-proof files after preflight, add a second check before the final `git add`:
+
+```bash
+allowed_final_paths=(
+  "$artifact_path"
+  README.md
+  recipes/README.md
+)
+
+mapfile -t final_paths < <(
+  git status --porcelain -- . | awk '{print substr($0,4)}'
+)
+
+unexpected_final_paths=()
+for path in "${final_paths[@]}"; do
+  allowed=false
+  for expected in "${allowed_final_paths[@]}"; do
+    if [ "$path" = "$expected" ]; then
+      allowed=true
+      break
+    fi
+  done
+  if [ "$allowed" = false ]; then
+    unexpected_final_paths+=("$path")
+  fi
+done
+
+if [ "${#unexpected_final_paths[@]}" -gt 0 ]; then
+  echo "Publish blocked: refresh steps widened the final path set:"
+  printf '  %s\n' "${unexpected_final_paths[@]}"
+  exit 1
+fi
+```
+
+Use this stricter variant when a review or automation assumes the final commit is bounded to a known artifact set, not only that the run started from the right artifact.
+
 ## Agent Prompt Pattern
 
 ```text
@@ -93,8 +153,10 @@ Tasks:
 3. Do not pass generated indexes or root README files unless the preflight expects them to pre-exist.
 4. Verify one failure run without the artifact path.
 5. Verify one success run with the exact artifact path.
-6. Report:
+6. If the final commit must stay narrow, add a post-refresh path check or explicit final allowlist.
+7. Report:
    - the artifact path contract,
+   - whether it is preflight-only or final-path-bounding,
    - the exact invocation,
    - what generated files are intentionally excluded from the argument list,
    - what final files landed in the successful commit.
@@ -102,7 +164,7 @@ Tasks:
 Rules:
 - Do not pass whole directories as expected paths.
 - Do not weaken the publish guard to avoid updating callers.
-- Do not claim the contract works without checking the final commit contents.
+- Do not claim the contract bounds the final commit unless you checked after refresh.
 ```
 
 ## Fast Checklist
@@ -111,7 +173,8 @@ Rules:
 - Are those paths real artifacts that already exist before publish starts?
 - Are generated files intentionally excluded because they appear only after preflight?
 - Did the missing-path run fail with the artifact path named in the error?
-- Did the success run commit the artifact plus generated surfaces only?
+- Did the success run show the actual final file set, not just the preflight decision?
+- If strict final-path control matters, is there a post-refresh check or explicit final allowlist?
 
 ## Evaluation Pattern
 
@@ -120,12 +183,13 @@ Score each item `0` or `1`:
 - The caller names exact artifact files, not directories.
 - Generated surfaces are excluded from `expected_paths` for the right reason.
 - Missing-path verification failed before staging.
-- Success-path verification produced the intended commit.
+- Success-path verification produced the intended final file set.
+- The recipe distinguishes preflight scope from final commit scope.
 - The contract is documented where another builder can copy it.
 
-`5`: ship the caller update or recipe.
-`4`: ship if the remaining gap is only missing documentation.
-`0-3`: do not trust the publish flow yet.
+`6`: ship the caller update or recipe.
+`5`: ship if the remaining gap is only missing strict final-path enforcement.
+`0-4`: do not trust the publish flow yet.
 
 ## Failure Modes
 
@@ -133,9 +197,11 @@ Score each item `0` or `1`:
 - Adding `README.md` or `recipes/README.md` to `expected_paths` even though the script generates them later.
 - Hardcoding the wrong dated artifact path in an automation wrapper.
 - Testing only the success path and never proving the guard still blocks missing paths.
+- Assuming `expected_paths` also constrains files changed by later refresh scripts.
+- Reading a clean preflight result as proof that the final commit stayed narrow.
 - Relaxing the preflight because one caller was not updated after the contract changed.
 
 ## Source Linkage
 
 - Repo / tool / workflow: this profile repo's daily publish automation.
-- Supporting prompt, script, or note: [`../labs/2026/2026-06-01-expected-paths-contract-for-agent-publish-runs.md`](../labs/2026/2026-06-01-expected-paths-contract-for-agent-publish-runs.md), [`../scripts/commit_daily_update.sh`](../scripts/commit_daily_update.sh), and [`./dirty-public-path-preflight.md`](./dirty-public-path-preflight.md).
+- Supporting prompt, script, or note: [`../labs/2026/2026-06-01-expected-paths-contract-for-agent-publish-runs.md`](../labs/2026/2026-06-01-expected-paths-contract-for-agent-publish-runs.md), [`../labs/2026/2026-06-06-expected-paths-stop-at-preflight.md`](../labs/2026/2026-06-06-expected-paths-stop-at-preflight.md), [`../scripts/commit_daily_update.sh`](../scripts/commit_daily_update.sh), and [`./dirty-public-path-preflight.md`](./dirty-public-path-preflight.md).
