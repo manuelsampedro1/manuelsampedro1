@@ -133,7 +133,7 @@ The check validates shell scripts, compiles local Python audit tools, runs Pytho
 
 ## Latest Proof
 
-- Latest lab note: [2026-06-06 - Expected Paths Stop at Preflight](./labs/2026/2026-06-06-expected-paths-stop-at-preflight.md)
+- Latest lab note: [2026-06-07 - Publish Guard Coverage Stops at No-Op](./labs/2026/2026-06-07-publish-guard-coverage-stops-at-no-op.md)
 - Latest recipes:
   - [Backfilled Lab Note Latest Proof Check](./recipes/backfilled-lab-note-latest-proof-check.md)
   - [Automation Memory for Recurring Codex Runs](./recipes/automation-memory-for-recurring-codex-runs.md)

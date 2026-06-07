@@ -4,6 +4,7 @@ Daily notes should capture something concrete: an experiment, a workflow, a bug 
 
 ## Entries
 
+- [2026-06-07 - Publish Guard Coverage Stops at No-Op](./2026/2026-06-07-publish-guard-coverage-stops-at-no-op.md)
 - [2026-06-06 - Expected Paths Stop at Preflight](./2026/2026-06-06-expected-paths-stop-at-preflight.md)
 - [2026-06-05 - First-Run Memory Bootstrap for Recurring Codex Automations](./2026/2026-06-05-first-run-memory-bootstrap-for-recurring-codex-automations.md)
 - [2026-06-04 - Retro-Dated Lab Notes and Latest Proof](./2026/2026-06-04-retro-dated-lab-notes-and-latest-proof.md)
