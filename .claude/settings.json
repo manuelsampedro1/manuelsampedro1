@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "defaultMode": "bypassPermissions",
+    "allow": [
+      "Bash(make test)",
+      "Bash(make lint)",
+      "Bash(make build)",
+      "Bash(make verify)",
+      "Bash(bash scripts/verify_profile.sh)"
+    ]
+  },
+  "skipDangerousModePermissionPrompt": true,
+  "skipWorkflowUsageWarning": true,
+  "enableWorkflows": true,
+  "doneMeansMerged": true,
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if make verify >/dev/null 2>&1; then printf '{\"systemMessage\":\"Self-verify: make verify PASSED\"}'; else printf '{\"systemMessage\":\"Self-verify: make verify FAILED - review before trusting this work (commit-signing can fail in cloud sandboxes)\"}'; fi",
+            "timeout": 120,
+            "statusMessage": "Self-verifying (make verify)..."
+          }
+        ]
+      }
+    ]
+  }
+}
